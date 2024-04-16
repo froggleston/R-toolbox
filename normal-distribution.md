@@ -98,6 +98,9 @@ del af observationerne der skal være mindre eller større.
 Så tæller vi op hvordan vores observationer faktisk fordeler sig. og sammenligner 
 med hvordan normalfordelingen ser ud - så kan vi se afvigelsen.
 
+her er der link til hvad jeg har fået skrevet om percentiler i episoden
+om deskriptiv statistik.
+
 indsæt qqplot.
 
 Punkterne kan selvfølgelig følge linien 100%. I så fald er vores data i hvert fald
@@ -148,7 +151,7 @@ skewness(test)
 ```
 
 ```output
-[1] 0.04387794
+[1] -0.02708634
 ```
 
 kurtosis
@@ -158,7 +161,7 @@ kurtosis(test)
 ```
 
 ```output
-[1] 0.1011569
+[1] -0.1839214
 ```
 Bemærk at vores test-vektor er ret normal fordelt. Men ingen af parametrene er
 lig 0.
@@ -176,7 +179,7 @@ shapiro.test(test)
 	Shapiro-Wilk normality test
 
 data:  test
-W = 0.99889, p-value = 0.8134
+W = 0.99833, p-value = 0.4469
 ```
 nul-hypotesen er her at data er normalfordelte. Hvis vi afviser null-hypotesen,vil det 
 i dette tilfælde, være forkert i ca. 94% af tilfældene.
@@ -201,7 +204,7 @@ ks.test(test, "pnorm", mean = mean(test), sd = sd(test))
 	Asymptotic one-sample Kolmogorov-Smirnov test
 
 data:  test
-D = 0.01706, p-value = 0.933
+D = 0.024655, p-value = 0.5776
 alternative hypothesis: two-sided
 ```
 Vær forsigtig. Den forudsætter at vi kender "den sande" middelværdi og standardafvigelse,
@@ -225,7 +228,7 @@ lillie.test(test)
 	Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  test
-D = 0.01706, p-value = 0.6843
+D = 0.024655, p-value = 0.1482
 ```
 Samme null-hypotese som før. Men læg igen mærke til at selvom data er 
 designet til at være normalfordelte, så er p-værdien ikke 1. 
@@ -244,7 +247,7 @@ ad.test(test)
 	Anderson-Darling normality test
 
 data:  test
-A = 0.23254, p-value = 0.799
+A = 0.45495, p-value = 0.2681
 ```
 Også her er null-hypotesen at data er normaltfordelte. 
 
@@ -261,7 +264,7 @@ rnorm(5, mean = 0, sd = 1 )
 ```
 
 ```output
-[1]  0.2882689 -0.2998252 -1.6977577 -0.1538210 -1.2804482
+[1] -0.26259408  0.49495816  0.12694180 -0.90441327 -0.02763691
 ```
 Den returnerer (her) fem tilfældige værdier fra en normalfordeling med (her) 
 middelværdi 0 og standardafvigelse 1.
