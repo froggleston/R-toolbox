@@ -1937,7 +1937,7 @@ kurtosis minus 3 på 0, jo tættere på normalfordelt er data.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.01588235</code></pre>
+<pre class="output" tabindex="0"><code>[1] -0.05020859</code></pre>
 </div>
 <p>kurtosis</p>
 <div class="codewrapper sourceCode" id="cb4">
@@ -1949,7 +1949,7 @@ kurtosis minus 3 på 0, jo tættere på normalfordelt er data.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.1625041</code></pre>
+<pre class="output" tabindex="0"><code>[1] -0.02373086</code></pre>
 </div>
 <p>Bemærk at vores test-vektor er ret normal fordelt. Men ingen af
 parametrene er lig 0.</p>
@@ -1967,7 +1967,7 @@ parametrene er lig 0.</p>
 	Shapiro-Wilk normality test
 
 data:  test
-W = 0.99834, p-value = 0.4557</code></pre>
+W = 0.99729, p-value = 0.09238</code></pre>
 </div>
 <p>nul-hypotesen er her at data er normalfordelte. Hvis vi afviser
 null-hypotesen,vil det i dette tilfælde, være forkert i ca. 94% af
@@ -1995,7 +1995,7 @@ qq-plottet.</p>
 	Asymptotic one-sample Kolmogorov-Smirnov test
 
 data:  test
-D = 0.016134, p-value = 0.957
+D = 0.026856, p-value = 0.4664
 alternative hypothesis: two-sided</code></pre>
 </div>
 <p>Vær forsigtig. Den forudsætter at vi kender “den sande” middelværdi
@@ -2024,7 +2024,7 @@ middelværdi og standardafvigelse.</p>
 	Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  test
-D = 0.016134, p-value = 0.7626</code></pre>
+D = 0.026856, p-value = 0.08616</code></pre>
 </div>
 <p>Samme null-hypotese som før. Men læg igen mærke til at selvom data er
 designet til at være normalfordelte, så er p-værdien ikke 1.</p>
@@ -2047,7 +2047,7 @@ designet til at være normalfordelte, så er p-værdien ikke 1.</p>
 	Anderson-Darling normality test
 
 data:  test
-A = 0.29693, p-value = 0.5908</code></pre>
+A = 0.7586, p-value = 0.04833</code></pre>
 </div>
 <p>Også her er null-hypotesen at data er normaltfordelte.</p>
 </div>
@@ -2069,7 +2069,7 @@ funktioner.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] -0.5711902 -0.3990898 -0.3614761  1.3379212  0.9579661</code></pre>
+<pre class="output" tabindex="0"><code>[1] -0.7152999 -0.7341053  0.7718805  1.3277633 -0.2392231</code></pre>
 </div>
 <p>Den returnerer (her) fem tilfældige værdier fra en normalfordeling
 med (her) middelværdi 0 og standardafvigelse 1.</p>
