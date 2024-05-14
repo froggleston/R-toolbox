@@ -45,6 +45,66 @@ The area under the curve is 1, equivalent to 100%.
 The normal distribution have a lot of nice mathematical properties, some of which
 are indicated on the graph. 
 
+Konceptet med - hvad er sandsynligheden for at se en observation der ligger
+x standardafvigelser fra middelværdien.
+
+This allows us to calculate the probability of finding a certain value in the data,
+if the data is normally distributed, if we know the mean and the standard deviation.
+
+R provides us with a set of functions:
+
+pnorm the probability of having a smaller value than. 
+qnorm the value corresponding to a given probability
+dnorm the probability density of the norma distribution at a given x.
+
+Og det er for den standardiserede normalfordeling N(0,1)
+
+De har mulighed for at returnere værdier for en hvilken som helst normalfordeling
+med arbitrære middelværdi og standardafvigelse.
+
+An example:
+
+If the height of men are normally distributed, with a mean (mu) = 183 cm, and 
+a standarddeviation of 9.7 cm. How probably is it to find a man that is taller
+than 2 meters? 
+
+Directly:
+
+```r
+1 - pnorm(200,183,9.7)
+```
+
+```output
+[1] 0.03983729
+```
+In this example, pnorm returns the probability of an observation smaller than
+200, if data is normally distributed with mean 183, and standard deviation 9.7.
+
+The probability of finding any observation is 1. So the probability of finding
+an observation larger than 200, is 1 minus the probability of finding an observation 
+smaller than 200.
+
+Manually we could calculate the distance from 200 to 183 = 17. And divide that
+with the standard deviation 9.7: 17/9.7 = 1.752577. 
+
+
+```r
+1 - pnorm(1.752577)
+```
+
+```output
+[1] 0.03983732
+```
+
+
+
+How many men are between 170 and 190 cm tall?
+Lidt før dette punkt skal vi videre til næste lesson.
+
+Og efter clt videre til hypotesetests
+
+## CLT
+
 CLT fører til at vi kan betragte middelværdien for vores data som normalfordelt.
 selv når disse data ikke _er_ normalfordelte.
 
@@ -151,7 +211,7 @@ skewness(test)
 ```
 
 ```output
-[1] 0.02134643
+[1] -0.1152395
 ```
 
 kurtosis
@@ -161,7 +221,7 @@ kurtosis(test)
 ```
 
 ```output
-[1] -0.1814367
+[1] -0.2131724
 ```
 Bemærk at vores test-vektor er ret normal fordelt. Men ingen af parametrene er
 lig 0.
@@ -179,7 +239,7 @@ shapiro.test(test)
 	Shapiro-Wilk normality test
 
 data:  test
-W = 0.99806, p-value = 0.3072
+W = 0.99774, p-value = 0.1901
 ```
 nul-hypotesen er her at data er normalfordelte. Hvis vi afviser null-hypotesen,vil det 
 i dette tilfælde, være forkert i ca. 94% af tilfældene.
@@ -204,7 +264,7 @@ ks.test(test, "pnorm", mean = mean(test), sd = sd(test))
 	Asymptotic one-sample Kolmogorov-Smirnov test
 
 data:  test
-D = 0.021554, p-value = 0.7416
+D = 0.022838, p-value = 0.674
 alternative hypothesis: two-sided
 ```
 Vær forsigtig. Den forudsætter at vi kender "den sande" middelværdi og standardafvigelse,
@@ -228,7 +288,7 @@ lillie.test(test)
 	Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  test
-D = 0.021554, p-value = 0.3136
+D = 0.022838, p-value = 0.2337
 ```
 Samme null-hypotese som før. Men læg igen mærke til at selvom data er 
 designet til at være normalfordelte, så er p-værdien ikke 1. 
@@ -247,7 +307,7 @@ ad.test(test)
 	Anderson-Darling normality test
 
 data:  test
-A = 0.43303, p-value = 0.3025
+A = 0.46523, p-value = 0.2532
 ```
 Også her er null-hypotesen at data er normaltfordelte. 
 
@@ -264,7 +324,7 @@ rnorm(5, mean = 0, sd = 1 )
 ```
 
 ```output
-[1]  0.88463453  0.65096258  1.13664864 -0.09265193 -1.09924414
+[1]  2.16915304  0.53661561 -0.07827189 -0.96417232  1.12617569
 ```
 Den returnerer (her) fem tilfældige værdier fra en normalfordeling med (her) 
 middelværdi 0 og standardafvigelse 1.
