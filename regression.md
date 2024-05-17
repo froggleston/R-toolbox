@@ -34,11 +34,11 @@ between two variables:
 Here is some data:
 
 
-```r
+``` r
 library(tidyverse)
 ```
 
-```output
+``` output
 ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
@@ -51,7 +51,7 @@ library(tidyverse)
 ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 ```
 
-```r
+``` r
 mtcars %>% 
   ggplot(aes(wt,mpg)) +
   geom_point()
@@ -71,14 +71,14 @@ the connection between the two variables.
 Let us add a straight line:
 
 
-```r
+``` r
 mtcars %>% 
   ggplot(aes(wt,mpg)) +
   geom_point() +
   geom_smooth(method = "lm", se = F)
 ```
 
-```output
+``` output
 `geom_smooth()` using formula = 'y ~ x'
 ```
 
@@ -158,7 +158,7 @@ Det gider vi ikke selv, det får vi R. Og det gør vi med funktionen lm():
 
 
 
-```r
+``` r
 lm(y~x, data = data)
 ```
 
@@ -167,18 +167,18 @@ y~x er Rs formelnotation, der beskriver at y er en funktion af x.
 For vores eksempel ovenfor:
 
 
-```r
+``` r
 linear_model <- lm(mpg~wt, data = mtcars)
 ```
 
 Vi gemte resultatet i et objekt, så vi kan arbejde videre med det:
 
 
-```r
+``` r
 linear_model
 ```
 
-```output
+``` output
 
 Call:
 lm(formula = mpg ~ wt, data = mtcars)
@@ -194,11 +194,11 @@ med 5.344.
 Vi kan få flere detaljer:
 
 
-```r
+``` r
 summary(linear_model)
 ```
 
-```output
+``` output
 
 Call:
 lm(formula = mpg ~ wt, data = mtcars)

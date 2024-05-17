@@ -70,11 +70,11 @@ than 2 meters?
 
 Directly:
 
-```r
+``` r
 1 - pnorm(200,183,9.7)
 ```
 
-```output
+``` output
 [1] 0.03983729
 ```
 In this example, pnorm returns the probability of an observation smaller than
@@ -88,11 +88,11 @@ Manually we could calculate the distance from 200 to 183 = 17. And divide that
 with the standard deviation 9.7: 17/9.7 = 1.752577. 
 
 
-```r
+``` r
 1 - pnorm(1.752577)
 ```
 
-```output
+``` output
 [1] 0.03983732
 ```
 
@@ -199,29 +199,29 @@ Ja. kurtosis og skewness. Jo tættere skewness kommer på 0, og kurtosis minus 3
 R i sig selv kan ikke beregne det. Men det kan pakken
 e1071
 
-```r
+``` r
 library(e1071)
 test <- rnorm(1000)
 ```
 
 Skewness:
 
-```r
+``` r
 skewness(test)
 ```
 
-```output
-[1] -0.1152395
+``` output
+[1] -0.0532932
 ```
 
 kurtosis
 
-```r
+``` r
 kurtosis(test)
 ```
 
-```output
-[1] -0.2131724
+``` output
+[1] 0.003832818
 ```
 Bemærk at vores test-vektor er ret normal fordelt. Men ingen af parametrene er
 lig 0.
@@ -230,16 +230,16 @@ Andre tests:
 Shapiro-Wilk
 
 
-```r
+``` r
 shapiro.test(test) 
 ```
 
-```output
+``` output
 
 	Shapiro-Wilk normality test
 
 data:  test
-W = 0.99774, p-value = 0.1901
+W = 0.99805, p-value = 0.3035
 ```
 nul-hypotesen er her at data er normalfordelte. Hvis vi afviser null-hypotesen,vil det 
 i dette tilfælde, være forkert i ca. 94% af tilfældene.
@@ -255,16 +255,16 @@ vi skal specificere at det er normalfordelingen vi tester imod ("pnorm") - den k
 nemlig teste for andre fordelinger også.
 
 
-```r
+``` r
 ks.test(test, "pnorm", mean = mean(test), sd = sd(test))
 ```
 
-```output
+``` output
 
 	Asymptotic one-sample Kolmogorov-Smirnov test
 
 data:  test
-D = 0.022838, p-value = 0.674
+D = 0.020122, p-value = 0.8129
 alternative hypothesis: two-sided
 ```
 Vær forsigtig. Den forudsætter at vi kender "den sande" middelværdi og standardafvigelse,
@@ -278,17 +278,17 @@ Den er en variation af ks-testen, der er  designet specifikt til at teste normal
 Og forudsætter _ikke_ at vi på forhånd kender middelværdi og standardafvigelse.
 
 
-```r
+``` r
 library(nortest)
 lillie.test(test)
 ```
 
-```output
+``` output
 
 	Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  test
-D = 0.022838, p-value = 0.2337
+D = 0.020122, p-value = 0.4203
 ```
 Samme null-hypotese som før. Men læg igen mærke til at selvom data er 
 designet til at være normalfordelte, så er p-værdien ikke 1. 
@@ -297,17 +297,17 @@ designet til at være normalfordelte, så er p-værdien ikke 1.
 
 Ikke tilgængelig i R direkte:
 
-```r
+``` r
 library(nortest)
 ad.test(test)
 ```
 
-```output
+``` output
 
 	Anderson-Darling normality test
 
 data:  test
-A = 0.46523, p-value = 0.2532
+A = 0.45062, p-value = 0.2746
 ```
 Også her er null-hypotesen at data er normaltfordelte. 
 
@@ -319,12 +319,12 @@ De hyppigst forekommende fordelinger har hver deres sæt af funktioner.
 #### rnorm
 I samme familie finder vi runif, rbeta og en del andre:
 
-```r
+``` r
 rnorm(5, mean = 0, sd = 1 )
 ```
 
-```output
-[1]  2.16915304  0.53661561 -0.07827189 -0.96417232  1.12617569
+``` output
+[1] -1.3509838  1.3581973 -1.7533493  0.5506981 -0.2942811
 ```
 Den returnerer (her) fem tilfældige værdier fra en normalfordeling med (her) 
 middelværdi 0 og standardafvigelse 1.
