@@ -337,7 +337,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>The normal distribution</h1>
-        <p>Last updated on 2024-05-14 |
+        <p>Last updated on 2024-05-17 |
         
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/normal-distribution.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -527,7 +527,7 @@ kurtosis minus 3 på 0, jo tættere på normalfordelt er data.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] -0.09679786</code></pre>
+<pre class="output" tabindex="0"><code>[1] -0.0532932</code></pre>
 </div>
 <p>kurtosis</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -539,7 +539,7 @@ kurtosis minus 3 på 0, jo tættere på normalfordelt er data.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] -0.002653957</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.003832818</code></pre>
 </div>
 <p>Bemærk at vores test-vektor er ret normal fordelt. Men ingen af
 parametrene er lig 0.</p>
@@ -557,7 +557,7 @@ parametrene er lig 0.</p>
 	Shapiro-Wilk normality test
 
 data:  test
-W = 0.99813, p-value = 0.3392</code></pre>
+W = 0.99805, p-value = 0.3035</code></pre>
 </div>
 <p>nul-hypotesen er her at data er normalfordelte. Hvis vi afviser
 null-hypotesen,vil det i dette tilfælde, være forkert i ca. 94% af
@@ -584,7 +584,7 @@ qq-plottet.</p>
 	Asymptotic one-sample Kolmogorov-Smirnov test
 
 data:  test
-D = 0.01964, p-value = 0.8352
+D = 0.020122, p-value = 0.8129
 alternative hypothesis: two-sided</code></pre>
 </div>
 <p>Vær forsigtig. Den forudsætter at vi kender “den sande” middelværdi
@@ -612,7 +612,7 @@ middelværdi og standardafvigelse.</p>
 	Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  test
-D = 0.01964, p-value = 0.4597</code></pre>
+D = 0.020122, p-value = 0.4203</code></pre>
 </div>
 <p>Samme null-hypotese som før. Men læg igen mærke til at selvom data er
 designet til at være normalfordelte, så er p-værdien ikke 1.</p>
@@ -634,7 +634,7 @@ designet til at være normalfordelte, så er p-værdien ikke 1.</p>
 	Anderson-Darling normality test
 
 data:  test
-A = 0.44891, p-value = 0.2772</code></pre>
+A = 0.45062, p-value = 0.2746</code></pre>
 </div>
 <p>Også her er null-hypotesen at data er normaltfordelte.</p>
 </div>
@@ -654,7 +654,7 @@ funktioner.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1]  0.54474923 -1.04298151 -0.30923269 -1.35831266 -0.01889237</code></pre>
+<pre class="output" tabindex="0"><code>[1] -1.3509838  1.3581973 -1.7533493  0.5506981 -0.2942811</code></pre>
 </div>
 <p>Den returnerer (her) fem tilfældige værdier fra en normalfordeling
 med (her) middelværdi 0 og standardafvigelse 1.</p>
@@ -758,8 +758,8 @@ any links that you are not going to use.
   "url": "https://KUBDatalab.github.io/R-toolbox/normal-distribution.html",
   "identifier": "https://KUBDatalab.github.io/R-toolbox/normal-distribution.html",
   "dateCreated": "2024-04-09",
-  "dateModified": "2024-05-14",
-  "datePublished": "2024-05-14"
+  "dateModified": "2024-05-17",
+  "datePublished": "2024-05-17"
 }
 
   </script><script>
