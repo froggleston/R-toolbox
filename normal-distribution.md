@@ -37,13 +37,19 @@ standard deviation. We can see that it is the "true" mean and standard deviation
 the entire population, basically for the _entire_ universe, because they are 
 written using greek letters.
 
-If we plot the distribution, it looks like this:
+We are often working with the standardized normal distribution,
+where mean is 0 and the standard deviation is 1. 
+
+If we plot that, it looks like this:
 
 ![The Normal Distribution. Source: https://en.m.wikipedia.org/wiki/File:The_Normal_Distribution.svg](fig/The_Normal_Distribution.svg){alt='The Normal Distribution.'}
 The area under the curve is 1, equivalent to 100%.
 
 The normal distribution have a lot of nice mathematical properties, some of which
 are indicated on the graph. 
+
+CDF-plottet - så vi har forbindelsen til den deskriptive 
+statistik.
 
 Konceptet med - hvad er sandsynligheden for at se en observation der ligger
 x standardafvigelser fra middelværdien.
@@ -164,7 +170,7 @@ om deskriptiv statistik.
 indsæt qqplot.
 
 Punkterne kan selvfølgelig følge linien 100%. I så fald er vores data i hvert fald
-normal fordelte. 
+normalfordelte. 
 
 Det vi oftest ser er at punkterne i midten af plottet følger linien ret nøje. Men at 
 der er afvigelser i hver ende, hvor de enten ligger over eller under linien. 
@@ -211,7 +217,7 @@ skewness(test)
 ```
 
 ``` output
-[1] -0.05453545
+[1] -0.1577804
 ```
 
 kurtosis
@@ -221,7 +227,7 @@ kurtosis(test)
 ```
 
 ``` output
-[1] -0.1741362
+[1] 0.1838604
 ```
 Bemærk at vores test-vektor er ret normal fordelt. Men ingen af parametrene er
 lig 0.
@@ -239,7 +245,7 @@ shapiro.test(test)
 	Shapiro-Wilk normality test
 
 data:  test
-W = 0.99842, p-value = 0.5064
+W = 0.99699, p-value = 0.05595
 ```
 nul-hypotesen er her at data er normalfordelte. Hvis vi afviser null-hypotesen,vil det 
 i dette tilfælde, være forkert i ca. 94% af tilfældene.
@@ -264,7 +270,7 @@ ks.test(test, "pnorm", mean = mean(test), sd = sd(test))
 	Asymptotic one-sample Kolmogorov-Smirnov test
 
 data:  test
-D = 0.021334, p-value = 0.7529
+D = 0.017283, p-value = 0.9263
 alternative hypothesis: two-sided
 ```
 Vær forsigtig. Den forudsætter at vi kender "den sande" middelværdi og standardafvigelse,
@@ -288,7 +294,7 @@ lillie.test(test)
 	Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  test
-D = 0.021334, p-value = 0.3289
+D = 0.017283, p-value = 0.6648
 ```
 Samme null-hypotese som før. Men læg igen mærke til at selvom data er 
 designet til at være normalfordelte, så er p-værdien ikke 1. 
@@ -307,7 +313,7 @@ ad.test(test)
 	Anderson-Darling normality test
 
 data:  test
-A = 0.46722, p-value = 0.2504
+A = 0.34171, p-value = 0.4932
 ```
 Også her er null-hypotesen at data er normaltfordelte. 
 
@@ -324,7 +330,7 @@ rnorm(5, mean = 0, sd = 1 )
 ```
 
 ``` output
-[1]  0.5410431 -0.7425156 -1.0356688 -2.5265633  0.3302512
+[1]  0.12832045  0.64983894  1.68024734  0.49796332 -0.09328417
 ```
 Den returnerer (her) fem tilfældige værdier fra en normalfordeling med (her) 
 middelværdi 0 og standardafvigelse 1.
