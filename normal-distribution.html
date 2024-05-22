@@ -92,11 +92,11 @@
   R-toolbox
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 36%" class="percentage">
-    36%
+<aside class="col-md-12 lesson-progress"><div style="width: 33%" class="percentage">
+    33%
   </div>
   <div class="progress library">
-    <div class="progress-bar library" role="progressbar" style="width: 36%" aria-valuenow="36" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar library" role="progressbar" style="width: 33%" aria-valuenow="33" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -288,6 +288,15 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush16">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading16">
+        <a href="multiple-regression.html">15. Multiple linear regression</a>
+    </div><!--/div.accordion-header-->
+        
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -393,11 +402,15 @@ population standard deviation. We can see that it is the “true” mean and
 standard deviation for the entire population, basically for the
 <em>entire</em> universe, because they are written using greek
 letters.</p>
-<p>If we plot the distribution, it looks like this:</p>
+<p>We are often working with the standardized normal distribution, where
+mean is 0 and the standard deviation is 1.</p>
+<p>If we plot that, it looks like this:</p>
 <p><img src="fig/The_Normal_Distribution.svg" alt="The Normal Distribution." class="figure"> The area under the curve is 1,
 equivalent to 100%.</p>
 <p>The normal distribution have a lot of nice mathematical properties,
 some of which are indicated on the graph.</p>
+<p>CDF-plottet - så vi har forbindelsen til den deskriptive
+statistik.</p>
 <p>Konceptet med - hvad er sandsynligheden for at se en observation der
 ligger x standardafvigelser fra middelværdien.</p>
 <p>This allows us to calculate the probability of finding a certain
@@ -497,7 +510,7 @@ afvigelsen.</p>
 episoden om deskriptiv statistik.</p>
 <p>indsæt qqplot.</p>
 <p>Punkterne kan selvfølgelig følge linien 100%. I så fald er vores data
-i hvert fald normal fordelte.</p>
+i hvert fald normalfordelte.</p>
 <p>Det vi oftest ser er at punkterne i midten af plottet følger linien
 ret nøje. Men at der er afvigelser i hver ende, hvor de enten ligger
 over eller under linien. Det giver fire forskellige udfald.</p>
@@ -536,7 +549,7 @@ kurtosis minus 3 på 0, jo tættere på normalfordelt er data.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] -0.05453545</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.02432092</code></pre>
 </div>
 <p>kurtosis</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -548,7 +561,7 @@ kurtosis minus 3 på 0, jo tættere på normalfordelt er data.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] -0.1741362</code></pre>
+<pre class="output" tabindex="0"><code>[1] -0.008129127</code></pre>
 </div>
 <p>Bemærk at vores test-vektor er ret normal fordelt. Men ingen af
 parametrene er lig 0.</p>
@@ -566,7 +579,7 @@ parametrene er lig 0.</p>
 	Shapiro-Wilk normality test
 
 data:  test
-W = 0.99842, p-value = 0.5064</code></pre>
+W = 0.99827, p-value = 0.4135</code></pre>
 </div>
 <p>nul-hypotesen er her at data er normalfordelte. Hvis vi afviser
 null-hypotesen,vil det i dette tilfælde, være forkert i ca. 94% af
@@ -593,7 +606,7 @@ qq-plottet.</p>
 	Asymptotic one-sample Kolmogorov-Smirnov test
 
 data:  test
-D = 0.021334, p-value = 0.7529
+D = 0.015402, p-value = 0.9716
 alternative hypothesis: two-sided</code></pre>
 </div>
 <p>Vær forsigtig. Den forudsætter at vi kender “den sande” middelværdi
@@ -621,7 +634,7 @@ middelværdi og standardafvigelse.</p>
 	Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  test
-D = 0.021334, p-value = 0.3289</code></pre>
+D = 0.015402, p-value = 0.818</code></pre>
 </div>
 <p>Samme null-hypotese som før. Men læg igen mærke til at selvom data er
 designet til at være normalfordelte, så er p-værdien ikke 1.</p>
@@ -643,7 +656,7 @@ designet til at være normalfordelte, så er p-værdien ikke 1.</p>
 	Anderson-Darling normality test
 
 data:  test
-A = 0.46722, p-value = 0.2504</code></pre>
+A = 0.33091, p-value = 0.5127</code></pre>
 </div>
 <p>Også her er null-hypotesen at data er normaltfordelte.</p>
 </div>
@@ -663,7 +676,7 @@ funktioner.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1]  0.5410431 -0.7425156 -1.0356688 -2.5265633  0.3302512</code></pre>
+<pre class="output" tabindex="0"><code>[1]  0.5224044  0.1669088  1.7641225  1.1242776 -0.7543424</code></pre>
 </div>
 <p>Den returnerer (her) fem tilfældige værdier fra en normalfordeling
 med (her) middelværdi 0 og standardafvigelse 1.</p>
