@@ -1,5 +1,5 @@
 ---
-title: 'introduction'
+title: 'tidyr'
 teaching: 10
 exercises: 2
 ---
@@ -18,20 +18,7 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
-
-
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Dette kursus skal sådan set ikke som udgangspunkt
-køres som et kursus. Det skal danne grundlag
-for andre kurser.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-
+tidyr ting.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 

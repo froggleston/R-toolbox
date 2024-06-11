@@ -1,5 +1,5 @@
 ---
-title: 'introduction'
+title: 'Advanced dplyr'
 teaching: 10
 exercises: 2
 ---
@@ -18,20 +18,11 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
+scoped dplyr-funktioner
+som jo så er pick og across - fordi vi faktisk ikke har scoped
+verbs længere.
 
-
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Dette kursus skal sådan set ikke som udgangspunkt
-køres som et kursus. Det skal danne grundlag
-for andre kurser.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-
+Så reelt de to - i kombi med mutate, filter, select etc.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
