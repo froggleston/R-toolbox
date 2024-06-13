@@ -246,6 +246,7 @@
       <div class="accordion-body">
         <ul><li><a href="#the-normal-distribution">The Normal Distribution</a></li>
 <li><a href="#clt">CLT</a></li>
+<li><a href="#er-ting-normalfordelte">Er ting normalfordelte?</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -500,7 +501,7 @@ challenge blocks</li>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -606,176 +607,6 @@ placerer sig på den sande normalfordeling.</p>
 <p>og ud fra de matematiske egenskaber fra normalfordelingen, kan vi se
 hvor underlig den middelværdi vi måler, er.</p>
 <p>og det er stadig ikke en specielt god forklaring…</p>
-<p>Hvordan tester vi så om et datasæt er normalt fordelt?</p>
-<p>Start med summary. I en normalfordeling er median og middelværdi
-ens.</p>
-<p>Dernæst et histogram. Hvor mange observationer falder i et bestemt
-interval. Det histogram skal helst ligne en normalfordeling.</p>
-<p>Indsæt plot.</p>
-<p>Men i hvor høj grad ligner det faktisk en normalfordeling?</p>
-<p>Normalfordelingens egenskaber fortæller os at 50% af observationerne
-skal være større end gennemsnittet. Og 50% af observationerne skal være
-mindre.</p>
-<p>For hver eneste værdi på x-aksen i plottet af normalfordelingen, ved
-vi hvor stor en del af observationerne der skal være mindre eller
-større.</p>
-<p>Så tæller vi op hvordan vores observationer faktisk fordeler sig. og
-sammenligner med hvordan normalfordelingen ser ud - så kan vi se
-afvigelsen.</p>
-<p>her er der link til hvad jeg har fået skrevet om percentiler i
-episoden om deskriptiv statistik.</p>
-<p>indsæt qqplot.</p>
-<p>Punkterne kan selvfølgelig følge linien 100%. I så fald er vores data
-i hvert fald normalfordelte.</p>
-<p>Det vi oftest ser er at punkterne i midten af plottet følger linien
-ret nøje. Men at der er afvigelser i hver ende, hvor de enten ligger
-over eller under linien. Det giver fire forskellige udfald.</p>
-<p>Hvis punkterne ligger over linien i begge ender.</p>
-<p>Det indikerer at data har tykkere haler end forventet. at der er
-flere ekstreme værdier, både høje og lave, end vi forventer. større
-kurtosis end normalfordelingen.</p>
-<p>punkter ligger under linien i begge ender:</p>
-<p>data har tyndere haler end forventet. Der er færre ekstreme værdier
-end vi ville forvente. lavere kurtosis end normalfordelingen.</p>
-<p>Øvre hale over, nedre hale under. Skæve data, hvor data er skubbet
-mod højere værdier. Høje værdier optræder hyppigere end forventet. Eller
-lave værdier optræder sjældnere end forventet.</p>
-<p>øvre under, nedre over. skæve data. i omvendt retning relativt til
-umiddelbart ovenstående.</p>
-<p>kurtosis</p>
-<p>skewness</p>
-<p>kan vi sætte tal på?</p>
-<p>Ja. kurtosis og skewness. Jo tættere skewness kommer på 0, og
-kurtosis minus 3 på 0, jo tættere på normalfordelt er data.</p>
-<p>R i sig selv kan ikke beregne det. Men det kan pakken e1071</p>
-<div class="codewrapper sourceCode" id="cb5">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">e1071</span><span class="op">)</span></span>
-<span><span class="va">test</span> <span class="op">&lt;-</span> <span class="fu">rnorm</span><span class="op">(</span><span class="fl">1000</span><span class="op">)</span></span></code></pre>
-</div>
-<p>Skewness:</p>
-<div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">skewness</span><span class="op">(</span><span class="va">test</span><span class="op">)</span></span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] 0.06032338</code></pre>
-</div>
-<p>kurtosis</p>
-<div class="codewrapper sourceCode" id="cb8">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">kurtosis</span><span class="op">(</span><span class="va">test</span><span class="op">)</span></span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] -0.298357</code></pre>
-</div>
-<p>Bemærk at vores test-vektor er ret normal fordelt. Men ingen af
-parametrene er lig 0.</p>
-<p>Andre tests: Shapiro-Wilk</p>
-<div class="codewrapper sourceCode" id="cb10">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">shapiro.test</span><span class="op">(</span><span class="va">test</span><span class="op">)</span> </span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>
-	Shapiro-Wilk normality test
-
-data:  test
-W = 0.99765, p-value = 0.1645</code></pre>
-</div>
-<p>nul-hypotesen er her at data er normalfordelte. Hvis vi afviser
-null-hypotesen,vil det i dette tilfælde, være forkert i ca. 94% af
-tilfældene.</p>
-<p>Testen er særligt godt til små stikprøver (&lt;50, nogen siger den er
-ok op op til &lt;2000)</p>
-<p>Det er, vist nok, principielt et mål for den lineære korrelation
-mellem data og normalfordelte kvantiler - altså det vi ser i
-qq-plottet.</p>
-<div class="section level3">
-<h3 id="kolmogorov-smirnov">Kolmogorov-Smirnov<a class="anchor" aria-label="anchor" href="#kolmogorov-smirnov"></a></h3>
-<p>vi skal specificere at det er normalfordelingen vi tester imod
-(“pnorm”) - den kan nemlig teste for andre fordelinger også.</p>
-<div class="codewrapper sourceCode" id="cb12">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ks.test</span><span class="op">(</span><span class="va">test</span>, <span class="st">"pnorm"</span>, mean <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">test</span><span class="op">)</span>, sd <span class="op">=</span> <span class="fu">sd</span><span class="op">(</span><span class="va">test</span><span class="op">)</span><span class="op">)</span></span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>
-	Asymptotic one-sample Kolmogorov-Smirnov test
-
-data:  test
-D = 0.020366, p-value = 0.8012
-alternative hypothesis: two-sided</code></pre>
-</div>
-<p>Vær forsigtig. Den forudsætter at vi kender “den sande” middelværdi
-og standardafvigelse, i stedet for som i dette eksempel at estimere dem
-fra vores stikprøve.</p>
-<p>NULL-hypotesen er også her at data er normalfordelte, p-værdien er
-her 0.99, og vi kan derfor ikke afvise null-hypotesen.</p>
-</div>
-<div class="section level3">
-<h3 id="liliefors-test">Liliefors test<a class="anchor" aria-label="anchor" href="#liliefors-test"></a></h3>
-<p>Den er en variation af ks-testen, der er designet specifikt til at
-teste normalitet. Og forudsætter <em>ikke</em> at vi på forhånd kender
-middelværdi og standardafvigelse.</p>
-<div class="codewrapper sourceCode" id="cb14">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">nortest</span><span class="op">)</span></span>
-<span><span class="fu">lillie.test</span><span class="op">(</span><span class="va">test</span><span class="op">)</span></span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>
-	Lilliefors (Kolmogorov-Smirnov) normality test
-
-data:  test
-D = 0.020366, p-value = 0.4011</code></pre>
-</div>
-<p>Samme null-hypotese som før. Men læg igen mærke til at selvom data er
-designet til at være normalfordelte, så er p-værdien ikke 1.</p>
-</div>
-<div class="section level3">
-<h3 id="anderson-darling-test">Anderson-darling test<a class="anchor" aria-label="anchor" href="#anderson-darling-test"></a></h3>
-<p>Ikke tilgængelig i R direkte:</p>
-<div class="codewrapper sourceCode" id="cb16">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">nortest</span><span class="op">)</span></span>
-<span><span class="fu">ad.test</span><span class="op">(</span><span class="va">test</span><span class="op">)</span></span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>
-	Anderson-Darling normality test
-
-data:  test
-A = 0.48842, p-value = 0.2223</code></pre>
-</div>
-<p>Også her er null-hypotesen at data er normaltfordelte.</p>
-</div>
 <div class="section level3">
 <h3 id="fordelingsfunktionerne-i-r-">Fordelingsfunktionerne i R.<a class="anchor" aria-label="anchor" href="#fordelingsfunktionerne-i-r-"></a></h3>
 <p>De hyppigst forekommende fordelinger har hver deres sæt af
@@ -783,7 +614,7 @@ funktioner.</p>
 <div class="section level4">
 <h4 id="rnorm">rnorm<a class="anchor" aria-label="anchor" href="#rnorm"></a></h4>
 <p>I samme familie finder vi runif, rbeta og en del andre:</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -792,7 +623,7 @@ funktioner.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] -0.1387073  1.0725917 -0.2123447  0.4389447  0.5679268</code></pre>
+<pre class="output" tabindex="0"><code>[1] -0.01453285  0.34441866 -0.49366815 -1.47433638  0.66424341</code></pre>
 </div>
 <p>Den returnerer (her) fem tilfældige værdier fra en normalfordeling
 med (her) middelværdi 0 og standardafvigelse 1.</p>
@@ -813,15 +644,21 @@ til 0 lig pnorm(0). Og hvis vi bruger defaulet mean og sd, er det så
 omvendte af et p.</p>
 <p>i pnorm finder vi sandsynligheden for at værdien er mindre end x. I
 qnorm finder vi x for en given sandsynlighed.</p>
-<p>Er ting normalfordelte?</p>
-<p>Normalfordelingen kaldes normal fordi Karl Pearson og Francis Galton
-i det 19. århundrede observerede at det var den statistiske fordeling
-der forklarede rigtig mange fænomener i befolkningsdata. Højde, vægt,
-blodtryk, intelligenskvotienter mv.</p>
+</div>
+</div>
+</section><section id="er-ting-normalfordelte"><h2 class="section-heading">Er ting normalfordelte?<a class="anchor" aria-label="anchor" href="#er-ting-normalfordelte"></a>
+</h2>
+<hr class="half-width"><p>Normalfordelingen kaldes normal fordi Karl Pearson og Francis Galton
+i det 19. århundrede observerede at det var en statistisk fordeling der
+forklarede rigtig mange fænomener i befolkningsdata. Højde, vægt,
+blodtryk, intelligenskvotienter mv. Faktisk var det den der forklarede
+flest (af de ting de nu undersøgte).</p>
+<p>Og så er det i øvrigt den fordeling som middelværdier af stikprøver
+vil tilnærme sig jf. den centrale grænseværdisætning.</p>
 <p>Så den er normal fordi det er normen, den hyppigst forekommende. Ikke
-at forveksle med en mere løs, dagligsprogs, normativ anvendelse af ordet
-norm. Normalen i en statistisk sammenhæng er ganske enkelt den hyppigst
-forekommende observation.</p>
+at forveksle med en mere løs, dagligsprogs, normativ (pun intended)
+anvendelse af ordet norm. Normalen i en statistisk sammenhæng er ganske
+enkelt den hyppigst forekommende observation.</p>
 <p>Det i statistisk forstand normale, normen, er at have brune øjne
 (&gt;50% af klodens befolkning har brune øjne). Det betyder ikke at der
 er noget galt med at have blå øjne.</p>
@@ -837,7 +674,7 @@ diagnostics - e-book. Elsevier - Health Sciences Division.</p>
 <p>Hvis vi antager at serum-Molybdæn er normalfordelt i populationen,
 kan vi beregne hvor stor en andel af den normale raske befolkning i
 danmark, der har en Molybdæn-koncentration under 0:</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -875,8 +712,6 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</div>
-</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/table1.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
