@@ -27,8 +27,8 @@ graph LR
 ")
 ```
 
-<!--html_preserve--><div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-5c351e1658e08fbe78ec" style="width:504px;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-5c351e1658e08fbe78ec">{"x":{"diagram":"\ngraph LR\n    A-->B\n"},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-c17cb2ac92e945d14d46" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-c17cb2ac92e945d14d46">{"x":{"diagram":"\ngraph LR\n    A-->B\n"},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
