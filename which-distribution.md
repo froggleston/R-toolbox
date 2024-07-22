@@ -1,19 +1,18 @@
 ---
-title: 'which-distribution'
+title: 'How is the data distributed?'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- If my data is not normally distributed - which distribution does it actually follow?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Show how to identify possible distributions describing the data
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -316,25 +315,60 @@ distribution (in the documentation we find that the abbreviation for that is
 
 
 ``` r
-log_norm_fit <- gamlss(eruptions ~ 1, family = LOGNO, data = test)
+log_norm_fit <- gamlss(eruptions ~ 1, family = LOGNO, data = eruption_example)
 ```
 
-``` error
-Error in eval(expr, envir, enclos): object 'test' not found
+``` output
+GAMLSS-RS iteration 1: Global Deviance = 194.3047 
+GAMLSS-RS iteration 2: Global Deviance = 194.3047 
 ```
 
 ``` r
 summary(log_norm_fit)
 ```
 
-``` error
-Error in eval(expr, envir, enclos): object 'log_norm_fit' not found
+``` output
+******************************************************************
+Family:  c("LOGNO", "Log Normal") 
+
+Call:  
+gamlss(formula = eruptions ~ 1, family = LOGNO, data = eruption_example) 
+
+Fitting method: RS() 
+
+------------------------------------------------------------------
+Mu link function:  identity
+Mu Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 1.451832   0.007461   194.6   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+------------------------------------------------------------------
+Sigma link function:  log
+Sigma Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -2.31561    0.05345  -43.32   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+------------------------------------------------------------------
+No. of observations in the fit:  175 
+Degrees of Freedom for the fit:  2
+      Residual Deg. of Freedom:  173 
+                      at cycle:  2 
+ 
+Global Deviance:     194.3047 
+            AIC:     198.3047 
+            SBC:     204.6343 
+******************************************************************
 ```
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- The data generating function is not neccesarily the same as the distribution that best fit the data.
+- The data generating function is not necessarily the same as the distribution that best fit the data
+- Chose the distribution that best describes your data - not the one that fits best
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
