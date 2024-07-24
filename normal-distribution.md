@@ -157,7 +157,7 @@ rnorm(5, mean = 0, sd = 1 )
 ```
 
 ``` output
-[1] -0.5953025 -0.7338536  0.4500797  1.2598973  0.7418625
+[1]  1.20860766 -0.07695243 -0.57763596 -1.44339946 -1.35404400
 ```
 Den returnerer (her) fem tilfældige værdier fra en normalfordeling med (her) 
 middelværdi 0 og standardafvigelse 1.
