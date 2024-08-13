@@ -530,7 +530,7 @@ same result.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>We will not always get the same result, applying the same functions
 on the same data - some statistical techniques relies on randomness.</p>
@@ -667,7 +667,7 @@ the first chunk, add your own text, and change the plot to plot the
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Make a new RMarkdown document - File -&gt; New File -&gt; R
 Markdown.</p>
@@ -2011,13 +2011,13 @@ Age (years)
 Mean (SD)
 </td>
 <td>
-26.4 (10.2)
+33.7 (11.7)
 </td>
 <td>
-28.7 (12.8)
+30.9 (12.1)
 </td>
 <td>
-27.6 (11.5)
+32.2 (11.8)
 </td>
 </tr>
 <tr>
@@ -2025,13 +2025,13 @@ Mean (SD)
 Median [Min, Max]
 </td>
 <td>
-26.4 [12.1, 48.2]
+32.8 [14.3, 48.9]
 </td>
 <td>
-28.3 [10.2, 49.4]
+26.9 [12.3, 49.1]
 </td>
 <td>
-26.4 [10.2, 49.4]
+28.1 [12.3, 49.1]
 </td>
 </tr>
 <tr>
@@ -2064,13 +2064,13 @@ Weight (kg)
 Mean (SD)
 </td>
 <td>
-64.7 (8.71)
+70.8 (15.3)
 </td>
 <td>
-66.7 (16.9)
+70.9 (13.0)
 </td>
 <td>
-65.7 (13.3)
+70.8 (14.0)
 </td>
 </tr>
 <tr>
@@ -2078,13 +2078,13 @@ Mean (SD)
 Median [Min, Max]
 </td>
 <td class="lastrow">
-64.1 [50.5, 80.1]
+67.2 [44.7, 105]
 </td>
 <td class="lastrow">
-63.1 [43.4, 123]
+71.6 [49.0, 92.4]
 </td>
 <td class="lastrow">
-63.1 [43.4, 123]
+68.5 [44.7, 105]
 </td>
 </tr>
 </tbody>
@@ -2233,13 +2233,13 @@ Age (years)
 Mean (SD%)
 </td>
 <td>
-26.4 (10.2%)
+33.7 (11.7%)
 </td>
 <td>
-28.7 (12.8%)
+30.9 (12.1%)
 </td>
 <td>
-27.6 (11.5%)
+32.2 (11.8%)
 </td>
 </tr>
 <tr>
@@ -2247,13 +2247,13 @@ Mean (SD%)
 Median [Min, Max]
 </td>
 <td>
-26.4 [12.1, 48.2]
+32.8 [14.3, 48.9]
 </td>
 <td>
-28.3 [10.2, 49.4]
+26.9 [12.3, 49.1]
 </td>
 <td>
-26.4 [10.2, 49.4]
+28.1 [12.3, 49.1]
 </td>
 </tr>
 <tr>
@@ -2261,13 +2261,13 @@ Median [Min, Max]
 Geom. mean (Geo. SD%)
 </td>
 <td>
-24.6 (1.48%)
+31.6 (1.47%)
 </td>
 <td>
-25.8 (1.63%)
+28.6 (1.50%)
 </td>
 <td>
-25.2 (1.55%)
+30.0 (1.48%)
 </td>
 </tr>
 <tr>
@@ -2300,13 +2300,13 @@ Weight (kg)
 Mean (SD%)
 </td>
 <td>
-64.7 (8.71%)
+70.8 (15.3%)
 </td>
 <td>
-66.7 (16.9%)
+70.9 (13.0%)
 </td>
 <td>
-65.7 (13.3%)
+70.8 (14.0%)
 </td>
 </tr>
 <tr>
@@ -2314,13 +2314,13 @@ Mean (SD%)
 Median [Min, Max]
 </td>
 <td>
-64.1 [50.5, 80.1]
+67.2 [44.7, 105]
 </td>
 <td>
-63.1 [43.4, 123]
+71.6 [49.0, 92.4]
 </td>
 <td>
-63.1 [43.4, 123]
+68.5 [44.7, 105]
 </td>
 </tr>
 <tr>
@@ -2328,13 +2328,13 @@ Median [Min, Max]
 Geom. mean (Geo. SD%)
 </td>
 <td class="lastrow">
-64.2 (1.15%)
+69.3 (1.23%)
 </td>
 <td class="lastrow">
-65.0 (1.25%)
+69.7 (1.21%)
 </td>
 <td class="lastrow">
-64.6 (1.20%)
+69.5 (1.21%)
 </td>
 </tr>
 </tbody>
@@ -2483,13 +2483,13 @@ Age (years)
 Median
 </td>
 <td>
-26.365
+32.819
 </td>
 <td>
-28.250
+26.945
 </td>
 <td>
-26.365
+28.073
 </td>
 </tr>
 <tr>
@@ -2497,13 +2497,13 @@ Median
 Variance
 </td>
 <td>
-103.0
+136.1
 </td>
 <td>
-163.2
+147.1
 </td>
 <td>
-131.7
+140.0
 </td>
 </tr>
 <tr>
@@ -2536,13 +2536,13 @@ Weight (kg)
 Median
 </td>
 <td>
-64.089
+67.242
 </td>
 <td>
-63.059
+71.557
 </td>
 <td>
-63.059
+68.505
 </td>
 </tr>
 <tr>
@@ -2550,13 +2550,13 @@ Median
 Variance
 </td>
 <td class="lastrow">
-75.9
+233.3
 </td>
 <td class="lastrow">
-285.5
+168.9
 </td>
 <td class="lastrow">
-177.1
+195.9
 </td>
 </tr>
 </tbody>
@@ -3022,7 +3022,7 @@ funktioner.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1]  0.63641851 -0.25986248 -1.14445952  0.01149939 -0.69358470</code></pre>
+<pre class="output" tabindex="0"><code>[1]  1.2480643  0.4297068 -1.1741565 -0.1898257  0.5656519</code></pre>
 </div>
 <p>Den returnerer (her) fem tilfældige værdier fra en normalfordeling
 med (her) middelværdi 0 og standardafvigelse 1.</p>
@@ -4575,7 +4575,7 @@ This is definitely not normally distributed.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.5142916</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.5117949</code></pre>
 </div>
 <p>The important point of the Central Limit Theorem is, that if we take
 a large number of random samples, and calculate the mean of each of
@@ -4591,7 +4591,7 @@ this:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.5106976</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.4780531</code></pre>
 </div>
 <p>And we can use the <code>replicate()</code> function to repeat that
 calculation several times, in this case 1000 times:</p>
@@ -4746,7 +4746,7 @@ with the data.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Men det er egentlig ikke vigtigt her - fokus er på hvordan man får et
 barchart til at se pænere ud.</p>
@@ -4821,7 +4821,7 @@ that the most frequent species of penguin is Adelie penguins.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
 <div class="accordion-body">
 <p>Ja, det er let nok ellers, men nu er det ekstremt let.</p>
 </div>
@@ -5587,31 +5587,31 @@ work with afterwards:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 47, 62, 69
+<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 62, 69, 47
 
 Cluster means:
    Alcohol Malicacid      Ash Alcalinityofash Magnesium Totalphenols Flavanoids
-1 13.80447  1.883404 2.426170        17.02340 105.51064     2.867234   3.014255
-2 12.92984  2.504032 2.408065        19.89032 103.59677     2.111129   1.584032
-3 12.51667  2.494203 2.288551        20.82319  92.34783     2.070725   1.758406
+1 12.92984  2.504032 2.408065        19.89032 103.59677     2.111129   1.584032
+2 12.51667  2.494203 2.288551        20.82319  92.34783     2.070725   1.758406
+3 13.80447  1.883404 2.426170        17.02340 105.51064     2.867234   3.014255
   Nonflavanoidphenols Proanthocyanins Colorintensity       Hue
-1           0.2853191        1.910426       5.702553 1.0782979
-2           0.3883871        1.503387       5.650323 0.8839677
-3           0.3901449        1.451884       4.086957 0.9411594
+1           0.3883871        1.503387       5.650323 0.8839677
+2           0.3901449        1.451884       4.086957 0.9411594
+3           0.2853191        1.910426       5.702553 1.0782979
   OD280OD315ofdilutedwines   Proline
-1                 3.114043 1195.1489
-2                 2.365484  728.3387
-3                 2.490725  458.2319
+1                 2.365484  728.3387
+2                 2.490725  458.2319
+3                 3.114043 1195.1489
 
 Clustering vector:
-  [1] 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 1 1 2 2 1 1 2 1 1 1 1 1 1 2 2
- [38] 1 1 2 2 1 1 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 2 3 2 3 3 2 3 3 2 2 2 3 3 1
- [75] 2 3 3 3 2 3 3 2 2 3 3 3 3 3 2 2 3 3 3 3 3 2 2 3 2 3 2 3 3 3 2 3 3 3 3 2 3
-[112] 3 2 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 2 3 3 2 2 2 2 3 3 3 2 2 3 3 2 2 3 2
-[149] 2 3 3 3 3 2 2 2 3 2 2 2 3 2 3 2 2 3 2 2 2 2 3 3 2 2 2 2 2 3
+  [1] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 1 3 3 1 1 3 3 1 3 3 3 3 3 3 1 1
+ [38] 3 3 1 1 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 1 2 1 2 2 1 2 2 1 1 1 2 2 3
+ [75] 1 2 2 2 1 2 2 1 1 2 2 2 2 2 1 1 2 2 2 2 2 1 1 2 1 2 1 2 2 2 1 2 2 2 2 1 2
+[112] 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 1 2 2 1 1 1 1 2 2 2 1 1 2 2 1 1 2 1
+[149] 1 2 2 2 2 1 1 1 2 1 1 1 2 1 2 1 1 2 1 1 1 1 2 2 1 1 1 1 1 2
 
 Within cluster sum of squares by cluster:
-[1] 1360950.5  566572.5  443166.7
+[1]  566572.5  443166.7 1360950.5
  (between_SS / total_SS =  86.5 %)
 
 Available components:
@@ -5633,9 +5633,9 @@ found, and match them with the true values, and count the matches:</p>
 </h3>
 <pre class="output" tabindex="0"><code>     true
 quess  1  2  3
-    1 46  1  0
-    2 13 20 29
-    3  0 50 19</code></pre>
+    1 13 20 29
+    2  0 50 19
+    3 46  1  0</code></pre>
 </div>
 <p>The algorithm have no idea about the numbering, the three groups are
 numbered 1 to 3 randomly. It appears that cluster 2 from the algorithm
