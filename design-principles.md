@@ -121,6 +121,23 @@ ALDRIG dobbelte y-eller x-akser.
 https://x.com/ValdemarOsted/status/1829409948540772604/photo/3
 Og slet ikke hvis enhederne er forskellige.
 
+
+``` r
+library(palmerpenguins)
+penguins %>% 
+filter(species == "Adelie") %>% 
+ggplot(aes(x=body_mass_g)) +
+geom_line(aes(y = bill_depth_mm)) +
+geom_line(aes(y = flipper_length_mm/5)) +
+scale_y_continuous(sec.axis = sec_axis(~.*5)) +
+theme_ipsum()
+```
+
+``` error
+Error in theme_ipsum(): could not find function "theme_ipsum"
+```
+
+
 ## 3D pie charts
 
 There are only two situations where you should make a 3D pie chart.
@@ -129,7 +146,7 @@ There are only two situations where you should make a 3D pie chart.
 2. If you want to illustrate why 3D pie charts should never be made.
 
 
-<img src="fig/design-principles-rendered-unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="fig/design-principles-rendered-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 The values behind the four slices are: A: 20, B: 40, C: 30 and D: 15.
 

@@ -375,7 +375,7 @@ ggplot(cluster3, aes(x,y,color=.cluster)) +
 ```
 
 ``` error
-Error in eval(expr, envir, enclos): object 'cluster3' not found
+Error: object 'cluster3' not found
 ```
 But not the ones we want.
 

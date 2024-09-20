@@ -193,7 +193,71 @@ The coefficient for the height variable is not significant (if we have decided
 on a 5% significanse level), and neither consumption of teo nor coffee has a 
 significant influence on bone density. According to this model.
 
-Is this a good model?
+Is this a good model? No. The coefficients for Tea and coffee consumption 
+are not significant, and should not be in the model. Let us remove them.
+
+But let us remove them one by one. First coffee that has the worst p-value:
+
+
+``` r
+lm(fs2 ~ ht2 + age + wt2 + tea2, data = density) %>% summary()
+```
+
+``` output
+
+Call:
+lm(formula = fs2 ~ ht2 + age + wt2 + tea2, data = density)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.26036 -0.06261  0.01682  0.06366  0.17393 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.2209640  0.7632342  -0.290   0.7739    
+ht2          0.0085364  0.0044976   1.898   0.0657 .  
+age         -0.0068645  0.0015514  -4.425 8.58e-05 ***
+wt2          0.0041140  0.0013927   2.954   0.0055 ** 
+tea2        -0.0007497  0.0009257  -0.810   0.4233    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1034 on 36 degrees of freedom
+Multiple R-squared:  0.5941,	Adjusted R-squared:  0.5489 
+F-statistic: 13.17 on 4 and 36 DF,  p-value: 1.048e-06
+```
+Note that not only is the coefficient for tea still not significant, it actually
+gets "worse". 
+
+
+
+``` r
+lm(fs2 ~ ht2 + age + wt2 , data = density) %>% summary()
+```
+
+``` output
+
+Call:
+lm(formula = fs2 ~ ht2 + age + wt2, data = density)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.273490 -0.058038  0.005241  0.067527  0.169512 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.569569   0.627355  -0.908  0.36981    
+ht2          0.010524   0.003751   2.806  0.00796 ** 
+age         -0.006489   0.001474  -4.404 8.74e-05 ***
+wt2          0.004077   0.001385   2.943  0.00559 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1029 on 37 degrees of freedom
+Multiple R-squared:  0.5867,	Adjusted R-squared:  0.5531 
+F-statistic:  17.5 on 3 and 37 DF,  p-value: 3.078e-07
+```
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
