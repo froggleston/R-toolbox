@@ -532,7 +532,7 @@
         
 <section id="aio-reproducible-analysis"><p>Content from <a href="reproducible-analysis.html">Reproducible Data Analysis</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/reproducible-analysis.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -739,7 +739,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-reading-files"><p>Content from <a href="reading-files.html">Reading data from file</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/reading-files.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -1038,7 +1038,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-descript-stat"><p>Content from <a href="descript-stat.html">Descriptive Statistics</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/descript-stat.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -1910,7 +1910,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-table1"><p>Content from <a href="table1.html">Table One</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/table1.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -1953,75 +1953,54 @@ study, and provides a concise overview of the relevant demographic and
 clinical variables.</p>
 <p>It typically compares different groups (male~female,
 treatment~control), to highlight similarities and differences.</p>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>
-Attaching package: 'table1'</code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>The following objects are masked from 'package:base':
-
-    units, units&lt;-</code></pre>
-</div>
-It can look like this: <!--html_preserve-->
+<p>It can look like this:</p>
+<!--html_preserve-->
 <div class="Rtable1">
 <table class="table Rtable1">
-<thead><tr>
+<thead>
+<tr>
+<th class="grouplabel">
+</th>
+<th colspan="2" class="grouplabel">
+<div>
+control
+</div>
+</th>
+<th colspan="2" class="grouplabel">
+<div>
+case
+</div>
+</th>
+<th colspan="2" class="grouplabel">
+<div>
+Overall
+</div>
+</th>
+</tr>
+<tr>
 <th class="rowlabel firstrow lastrow">
 </th>
 <th class="firstrow lastrow">
-<span class="stratlabel">Treated<br><span class="stratn">(N=20)</span></span>
+<span class="stratlabel">no<br><span class="stratn">(N=298)</span></span>
 </th>
 <th class="firstrow lastrow">
-<span class="stratlabel">Placebo<br><span class="stratn">(N=20)</span></span>
+<span class="stratlabel">yes<br><span class="stratn">(N=48)</span></span>
 </th>
 <th class="firstrow lastrow">
-<span class="stratlabel">Overall<br><span class="stratn">(N=40)</span></span>
+<span class="stratlabel">no<br><span class="stratn">(N=135)</span></span>
 </th>
-</tr></thead>
+<th class="firstrow lastrow">
+<span class="stratlabel">yes<br><span class="stratn">(N=29)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">no<br><span class="stratn">(N=433)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">yes<br><span class="stratn">(N=77)</span></span>
+</th>
+</tr>
+</thead>
 <tbody>
-<tr>
-<td class="rowlabel firstrow">
-Sex
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Male
-</td>
-<td>
-10 (50.0%)
-</td>
-<td>
-10 (50.0%)
-</td>
-<td>
-20 (50.0%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Female
-</td>
-<td class="lastrow">
-10 (50.0%)
-</td>
-<td class="lastrow">
-10 (50.0%)
-</td>
-<td class="lastrow">
-20 (50.0%)
-</td>
-</tr>
 <tr>
 <td class="rowlabel firstrow">
 Age (years)
@@ -2032,19 +2011,160 @@ Age (years)
 </td>
 <td class="firstrow">
 </td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
 </tr>
 <tr>
 <td class="rowlabel">
 Mean (SD)
 </td>
 <td>
-30.7 (10.3)
+61.3 (4.75)
 </td>
 <td>
-29.9 (12.6)
+58.9 (5.68)
 </td>
 <td>
-30.3 (11.4)
+61.5 (4.85)
+</td>
+<td>
+58.1 (5.32)
+</td>
+<td>
+61.4 (4.78)
+</td>
+<td>
+58.6 (5.53)
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Median [Min, Max]
+</td>
+<td class="lastrow">
+62.0 [46.0, 69.0]
+</td>
+<td class="lastrow">
+59.0 [46.0, 68.0]
+</td>
+<td class="lastrow">
+62.0 [45.0, 69.0]
+</td>
+<td class="lastrow">
+58.0 [49.0, 68.0]
+</td>
+<td class="lastrow">
+62.0 [45.0, 69.0]
+</td>
+<td class="lastrow">
+58.0 [46.0, 68.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+estradol (pg/mL)
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+8.05 (5.29)
+</td>
+<td>
+8.73 (8.84)
+</td>
+<td>
+10.5 (9.72)
+</td>
+<td>
+10.6 (13.7)
+</td>
+<td>
+8.81 (7.06)
+</td>
+<td>
+9.44 (10.9)
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Median [Min, Max]
+</td>
+<td class="lastrow">
+6.00 [2.00, 46.0]
+</td>
+<td class="lastrow">
+6.50 [2.00, 57.0]
+</td>
+<td class="lastrow">
+8.00 [3.00, 85.0]
+</td>
+<td class="lastrow">
+6.00 [3.00, 76.0]
+</td>
+<td class="lastrow">
+7.00 [2.00, 85.0]
+</td>
+<td class="lastrow">
+6.00 [2.00, 76.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+estrone (pg/mL)
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+28.7 (15.0)
+</td>
+<td>
+26.8 (12.0)
+</td>
+<td>
+32.3 (15.7)
+</td>
+<td>
+27.7 (13.2)
+</td>
+<td>
+29.8 (15.3)
+</td>
+<td>
+27.1 (12.3)
 </td>
 </tr>
 <tr>
@@ -2052,13 +2172,22 @@ Mean (SD)
 Median [Min, Max]
 </td>
 <td>
-34.1 [13.4, 43.7]
+25.0 [10.0, 131]
 </td>
 <td>
-32.6 [11.7, 48.6]
+23.0 [13.0, 65.0]
 </td>
 <td>
-33.1 [11.7, 48.6]
+29.0 [11.0, 119]
+</td>
+<td>
+24.0 [12.0, 59.0]
+</td>
+<td>
+26.0 [10.0, 131]
+</td>
+<td>
+23.0 [12.0, 65.0]
 </td>
 </tr>
 <tr>
@@ -2066,18 +2195,33 @@ Median [Min, Max]
 Missing
 </td>
 <td class="lastrow">
-1 (5.0%)
+58 (19.5%)
 </td>
 <td class="lastrow">
-0 (0%)
+15 (31.3%)
 </td>
 <td class="lastrow">
-1 (2.5%)
+30 (22.2%)
+</td>
+<td class="lastrow">
+11 (37.9%)
+</td>
+<td class="lastrow">
+88 (20.3%)
+</td>
+<td class="lastrow">
+26 (33.8%)
 </td>
 </tr>
 <tr>
 <td class="rowlabel firstrow">
-Weight (kg)
+testost
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
 </td>
 <td class="firstrow">
 </td>
@@ -2091,13 +2235,307 @@ Weight (kg)
 Mean (SD)
 </td>
 <td>
-73.3 (12.9)
+25.3 (13.2)
 </td>
 <td>
-69.0 (16.9)
+22.2 (10.7)
 </td>
 <td>
-71.1 (15.0)
+27.6 (16.1)
+</td>
+<td>
+28.2 (15.6)
+</td>
+<td>
+26.0 (14.2)
+</td>
+<td>
+24.4 (13.0)
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Median [Min, Max]
+</td>
+<td>
+23.0 [4.00, 111]
+</td>
+<td>
+21.5 [8.00, 63.0]
+</td>
+<td>
+25.0 [6.00, 144]
+</td>
+<td>
+24.0 [10.0, 69.0]
+</td>
+<td>
+23.0 [4.00, 144]
+</td>
+<td>
+22.0 [8.00, 69.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Missing
+</td>
+<td class="lastrow">
+6 (2.0%)
+</td>
+<td class="lastrow">
+2 (4.2%)
+</td>
+<td class="lastrow">
+3 (2.2%)
+</td>
+<td class="lastrow">
+1 (3.4%)
+</td>
+<td class="lastrow">
+9 (2.1%)
+</td>
+<td class="lastrow">
+3 (3.9%)
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+prolactn
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+9.60 (5.10)
+</td>
+<td>
+13.7 (12.3)
+</td>
+<td>
+10.8 (6.79)
+</td>
+<td>
+9.57 (3.29)
+</td>
+<td>
+9.99 (5.70)
+</td>
+<td>
+12.2 (10.1)
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Median [Min, Max]
+</td>
+<td>
+8.16 [1.96, 37.3]
+</td>
+<td>
+8.81 [3.87, 55.8]
+</td>
+<td>
+9.30 [2.66, 59.9]
+</td>
+<td>
+8.88 [4.49, 17.6]
+</td>
+<td>
+8.64 [1.96, 59.9]
+</td>
+<td>
+8.84 [3.87, 55.8]
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Missing
+</td>
+<td class="lastrow">
+14 (4.7%)
+</td>
+<td class="lastrow">
+0 (0%)
+</td>
+<td class="lastrow">
+6 (4.4%)
+</td>
+<td class="lastrow">
+1 (3.4%)
+</td>
+<td class="lastrow">
+20 (4.6%)
+</td>
+<td class="lastrow">
+1 (1.3%)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--/html_preserve-->
+<p>Please note that the automatic styling of this site results in a
+table-one that is not very nice looking.</p>
+<p>We have 510 participants in a study, split into control and case
+groups, and further subdivided into two groups based on Postmenopausal
+hormone use. It describes the distribution of sex and concentration of
+estradiol, estrone, testosterone and prolactin in a blood sample.</p>
+<p>A number of packages making it easy to make a Table One exists. Here
+we look at the package <code>table1</code>.</p>
+<p>The specific way of doing it depends on the data available. If we do
+not have data on the weight of the participants, we are not able to
+describe the distribution of their weight.</p>
+<p>Let us begin by looking at the data. We begin by loading the two
+packages <code>tidyverse</code> and <code>table1</code>. We then read in
+the data from the csv-file “BLOOD.csv”, which we have <a href="https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/BLOOD.csv" class="external-link">downloaded
+from this link</a>.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">table1</span><span class="op">)</span></span>
+<span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"data/BLOOD.csv"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Rows: 510 Columns: 9
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (9): ID, matchid, case, curpmh, ageblood, estradol, estrone, testost, pr...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<p>The data contains missing values, coded as “999.0” for estrone and
+testost, and 99.99 for prolactin:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">dat</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">mutate</span><span class="op">(</span>estrone <span class="op">=</span> <span class="fu">na_if</span><span class="op">(</span><span class="va">estrone</span>, <span class="fl">999</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">mutate</span><span class="op">(</span>testost <span class="op">=</span> <span class="fu">na_if</span><span class="op">(</span><span class="va">testost</span>, <span class="fl">999</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">mutate</span><span class="op">(</span>prolactn <span class="op">=</span> <span class="fu">na_if</span><span class="op">(</span><span class="va">prolactn</span>, <span class="fl">99.99</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+<p>We then ensure that categorical values are stored as categorical
+values, and adjust the labels of those categorical values:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">dat</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">mutate</span><span class="op">(</span>case <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="va">case</span>, labels <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"control"</span>, <span class="st">"case"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>    <span class="fu">mutate</span><span class="op">(</span>curpmh <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="va">curpmh</span>, labels <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"no"</span>, <span class="st">"yes"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+<p>And now we can make our table one like this:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span><span class="op">+</span><span class="va">estradol</span><span class="op">+</span><span class="va">estrone</span><span class="op">+</span><span class="va">testost</span><span class="op">+</span><span class="va">prolactn</span><span class="op">|</span><span class="va">case</span><span class="op">+</span><span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">dat</span><span class="op">)</span></span></code></pre>
+</div>
+<!--html_preserve-->
+<div class="Rtable1">
+<table class="table Rtable1">
+<thead>
+<tr>
+<th class="grouplabel">
+</th>
+<th colspan="2" class="grouplabel">
+<div>
+control
+</div>
+</th>
+<th colspan="2" class="grouplabel">
+<div>
+case
+</div>
+</th>
+<th colspan="2" class="grouplabel">
+<div>
+Overall
+</div>
+</th>
+</tr>
+<tr>
+<th class="rowlabel firstrow lastrow">
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">no<br><span class="stratn">(N=298)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">yes<br><span class="stratn">(N=48)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">no<br><span class="stratn">(N=135)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">yes<br><span class="stratn">(N=29)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">no<br><span class="stratn">(N=433)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">yes<br><span class="stratn">(N=77)</span></span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="rowlabel firstrow">
+ageblood
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+61.3 (4.75)
+</td>
+<td>
+58.9 (5.68)
+</td>
+<td>
+61.5 (4.85)
+</td>
+<td>
+58.1 (5.32)
+</td>
+<td>
+61.4 (4.78)
+</td>
+<td>
+58.6 (5.53)
 </td>
 </tr>
 <tr>
@@ -2105,69 +2543,805 @@ Mean (SD)
 Median [Min, Max]
 </td>
 <td class="lastrow">
-74.4 [50.3, 94.8]
+62.0 [46.0, 69.0]
 </td>
 <td class="lastrow">
-64.6 [43.8, 101]
+59.0 [46.0, 68.0]
 </td>
 <td class="lastrow">
-73.5 [43.8, 101]
+62.0 [45.0, 69.0]
+</td>
+<td class="lastrow">
+58.0 [49.0, 68.0]
+</td>
+<td class="lastrow">
+62.0 [45.0, 69.0]
+</td>
+<td class="lastrow">
+58.0 [46.0, 68.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+estradol
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+8.05 (5.29)
+</td>
+<td>
+8.73 (8.84)
+</td>
+<td>
+10.5 (9.72)
+</td>
+<td>
+10.6 (13.7)
+</td>
+<td>
+8.81 (7.06)
+</td>
+<td>
+9.44 (10.9)
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Median [Min, Max]
+</td>
+<td class="lastrow">
+6.00 [2.00, 46.0]
+</td>
+<td class="lastrow">
+6.50 [2.00, 57.0]
+</td>
+<td class="lastrow">
+8.00 [3.00, 85.0]
+</td>
+<td class="lastrow">
+6.00 [3.00, 76.0]
+</td>
+<td class="lastrow">
+7.00 [2.00, 85.0]
+</td>
+<td class="lastrow">
+6.00 [2.00, 76.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+estrone
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+28.7 (15.0)
+</td>
+<td>
+26.8 (12.0)
+</td>
+<td>
+32.3 (15.7)
+</td>
+<td>
+27.7 (13.2)
+</td>
+<td>
+29.8 (15.3)
+</td>
+<td>
+27.1 (12.3)
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Median [Min, Max]
+</td>
+<td>
+25.0 [10.0, 131]
+</td>
+<td>
+23.0 [13.0, 65.0]
+</td>
+<td>
+29.0 [11.0, 119]
+</td>
+<td>
+24.0 [12.0, 59.0]
+</td>
+<td>
+26.0 [10.0, 131]
+</td>
+<td>
+23.0 [12.0, 65.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Missing
+</td>
+<td class="lastrow">
+58 (19.5%)
+</td>
+<td class="lastrow">
+15 (31.3%)
+</td>
+<td class="lastrow">
+30 (22.2%)
+</td>
+<td class="lastrow">
+11 (37.9%)
+</td>
+<td class="lastrow">
+88 (20.3%)
+</td>
+<td class="lastrow">
+26 (33.8%)
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+testost
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+25.3 (13.2)
+</td>
+<td>
+22.2 (10.7)
+</td>
+<td>
+27.6 (16.1)
+</td>
+<td>
+28.2 (15.6)
+</td>
+<td>
+26.0 (14.2)
+</td>
+<td>
+24.4 (13.0)
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Median [Min, Max]
+</td>
+<td>
+23.0 [4.00, 111]
+</td>
+<td>
+21.5 [8.00, 63.0]
+</td>
+<td>
+25.0 [6.00, 144]
+</td>
+<td>
+24.0 [10.0, 69.0]
+</td>
+<td>
+23.0 [4.00, 144]
+</td>
+<td>
+22.0 [8.00, 69.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Missing
+</td>
+<td class="lastrow">
+6 (2.0%)
+</td>
+<td class="lastrow">
+2 (4.2%)
+</td>
+<td class="lastrow">
+3 (2.2%)
+</td>
+<td class="lastrow">
+1 (3.4%)
+</td>
+<td class="lastrow">
+9 (2.1%)
+</td>
+<td class="lastrow">
+3 (3.9%)
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+prolactn
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+9.60 (5.10)
+</td>
+<td>
+13.7 (12.3)
+</td>
+<td>
+10.8 (6.79)
+</td>
+<td>
+9.57 (3.29)
+</td>
+<td>
+9.99 (5.70)
+</td>
+<td>
+12.2 (10.1)
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Median [Min, Max]
+</td>
+<td>
+8.16 [1.96, 37.3]
+</td>
+<td>
+8.81 [3.87, 55.8]
+</td>
+<td>
+9.30 [2.66, 59.9]
+</td>
+<td>
+8.88 [4.49, 17.6]
+</td>
+<td>
+8.64 [1.96, 59.9]
+</td>
+<td>
+8.84 [3.87, 55.8]
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Missing
+</td>
+<td class="lastrow">
+14 (4.7%)
+</td>
+<td class="lastrow">
+0 (0%)
+</td>
+<td class="lastrow">
+6 (4.4%)
+</td>
+<td class="lastrow">
+1 (3.4%)
+</td>
+<td class="lastrow">
+20 (4.6%)
+</td>
+<td class="lastrow">
+1 (1.3%)
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 <!--/html_preserve-->
-<p>We have 40 participants in a study, split into equal control and
-treatment groups, and describe the distribution of Sex, Age and Weight
-in both the two groups, and overall.</p>
-<p>A number of packages making it easy to make a Table One exists. Here
-we look at the package <code>table1</code>.</p>
-<p>The specific way of doing it depends on the data available. If we do
-not have data on the weight of the participants, we are not able to
-describe the distribution of their weight.</p>
-<p>But the table above was made in this way:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">table1</span><span class="op">)</span></span>
-<span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">sex</span> <span class="op">+</span> <span class="va">age</span> <span class="op">+</span> <span class="va">weight</span><span class="op">|</span><span class="va">treatment</span>, data <span class="op">=</span> <span class="va">dat</span><span class="op">)</span></span></code></pre>
-</div>
-<p>We specify that we would like a table that is a function of
-<code>sex</code>, <code>age</code> and <code>wt</code>, and we would
-like it split into groups based on the values in the
-<code>treatment</code></p>
-<p>It might be instructive to take a look at how the data was prepared.
-First the data it self:</p>
-<div class="codewrapper sourceCode" id="cb4">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu">expand.grid</span><span class="op">(</span>id<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, sex<span class="op">=</span><span class="fu">c</span><span class="op">(</span><span class="st">"Male"</span>, <span class="st">"Female"</span><span class="op">)</span>, treatment<span class="op">=</span><span class="fu">c</span><span class="op">(</span><span class="st">"Treated"</span>, <span class="st">"Placebo"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">dat</span><span class="op">$</span><span class="va">age</span> <span class="op">&lt;-</span> <span class="fu">runif</span><span class="op">(</span><span class="fu">nrow</span><span class="op">(</span><span class="va">dat</span><span class="op">)</span>, <span class="fl">10</span>, <span class="fl">50</span><span class="op">)</span></span>
-<span><span class="va">dat</span><span class="op">$</span><span class="va">age</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span>  <span class="co"># Add a missing value</span></span>
-<span><span class="va">dat</span><span class="op">$</span><span class="va">weight</span> <span class="op">&lt;-</span> <span class="fu">exp</span><span class="op">(</span><span class="fu">rnorm</span><span class="op">(</span><span class="fu">nrow</span><span class="op">(</span><span class="va">dat</span><span class="op">)</span>, <span class="fu">log</span><span class="op">(</span><span class="fl">70</span><span class="op">)</span>, <span class="fl">0.2</span><span class="op">)</span><span class="op">)</span></span></code></pre>
-</div>
-<p>The interesting part occurs here, where we add labels to the data.
-That allows us to control the headings in the table:</p>
-<div class="codewrapper sourceCode" id="cb5">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">sex</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Sex"</span></span>
-<span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">age</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Age"</span></span>
-<span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">treatment</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Treatment Group"</span></span>
-<span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">weight</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Weight"</span></span></code></pre>
-</div>
-<p>It can be beneficial to add information about units of the data:</p>
+<p>It is a good idea, and increases readability, to add labels and units
+to the variables. The <code>table1</code> package provides functions for
+that:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">age</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"years"</span></span>
-<span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">weight</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"kg"</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">curpmh</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"current_pmh"</span></span>
+<span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">case</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"case_control"</span></span>
+<span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">ageblood</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Age"</span></span>
+<span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">ageblood</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"years"</span></span>
+<span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">estradol</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"pg/mL"</span></span>
+<span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">estrone</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"pg/mL"</span></span></code></pre>
 </div>
+<p>Which looks a bit nicer:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span><span class="op">+</span><span class="va">estradol</span><span class="op">+</span><span class="va">estrone</span><span class="op">+</span><span class="va">testost</span><span class="op">+</span><span class="va">prolactn</span><span class="op">|</span><span class="va">case</span><span class="op">+</span><span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">dat</span><span class="op">)</span></span></code></pre>
+</div>
+<!--html_preserve-->
+<div class="Rtable1">
+<table class="table Rtable1">
+<thead>
+<tr>
+<th class="grouplabel">
+</th>
+<th colspan="2" class="grouplabel">
+<div>
+control
+</div>
+</th>
+<th colspan="2" class="grouplabel">
+<div>
+case
+</div>
+</th>
+<th colspan="2" class="grouplabel">
+<div>
+Overall
+</div>
+</th>
+</tr>
+<tr>
+<th class="rowlabel firstrow lastrow">
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">no<br><span class="stratn">(N=298)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">yes<br><span class="stratn">(N=48)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">no<br><span class="stratn">(N=135)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">yes<br><span class="stratn">(N=29)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">no<br><span class="stratn">(N=433)</span></span>
+</th>
+<th class="firstrow lastrow">
+<span class="stratlabel">yes<br><span class="stratn">(N=77)</span></span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="rowlabel firstrow">
+Age (years)
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+61.3 (4.75)
+</td>
+<td>
+58.9 (5.68)
+</td>
+<td>
+61.5 (4.85)
+</td>
+<td>
+58.1 (5.32)
+</td>
+<td>
+61.4 (4.78)
+</td>
+<td>
+58.6 (5.53)
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Median [Min, Max]
+</td>
+<td class="lastrow">
+62.0 [46.0, 69.0]
+</td>
+<td class="lastrow">
+59.0 [46.0, 68.0]
+</td>
+<td class="lastrow">
+62.0 [45.0, 69.0]
+</td>
+<td class="lastrow">
+58.0 [49.0, 68.0]
+</td>
+<td class="lastrow">
+62.0 [45.0, 69.0]
+</td>
+<td class="lastrow">
+58.0 [46.0, 68.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+estradol (pg/mL)
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+8.05 (5.29)
+</td>
+<td>
+8.73 (8.84)
+</td>
+<td>
+10.5 (9.72)
+</td>
+<td>
+10.6 (13.7)
+</td>
+<td>
+8.81 (7.06)
+</td>
+<td>
+9.44 (10.9)
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Median [Min, Max]
+</td>
+<td class="lastrow">
+6.00 [2.00, 46.0]
+</td>
+<td class="lastrow">
+6.50 [2.00, 57.0]
+</td>
+<td class="lastrow">
+8.00 [3.00, 85.0]
+</td>
+<td class="lastrow">
+6.00 [3.00, 76.0]
+</td>
+<td class="lastrow">
+7.00 [2.00, 85.0]
+</td>
+<td class="lastrow">
+6.00 [2.00, 76.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+estrone (pg/mL)
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+28.7 (15.0)
+</td>
+<td>
+26.8 (12.0)
+</td>
+<td>
+32.3 (15.7)
+</td>
+<td>
+27.7 (13.2)
+</td>
+<td>
+29.8 (15.3)
+</td>
+<td>
+27.1 (12.3)
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Median [Min, Max]
+</td>
+<td>
+25.0 [10.0, 131]
+</td>
+<td>
+23.0 [13.0, 65.0]
+</td>
+<td>
+29.0 [11.0, 119]
+</td>
+<td>
+24.0 [12.0, 59.0]
+</td>
+<td>
+26.0 [10.0, 131]
+</td>
+<td>
+23.0 [12.0, 65.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Missing
+</td>
+<td class="lastrow">
+58 (19.5%)
+</td>
+<td class="lastrow">
+15 (31.3%)
+</td>
+<td class="lastrow">
+30 (22.2%)
+</td>
+<td class="lastrow">
+11 (37.9%)
+</td>
+<td class="lastrow">
+88 (20.3%)
+</td>
+<td class="lastrow">
+26 (33.8%)
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+testost
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+25.3 (13.2)
+</td>
+<td>
+22.2 (10.7)
+</td>
+<td>
+27.6 (16.1)
+</td>
+<td>
+28.2 (15.6)
+</td>
+<td>
+26.0 (14.2)
+</td>
+<td>
+24.4 (13.0)
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Median [Min, Max]
+</td>
+<td>
+23.0 [4.00, 111]
+</td>
+<td>
+21.5 [8.00, 63.0]
+</td>
+<td>
+25.0 [6.00, 144]
+</td>
+<td>
+24.0 [10.0, 69.0]
+</td>
+<td>
+23.0 [4.00, 144]
+</td>
+<td>
+22.0 [8.00, 69.0]
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Missing
+</td>
+<td class="lastrow">
+6 (2.0%)
+</td>
+<td class="lastrow">
+2 (4.2%)
+</td>
+<td class="lastrow">
+3 (2.2%)
+</td>
+<td class="lastrow">
+1 (3.4%)
+</td>
+<td class="lastrow">
+9 (2.1%)
+</td>
+<td class="lastrow">
+3 (3.9%)
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+prolactn
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD)
+</td>
+<td>
+9.60 (5.10)
+</td>
+<td>
+13.7 (12.3)
+</td>
+<td>
+10.8 (6.79)
+</td>
+<td>
+9.57 (3.29)
+</td>
+<td>
+9.99 (5.70)
+</td>
+<td>
+12.2 (10.1)
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Median [Min, Max]
+</td>
+<td>
+8.16 [1.96, 37.3]
+</td>
+<td>
+8.81 [3.87, 55.8]
+</td>
+<td>
+9.30 [2.66, 59.9]
+</td>
+<td>
+8.88 [4.49, 17.6]
+</td>
+<td>
+8.64 [1.96, 59.9]
+</td>
+<td>
+8.84 [3.87, 55.8]
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Missing
+</td>
+<td class="lastrow">
+14 (4.7%)
+</td>
+<td class="lastrow">
+0 (0%)
+</td>
+<td class="lastrow">
+6 (4.4%)
+</td>
+<td class="lastrow">
+1 (3.4%)
+</td>
+<td class="lastrow">
+20 (4.6%)
+</td>
+<td class="lastrow">
+1 (1.3%)
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--/html_preserve-->
 </section><section><h2 class="section-heading" id="more-advanced-stuff">More advanced stuff<a class="anchor" aria-label="anchor" href="#more-advanced-stuff"></a>
 </h2>
 <hr class="half-width">
@@ -2179,7 +3353,7 @@ control how continuous and categorical data respecetively, is shown in
 the table.</p>
 <p>The simple way of doing that is by using abbrevieated function
 names:</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2187,186 +3361,11 @@ names:</p>
 <span>        render.continuous<span class="op">=</span><span class="fu">c</span><span class="op">(</span>.<span class="op">=</span><span class="st">"Mean (SD%)"</span>, .<span class="op">=</span><span class="st">"Median [Min, Max]"</span>,</span>
 <span>                           <span class="st">"Geom. mean (Geo. SD%)"</span><span class="op">=</span><span class="st">"GMEAN (GSD%)"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
-<!--html_preserve-->
-<div class="Rtable1">
-<table class="table Rtable1">
-<thead><tr>
-<th class="rowlabel firstrow lastrow">
-</th>
-<th class="firstrow lastrow">
-<span class="stratlabel">Treated<br><span class="stratn">(N=20)</span></span>
-</th>
-<th class="firstrow lastrow">
-<span class="stratlabel">Placebo<br><span class="stratn">(N=20)</span></span>
-</th>
-<th class="firstrow lastrow">
-<span class="stratlabel">Overall<br><span class="stratn">(N=40)</span></span>
-</th>
-</tr></thead>
-<tbody>
-<tr>
-<td class="rowlabel firstrow">
-Sex
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Male
-</td>
-<td>
-10 (50.0%)
-</td>
-<td>
-10 (50.0%)
-</td>
-<td>
-20 (50.0%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Female
-</td>
-<td class="lastrow">
-10 (50.0%)
-</td>
-<td class="lastrow">
-10 (50.0%)
-</td>
-<td class="lastrow">
-20 (50.0%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-Age (years)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Mean (SD%)
-</td>
-<td>
-30.7 (10.3%)
-</td>
-<td>
-29.9 (12.6%)
-</td>
-<td>
-30.3 (11.4%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median [Min, Max]
-</td>
-<td>
-34.1 [13.4, 43.7]
-</td>
-<td>
-32.6 [11.7, 48.6]
-</td>
-<td>
-33.1 [11.7, 48.6]
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Geom. mean (Geo. SD%)
-</td>
-<td>
-28.9 (1.47%)
-</td>
-<td>
-27.1 (1.62%)
-</td>
-<td>
-27.9 (1.54%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Missing
-</td>
-<td class="lastrow">
-1 (5.0%)
-</td>
-<td class="lastrow">
-0 (0%)
-</td>
-<td class="lastrow">
-1 (2.5%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-Weight (kg)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Mean (SD%)
-</td>
-<td>
-73.3 (12.9%)
-</td>
-<td>
-69.0 (16.9%)
-</td>
-<td>
-71.1 (15.0%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median [Min, Max]
-</td>
-<td>
-74.4 [50.3, 94.8]
-</td>
-<td>
-64.6 [43.8, 101]
-</td>
-<td>
-73.5 [43.8, 101]
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Geom. mean (Geo. SD%)
-</td>
-<td class="lastrow">
-72.2 (1.20%)
-</td>
-<td class="lastrow">
-67.1 (1.27%)
-</td>
-<td class="lastrow">
-69.6 (1.24%)
-</td>
-</tr>
-</tbody>
-</table>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>Error in eval(predvars, data, env): object 'sex' not found</code></pre>
 </div>
-<!--/html_preserve-->
 <p><code>table1</code> recognizes the following summary statisticis: N,
 NMISS, MEAN, SD, CV, GMEAN, GCV, MEDIAN, MIN, MAX, IQR, Q1, Q2, Q3, T1,
 T2, FREQ, PCT</p>
@@ -2399,7 +3398,7 @@ geometric standard deviation. Change the code to write out “Geom.” and
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2424,7 +3423,7 @@ product. In general:</p>
 <hr class="half-width">
 <p>If we want to specify the summary statistics very precisely, we have
 to define a function ourself:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2435,158 +3434,11 @@ to define a function ourself:</p>
 <span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">sex</span> <span class="op">+</span> <span class="va">age</span> <span class="op">+</span> <span class="va">weight</span><span class="op">|</span><span class="va">treatment</span>, data <span class="op">=</span> <span class="va">dat</span>,</span>
 <span>render.continuous <span class="op">=</span> <span class="va">my_summary</span><span class="op">)</span></span></code></pre>
 </div>
-<!--html_preserve-->
-<div class="Rtable1">
-<table class="table Rtable1">
-<thead><tr>
-<th class="rowlabel firstrow lastrow">
-</th>
-<th class="firstrow lastrow">
-<span class="stratlabel">Treated<br><span class="stratn">(N=20)</span></span>
-</th>
-<th class="firstrow lastrow">
-<span class="stratlabel">Placebo<br><span class="stratn">(N=20)</span></span>
-</th>
-<th class="firstrow lastrow">
-<span class="stratlabel">Overall<br><span class="stratn">(N=40)</span></span>
-</th>
-</tr></thead>
-<tbody>
-<tr>
-<td class="rowlabel firstrow">
-Sex
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Male
-</td>
-<td>
-10 (50.0%)
-</td>
-<td>
-10 (50.0%)
-</td>
-<td>
-20 (50.0%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Female
-</td>
-<td class="lastrow">
-10 (50.0%)
-</td>
-<td class="lastrow">
-10 (50.0%)
-</td>
-<td class="lastrow">
-20 (50.0%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-Age (years)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median
-</td>
-<td>
-34.082
-</td>
-<td>
-32.587
-</td>
-<td>
-33.125
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Variance
-</td>
-<td>
-106.3
-</td>
-<td>
-157.8
-</td>
-<td>
-129.4
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Missing
-</td>
-<td class="lastrow">
-1 (5.0%)
-</td>
-<td class="lastrow">
-0 (0%)
-</td>
-<td class="lastrow">
-1 (2.5%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-Weight (kg)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median
-</td>
-<td>
-74.375
-</td>
-<td>
-64.565
-</td>
-<td>
-73.535
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Variance
-</td>
-<td class="lastrow">
-166.0
-</td>
-<td class="lastrow">
-284.8
-</td>
-<td class="lastrow">
-224.4
-</td>
-</tr>
-</tbody>
-</table>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>Error in eval(predvars, data, env): object 'sex' not found</code></pre>
 </div>
-<!--/html_preserve-->
 <p>We do not <em>need</em> to use the <code>sprintf()</code> function,
 but it is a very neat way of combining text with numeric variables
 because it allows us to format them directly.</p>
@@ -2611,7 +3463,7 @@ specifying <code>render.categorical</code>.</p>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2640,7 +3492,7 @@ point.</p>
 <div class="callout-content">
 <p>Note that in the function, we define a vector as output, with three
 elements:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2665,7 +3517,7 @@ straightforward.</p>
 <div class="accordion-body">
 <p>Try to remove the empty string from the function, and use it is a
 table one as previously shown:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2716,7 +3568,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-tidy-data"><p>Content from <a href="tidy-data.html">Tidy Data</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/tidy-data.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -2872,7 +3724,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-normal-distribution"><p>Content from <a href="normal-distribution.html">The normal distribution</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/normal-distribution.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -3085,7 +3937,7 @@ funktioner.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1]  0.51598111 -0.64990533  0.18519065 -0.06793341 -0.04465254</code></pre>
+<pre class="output" tabindex="0"><code>[1]  1.5567612 -0.4486503 -0.3164672  2.3112419  0.8082093</code></pre>
 </div>
 <p>Den returnerer (her) fem tilfældige værdier fra en normalfordeling
 med (her) middelværdi 0 og standardafvigelse 1.</p>
@@ -3181,7 +4033,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-is-it-normal"><p>Content from <a href="is-it-normal.html">Testing for normality</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/is-it-normal.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -3626,7 +4478,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-which-distribution"><p>Content from <a href="which-distribution.html">How is the data distributed?</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/which-distribution.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -3695,7 +4547,7 @@ in USA. We only look at eruptions that lasts longer than 3 minutes:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Det er nødvendigt at specificere at vi bruger
 <code>dplyr::select</code> da den maskeres af MASS-pakken</p>
@@ -3936,7 +4788,7 @@ actually be better.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>Og her er det vi holder dem fast på at det faktisk er dem selv der er
 de bedst kvalificerede til at afgøre det. For det er dem der forstår
@@ -4086,7 +4938,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-linear-regression"><p>Content from <a href="linear-regression.html">Linear regression</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/linear-regression.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -4192,7 +5044,7 @@ bad.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Bremselængden er faktisk ikke en lineær funktion af hastigheden.
 Bilen har kinetisk (bevægelses) energi så længe den bevæger sig. Den
@@ -4322,7 +5174,7 @@ mph?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>3.932*12.5 - 17.579 = 31.571 ft</p>
 </div>
@@ -4345,7 +5197,7 @@ mph?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Yep. We might be able to measure the speed with the implied
 precision. But the prediction implies a precision on the scale of
@@ -4541,7 +5393,7 @@ distributed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4577,7 +5429,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-multiple-linear-regression"><p>Content from <a href="multiple-linear-regression.html">Multiple Linear Regression</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/multiple-linear-regression.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -4592,8 +5444,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>How do you run a multiple linear regression?</li>
+<li>What about conditional effects?</li>
 </ul>
 </div>
 </div>
@@ -4604,8 +5456,6 @@ any links that you are not going to use.
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
 </ul>
 </div>
 </div>
@@ -4889,7 +5739,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-logistic-regression"><p>Content from <a href="logistic-regression.html">Logistisk regression</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/logistic-regression.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -4904,8 +5754,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>How do you run a logistic regression?</li>
 </ul>
 </div>
 </div>
@@ -5020,7 +5869,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-clt"><p>Content from <a href="clt.html">Central Limit Theorem</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/clt.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -5084,7 +5933,7 @@ This is definitely not normally distributed.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.4941153</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.4531108</code></pre>
 </div>
 <p>The important point of the Central Limit Theorem is, that if we take
 a large number of random samples, and calculate the mean of each of
@@ -5100,7 +5949,7 @@ this:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.4418323</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.4882455</code></pre>
 </div>
 <p>And we can use the <code>replicate()</code> function to repeat that
 calculation several times, in this case 1000 times:</p>
@@ -5151,7 +6000,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-barcharts"><p>Content from <a href="barcharts.html">Nicer barcharts</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/barcharts.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -5594,7 +6443,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-powerberegninger"><p>Content from <a href="powerberegninger.html">powerberegninger</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/powerberegninger.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -5914,7 +6763,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-kmeans"><p>Content from <a href="kmeans.html">k-means</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/kmeans.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -6076,31 +6925,31 @@ work with afterwards:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 62, 69, 47
+<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 62, 47, 69
 
 Cluster means:
    Alcohol Malicacid      Ash Alcalinityofash Magnesium Totalphenols Flavanoids
 1 12.92984  2.504032 2.408065        19.89032 103.59677     2.111129   1.584032
-2 12.51667  2.494203 2.288551        20.82319  92.34783     2.070725   1.758406
-3 13.80447  1.883404 2.426170        17.02340 105.51064     2.867234   3.014255
+2 13.80447  1.883404 2.426170        17.02340 105.51064     2.867234   3.014255
+3 12.51667  2.494203 2.288551        20.82319  92.34783     2.070725   1.758406
   Nonflavanoidphenols Proanthocyanins Colorintensity       Hue
 1           0.3883871        1.503387       5.650323 0.8839677
-2           0.3901449        1.451884       4.086957 0.9411594
-3           0.2853191        1.910426       5.702553 1.0782979
+2           0.2853191        1.910426       5.702553 1.0782979
+3           0.3901449        1.451884       4.086957 0.9411594
   OD280OD315ofdilutedwines   Proline
 1                 2.365484  728.3387
-2                 2.490725  458.2319
-3                 3.114043 1195.1489
+2                 3.114043 1195.1489
+3                 2.490725  458.2319
 
 Clustering vector:
-  [1] 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 1 1 3 3 1 1 3 3 1 3 3 3 3 3 3 1 1
- [38] 3 3 1 1 3 3 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 1 2 1 2 2 1 2 2 1 1 1 2 2 3
- [75] 1 2 2 2 1 2 2 1 1 2 2 2 2 2 1 1 2 2 2 2 2 1 1 2 1 2 1 2 2 2 1 2 2 2 2 1 2
-[112] 2 1 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 1 2 2 1 1 1 1 2 2 2 1 1 2 2 1 1 2 1
-[149] 1 2 2 2 2 1 1 1 2 1 1 1 2 1 2 1 1 2 1 1 1 1 2 2 1 1 1 1 1 2
+  [1] 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 2 2 1 1 2 2 1 2 2 2 2 2 2 1 1
+ [38] 2 2 1 1 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 3 1 3 3 1 3 3 1 1 1 3 3 2
+ [75] 1 3 3 3 1 3 3 1 1 3 3 3 3 3 1 1 3 3 3 3 3 1 1 3 1 3 1 3 3 3 1 3 3 3 3 1 3
+[112] 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 1 3 3 1 1 1 1 3 3 3 1 1 3 3 1 1 3 1
+[149] 1 3 3 3 3 1 1 1 3 1 1 1 3 1 3 1 1 3 1 1 1 1 3 3 1 1 1 1 1 3
 
 Within cluster sum of squares by cluster:
-[1]  566572.5  443166.7 1360950.5
+[1]  566572.5 1360950.5  443166.7
  (between_SS / total_SS =  86.5 %)
 
 Available components:
@@ -6123,8 +6972,8 @@ found, and match them with the true values, and count the matches:</p>
 <pre class="output" tabindex="0"><code>     true
 quess  1  2  3
     1 13 20 29
-    2  0 50 19
-    3 46  1  0</code></pre>
+    2 46  1  0
+    3  0 50 19</code></pre>
 </div>
 <p>The algorithm have no idea about the numbering, the three groups are
 numbered 1 to 3 randomly. It appears that cluster 2 from the algorithm
@@ -6337,7 +7186,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-factor-analysis"><p>Content from <a href="factor-analysis.html">Factor Analysis</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/factor-analysis.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -6395,7 +7244,7 @@ faktisk fik identificeret faktorerne.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>This is lavaan 0.6-18
+<pre class="output" tabindex="0"><code>This is lavaan 0.6-19
 lavaan is FREE software! Please report any bugs.</code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb3">
@@ -6798,7 +7647,7 @@ springe over hvor det er højest.)</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>lavaan 0.6-18 ended normally after 35 iterations
+<pre class="output" tabindex="0"><code>lavaan 0.6-19 ended normally after 35 iterations
 
   Estimator                                         ML
   Optimization method                           NLMINB
@@ -6824,7 +7673,7 @@ ret godt.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>lavaan 0.6-18 ended normally after 35 iterations
+<pre class="output" tabindex="0"><code>lavaan 0.6-19 ended normally after 35 iterations
 
   Estimator                                         ML
   Optimization method                           NLMINB
@@ -7022,7 +7871,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-structure-you-work"><p>Content from <a href="structure-you-work.html">structure-you-work</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/structure-you-work.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -7083,7 +7932,7 @@ locally</li>
 </div>
 </div></section><section id="aio-fence-test"><p>Content from <a href="fence-test.html">fence-test</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/fence-test.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -7243,13 +8092,13 @@ gør vi også.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
 <p>1</p>
 </div>
-<div id="nav-tabpanel-1-Mac" class="tab-pane" aria-labelledby="nav-tab-1-Mac" role="tabpanel">
+<div id="nav-tabpanel-1-Mac" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Mac">
 <p>2</p>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
 <p>3</p>
 </div>
 </div>
@@ -7278,16 +8127,16 @@ gør vi også.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
 <p>4</p>
 </div>
-<div id="nav-tabpanel-2-Mac" class="tab-pane" aria-labelledby="nav-tab-2-Mac" role="tabpanel">
+<div id="nav-tabpanel-2-Mac" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Mac">
 <p>5</p>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
 <p>6</p>
 </div>
-<div id="nav-tabpanel-2-Windows" class="tab-pane" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
+<div id="nav-tabpanel-2-Windows" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
 <p>7</p>
 </div>
 </div>
@@ -7318,7 +8167,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-design-principles"><p>Content from <a href="design-principles.html">design-principles</a></p>
 <hr>
-<p>Last updated on 2024-09-24 |
+<p>Last updated on 2024-09-30 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/episodes/design-principles.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -7556,8 +8405,8 @@ any links that you are not going to use.
   "url": "https://KUBDatalab.github.io/R-toolbox/instructor/aio.html",
   "identifier": "https://KUBDatalab.github.io/R-toolbox/instructor/aio.html",
   "dateCreated": "2024-04-09",
-  "dateModified": "2024-09-24",
-  "datePublished": "2024-09-24"
+  "dateModified": "2024-09-30",
+  "datePublished": "2024-09-30"
 }
 
   </script><script>
