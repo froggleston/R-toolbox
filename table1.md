@@ -258,10 +258,10 @@ The data contains missing values, coded as "999.0" for estrone and testost, and
 99.99 for prolactin:
 
 ``` r
-dat <- dat %>%
-    mutate(estrone = na_if(estrone, 999)) %>%
-    mutate(testost = na_if(testost, 999)) %>%
-    mutate(prolactn = na_if(prolactn, 99.99))
+dat <- dat %>% 
+  mutate(estrone = na_if(estrone, 999.0)) %>% 
+  mutate(testost = na_if(testost, 999.0)) %>% 
+  mutate(prolactn = na_if(prolactn, 99.99)) 
 ```
 
 
@@ -270,9 +270,9 @@ adjust the labels of those categorical values:
 
 
 ``` r
-dat <- dat %>%
-    mutate(case = factor(case, labels = c("control", "case"))) %>%
-    mutate(curpmh = factor(curpmh, labels = c("no", "yes")))
+dat <- dat %>% 
+  mutate(case = factor(case, labels = c("control", "case"))) %>% 
+  mutate(curpmh = factor(curpmh, labels = c("no", "yes")))
 ```
 
 And now we can make our table one like this:
