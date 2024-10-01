@@ -31,4 +31,4 @@
 "learners/setup.md" "0c80507a6a78380e67338e8e60563b20" "site/built/setup.md" "2024-10-01"
 "poster/poster_dk.Rmd" "721a2b68eeb0b61308158bce41c6ae21" "site/built/poster_dk.md" "2024-10-01"
 "profiles/learner-profiles.md" "5fe5bf7537072422b91ed393ada03f9a" "site/built/learner-profiles.md" "2024-10-01"
-"renv/profiles/lesson-requirements/renv.lock" "e9e99c44f55a362d77b30d667dba435d" "site/built/renv.lock" "2024-10-01"
+"renv/profiles/lesson-requirements/renv.lock" "7062a1c4c940247fed3673883060ea31" "site/built/renv.lock" "2024-10-01"
