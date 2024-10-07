@@ -469,7 +469,7 @@ Blood samples were drawn after 6, 8, 10 and 12 weeks.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <table class="table"><colgroup><col width="17%"><col width="71%"><col width="11%"></colgroup><thead><tr class="header"><th>Variable</th>
 <th>Description/Code</th>
@@ -528,7 +528,7 @@ group.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
@@ -592,7 +592,7 @@ well as other factors, details in metadata below.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>The data set is rather wide, and the columns are split up in this
 describtion.</p>
@@ -697,7 +697,7 @@ condition in both legs leading to 70 observations in the dataset.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Code</th>
@@ -754,9 +754,34 @@ condition in both legs leading to 70 observations in the dataset.</p>
 </div>
 <div class="section level3">
 <h3 id="breast">BREAST<a class="anchor" aria-label="anchor" href="#breast"></a></h3>
+<p>A dataset describing 1200 women in the NHS. In 1990 it was confirmed
+that they were postmenopausal and free of any cancer. The selection was
+done so that 200 of the women were using postmenopausal hormones (PMH)
+in 1990, and 1000 had never used PMH. The objective was to identify a
+possible relation between incidence of breast cancer between 1990 to
+2000 with PMH use in 1990.</p>
+<p>The objective was to relate breast cancer incidence from 1990 to 2000
+with PMH use in 1990. Data on PMH use are found in three variables,
+<code>pmh</code> registers PMH use in 1990, where <code>dur3</code> and
+<code>dur4</code> registers length of use of two different PMH. In the
+variable <code>foluptm</code> the time between the first questionnaire
+(in 1990), and a follow up date is recorded in months. If a control that
+follow up date was the date of the last questionnaire in 2000, if a
+case, the date of diagnosis of breast cancer. Other cancer risk factors
+are recorded.</p>
 <p><a href="#rosner_1">source</a><sup>1</sup></p>
 <p><a href="https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/BREAST.csv" class="external-link">Download</a></p>
-<table class="table"><colgroup><col width="12%"><col width="78%"><col width="9%"></colgroup><thead><tr class="header"><th>variable</th>
+<div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
+  <h3 class="accordion-header" id="headingSpoiler5">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Metadata
+  </h3>
+</button>
+<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div class="accordion-body">
+<table class="table"><colgroup><col width="12%"><col width="76%"><col width="12%"></colgroup><thead><tr class="header"><th>variable</th>
 <th>Description</th>
 <th>unit</th>
 </tr></thead><tbody><tr class="odd"><td>Id</td>
@@ -765,10 +790,10 @@ condition in both legs leading to 70 observations in the dataset.</p>
 </tr><tr class="even"><td>case</td>
 <td>case</td>
 <td></td>
-</tr><tr class="odd"><td>case</td>
+</tr><tr class="odd"><td></td>
 <td>1 = case</td>
 <td></td>
-</tr><tr class="even"><td>case</td>
+</tr><tr class="even"><td></td>
 <td>0 = control</td>
 <td></td>
 </tr><tr class="odd"><td>age</td>
@@ -787,22 +812,40 @@ condition in both legs leading to 70 observations in the dataset.</p>
 <td>parity</td>
 <td></td>
 </tr><tr class="even"><td>bbd</td>
-<td>Benign Breast disease 1=yes/0=no</td>
+<td>Benign Breast disease</td>
+<td></td>
+</tr><tr class="odd"><td></td>
+<td>1 = yes</td>
+<td></td>
+</tr><tr class="even"><td></td>
+<td>0 = no</td>
 <td></td>
 </tr><tr class="odd"><td>famhx</td>
-<td>family history breast cancer 1=yes/0=no</td>
+<td>family history breast cancer</td>
+<td></td>
+</tr><tr class="even"><td></td>
+<td>1 = yes</td>
+<td></td>
+</tr><tr class="odd"><td></td>
+<td>0 = no</td>
 <td></td>
 </tr><tr class="even"><td>bmi</td>
-<td>BMI (kg/m**2)</td>
-<td></td>
+<td>BMI</td>
+<td>kg/m<sup>2</sup></td>
 </tr><tr class="odd"><td>hgt</td>
-<td>Height (inches)</td>
+<td>Height</td>
 <td>inches</td>
 </tr><tr class="even"><td>alcohol</td>
 <td>Alcohol use (grams/day)</td>
 <td>g/day</td>
 </tr><tr class="odd"><td>pmh</td>
-<td>PMH status 2=never user/3=current user</td>
+<td>PMH status</td>
+<td></td>
+</tr><tr class="even"><td></td>
+<td>2 = never user</td>
+<td></td>
+</tr><tr class="odd"><td></td>
+<td>3 = current user</td>
 <td></td>
 </tr><tr class="even"><td>dur3</td>
 <td>Duration of Estrogen use (months)</td>
@@ -811,10 +854,22 @@ condition in both legs leading to 70 observations in the dataset.</p>
 <td>Duration of Estrogen + progesterone use (months)</td>
 <td>months</td>
 </tr><tr class="even"><td>csmk</td>
-<td>Current Smoker 1=yes/0=no</td>
+<td>Current Smoker</td>
+<td></td>
+</tr><tr class="odd"><td></td>
+<td>1 = yes</td>
+<td></td>
+</tr><tr class="even"><td></td>
+<td>0 = no</td>
 <td></td>
 </tr><tr class="odd"><td>psmk</td>
-<td>Past smoker 1=yes/0=no</td>
+<td>Past smoker</td>
+<td></td>
+</tr><tr class="even"><td></td>
+<td>1 = yes</td>
+<td></td>
+</tr><tr class="odd"><td></td>
+<td>0 = no</td>
 <td></td>
 </tr><tr class="even"><td>foluptm</td>
 <td>Months of follow up Note: Some subjects provided no</td>
@@ -826,6 +881,10 @@ condition in both legs leading to 70 observations in the dataset.</p>
 <td>these people</td>
 <td></td>
 </tr></tbody></table></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="corneal">CORNEAL<a class="anchor" aria-label="anchor" href="#corneal"></a></h3>
 <p><a href="https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/CORNEAL.csv" class="external-link">Download</a></p>
