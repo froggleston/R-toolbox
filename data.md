@@ -804,6 +804,10 @@ CONTAIN NEUROLOGICAL TEST DATA
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/MICE.csv)
 
+:::: spoiler
+
+## Metadata
+
 |  Variable  |  Description           |
 |------------|------------------------|
 |  Id        |  ID                    |
@@ -816,6 +820,7 @@ CONTAIN NEUROLOGICAL TEST DATA
 |  B_amp     |  B AMP  9999=missing   |
 |  A_amp     |  A AMP  9999=missing   |
 
+::::
 
 ### NEPHRO
 
@@ -828,6 +833,10 @@ of several different aminoclycosides[^17]. Each row co
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/NEPHRO.csv)
 
+:::: spoiler
+
+## Metadata
+
 |  Variable  |  Description/Code                                  |
 |------------|----------------------------------------------------|
 |  name      |  Study name                                        |
@@ -838,13 +847,17 @@ of several different aminoclycosides[^17]. Each row co
 |  Samp_sz   |  Sample size                                       |
 |  Side_eff  |  Number with side effects                          |
 
-
+::::
 
 ### NIFED
 
 [source](#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/NIFED.csv)
+
+:::: spoiler
+
+## Metadata
 
 |  Variable  |  Description            |  Code                    |
 |------------|-------------------------|--------------------------|
@@ -859,6 +872,7 @@ of several different aminoclycosides[^17]. Each row co
 |  lv2sys    |  Level 2 systolic bp    |  mm Hg                   |
 |  lv3sys    |  Level 3 systolic bp    |  mm Hg                   |
 
+::::
 
 * Immediately prior to randomization.
 
@@ -880,16 +894,28 @@ Values of 999 indicates that either
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/OTO.csv)
 
-|  Variable  |  Description/Code                                    |
-|------------|------------------------------------------------------|
-|  Name      |  Study Name                                          |
-|  Id        |  Study Number                                        |
-|  Endpnt    |  Endpoint 1=efficacy/2=nephrotoxicity/3=ototoxicity  |
-|  Antibio   |  Antibiotic 1=Amikacin/2=Gentamicin/3=Netilmicin/    |
-|            |  4=Sisomycin/5=Tobramycin                            |
-|  Samp_sz   |  Sample Size                                         |
-|  Side_eff  |  Number with side effect                             |
+:::: spoiler
 
+## Metadata
+
+|  Variable  |  Description/Code        |
+|------------|--------------------------|
+|  Name      |  Study Name              |
+|  Id        |  Study Number            |
+|  Endpnt    |  Endpoint                |
+|            |  1 = efficacy            |
+|            |  2 = nephrotoxicity      |
+|            |  3 = ototoxicity         |
+|  Antibio   |  Antibiotic              |
+|            |  1 = Amikacin            |
+|            |  2 = Gentamicin          |
+|            |  3 = Netilmicin          |
+|            |  4 = Sisomycin           |
+|            |  5 = Tobramycin          |
+|  Samp_sz   |  Sample Size             |
+|  Side_eff  |  Number with side effect |
+
+::::
 
 ### PIRIFORM
 
@@ -897,20 +923,34 @@ Values of 999 indicates that either
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/PIRIFORM.csv)
 
-|  Variable  |  Code                                         |
-|------------|-----------------------------------------------|
-|  ID        |                                               |
-|  piriform  |  Piriformis Syndrome 1=Negative,  2=Positive  |
-|  sex       |  Sex  1=Male,  2=Female                       |
-|  age       |  Age                                          |
-|  maxchg    |  Max change between tibia and peroneal        |
+:::: spoiler
 
+## Metadata
+
+|  Variable  |  Code                                  |
+|------------|----------------------------------------|
+|  ID        |                                        |
+|  piriform  |  Piriformis Syndrome                   |
+|            |  1 = Negative                          |
+|            |  2 = Positive                          |
+|  sex       |  Sex                                   |
+|            |  1 = Male                              |
+|            |  2 = Female                            |
+|            |  Age                                   |
+|  maxchg    |  Max change between tibia and peroneal |
+
+::::
 
 ### SEXRAT
 
 [source](#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/SEXRAT.csv)
+
+:::: spoiler
+
+## Metadata
+
 
 |  Variable   |  code                 |
 |-------------|-----------------------|
@@ -922,6 +962,8 @@ Values of 999 indicates that either
 |  sx_5       |  Sex of 5th born      |
 |  sexchldn*  |  Sex of all children  |
 |  num_fam**  |  Number of families   |
+
+::::
 
 + For families with 5+ children, the sex of the first 5 children are listed.
 The number of children is given as 5 for such families.
@@ -939,18 +981,25 @@ such families.
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/SMOKE.csv)
 
-|  Variable  |  Code                                               |
-|------------|-----------------------------------------------------|
-|  ID        |  ID number                                          |
-|  Age       |  age                                                |
-|  Gender    |  Gender        1=male/2=female                      |
-|  Cig_day   |  Cigarettes/day                                     |
-|  CO        |  Carbon monoxide (CO) (X 10) missing=999            |
-|  Min_last  |  Minutes elapsed since last cigarette missing=9999  |
-|  LogCOadj  |  Log CO Adj * (X 1000)  missing=9999                |
-|  Day_abs   |  Days abstinent  Those abstinent less than 1 day    |
-|            |  were given a value of zero.                        |
+:::: spoiler
 
+## Metadata
+
+|  Variable  |  Code                                               | unit |
+|------------|-----------------------------------------------------|------|
+|  ID        |  ID number                                          |      |
+|  Age       |  age                                                |      |
+|  Gender    |  Gender                                             |      |
+|            |  1 = male                                           |      |
+|            |  2 = female                                         |      |
+|  Cig_day   |  Cigarettes/day                                     |      |
+|  CO        |  Carbon monoxide (CO) (X 10) missing=999            |      |
+|  Min_last  |  Minutes elapsed since last cigarette missing=9999  |      |
+|  LogCOadj  |  Log CO Adj * (X 1000)  missing=9999                |      |
+|  Day_abs   |  Days abstinent  Those abstinent less than 1 day    |      |
+|            |  were given a value of zero.                        |      |
+
+::::
 
 * This variable represents adjusted carbon monoxide (CO) values. CO values
 were adjusted for minutes elapsed since last cigarette smoked using the formula
@@ -964,26 +1013,37 @@ number of minutes elapsed since the last cigarette smoked.
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/SWISS.csv)
 
-|  Variable   |  Codes                                            |
-|-------------|---------------------------------------------------|
-|  ID         |  ID                                               |
-|  age (yrs)  |  age (yrs)                                        |
-|  group      |  Group    1=High NAPAP, 2=Low NAPAP, 3 = control  |
-|  creat_68   |  x.xx Serum Creatinine 1968 (mg/dL) 9.99=missing  |
-|  creat_69   |  x.xx Serum Creatinine 1969 (mg/dL) 9.99=missing  |
-|  creat_70   |  x.xx Serum Creatinine 1970 (mg/dL) 9.99=missing  |
-|  creat_71   |  x.xx Serum Creatinine 1971 (mg/dL) 9.99=missing  |
-|  creat_72   |  x.xx Serum Creatinine 1972 (mg/dL) 9.99=missing  |
-|  creat_75   |  x.xx Serum Creatinine 1975 (mg/dL) 9.99=missing  |
-|  creat_78   |  x.xx Serum Creatinine 1978 (mg/dL) 9.99=missing  |
+:::: spoiler
 
+## Metadata
 
+|  Variable   |  Codes                                            | unit    |
+|-------------|---------------------------------------------------|---------|
+|  ID         |  ID                                               |         | 
+|  age        |  age                                              | years   |
+|  group      |  Group                                            |         |
+|             |  1 = High NAPAP                                   |         |
+|             |  2 = Low NAPAP                                    |         |
+|             |  3 = control                                      |         |
+|  creat_68   |  Serum Creatinine 1968  9.99=missing              | (mg/dL) |
+|  creat_69   |  Serum Creatinine 1969  9.99=missing              | (mg/dL) |
+|  creat_70   |  Serum Creatinine 1970  9.99=missing              | (mg/dL) |
+|  creat_71   |  Serum Creatinine 1971  9.99=missing              | (mg/dL) |
+|  creat_72   |  Serum Creatinine 1972  9.99=missing              | (mg/dL) |
+|  creat_75   |  Serum Creatinine 1975  9.99=missing              | (mg/dL) |
+|  creat_78   |  Serum Creatinine 1978  9.99=missing              | (mg/dL) |
+
+::::
 
 ### TEAR
 
 [source](#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/TEAR.csv)
+
+:::: spoiler
+
+## Metadata
 
 |  Variable  |  Code                          |
 |------------|--------------------------------|
@@ -1049,26 +1109,34 @@ number of minutes elapsed since the last cigarette smoked.
 |  os10p151  |  OS 10 sec 15min post 1        |
 |  os10p152  |  OS 10 sec 15min post 2        | 
 
+::::
+
 ### TEMPERAT
 
 [source](#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/TEMPERAT.csv)
 
-|  Variable  |    LABEL                                 |
-|------------|------------------------------------------|
-|  Date      |  DATE (MDY)                              |
-|  Out_temp  |  OUTSIDE TEMERATURE  Degrees Fahrenheit  |
-|  Room      |  ROOM LOCATION                           |
-|  In_temp   |  INSIDE TEMPERATURE  Degrees Fahrenheit  |
-|  Cor_fac   |  CORRECTION FACTOR ADDED (1=YES 0=NO)    |
-|  Typ_wea   |  TYPE OF WEATHER                         |
-|            |           1=SUNNY                        |
-|            |           2=PARTLY CLOUDY                |
-|            |           3=CLOUDY                       |
-|            |           4=RAINY                        |
-|            |           5=FOGGY                        |
-|            |           9=MISSING                      |
+:::: spoiler
+
+## Metadata
+
+|  Variable  |    LABEL                                 | unit |
+|------------|------------------------------------------|------|
+|  Date      |  DATE (MDY)                              |      |
+|  Out_temp  |  OUTSIDE TEMERATURE  Degrees Fahrenheit  |      |
+|  Room      |  ROOM LOCATION                           |      |
+|  In_temp   |  INSIDE TEMPERATURE  Degrees Fahrenheit  |      |
+|  Cor_fac   |  CORRECTION FACTOR ADDED (1=YES 0=NO)    |      |
+|  Typ_wea   |  TYPE OF WEATHER                         |      |
+|            |  1 = SUNNY                        |      |
+|            |  2 = PARTLY CLOUDY                |      |
+|            |  3 = CLOUDY                       |      |
+|            |  4 = RAINY                        |      |
+|            |  5 = FOGGY                        |      |
+|            |  9 = MISSING                      |      |
+
+::::
 
 ### TENNIS1
 
@@ -1076,62 +1144,70 @@ number of minutes elapsed since the last cigarette smoked.
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/TENNIS1.csv)
 
-|  VARIABLE  |  VARIABLE NAME                                    |
-|------------|---------------------------------------------------|
-|  Id        |  ID                                               |
-|  Age       |  AGE    99=MISSING                                |
-|  Sex       |  SEX   1=MALE / 2=FEMALE                          |
-|  Num_epis  |  NUMBER OF EPISODES OF TENNIS ELBOW 9=MISSING     |
-|  Typ_last  |  TYPE OF RACQUET USED DURING LAST EPISODE         |
-|            |          1=CONVENTIONAL SIZE                      |
-|            |          2=MID-SIZE                               |
-|            |          3=OVER-SIZE                              |
-|            |          9=MISSING                                |
-|  Wgt_last  |  WEIGHT OF RACQUET USED DURING LAST EPISODE       |
-|            |          1=HEAVY                                  |
-|            |          2=MEDIUM                                 |
-|            |          3=LIGHT                                  |
-|            |          4=DON'T KNOW                             |
-|            |          9=MISSING                                |
-|  Mat_last  |  MATERIAL OF RACQUET USED DURING LAST EPISODE     |
-|            |          1=WOOD                                   |
-|            |          2=ALUMINUM                               |
-|            |          3=FIBERGLASS AND COMPOSITE               |
-|            |          4=GRAPHITE                               |
-|            |          5=STEEL                                  |
-|            |          6=COMPOSITE                              |
-|            |          7=OTHER                                  |
-|            |          9=MISSING                                |
-|  Str_last  |  STRING TYPE OF RACQUET USED DURING LAST EPISODE  |
-|            |          1=NYLON                                  |
-|            |          2=GUT                                    |
-|            |          3=DON'T KNOW                             |
-|            |          9=MISSING                                |
-|  Typ_curr  |  TYPE OF RACQUET USED CURRENTLY                   |
-|            |          1=CONVENTIONAL SIZE                      |
-|            |          2=MID-SIZE                               |
-|            |          3=OVER-SIZE                              |
-|            |          9=MISSING                                |
-|  Wgt_curr  |  WEIGHT OF RACQUET USED CURRENTLY                 |
-|            |          1=HEAVY                                  |
-|            |          2=MEDIUM                                 |
-|            |          3=LIGHT                                  |
-|            |          4=DON'T KNOW                             |
-|            |          9=MISSING                                |
-|  Mat_curr  |  MATERIAL OF RACQUET USED CURRENTLY               |
-|            |          1=WOOD                                   |
-|            |          2=ALUMINUM                               |
-|            |          3=FIBERGLASS AND COMPOSITE               |
-|            |          4=GRAPHITE                               |
-|            |          5=STEEL                                  |
-|            |          6=COMPOSITE                              |
-|            |          7=OTHER                                  |
-|            |          9=MISSING                                |
-|  Str_curr  |  STRING TYPE OF RACQUET USED CURRENTLY            |
-|            |          1=NYLON                                  |
-|            |          2=GUT                                    |
-|            |          3=DON'T KNOW                             |
-|            |          9=MISSING                                | 
+:::: spoiler
+
+## Metadata
+
+|  VARIABLE  |  VARIABLE NAME                                    | unit |
+|------------|---------------------------------------------------|------|
+|  Id        |  ID                                               | |
+|  Age       |  AGE    99=MISSING                                || 
+|  Sex       |  SEX                             | |
+|            |  1 = MALE                          | |
+|            |  2 = FEMALE                          | |
+|  Num_epis  |  NUMBER OF EPISODES OF TENNIS ELBOW 9=MISSING     | |
+|  Typ_last  |  TYPE OF RACQUET USED DURING LAST EPISODE         | |
+|            |  1 = CONVENTIONAL SIZE                      | |
+|            |  2 = MID-SIZE                               | |
+|            |  3 = OVER-SIZE                              | |
+|            |  9 = MISSING                                | |
+|  Wgt_last  |  WEIGHT OF RACQUET USED DURING LAST EPISODE       | |
+|            |          1=HEAVY                                  | |
+|            |          2=MEDIUM                                 | |
+|            |          3=LIGHT                                  | |
+|            |          4=DON'T KNOW                             | |
+|            |          9=MISSING                                | |
+|  Mat_last  |  MATERIAL OF RACQUET USED DURING LAST EPISODE     | |
+|            |          1=WOOD                                   | |
+|            |          2=ALUMINUM                               | |
+|            |          3=FIBERGLASS AND COMPOSITE               | |
+|            |          4=GRAPHITE                               | |
+|            |          5=STEEL                                  | |
+|            |          6=COMPOSITE                              | |
+|            |          7=OTHER                                  | |
+|            |          9=MISSING                                | |
+|  Str_last  |  STRING TYPE OF RACQUET USED DURING LAST EPISODE  | |
+|            |          1=NYLON                                  | |
+|            |          2=GUT                                    | |
+|            |          3=DON'T KNOW                             | |
+|            |          9=MISSING                                | |
+|  Typ_curr  |  TYPE OF RACQUET USED CURRENTLY                   | |
+|            |  1 = CONVENTIONAL SIZE                      | |
+|            |  2 = MID-SIZE                               | |
+|            |  3 = OVER-SIZE                              | |
+|            |  9 = MISSING                                | |
+|  Wgt_curr  |  WEIGHT OF RACQUET USED CURRENTLY                 | |
+|            |  1 = HEAVY                                  | |
+|            |  2 = MEDIUM                                 | |
+|            |  3 = LIGHT                                  | |
+|            |  4 = DON'T KNOW                             | |
+|            |  9 = MISSING                                | |
+|  Mat_curr  |  MATERIAL OF RACQUET USED CURRENTLY               | |
+|            |  1 = WOOD                                   | |
+|            |  2 = ALUMINUM                               | |
+|            |  3 = FIBERGLASS AND COMPOSITE               | |
+|            |  4 = GRAPHITE                               | |
+|            |  5 = STEEL                                  | |
+|            |  6 = COMPOSITE                              | |
+|            |  7 = OTHER                                  | |
+|            |  9 = MISSING                                | |
+|  Str_curr  |  STRING TYPE OF RACQUET USED CURRENTLY            | |
+|            |  1 = NYLON                                  | |
+|            |  2 = GUT                                    | |
+|            |  3 = DON'T KNOW                             | |
+|            |  9 = MISSING                                |  |
+
+::::
 
 ### TENNIS2
 
@@ -1196,18 +1272,23 @@ number of minutes elapsed since the last cigarette smoked.
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/VALID.csv)
 
-|  Variable  |  Description              |Format or Code  |
+:::: spoiler
+
+## Metadata
+
+|  Variable  |  Description              | unit  |
 |------------|---------------------------|----------------|
 |  Id        |  ID number                |                |
-|  sfat_dr   |  Saturated fat-DR         |   XXXXX.XX     |
-|  sfat_ffq  |  Saturated fat-FFQ        |   XXXXX.XX     |
-|  tfat_dr   |  Total fat-DR             |   XXXXX.XX     |
-|  tfat_ffq  |  Total fat-FFQ            |   XXXXX.XX     |
-|  alco_dr   |  Alcohol consumption-DR   |   XXXXX.XX     |
-|  alco_ffq  |  Alcohol consumption-FFQ  |   XXXXX.XX     |
-|  cal_dr    |  Total calories-DR        |  XXXXXX.XX     |
-|  cal_ffq   |  Total calories-FFQ       |  XXXXXX.XX     |
+|  sfat_dr   |  Saturated fat-DR         |        |
+|  sfat_ffq  |  Saturated fat-FFQ        |        |
+|  tfat_dr   |  Total fat-DR             |        |
+|  tfat_ffq  |  Total fat-FFQ            |        |
+|  alco_dr   |  Alcohol consumption-DR   |        |
+|  alco_ffq  |  Alcohol consumption-FFQ  |        |
+|  cal_dr    |  Total calories-DR        |       |
+|  cal_ffq   |  Total calories-FFQ       |       |
 
+::::
 
 ### spermatozoa
 
