@@ -444,7 +444,13 @@
 
         
 <!-- Referencer er lidt bøvlet... Vi laver dem ved at indsætte interne links.
-TJEK at nummereringen er som den skal være hvis du ændrer noget. -->
+TJEK at nummereringen er som den skal være hvis du ændrer noget.
+
+Vi vil gerne have de der "1 er dette præparat, 2 det andet" i
+en celle, snarere end i nye linier - stribningen er forvirrende.
+
+Og vi kunne også godt tænke os dimensionerne angivet i beskrivelsen.
+-->
 <div class="section level3">
 <h3 id="betacar">BETACAR<a class="anchor" aria-label="anchor" href="#betacar"></a></h3>
 <p>Data from a study of bio availability of four different preparations
@@ -467,17 +473,17 @@ Blood samples were drawn after 6, 8, 10 and 12 weeks.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <table class="table"><colgroup><col width="17%"><col width="71%"><col width="11%"></colgroup><thead><tr class="header"><th>Variable</th>
 <th>Description/Code</th>
 <th>Unit</th>
 </tr></thead><tbody><tr class="odd"><td>Prepar</td>
-<td>Preparation 1=SOL/2=ROCHE/3=BASF-30/4=BASF-60</td>
-<td>NULL</td>
+<td>Preparation<br>21=SOL<br>2=ROCHE<br>23=BASF-30<br>24=BASF-60</td>
+<td></td>
 </tr><tr class="even"><td>Id</td>
 <td>Subject #</td>
-<td>NULL</td>
+<td></td>
 </tr><tr class="odd"><td>Base1lvl</td>
 <td>1st Baseline Level</td>
 <td>µmol/L</td>
@@ -511,7 +517,7 @@ cancer) and control (does not have breast cancer). The column matchid
 matches the controls with their respective cases. Cases have identical
 ID and matchid.</p>
 <p>Note the different ways of coding missing values.</p>
-<p>Useful for logistic regression to asscess the association between
+<p>Useful for logistic regression to assess the association between
 testosterone and breast cancer, controlling for age and current PMH use.
 Either with testosterone as a continuous variable or as a categorical
 variabel in quartiles, with the first quartile as the reference
@@ -526,7 +532,7 @@ group.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
@@ -590,7 +596,7 @@ well as other factors, details in metadata below.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>The data set is rather wide, and the columns are split up in this
 describtion.</p>
@@ -695,7 +701,7 @@ condition in both legs leading to 70 observations in the dataset.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Code</th>
@@ -777,7 +783,7 @@ are recorded.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
 <div class="accordion-body">
 <table class="table"><colgroup><col width="12%"><col width="76%"><col width="12%"></colgroup><thead><tr class="header"><th>variable</th>
 <th>Description</th>
@@ -919,7 +925,7 @@ lower, abnormal, sensitivity.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Variable label</th>
@@ -1012,7 +1018,7 @@ appear to change by pubertal stage.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler7" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler7" aria-labelledby="headingSpoiler7">
+<div id="collapseSpoiler7" class="accordion-collapse collapse" aria-labelledby="headingSpoiler7" data-bs-parent="#accordionSpoiler7">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Code</th>
@@ -1063,7 +1069,7 @@ follow up visit after 14 days were recorded.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler8" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler8" aria-labelledby="headingSpoiler8">
+<div id="collapseSpoiler8" class="accordion-collapse collapse" aria-labelledby="headingSpoiler8" data-bs-parent="#accordionSpoiler8">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
@@ -1112,7 +1118,7 @@ follow up visit after 14 days were recorded.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler9" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler9" aria-labelledby="headingSpoiler9">
+<div id="collapseSpoiler9" class="accordion-collapse collapse" aria-labelledby="headingSpoiler9" data-bs-parent="#accordionSpoiler9">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description/Code</th>
@@ -1155,7 +1161,7 @@ follow up visit after 14 days were recorded.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler10" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler10" aria-labelledby="headingSpoiler10">
+<div id="collapseSpoiler10" class="accordion-collapse collapse" aria-labelledby="headingSpoiler10" data-bs-parent="#accordionSpoiler10">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>LABEL</th>
@@ -1195,7 +1201,7 @@ follow up visit after 14 days were recorded.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler11" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler11" aria-labelledby="headingSpoiler11">
+<div id="collapseSpoiler11" class="accordion-collapse collapse" aria-labelledby="headingSpoiler11" data-bs-parent="#accordionSpoiler11">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Code</th>
@@ -1262,7 +1268,7 @@ follow up visit after 14 days were recorded.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler12" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler12" aria-labelledby="headingSpoiler12">
+<div id="collapseSpoiler12" class="accordion-collapse collapse" aria-labelledby="headingSpoiler12" data-bs-parent="#accordionSpoiler12">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>LABEL</th>
@@ -1392,7 +1398,7 @@ function in children. American Journal of Epidemiology, 110, 15-26.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler13" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler13" aria-labelledby="headingSpoiler13">
+<div id="collapseSpoiler13" class="accordion-collapse collapse" aria-labelledby="headingSpoiler13" data-bs-parent="#accordionSpoiler13">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
@@ -1807,28 +1813,44 @@ COD)</td>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler14" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler14" aria-labelledby="headingSpoiler14">
+<div id="collapseSpoiler14" class="accordion-collapse collapse" aria-labelledby="headingSpoiler14" data-bs-parent="#accordionSpoiler14">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
+<th>unit</th>
 </tr></thead><tbody><tr class="odd"><td>Id</td>
 <td>ID</td>
+<td></td>
 </tr><tr class="even"><td>Group</td>
-<td>GROUP 1=RP 2=NORMAL</td>
+<td></td>
+<td></td>
+</tr><tr class="odd"><td></td>
+<td>1 = RP</td>
+<td></td>
+</tr><tr class="even"><td></td>
+<td>2 = NORMAL</td>
+<td></td>
 </tr><tr class="odd"><td>Trtgrp</td>
 <td>TREATMENT GROUP</td>
+<td></td>
 </tr><tr class="even"><td></td>
-<td>A=LIGHT</td>
+<td>A = LIGHT</td>
+<td></td>
 </tr><tr class="odd"><td></td>
-<td>B=DIM</td>
+<td>B = DIM</td>
+<td></td>
 </tr><tr class="even"><td></td>
-<td>C=DARK</td>
+<td>C = DARK</td>
+<td></td>
 </tr><tr class="odd"><td>Age</td>
-<td>AGE (days)</td>
+<td>AGE</td>
+<td>days</td>
 </tr><tr class="even"><td>B_amp</td>
 <td>B AMP 9999=missing</td>
+<td></td>
 </tr><tr class="odd"><td>A_amp</td>
 <td>A AMP 9999=missing</td>
+<td></td>
 </tr></tbody></table></div>
 </div>
 </div>
@@ -1848,7 +1870,7 @@ different aminoclycosides<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1<
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler15" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler15" aria-labelledby="headingSpoiler15">
+<div id="collapseSpoiler15" class="accordion-collapse collapse" aria-labelledby="headingSpoiler15" data-bs-parent="#accordionSpoiler15">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description/Code</th>
@@ -1883,7 +1905,7 @@ different aminoclycosides<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1<
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler16" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler16" aria-labelledby="headingSpoiler16">
+<div id="collapseSpoiler16" class="accordion-collapse collapse" aria-labelledby="headingSpoiler16" data-bs-parent="#accordionSpoiler16">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
@@ -1945,7 +1967,7 @@ particular piece of data was missing.</p></li>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler17" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler17" aria-labelledby="headingSpoiler17">
+<div id="collapseSpoiler17" class="accordion-collapse collapse" aria-labelledby="headingSpoiler17" data-bs-parent="#accordionSpoiler17">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description/Code</th>
@@ -1994,7 +2016,7 @@ particular piece of data was missing.</p></li>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler18" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler18" aria-labelledby="headingSpoiler18">
+<div id="collapseSpoiler18" class="accordion-collapse collapse" aria-labelledby="headingSpoiler18" data-bs-parent="#accordionSpoiler18">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Code</th>
@@ -2033,7 +2055,7 @@ particular piece of data was missing.</p></li>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler19" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler19" aria-labelledby="headingSpoiler19">
+<div id="collapseSpoiler19" class="accordion-collapse collapse" aria-labelledby="headingSpoiler19" data-bs-parent="#accordionSpoiler19">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>code</th>
@@ -2078,7 +2100,7 @@ children</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler20" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler20" aria-labelledby="headingSpoiler20">
+<div id="collapseSpoiler20" class="accordion-collapse collapse" aria-labelledby="headingSpoiler20" data-bs-parent="#accordionSpoiler20">
 <div class="accordion-body">
 <table class="table"><colgroup><col width="16%"><col width="74%"><col width="8%"></colgroup><thead><tr class="header"><th>Variable</th>
 <th>Code</th>
@@ -2138,7 +2160,7 @@ cigarette smoked.</li>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler21" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler21" aria-labelledby="headingSpoiler21">
+<div id="collapseSpoiler21" class="accordion-collapse collapse" aria-labelledby="headingSpoiler21" data-bs-parent="#accordionSpoiler21">
 <div class="accordion-body">
 <table class="table"><colgroup><col width="17%"><col width="69%"><col width="12%"></colgroup><thead><tr class="header"><th>Variable</th>
 <th>Codes</th>
@@ -2199,7 +2221,7 @@ cigarette smoked.</li>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler22" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler22" aria-labelledby="headingSpoiler22">
+<div id="collapseSpoiler22" class="accordion-collapse collapse" aria-labelledby="headingSpoiler22" data-bs-parent="#accordionSpoiler22">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Code</th>
@@ -2342,7 +2364,7 @@ cigarette smoked.</li>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler23" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler23" aria-labelledby="headingSpoiler23">
+<div id="collapseSpoiler23" class="accordion-collapse collapse" aria-labelledby="headingSpoiler23" data-bs-parent="#accordionSpoiler23">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>LABEL</th>
@@ -2400,7 +2422,7 @@ cigarette smoked.</li>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler24" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler24" aria-labelledby="headingSpoiler24">
+<div id="collapseSpoiler24" class="accordion-collapse collapse" aria-labelledby="headingSpoiler24" data-bs-parent="#accordionSpoiler24">
 <div class="accordion-body">
 <table class="table"><colgroup><col width="17%"><col width="73%"><col width="8%"></colgroup><thead><tr class="header"><th>VARIABLE</th>
 <th>VARIABLE NAME</th>
@@ -2724,7 +2746,7 @@ WITH BASELINE</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler25" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler25" aria-labelledby="headingSpoiler25">
+<div id="collapseSpoiler25" class="accordion-collapse collapse" aria-labelledby="headingSpoiler25" data-bs-parent="#accordionSpoiler25">
 <div class="accordion-body">
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
@@ -2772,6 +2794,19 @@ observations are registered the result of each urine sample.</p>
 <p>The purpose of the study was to determine age of spermache.</p>
 <p>The format of observations is unusual and suitable for cleaning
 exercises.</p>
+<p>Det kan godt være vi lige skal kigge på:For further details about the
+study see Nielsen et al. (1986a, 1986b). mere præcist: Nielsen, C. T.,
+Skakkebxk, N. E., Darling, J. A. B., Hunter, W. M., Richardson, D. W.,
+Jorgensen, M., and Keiding, N. (1986a). Longitudinal study of
+testosterone and luteinizing hormone (LH) in relation to spermarche,
+pubic hair, height and sitting height in normal boys. Acta
+Endocrinologica 113, Supplementum 279, 98-106.</p>
+<p>Nielsen, C. T., Skakkebxk, N. E., Richardson, D. W., Darling, J. A.
+B., Hunter, W. M., J0rgensen, M., Nielsen, A., Ingerslev, O., Keiding,
+N., and Muller, J. (1986b). Onset of the release of spermatozoa
+(spermarche) in boys in relation to age, testicular growth, pubic hair
+and height. Journal of Clinical Endocrinology and Metabolism 62,
+532–535.</p>
 <p><a href="#jorgensen_4">source</a><sup>4</sup></p>
 <p><a href="https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/spermatozoa.csv" class="external-link">Download</a></p>
 <div id="accordionSpoiler26" class="accordion spoiler-accordion accordion-flush">
@@ -2782,7 +2817,7 @@ exercises.</p>
   Metadata
   </h3>
 </button>
-<div id="collapseSpoiler26" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler26" aria-labelledby="headingSpoiler26">
+<div id="collapseSpoiler26" class="accordion-collapse collapse" aria-labelledby="headingSpoiler26" data-bs-parent="#accordionSpoiler26">
 <div class="accordion-body">
 <table class="table"><colgroup><col width="22%"><col width="68%"><col width="9%"></colgroup><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
