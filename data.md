@@ -483,7 +483,7 @@ CAVE: Note the coding of Agefbo
 
 _Dimensions:_ Rows: 62 Columns: 22
 
-[source](data.md#rosner_1)^1^
+[Source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/ESTROGEN.csv)
 
@@ -494,40 +494,29 @@ _Dimensions:_ Rows: 62 Columns: 22
 |Variable  |  LABEL                        | unit |
 |----------|-------------------------------|------|
 |Id        |  ID                           |      |
-|std_typ   |  STUDY TYPE                   |      |
-|          |  1 = 0.625MG VS PLACEBO       |      |
-|          |  2 = 1.25MG VS PLACEBO        |      |
-|          |  3 = 1.25MG VS 0.625MG        |      |
+|std_typ   |  STUDY TYPE <br> 1 = 0.625MG VS PLACEBO <br> 2 = 1.25MG VS PLACEBO <br> 3 = 1.25MG VS 0.625MG        |      |
 |period    |  PERIOD                       |      |
-|trtgrp    |  TREATMENT                    |      |
-|          |  1 = PLACEBO                  |      |
-|          |  2 = 0.625MG                  |      |
-|          |  3 = 1.25MG                   |      |
-|sysd1r1   |  SYSTOLIC BP DAY 1 READING 1  |      |
-|          |  MISSING=999                  |      |
-|diasd1r1  |  DIASTOLIC BP DAY 1 READING 1 |      |
-|          |  MISSING=999                  |      |
-|sysd1r2   |  SYSTOLIC BP DAY 1 READING 2  |      |
-|          |  MISSING=999                  |      |
-|diasd1r2  |  DIASTOLIC BP DAY 1 READING 2 |      |
-|          |  MISSING=999                  |      |
-|sysd1r3   |  SYSTOLIC BP  DAY 1 READING 3 |      |
-|          |  MISSING=999                  |      |
-|diasd1r3  |  DIASTOLIC BP DAY 1 READING 3 |      |
-|          |  MISSING=999                  |      |
-|sysd2r1   |  SYSTOLIC BP DAY 2 READING 1  |      |
-|          |  MISSING=999                  |      |
-|diasd2r1  |  DIASTOLIC BP DAY 2 READING 1 |      |
-|sysd2r2   |  SYSTOLIC BP DAY 2 READING 2  |      |
-|diasd2r2  |  DIASTOLIC BP DAY 2 READING 2 |      |
-|sysd2r3   |  SYSTOLIC BP DAY 2 READING 3  |      |
-|diasd2r3  |  DIASTOLIC BP DAY 2 READING 3 |      |
-|sysd3r1   |  SYSTOLIC BP DAY 3 READING 1  |      |
-|diasd3r1  |  DIASTOLIC BP DAY 3 READING 1 |      |
-|sysd3r2   |  SYSTOLIC BP DAY 3 READING 2  |      |
-|diasd3r2  |  DIASTOLIC BP DAY 3 READING 2 |      |
-|sysd3r3   |  SYSTOLIC BP DAY 3 READING 3  |      |
-|diasd3r3  |  DIASTOLIC BP DAY 3 READING 3 |      |
+|trtgrp    |  TREATMENT <br> 1 = PLACEBO <br>   2 = 0.625MG <br> 3 = 1.25MG |      |
+|sysd1r1   |  SYSTOLIC BP DAY 1 READING 1  |  mmHg    |
+|diasd1r1  |  DIASTOLIC BP DAY 1 READING 1 |  mmHg    |
+|sysd1r2   |  SYSTOLIC BP DAY 1 READING 2  |  mmHg    |
+|diasd1r2  |  DIASTOLIC BP DAY 1 READING 2 |  mmHg    |
+|sysd1r3   |  SYSTOLIC BP  DAY 1 READING 3 |  mmHg    |
+|diasd1r3  |  DIASTOLIC BP DAY 1 READING 3 |  mmHg    |
+|sysd2r1   |  SYSTOLIC BP DAY 2 READING 1  |  mmHg    |
+|diasd2r1  |  DIASTOLIC BP DAY 2 READING 1 |  mmHg    |
+|sysd2r2   |  SYSTOLIC BP DAY 2 READING 2  |  mmHg    |
+|diasd2r2  |  DIASTOLIC BP DAY 2 READING 2 |  mmHg    |
+|sysd2r3   |  SYSTOLIC BP DAY 2 READING 3  |  mmHg    |
+|diasd2r3  |  DIASTOLIC BP DAY 2 READING 3 |  mmHg    |
+|sysd3r1   |  SYSTOLIC BP DAY 3 READING 1  |  mmHg    |
+|diasd3r1  |  DIASTOLIC BP DAY 3 READING 1 |  mmHg    |
+|sysd3r2   |  SYSTOLIC BP DAY 3 READING 2  |  mmHg    |
+|diasd3r2  |  DIASTOLIC BP DAY 3 READING 2 |  mmHg    |
+|sysd3r3   |  SYSTOLIC BP DAY 3 READING 3  |  mmHg    |
+|diasd3r3  |  DIASTOLIC BP DAY 3 READING 3 |  mmHg    |
+
+999: Missing bloodpressure data.
 
 ::::
 
@@ -549,18 +538,14 @@ American Journal of Epidemiology, 110, 15-26.
 
 ## Metadata
 
-|Variable |  Description          |  Unit | 
-|---------|-----------------------|-------|
-| Id      |  ID number            |       |
-| Age     |  Age (yrs)            | years |
-| FEV     |  FEV (liters)         | l     |
-| Hgt     |  Height (inches)      | in    |
-| Sex     |  Sex                  |       |
-|         |  0 = female           |       |
-|         |  1 = male             |       |
-| Smoke   |  Smoking Status       |       |
-|         |  0=non-current smoker |       |
-|         |  1=current smoker     |       |
+|Variable |  Description                                                        |  Unit | 
+|---------|---------------------------------------------------------------------|-------|
+| Id      |  ID number                                                          |       |
+| Age     |  Age                                                                | years |
+| FEV     |  FEV                                                                | l     |
+| Hgt     |  Height                                                             | in    |
+| Sex     |  Sex <br> 0 = female <br> 1 = male                                  |       |
+| Smoke   |  Smoking Status <br> 0 = non-current smoker <br> 1 = current smoker |       |
 
 ::::
 
@@ -583,16 +568,16 @@ _Dimensions:_ Rows: 1326 Columns: 8
 
 ## Metadata
 
-|  Variable  |  Description                                                   |
-|------------|----------------------------------------------------------------|
-|  id        |  ID                                                            |
-|  group     |  group (1=RHO/2=RPGR)                                          |
-|  age       |  age at visit  (XX.X in years)                                 |
-|  gender    |  gender (1=m/2=f)  Note: all RPGR individuals have to be male  |
-|  dtvisit   |  date of visit (month/day/year)                                |
-|  folowup   |  time from 1st visit in years                                  |
-|  totfldod  |  total field area right eye (OD) in degrees²                   |
-|  totfldos  |  total field area left eye (OS) in degrees²                    |
+|  Variable  |  Description                                                   | unit | 
+|------------|----------------------------------------------------------------|------|
+|  id        |  ID                                                            |      |
+|  group     |  group <br> 1 = RHO <br> 2 = RPGR                              |      |
+|  age       |  age at visit  (XX.X in years)                                 |      |
+|  gender    |  gender <br> 1 = m <br> 2 = f <br> Note: all RPGR individuals have to be male  |      |
+|  dtvisit   |  date of visit (month/day/year)                                |      |
+|  folowup   |  time from 1st visit in years                                  |      |
+|  totfldod  |  total field area right eye (OD) in degrees²                   |      |
+|  totfldos  |  total field area left eye (OS) in degrees²                    |      |
 
 ::::
 
@@ -610,13 +595,7 @@ _Dimensions:_ Rows: 7 Columns: 9
 
 |Variable    |  code                                                                          |
 |------------|--------------------------------------------------------------------------------|
-|Diagnosis   |  Y1=normal                                                                     |
-|            |  Y2=atrial septal defect without pulmonary stenosis or pulmonary hypertension  |
-|            |  Y3=ventricular septal defect with valvular pulmonary stenosis                 |
-|            |  Y4=isolated pulmonary hypertension                                            |
-|            |  Y5=transposed great vessels                                                   |
-|            |  Y6=ventricular septal defect without pulmonary hypertension                   |
-|            |  Y7=ventricular septal defect with pulmonary hypertension                      |
+|Diagnosis   |  Y1 = normal <br> Y2 = atrial septal defect without pulmonary stenosis or pulmonary hypertension <br>  Y3 = ventricular septal defect with valvular pulmonary stenosis <br> Y4 = isolated pulmonary hypertension <br> Y5 = transposed great vessels <br> Y6 = ventricular septal defect without pulmonary hypertension <br>  Y7 = ventricular septal defect with pulmonary hypertension       |
 |Prevalence  |  Prevalence                                                                    |
 |X1          |  age 1-20 years old                                                            |
 |X2          |  age>20 years old                                                              |
@@ -632,7 +611,7 @@ _Dimensions:_ Rows: 7 Columns: 9
 
 _Dimensions:_ Rows: 398 Columns: 11
 
-[source](data.md#rosner_1)^1^
+[Source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/HORMONE.csv)
 
@@ -652,7 +631,7 @@ _Dimensions:_ Rows: 398 Columns: 11
 |  Bilphpt   |  Biliary pH-post                       |
 |  Pansecpt  |  Pancreatic secretion-post             |
 |  Panphpt   |  Pancreatic pH-post                    |
-|  Hormone   |  Hormone 1=SAL/2=APP/3=CCK/4=SEC/5=VIP |
+|  Hormone   |  Hormone <br> 1 = SAL <br> 2 = APP <br> 3 = CCK <br> 4=SEC <br> 5=VIP |
 
 ::::
 
@@ -668,17 +647,17 @@ _Dimensions:_ Rows: 25 Columns: 9
 
 ## Metadata
 
-|  Variable  |  Label                                  |
-|------------|-----------------------------------------|
-|  Id        |  id no.                                 |
-|  Dur_stay  |  Duration of hospital stay              |
-|  Age       |  Age                                    |
-|  Sex       |  Sex  1=male/2=female                   |
-|  Temp      |  First temperature following admission  |
-|  WBC       |  First WBC(x1000) following admission   |
-|  Antibio   |  Received antibiotic 1=yes/2=no         |
-|  Bact_cul  |  Received bacterial culture 1=yes/2=no  |
-|  Service   |  Service 1=med/2=surg.                  |
+|  Variable  |  Label                                               | unit |
+|------------|------------------------------------------------------|------|
+|  Id        |  id no.                                              |      |
+|  Dur_stay  |  Duration of hospital stay                           |      |
+|  Age       |  Age                                                 |      |
+|  Sex       |  Sex <br> 1 = male <br> 2 = female                   |      |
+|  Temp      |  First temperature following admission               |      |
+|  WBC       |  First WBC(x1000) following admission                |      |
+|  Antibio   |  Received antibiotic <br> 1 = yes <br> 2 = no        |      |
+|  Bact_cul  |  Received bacterial culture <br> 1 = yes <br> 2 = no |      |
+|  Service   |  Service <br> 1 = med <br> 2 = surg.                 |      |
 
 ::::
 
@@ -710,31 +689,31 @@ Salt Taste Variables
 
 ## Metadata
 
-|  Variable  |  Format |  Description                         |
-|------------|---------|--------------------------------------|
-|  ID        |         |                                      |
-|  Mn_sbp    |  xx.xx  |  Mean SBP 99.99=missing              |
-|  Mn_dbp    |  xx.xx  |  Mean DBP 99.99=missing              |
-|  MSB1slt   |  xxx.xx |  MSB-trial 1* water                  |
-|  MSB2slt   |  xxx.xx |  MSB-trial 2 water                   |
-|  MSB3slt   |  xxx.xx |  MSB-trial 3 0.1 molar salt + water  |
-|  MSB4slt   |  xxx.xx |  MSB-trial 4 0.1 molar salt + water  |
-|  MSB5slt   |  xxx.xx |  MSB-trial 5 water                   |
-|  MSB6slt   |  xxx.xx |  MSB-trial 6 water                   |
-|  MSB7slt   |  xxx.xx |  MSB-trial 7 0.3 molar salt + water  |
-|  MSB8slt   |  xxx.xx |  MSB-trial 8 0.3 molar salt + water  |
-|  MSB9slt   |  xxx.xx |  MSB-trial 9 water                   |
-|  MSB10slt  |  xxx.xx |  MSB-trial 10 water                  |
+|  Variable  |    Description                       | unit |
+|------------|--------------------------------------|------|
+|  ID        |                                      |      |
+|  Mn_sbp    |  Mean SBP 99.99=missing              |      |
+|  Mn_dbp    |  Mean DBP 99.99=missing              |      |
+|  MSB1slt   |  MSB-trial 1* water                  |      |
+|  MSB2slt   |  MSB-trial 2 water                   |      |
+|  MSB3slt   |  MSB-trial 3 0.1 molar salt + water  |      |
+|  MSB4slt   |  MSB-trial 4 0.1 molar salt + water  |      |
+|  MSB5slt   |  MSB-trial 5 water                   |      |
+|  MSB6slt   |  MSB-trial 6 water                   |      |
+|  MSB7slt   |  MSB-trial 7 0.3 molar salt + water  |      |
+|  MSB8slt   |  MSB-trial 8 0.3 molar salt + water  |      |
+|  MSB9slt   |  MSB-trial 9 water                   |      |
+|  MSB10slt  |  MSB-trial 10 water                  |      |
 
 Sugar Taste Variables
 
-|  Variable  |  Format  |  Description                        |
-|------------|----------|-------------------------------------|
-|  MSB1sug   |  xxx.xx  |  MSB-trial 1 non-nutritive sucking  |
-|  MSB2sug   |  xxx.xx  |  MSB-trial 2 water                  |
-|  MSB3sug   |  xxx.xx  |  MSB-trial 3 5% sucrose + water     |
-|  MSB4sug   |  xxx.xx  |  MSB-trial 4 15% sucrose + water    |
-|  MSB5sug   |  xxx.xx  |  MSB-trial 5 non-nutritive sucking  |
+|  Variable  |   Description                       |
+|------------|-------------------------------------|
+|  MSB1sug   |  MSB-trial 1 non-nutritive sucking  |
+|  MSB2sug   |  MSB-trial 2 water                  |
+|  MSB3sug   |  MSB-trial 3 5% sucrose + water     |
+|  MSB4sug   |  MSB-trial 4 15% sucrose + water    |
+|  MSB5sug   |  MSB-trial 5 non-nutritive sucking  |
 
 
 * for MSB data 999.99 is a missing value; 0 indicates the baby did not suck.
@@ -756,12 +735,9 @@ _Dimensions:_ Rows: 124 Columns: 40
 |  VARIABLE  |  DESCRIPTION                 |
 |------------|------------------------------|
 |  id        |  IDENTIFICATION NUMBER       |
-|  area      |  AREA - RESIDENCE ON AUG'72  |
-|            |  1=0-1 MILES FROM SMELTER    |
-|            |  2=1-2.5 MILES               |
-|            |  3=2.5-4.1 MILES             |
-|  ageyrs    |  AGE in years xx.xx          |
-|  sex       |  SEX  1=MALE  2=FEMALE       |
+|  area      |  AREA - RESIDENCE ON AUG'72 <br> 1 = 0-1 MILES FROM SMELTER <br> 2 = 1-2.5 MILES <br> 3 = 2.5-4.1 MILES             |
+|  ageyrs    |  AGE in years           |
+|  sex       |  SEX <br> 1 = MALE <br> 2 = FEMALE       |
 
 
 IQ TEST RESULTS
@@ -782,9 +758,7 @@ IQ TEST RESULTS
 |  iqv       |  IQV - VERBAL IQ                                                       |
 |  iqp       |  IQP - PERFORMANCE IQ                                                  |
 |  iqf       |  IQF - FULL SCALE IQ (NOT SUM OR AVERAGE OF IQV D IQP)                 |
-|  iq_type   |  TYPE OF IQ TEST   1=WISC  2=WPPSI                                     |
-|            |  (WISC USUALLY GIVEN TO CHILDREN GE 5 YRS 1 MONTH OF AGE               |
-|            |  WPPSI USUALLY GIVEN TO CHILDREN LE 5YRS OF AGE)                       |
+|  iq_type   |  TYPE OF IQ TEST <br> 1 = WISC <br> 2 = WPPSI <br> (WISC USUALLY GIVEN TO CHILDREN GE 5 YRS 1 MONTH OF AGE <br> WPPSI USUALLY GIVEN TO CHILDREN LE 5YRS OF AGE)                       |
 |  lead_grp  |  GROUP - BLOOD LEAD LEVEL GROUP                                        |
 |            |  1=BLOOD LEAD LEVELS BELOW 40 MICROGRAMS/100ML IN                      |
 |            |  BOTH 1972 & 1973 (control group)                                      |
@@ -812,11 +786,11 @@ SYMPTOM DATA (AS REPORTED BY PARENTS)
 
 |  VARIABLE  |  DESCRIPTION                |
 |------------|-----------------------------|
-|  pica      |  PICA   1=YES  2=NO         |
-|  colic     |  COLIC  1=YES  2=NO         |
-|  clumsi    |  CLUMSINESS  1=YES  2=NO    |
-|  irrit     |  IRRITABILITY  1=YES  2=NO  |
-|  convul    |  CONVULSIONS  1=YES  2=NO   |
+|  pica      |  PICA <br> 1 = YES <br> 2 = NO         |
+|  colic     |  COLIC <br> 1 = YES <br> 2 = NO         |
+|  clumsi    |  CLUMSINESS <br> 1 = YES <br> 2 = NO    |
+|  irrit     |  IRRITABILITY <br> 1 = YES <br> 2 = NO  |
+|  convul    |  CONVULSIONS  <br> 1 = YES <br> 2 = NO   |
 
 CONTAIN NEUROLOGICAL TEST DATA
 
@@ -864,16 +838,13 @@ _Dimensions:_ Rows: 240 Columns: 6
 |  Variable  |  Description           | unit |
 |------------|------------------------|------|
 |  Id        |  ID                    |      |
-|  Group     |                        |      |
-|            |  1 = RP                |      |
-|            |  2 = NORMAL            |      |
-|  Trtgrp    |  TREATMENT GROUP       |      |
-|            |  A = LIGHT             |      |
-|            |  B = DIM               |      |
-|            |  C = DARK              |      |
+|  Group     | <br> 1 = RP <br> 2 = NORMAL |      |
+|  Trtgrp    |  TREATMENT GROUP <br> A = LIGHT <br> B = DIM <br> C = DARK |      |
 |  Age       |  AGE                   | days |
-|  B_amp     |  B AMP  9999=missing   |      |
-|  A_amp     |  A AMP  9999=missing   |      |
+|  B_amp     |  B AMP     |      |
+|  A_amp     |  A AMP     |      |
+
+9999 = missing.
 
 ::::
 
@@ -998,12 +969,8 @@ _Dimensions:_ Rows: 631 Columns: 5
 |  Variable  |  Code                                  |
 |------------|----------------------------------------|
 |  ID        |                                        |
-|  piriform  |  Piriformis Syndrome                   |
-|            |  1 = Negative                          |
-|            |  2 = Positive                          |
-|  sex       |  Sex                                   |
-|            |  1 = Male                              |
-|            |  2 = Female                            |
+|  piriform  |  Piriformis Syndrome <br> 1 = Negative <br> 2 = Positive |
+|  sex       |  Sex <br> 1 = Male <br> 2 = Female                            |
 |            |  Age                                   |
 |  maxchg    |  Max change between tibia and peroneal |
 
@@ -1061,15 +1028,14 @@ _Dimensions:_ Rows: 234 Columns: 8
 |------------|-----------------------------------------------------|------|
 |  ID        |  ID number                                          |      |
 |  Age       |  age                                                |      |
-|  Gender    |  Gender                                             |      |
-|            |  1 = male                                           |      |
-|            |  2 = female                                         |      |
+|  Gender    |  Gender <br> <br> 1 = male <br> 2 = female          |      |
 |  Cig_day   |  Cigarettes/day                                     |      |
-|  CO        |  Carbon monoxide (CO) (X 10) missing=999            |      |
-|  Min_last  |  Minutes elapsed since last cigarette missing=9999  |      |
-|  LogCOadj  |  Log CO Adj * (X 1000)  missing=9999                |      |
-|  Day_abs   |  Days abstinent  Those abstinent less than 1 day    |      |
-|            |  were given a value of zero.                        |      |
+|  CO        |  Carbon monoxide (CO) (X 10)             |      |
+|  Min_last  |  Minutes elapsed since last cigarette   |      |
+|  LogCOadj  |  Log CO Adj * (X 1000)                  |      |
+|  Day_abs   |  Days abstinent  Those abstinent less than 1 day <br> were given a value of zero.|      |
+
+999 and 9999 = missing values
 
 ::::
 
