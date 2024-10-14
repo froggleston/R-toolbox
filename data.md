@@ -29,9 +29,9 @@ fasting blood samples. They were then randomized to one of the four preparations
 and took 1 pill every other day for 12 weeks. Blood samples were drawn after 
 6, 8, 10 and 12 weeks.
 
-_Dimensions_: Rows: 23 Columns: 8
+_Dimensions:_ Rows: 23 Columns: 8
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/BETACAR.csv)
 
@@ -54,7 +54,7 @@ _Dimensions_: Rows: 23 Columns: 8
 
 
 
-### BLOOD
+### BLOOD 
 
 A case-control study of riskfactors (hormone levels in blood samples) for 
 breast cancer. Individuals are matched on age and current postmenopausal homone
@@ -73,7 +73,7 @@ quartile as the reference group.
 
 _Dimensions_: Rows: 510 Columns: 9   
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/BLOOD.csv)
 
@@ -101,14 +101,14 @@ _Dimensions_: Rows: 510 Columns: 9
 ### BONEDEN
 
 Data from a twin study on the relationship between bone density and cigarette
-consumption [source](#hopper_2)^2^. 41 pairs of middle-aged australian female 
+consumption [source](data.md#hopper_2)^2^. 41 pairs of middle-aged australian female 
 twins with different smoking histories had their bone density measured at a hospital
 in Victoria, as well
 as other factors, details in metadata below. 
 
 _Dimensions:_ Rows: 41 Columns: 25   
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/BONEDEN.csv)
 
@@ -120,12 +120,9 @@ The data set is rather wide, and the columns are split up in this describtion.
 |  Variable  |  Code       | Unit  | 
 |------------|-------------|-------|
 |  ID        |             |       |
-|  Age       |  Age (yrs)  | years |
-|  zyg       |  1=mz 2=dz  |       |
+|  Age       |  Age        | years |
+|  zyg       |  Mono- or dizygotic twins<br>1 = mz<br> 2 = dz  |       |
 
-mz - monozygotic twins
-
-dz - dizygotic twins
 
 The following variables are dublicated, in the form of 
 
@@ -141,10 +138,7 @@ xx2 for the heavier smoking twin
 |  cof       |  Coffee                     | cups/week        |
 |  alc       |  Alcohol                    | drinks/week      |
 |  cur       |  Current Smoking            | (cigarettes/day) |
-|  men       |  Menopause Status           |                  |
-|            |  0: Premenopausal           |                  |
-|            |  1: Postmenopausal          |                  |
-|            |  2: unknown or hysterectomy |                  |
+|  men       |  Menopause Status<br>0: Premenopausal<br> 1: Postmenopausal<br>2: unknown or hysterectomy |                  |
 |  pyr       |  Pack-years smoking         | year             |
 |  ls        |  Lumbar spine               | g/cm^2^          |
 |  fn        |  Femoral neck               | g/cm^2^          |
@@ -187,38 +181,38 @@ in the dataset.
 
 _Dimensions:_ Rows: 70 Columns: 24 
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/BOTOX.csv)
 
 :::: spoiler
 ## Metadata
 
-|  Variable  |  Code                               |
-|------------|-------------------------------------|
-|  ID        |                                     |
-|  group     |  1 = TL                             |
-|            |  2 = Placebo                        |
-|            |  3 = Botox                          |
-|  pain0     |  pain score month 0  missing=999    |
-|  pain05    |  pain score month 0.5  missing=999  |
-|  pain1     |  pain score month 1  missing=999    |
-|  pain2     |  pain score month 2  mising=999     |
-|  pain3     |  pain score month 3  missing=999    |
-|  pain4     |  pain score month 4  missing=999    |
-|  pain5     |  pain score month 5  missing=999    |
-|  pain6     |  pain score month 6  missing=999    |
-|  pain7     |  pain score month 7  missing=999    |
-|  pain8     |  pain score month 8  missing=999    |
-|  pain9     |  pain score month 9  missing=999    |
-|  pain10    |  pain score month 10  missing=999   |
-|  pain11    |  pain score month 11  missing=999   |
-|  pain12    |  pain score month 12  missing=999   |
-|  pain13    |  pain score month 13  missing=999   |
-|  pain14    |  pain score month 14  missing=999   |
-|  pain15    |  pain score month 15  missing=999   |
-|  pain16    |  pain score month 16  missing=999   |
-|  pain17    |  pain score month 17  missing=999   |
+|  Variable  |  Code                                   | unit |
+|------------|-----------------------------------------|------|
+|  ID        |                                         |      |
+|  group     |  1 = TL <br> 2 = Placebo <br> 3 = Botox |      |
+|  pain0     |  pain score month 0                     |  %   |
+|  pain05    |  pain score month 0.5                   |  %   |
+|  pain1     |  pain score month 1                     |  %   |
+|  pain2     |  pain score month 2                     |  %   |
+|  pain3     |  pain score month 3                     |  %   |
+|  pain4     |  pain score month 4                     |  %   |
+|  pain5     |  pain score month 5                     |  %   |
+|  pain6     |  pain score month 6                     |  %   |
+|  pain7     |  pain score month 7                     |  %   |
+|  pain8     |  pain score month 8                     |  %   |
+|  pain9     |  pain score month 9                     |  %   |
+|  pain10    |  pain score month 10                    |  %   |
+|  pain11    |  pain score month 11                    |  %   |
+|  pain12    |  pain score month 12                    |  %   |
+|  pain13    |  pain score month 13                    |  %   |
+|  pain14    |  pain score month 14                    |  %   |
+|  pain15    |  pain score month 15                    |  %   |
+|  pain16    |  pain score month 16                    |  %   |
+|  pain17    |  pain score month 17                    |  %   |
+
+For all pain scores 999 indicates missing value.
 
 ::::
 
@@ -244,7 +238,7 @@ Other cancer risk factors are recorded.
 
 _Dimensions:_ Rows: 1200 Columns: 18
 
-[source](#rosner_1)^1^
+[Source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/BREAST.csv)
 
@@ -254,37 +248,23 @@ _Dimensions:_ Rows: 1200 Columns: 18
 |variable |  Description                                            | unit    |
 |---------|---------------------------------------------------------|---------|
 |Id       |  ID                                                     |         |
-|case     |  case                                                   |         |
-|         |  1 = case                                               |         |
-|         |  0 = control                                            |         |
+|case     |  case <br> 1 = case <br> 0 = control                    |         |
 |age      |  age                                                    | years   |
 |agemenar |  age at menarche                                        | years   |
 |agemenop |  age at menopause                                       | years   |
 |afb      |  age at first birth  98=nullip                          | years   |
 |parity   |  parity                                                 |         |
-|bbd      |  Benign Breast disease                                  |         |
-|         |  1 = yes                                                |         |
-|         |  0 = no                                                 |         |   
-|famhx    |  family history breast cancer                           |         |
-|         |  1 = yes                                                |         |
-|         |  0 = no                                                 |         | 
+|bbd      |  Benign Breast disease <br> 1 = yes <br> 0 = no         |         |
+|famhx    |  family history breast cancer <br> 1 = yes <br> 0 = no   |         | 
 |bmi      |  BMI                                                    | kg/m^2^ |
 |hgt      |  Height                                                 | inches  |
-|alcohol  |  Alcohol use (grams/day)                                | g/day   |
-|pmh      |  PMH status                                             |         |
-|         |  2 = never user                                         |         |
-|         |  3 = current user                                       |         | 
+|alcohol  |  Alcohol use                                            | g/day   |
+|pmh      |  PMH status <br> 2 = never user <br> 3 = current user   |         | 
 |dur3     |  Duration of Estrogen use  (months)                     | months  |
 |dur4     |  Duration of Estrogen + progesterone use  (months)      | months  |
-|csmk     |  Current Smoker                                         |         |
-|         |  1 = yes                                                |         |
-|         |  0 = no                                                 |         | 
-|psmk     |  Past smoker                                            |         |
-|         |    1 = yes                                              |         |
-|         |    0 = no                                               |         | 
-|foluptm  |  Months of follow up Note: Some subjects provided no    |  months |
-|         |  follow up after the 1990 questionnaire: foluptm=0 for  |         |
-|         |  these people                                           |         |
+|csmk     |  Current Smoker <br> 1 = yes <br> 0 = no                |         | 
+|psmk     |  Past smoker <br> 1 = yes <br> 0 = no                   |         | 
+|foluptm  |  Months of follow up Note: Some subjects provided no <br> follow up after the 1990 questionnaire: foluptm=0 for <br> these people     |  months |
 
 ::::
 
@@ -292,7 +272,7 @@ _Dimensions:_ Rows: 1200 Columns: 18
 
 Data from a randomized trial of two different active drugs of the fluoroquinolone-group,
 M and G along with a placebo, P.
-93 subjects placed in one of three groups:
+93 subjects were placed in one of three groups:
 
 | Group | Eye 1 | Eye 2|
 |-------|-------|------|
@@ -311,7 +291,7 @@ lower, abnormal, sensitivity.
 
 _Dimensions:_ Rows: 186 Columns: 17   
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/CORNEAL.csv)
 
@@ -323,10 +303,7 @@ _Dimensions:_ Rows: 186 Columns: 17
 |Variable  |  Variable label                       | unit |
 |----------|---------------------------------------|------|
 |  id      |  ID                                   |      |
-|  tr      |  Treatment                            |      |
-|          |  1=M                                  |      |
-|          |  2=G                                  |      |
-|          |  3=P                                  |      |
+|  tr      |  Treatment <br> 1 = M <br> 2 = G <br> 3 = P  |      |
 |  c1      |  Central  visit 1                     | mm |
 |  s1      |  Superior visit 1                     | mm |
 |  i1      |  Inferior Visit 1                     | mm |
@@ -337,11 +314,13 @@ _Dimensions:_ Rows: 186 Columns: 17
 |  i2      |  Inferior Visit 2                     | mm |
 |  t2      |  Temporal Visit 2                     | mm |
 |  n2      |  Nasal Visit 2                        | mm |
-|  c3      |  Central Visit 3(day 14)  missing=99  | mm |
-|  s3      |  Superior Visit 3         missing=99  | mm |
-|  i3      |  Inferior Visit 3         missing=99  | mm |
-|  t3      |  Temporal Visit 3         missing=99  | mm |
-|  n3      |  Nasal Visit 3            missing=99  | mm |
+|  c3      |  Central Visit 3(day 14)              | mm |
+|  s3      |  Superior Visit 3                     | mm |
+|  i3      |  Inferior Visit 3                     | mm |
+|  t3      |  Temporal Visit 3                     | mm |
+|  n3      |  Nasal Visit 3                        | mm |
+
+99: Missing values
 
 ::::
 
@@ -360,7 +339,7 @@ indicative of diabetes. The normal range does not appear to change by pubertal s
 
 _Dimensions:_ Rows: 910 Columns: 8     
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/DIABETES.csv)
 
@@ -375,7 +354,7 @@ _Dimensions:_ Rows: 910 Columns: 8
 |yr_a1c    |  Yr                            |      |
 |age_yrs   |  Age in years                  | year |
 |gly_a1c   |  Hemoglobin A1c                |  %   |
-|ht_cm     |  Height   missing=999.9        | cm   |
+|ht_cm     |  Height <br>  missing=999.9    | cm   |
 |wt_kg     |  Weight                        | kg   |
 
 ::::
@@ -389,9 +368,9 @@ follow up visit after 14 days were recorded.
 
 _Dimensions:_ Rows: 278 Columns: 5 
 
-[source](#rosner_1)^1^
+[Source](data.md#rosner_1)^1^
 
-Additional [reference](#mandel_3)
+Additional [reference](data.md#mandel_3)
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/EAR.csv)
 
@@ -399,22 +378,13 @@ Additional [reference](#mandel_3)
 
 ### Metadata
 
-| Variable  |         Description    |
-|-----------|------------------------|
-| Id        |  ID                    |  
-| Clear     |  Clearance by 14 days  |  
-|           |   1 = yes              |  
-|           |   0 = no               |
-| Antibo    |  Antibiotic            |  
-|           |  1 = CEF               |  
-|           |  2 = AMO               |  
-| Age       |  Age                   |  
-|           |  1=<2 yrs              |  
-|           | 2=2-5 yrs              |
-|           | 3=6+ yrs               |
-| Ear       |  Ear                   |
-|           |  1=1st ear             |
-|           |  2=2nd ear             |
+| Variable  |         Description                                   |
+|-----------|-------------------------------------------------------|
+| Id        |  ID                                                   |  
+| Clear     |  Clearance by 14 days <br> 1 = yes <br> 0 = no        |
+| Antibo    |  Antibiotic <br>1 = CEF <br> 2 = AMO                  |  
+| Age       |  Age <br> 1 = <2 yrs <br> 2 = 2-5 yrs <br> 3 = 6+ yrs |
+| Ear       |  Ear <br> 1 = 1st ear <br> 2 = 2nd ear                |
 
 ::::
 
@@ -431,7 +401,7 @@ patients that were cured for their infection. Which antibiotic is best?
 
 _Dimensions:_ Rows: 64 Columns: 6  
 
-[source](#rosner_1)^1^
+[Source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/EFF.csv)
 
@@ -453,9 +423,12 @@ _Dimensions:_ Rows: 64 Columns: 6
 
 ###  ENDOCRIN
 
+Data for comparison of measurements of four hormones in five subjects. Measurements
+were done twice on blood samples from each subject. Are the measurements reproducable?
+
 _Dimensions:_ Rows: 10 Columns: 6 
 
-[source](#rosner_1)^1^
+[Source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/ENDOCRIN.csv)
 
@@ -463,22 +436,25 @@ _Dimensions:_ Rows: 10 Columns: 6
 
 ## Metadata
 
-| Variable   |  LABEL           | unit |
-|------------|------------------|------|
-|  Subject   |  SUBJECT #       |      |
-|  Replicat  |  REPLICATE #     |      |
-|  Estrone   |  ESTRONE         |      |
-|  Estradol  |  ESTRADIOL       |      |
-|  Androste  |  ANDROSTENEDIONE |      |
-|  Testost   |  TESTOSTERONE    |      |
+| Variable   |  LABEL           | unit  |
+|------------|------------------|-------|
+|  Subject   |  SUBJECT #       |       |
+|  Replicat  |  REPLICATE #     |       |
+|  Estrone   |  ESTRONE         | pg/mL |
+|  Estradol  |  ESTRADIOL       | pg/ml |
+|  Androste  |  ANDROSTENEDIONE | ng/dL |
+|  Testost   |  TESTOSTERONE    | ng/dL |
 
 ::::
 
 ### ESTRADL
 
+Data on 211 women. Measurement of estradiol, ethnicity, number of children, 
+BMI and Waist/hip ratio.
+
 _Dimensions:_ Rows: 211 Columns: 10  
 
-[source](#rosner_1)^1^
+[Source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/ESTRADL.csv)
 
@@ -486,23 +462,20 @@ _Dimensions:_ Rows: 211 Columns: 10
 
 ## Metadata
 
-|Variable |  Code	                                           | unit  |
-|---------|--------------------------------------------------|-------|
-|Id       |  Identification number                           |       |
-|Estradl  |  Estradiol                                       |       |
-|Ethnic   |  Ethnicity                                       |       |
-|         |  0 = African-American                            |       |
-|         |  1 = Caucasian                                   |       |
-|Entage   |  Age                                             |       |
-|Numchild |  Parity, number of children  9=missing           |       |
-|Agefbo   |  Age at 1st birth (=0 if numchild=0)  99=missing |       |
-|Anykids	|  any children                                    |       |
-|        	|  1 = yes                                         |       |
-|        	|  0 = no                                          |       |
-|        	|  9 = missing                                     |       |
-|Agemenar |  age at menarche   99=missing                    | years |
-|BMI      |  Body Mass Index                                 |       |
-|WHR      |  waist-hip ratio                                 |       |
+|Variable |  Code	                                                  | unit    |
+|---------|---------------------------------------------------------|---------|
+|Id       |  Identification number                                  |         |
+|Estradl  |  Estradiol                                              | pg/ml   |
+|Ethnic   |  Ethnicity <br> 0 = African-American <br> 1 = Caucasian |         |
+|Entage   |  Age                                                    | year    |
+|Numchild |  Parity, number of children  9=missing                  |         |
+|Agefbo   |  Age at 1st birth (= 0 if numchild = 0)  99 = missing   | year    |
+|Anykids	|  Any children <br> 1 = yes <br> 0 = no <br> 9 = missing |         |
+|Agemenar |  Age at menarche <br> 99=missing                        | years   |
+|BMI      |  Body Mass Index                                        | kg/^m^^ |
+|WHR      |  waist-hip ratio                                        |         |
+
+CAVE: Note the coding of Agefbo
 
 ::::
 
@@ -510,7 +483,7 @@ _Dimensions:_ Rows: 211 Columns: 10
 
 _Dimensions:_ Rows: 62 Columns: 22
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/ESTROGEN.csv)
 
@@ -562,7 +535,7 @@ _Dimensions:_ Rows: 62 Columns: 22
 
 _Dimensions:_ Rows: 654 Columns: 6 
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 Yderligere reference:
 Tage, I.B., Weiss, S.T., Rosner, B. & Speizer, F.E. (1979),
@@ -602,7 +575,7 @@ Respiratory Disease (CRD) Study", fra 1980 i Øst Boston, Massachusetts, USA.
 
 _Dimensions:_ Rows: 1326 Columns: 8  
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/FIELD.csv)
 
@@ -627,7 +600,7 @@ _Dimensions:_ Rows: 1326 Columns: 8
 
 _Dimensions:_ Rows: 7 Columns: 9  
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/HEART.csv)
 
@@ -659,7 +632,7 @@ _Dimensions:_ Rows: 7 Columns: 9
 
 _Dimensions:_ Rows: 398 Columns: 11
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/HORMONE.csv)
 
@@ -687,7 +660,7 @@ _Dimensions:_ Rows: 398 Columns: 11
 
 _Dimensions:_ Rows: 25 Columns: 9  
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/HOSPITAL.csv)
 
@@ -727,7 +700,7 @@ Infectious Diseases, 139(6) 688-697.
 
 _Dimensions:_ Rows: 100 Columns: 18  
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/INFANTBP.csv)
 
@@ -772,7 +745,7 @@ Sugar Taste Variables
 
 _Dimensions:_ Rows: 124 Columns: 40  
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/LEAD.csv)
 
@@ -880,7 +853,7 @@ CONTAIN NEUROLOGICAL TEST DATA
 
 _Dimensions:_ Rows: 240 Columns: 6
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/MICE.csv)
 
@@ -906,7 +879,7 @@ _Dimensions:_ Rows: 240 Columns: 6
 
 ### NEPHRO
 
-Data from a litterature [study](#buring_5)^5^ on nephrotoxicity of
+Data from a litterature [study](data.md#buring_5)^5^ on nephrotoxicity of
 of several different aminoclycosides.
 
 Note that this dataset is closely related to the datasets EFF and OTO, where
@@ -918,7 +891,7 @@ patients that experienced nephrotoxicity. Which antibiotic is best?
 
 _Dimensions:_ Rows: 72 Columns: 6  
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/NEPHRO.csv)
 
@@ -941,7 +914,7 @@ _Dimensions:_ Rows: 72 Columns: 6
 
 _Dimensions:_ Rows: 34 Columns: 10 
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/NIFED.csv)
 
@@ -980,7 +953,7 @@ Values of 999 indicates that either
 
 ### OTO
 
-Data from a litterature [study](#buring_5)^5^ on nephro- and ototoxicity and efficacy of
+Data from a litterature [study](data.md#buring_5)^5^ on nephro- and ototoxicity and efficacy of
 of several different aminoclycosides.
 
 Note that this dataset is closely related to the datasets EFF and NEPHRO, where
@@ -991,7 +964,7 @@ patients that experienced sideeffects. Which antibiotic is best?
 
 _Dimensions:_ Rows: 50 Columns: 6   
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/OTO.csv)
 
@@ -1014,7 +987,7 @@ _Dimensions:_ Rows: 50 Columns: 6
 
 _Dimensions:_ Rows: 631 Columns: 5 
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/PIRIFORM.csv)
 
@@ -1040,7 +1013,7 @@ _Dimensions:_ Rows: 631 Columns: 5
 
 _Dimensions:_ Rows: 60 Columns: 8   
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/SEXRAT.csv)
 
@@ -1076,7 +1049,7 @@ such families.
 
 _Dimensions:_ Rows: 234 Columns: 8
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/SMOKE.csv)
 
@@ -1110,7 +1083,7 @@ number of minutes elapsed since the last cigarette smoked.
 
 _Dimensions:_ Rows: 300 Columns: 10 
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/SWISS.csv)
 
@@ -1139,7 +1112,7 @@ For all `creat_xx`: 9.99 indicates missing data, i.e. NA-values.
 
 _Dimensions:_ Rows: 14 Columns: 61     
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/TEAR.csv)
 
@@ -1217,7 +1190,7 @@ _Dimensions:_ Rows: 14 Columns: 61
 
 _Dimensions:_ Rows: 630 Columns: 6 
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/TEMPERAT.csv)
 
@@ -1225,20 +1198,15 @@ _Dimensions:_ Rows: 630 Columns: 6
 
 ## Metadata
 
-|  Variable  |    LABEL                                 | unit |
-|------------|------------------------------------------|------|
-|  Date      |  DATE (MDY)                              |      |
-|  Out_temp  |  OUTSIDE TEMERATURE  Degrees Fahrenheit  |      |
-|  Room      |  ROOM LOCATION                           |      |
-|  In_temp   |  INSIDE TEMPERATURE  Degrees Fahrenheit  |      |
-|  Cor_fac   |  CORRECTION FACTOR ADDED (1=YES 0=NO)    |      |
-|  Typ_wea   |  TYPE OF WEATHER                         |      |
-|            |  1 = SUNNY                        |      |
-|            |  2 = PARTLY CLOUDY                |      |
-|            |  3 = CLOUDY                       |      |
-|            |  4 = RAINY                        |      |
-|            |  5 = FOGGY                        |      |
-|            |  9 = MISSING                      |      |
+|  Variable  |    LABEL                                       | unit |
+|------------|------------------------------------------------|------|
+|  Date      |  DATE (MDY)                                    |      |
+|  Out_temp  |  OUTSIDE TEMERATURE                            | °F   |
+|  Room      |  ROOM LOCATION                                 |      |
+|  In_temp   |  INSIDE TEMPERATURE                            | °F   |
+|  Cor_fac   |  CORRECTION FACTOR ADDED<br>1 = YES<br>0 = NO) |      |
+|  Typ_wea   |  TYPE OF WEATHER<br>1 = SUNNY<br>2 = PARTLY CLOUDY<br>3 = CLOUDY<br>4 = RAINY<br>5 = FOGGY <br>9 = MISSING|      |
+
 
 ::::
 
@@ -1246,7 +1214,7 @@ _Dimensions:_ Rows: 630 Columns: 6
 
 _Dimensions:_ Rows: 444 Columns: 12 
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/TENNIS1.csv)
 
@@ -1319,7 +1287,7 @@ _Dimensions:_ Rows: 444 Columns: 12
 
 _Dimensions:_ Rows: 88 Columns: 16 
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/TENNIS2.csv)
 
@@ -1382,7 +1350,7 @@ _Dimensions:_ Rows: 88 Columns: 16
 
 _Dimensions:_ Rows: 173 Columns: 9   
 
-[source](#rosner_1)^1^
+[source](data.md#rosner_1)^1^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/VALID.csv)
 
@@ -1426,7 +1394,9 @@ Nielsen, C. T., Skakkebxk, N. E., Richardson, D. W., Darling, J. A. B., Hunter, 
 
 _Dimensions:_ Rows: 40 Columns: 5 
 
-[source](#jorgensen_4)^4^
+Også Rosner...
+
+[source](learners/data.md#jorgensen_4)^4^
 
 [Download](https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/spermatozoa.csv)
 
@@ -1460,17 +1430,17 @@ NB: Filen er semikolon-separeret
 
 ## Metadata
 
-|  Variable  |  Description                      |  Format or Code            |
+|  Variable  |  Description                      |  Unit            |
 |------------|-----------------------------------|----------------------------|
 |country     |  Landenavn                        |                            | 
-|iso2        |  ISO2 landekode                   |                            | 
-|iso3        |  ISO3 landekode                   |                            | 
-|year        |  År                               | XXXX                       |         
+|iso2        |  ISO2 countrycode                   |                            | 
+|iso3        |  ISO3 countrycode                   |                            | 
+|year        |  year                               | XXXX                       |         
 |new         |  Artefakt fra databehandling      | Alle felter er "new"       |
 |diag        |  Diagnostisk metode               |  *                         |
-|sex         |  Køn                              |  m for male, f for female  |
-|age_low     |  Nedre aldersinterval             |  XX                        |
-|age_high    |  Øvre aldersinterval              |  XX                        |
+|sex         |  Sex <br> m = male <br> f = female                               |    |
+|age_low     |  Nedre aldersinterval             |  year                        |
+|age_high    |  Øvre aldersinterval              |  year                        |
 |value       |  Antal observerede tilfælde af TB |                            |
 
 
@@ -1494,7 +1464,7 @@ Den oprindelige kilde til det datasæt: https://www.who.int/teams/global-tubercu
 
 
 
-https://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&product_isbn_issn=9780538733496&token
+
 
 
 @misc{misc_wine_109,
@@ -1509,7 +1479,7 @@ https://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&product_isb
 
 
 
-<a id="rosner_1">1</a>: Rosner, Bernard A. Fundamentals of Biostatistics, 7/e, International Edition, 2011 ISBN: 9780538735896
+<a id="rosner_1">1</a>: Rosner, Bernard A. Fundamentals of Biostatistics, 7/e, International Edition, 2011 ISBN: 9780538735896. https://www.cengage.com/cgi-wadsworth/course_products_wp.pl?fid=M20b&product_isbn_issn=9780538733496&token
 
 <a id="hopper_2">2</a>: Hopper, J.H. & Seeman, E (1994). The bone density
 of female twins discordant for tobacco use. New England Journal of Medicine, 330, 387-392.
@@ -1519,15 +1489,37 @@ Wucher, E.P. & Harper, J. 1982, Duration of effusion after antibiotic
 treatment for acute otitis media: Comparison of cefaclor and amoxicillin.
 Pediatric Infections Diseases, 1, 310-316.
 
-
-
-
-
 <a id="jorgensen_4">4</a>: Jorgensen, Merete; Keiding, Niels; Skakkebaek, Niels Erik. Estimation of Spermarche from Longitudinal Spermaturia Data
 Biometrics, Vol. 47, No. 1 (Mar., 1991), pp. 177-193 
 https://doi.org/10.2307/2532505
 https://www.jstor.org/stable/2532505
 
-
 <a id="buring_5">5</a>: Buring, J.E, Evans, D.A., Mayrent, S.L. Rosner, B. Colton, T & Hennekens, C.H. (1988). Randomized trials of aminoglycoside antibiotics. Reviews of Infectious Disease, 10(5) 951-957.
 
+
+## listen over datasæt. 
+Der hakkes af efterhånden som de er færdige - og så er issue 113 done.
+
+* estrogen
+* FEV
+* field
+* heart
+* hormone
+* hospital
+* infantbp
+* lead
+* mice
+* nephro
+* nifed
+* oto
+* piriform
+* sexrat
+* smoke
+* swiss
+* tear
+* temperat
+* tennis1
+* tennis2
+* valid
+* spermatozoa
+* who
