@@ -244,6 +244,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#what-is-a-table-one">What is a “Table One”?</a></li>
+<li><a href="#structuring-the-data">Structuring the data</a></li>
 <li><a href="#more-advanced-stuff">More advanced stuff</a></li>
 <li><a href="#very-advanced-stuff">Very advanced stuff</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -1324,15 +1325,70 @@ that:</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">curpmh</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"current_pmh"</span></span>
-<span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">case</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"case_control"</span></span>
-<span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">ageblood</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Age"</span></span>
-<span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">ageblood</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"years"</span></span>
-<span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">estradol</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"pg/mL"</span></span>
-<span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">estrone</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"pg/mL"</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">curpmh</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"current_pmh"</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>Error: object 'dat' not found</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">case</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"case_control"</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>Error: object 'dat' not found</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">label</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">ageblood</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Age"</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>Error: object 'dat' not found</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">ageblood</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"years"</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>Error: object 'dat' not found</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">estradol</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"pg/mL"</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>Error: object 'dat' not found</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">units</span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">estrone</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"pg/mL"</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="error" tabindex="0"><code>Error: object 'dat' not found</code></pre>
 </div>
 <p>Which looks a bit nicer:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1727,6 +1783,37 @@ Missing
 </td>
 </tr></tbody></table></div>
 <!--/html_preserve-->
+</section><section><h2 class="section-heading" id="structuring-the-data">Structuring the data<a class="anchor" aria-label="anchor" href="#structuring-the-data"></a></h2>
+<hr class="half-width"><p>Most things in R are simple to do (but rarely simple to understand)
+when the data has the correct structure.</p>
+<p>If we follow the general rules of thumb for tidy data, we are off to
+a good start. This is the structure of the data set we are working with
+here - after we have made some modifications as described above.</p>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">head</span><span class="op">(</span><span class="va">blood</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code># A tibble: 6 × 9
+      ID matchid case    curpmh ageblood estradol estrone testost prolactn
+   &lt;dbl&gt;   &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+1 100013  164594 control yes          46       57      65      25     11.1
+2 100241  107261 control no           65       11      26      NA      2.8
+3 100696  110294 control yes          66        3      NA       8     38
+4 101266  101266 case    no           57        4      18       6      8.9
+5 101600  101600 case    no           66        6      18      25      6.9
+6 102228  155717 control yes          57       10      NA      31     13.9</code></pre>
+</div>
+<p>The important thing to note is that when we stratify the summary
+statistics by some variable, this variable have to be a categorical
+variable. The variables we want to do summary statistics <em>on</em>
+also have to have the correct type. Are the values categorical, the
+column in the dataframe have to actually be categorical. Are they
+numeric, the data type have to be numeric.</p>
 </section><section><h2 class="section-heading" id="more-advanced-stuff">More advanced stuff<a class="anchor" aria-label="anchor" href="#more-advanced-stuff"></a></h2>
 <hr class="half-width"><p>We might want to be able to precisely control the summary statistics
 presented in the table.</p>
@@ -1738,7 +1825,7 @@ the table.</p>
 names:</p>
 <p>table1(~ageblood + estradol + estrone + testost + prolactn|case +
 curpmh, data = blood)</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2272,7 +2359,7 @@ geometric standard deviation. Change the code to write out “Geom.” and
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2295,7 +2382,7 @@ product. In general:</p>
 </section><section><h2 class="section-heading" id="very-advanced-stuff">Very advanced stuff<a class="anchor" aria-label="anchor" href="#very-advanced-stuff"></a></h2>
 <hr class="half-width"><p>If we want to specify the summary statistics very precisely, we have
 to define a function ourself:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2719,7 +2806,7 @@ specifying <code>render.categorical</code>.</p>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2748,7 +2835,7 @@ point.</p>
 <div class="callout-content">
 <p>Note that in the function, we define a vector as output, with three
 elements:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2773,7 +2860,7 @@ straightforward.</p>
 <div class="accordion-body">
 <p>Try to remove the empty string from the function, and use it is a
 table one as previously shown:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
