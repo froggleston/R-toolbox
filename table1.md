@@ -463,11 +463,50 @@ the variables. The `table1` package provides functions for that:
 
 ``` r
 label(dat$curpmh) <- "current_pmh"
+```
+
+``` error
+Error: object 'dat' not found
+```
+
+``` r
 label(dat$case) <- "case_control"
+```
+
+``` error
+Error: object 'dat' not found
+```
+
+``` r
 label(dat$ageblood) <- "Age"
+```
+
+``` error
+Error: object 'dat' not found
+```
+
+``` r
 units(dat$ageblood) <- "years"
+```
+
+``` error
+Error: object 'dat' not found
+```
+
+``` r
 units(dat$estradol) <- "pg/mL"
+```
+
+``` error
+Error: object 'dat' not found
+```
+
+``` r
 units(dat$estrone) <- "pg/mL"
+```
+
+``` error
+Error: object 'dat' not found
 ```
 
 Which looks a bit nicer:
@@ -663,6 +702,37 @@ table1(~ageblood + estradol + estrone + testost + prolactn|case + curpmh, data =
 </table>
 </div><!--/html_preserve-->
 
+## Structuring the data
+
+Most things in R are simple to do (but rarely simple to understand) when the 
+data has the correct structure.
+
+If we follow the general rules of thumb for tidy data, we are off to a good 
+start. This is the structure of the data set we are working with here - after 
+we have made some modifications as described above.
+
+
+``` r
+head(blood)
+```
+
+``` output
+# A tibble: 6 × 9
+      ID matchid case    curpmh ageblood estradol estrone testost prolactn
+   <dbl>   <dbl> <fct>   <fct>     <dbl>    <dbl>   <dbl>   <dbl>    <dbl>
+1 100013  164594 control yes          46       57      65      25     11.1
+2 100241  107261 control no           65       11      26      NA      2.8
+3 100696  110294 control yes          66        3      NA       8     38  
+4 101266  101266 case    no           57        4      18       6      8.9
+5 101600  101600 case    no           66        6      18      25      6.9
+6 102228  155717 control yes          57       10      NA      31     13.9
+```
+
+The important thing to note is that when we stratify the summary statistics by
+some variable, this variable have to be a categorical variable. The variables 
+we want to do summary statistics _on_ also have to have the correct type.
+Are the values categorical, the column in the dataframe have to actually be
+categorical. Are they numeric, the data type have to be numeric.
 
 
 ## More advanced stuff
