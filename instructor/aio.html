@@ -2153,155 +2153,6 @@ Median [Min, Max]
 </tr>
 <tr>
 <td class="rowlabel firstrow">
-estradol (pg/mL)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Mean (SD)
-</td>
-<td>
-8.05 (5.29)
-</td>
-<td>
-8.73 (8.84)
-</td>
-<td>
-10.5 (9.72)
-</td>
-<td>
-10.6 (13.7)
-</td>
-<td>
-8.81 (7.06)
-</td>
-<td>
-9.44 (10.9)
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Median [Min, Max]
-</td>
-<td class="lastrow">
-6.00 [2.00, 46.0]
-</td>
-<td class="lastrow">
-6.50 [2.00, 57.0]
-</td>
-<td class="lastrow">
-8.00 [3.00, 85.0]
-</td>
-<td class="lastrow">
-6.00 [3.00, 76.0]
-</td>
-<td class="lastrow">
-7.00 [2.00, 85.0]
-</td>
-<td class="lastrow">
-6.00 [2.00, 76.0]
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-estrone (pg/mL)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Mean (SD)
-</td>
-<td>
-28.7 (15.0)
-</td>
-<td>
-26.8 (12.0)
-</td>
-<td>
-32.3 (15.7)
-</td>
-<td>
-27.7 (13.2)
-</td>
-<td>
-29.8 (15.3)
-</td>
-<td>
-27.1 (12.3)
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median [Min, Max]
-</td>
-<td>
-25.0 [10.0, 131]
-</td>
-<td>
-23.0 [13.0, 65.0]
-</td>
-<td>
-29.0 [11.0, 119]
-</td>
-<td>
-24.0 [12.0, 59.0]
-</td>
-<td>
-26.0 [10.0, 131]
-</td>
-<td>
-23.0 [12.0, 65.0]
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Missing
-</td>
-<td class="lastrow">
-58 (19.5%)
-</td>
-<td class="lastrow">
-15 (31.3%)
-</td>
-<td class="lastrow">
-30 (22.2%)
-</td>
-<td class="lastrow">
-11 (37.9%)
-</td>
-<td class="lastrow">
-88 (20.3%)
-</td>
-<td class="lastrow">
-26 (33.8%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
 testost
 </td>
 <td class="firstrow">
@@ -2479,9 +2330,9 @@ Missing
 <p>Please note that the automatic styling of this site results in a
 table-one that is not very nice looking.</p>
 <p>We have 510 participants in a study, split into control and case
-groups, and further subdivided into two groups based on Postmenopausal
-hormone use. It describes the distribution of sex and concentration of
-estradiol, estrone, testosterone and prolactin in a blood sample.</p>
+groups, and further subdivided into two groups based on PostMenopausal
+Hormone use. It describes the distribution of sex and concentration of
+testosterone and prolactin in a blood sample.</p>
 </section><section><h2 class="section-heading" id="how-do-we-make-that">How do we make that?<a class="anchor" aria-label="anchor" href="#how-do-we-make-that"></a>
 </h2>
 <hr class="half-width">
@@ -2502,15 +2353,15 @@ here - after we have made some modifications as described above.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code># A tibble: 6 × 9
-      ID matchid case    curpmh ageblood estradol estrone testost prolactn
-   &lt;dbl&gt;   &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
-1 100013  164594 control yes          46       57      65      25     11.1
-2 100241  107261 control no           65       11      26      NA      2.8
-3 100696  110294 control yes          66        3      NA       8     38
-4 101266  101266 case    no           57        4      18       6      8.9
-5 101600  101600 case    no           66        6      18      25      6.9
-6 102228  155717 control yes          57       10      NA      31     13.9</code></pre>
+<pre class="output" tabindex="0"><code># A tibble: 6 × 8
+      ID matchid case    curpmh ageblood estradol testost prolactn
+   &lt;dbl&gt;   &lt;dbl&gt; &lt;fct&gt;   &lt;fct&gt;     &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+1 100013  164594 control yes          46       57      25     11.1
+2 100241  107261 control no           65       11      NA      2.8
+3 100696  110294 control yes          66        3       8     38
+4 101266  101266 case    no           57        4       6      8.9
+5 101600  101600 case    no           66        6      25      6.9
+6 102228  155717 control yes          57       10      31     13.9</code></pre>
 </div>
 <p>The important thing to note is that when we stratify the summary
 statistics by some variable, this variable have to be a categorical
@@ -2579,12 +2430,14 @@ values, and adjust the labels of those categorical values:</p>
 <span>  <span class="fu">mutate</span><span class="op">(</span>case <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="va">case</span>, labels <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"control"</span>, <span class="st">"case"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>curpmh <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="va">curpmh</span>, labels <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"no"</span>, <span class="st">"yes"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
-<p>And now we can make our table one like this:</p>
+<p>And now we can make our table one like this. Note that we only
+include testosterone and prolactin, in order to get a more manageble
+table 1:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">estradol</span> <span class="op">+</span> <span class="va">estrone</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span><span class="op">)</span></span></code></pre>
 </div>
 <!--html_preserve-->
 <div class="Rtable1">
@@ -2694,155 +2547,6 @@ Median [Min, Max]
 </td>
 <td class="lastrow">
 58.0 [46.0, 68.0]
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-estradol
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Mean (SD)
-</td>
-<td>
-8.05 (5.29)
-</td>
-<td>
-8.73 (8.84)
-</td>
-<td>
-10.5 (9.72)
-</td>
-<td>
-10.6 (13.7)
-</td>
-<td>
-8.81 (7.06)
-</td>
-<td>
-9.44 (10.9)
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Median [Min, Max]
-</td>
-<td class="lastrow">
-6.00 [2.00, 46.0]
-</td>
-<td class="lastrow">
-6.50 [2.00, 57.0]
-</td>
-<td class="lastrow">
-8.00 [3.00, 85.0]
-</td>
-<td class="lastrow">
-6.00 [3.00, 76.0]
-</td>
-<td class="lastrow">
-7.00 [2.00, 85.0]
-</td>
-<td class="lastrow">
-6.00 [2.00, 76.0]
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-estrone
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Mean (SD)
-</td>
-<td>
-28.7 (15.0)
-</td>
-<td>
-26.8 (12.0)
-</td>
-<td>
-32.3 (15.7)
-</td>
-<td>
-27.7 (13.2)
-</td>
-<td>
-29.8 (15.3)
-</td>
-<td>
-27.1 (12.3)
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median [Min, Max]
-</td>
-<td>
-25.0 [10.0, 131]
-</td>
-<td>
-23.0 [13.0, 65.0]
-</td>
-<td>
-29.0 [11.0, 119]
-</td>
-<td>
-24.0 [12.0, 59.0]
-</td>
-<td>
-26.0 [10.0, 131]
-</td>
-<td>
-23.0 [12.0, 65.0]
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Missing
-</td>
-<td class="lastrow">
-58 (19.5%)
-</td>
-<td class="lastrow">
-15 (31.3%)
-</td>
-<td class="lastrow">
-30 (22.2%)
-</td>
-<td class="lastrow">
-11 (37.9%)
-</td>
-<td class="lastrow">
-88 (20.3%)
-</td>
-<td class="lastrow">
-26 (33.8%)
 </td>
 </tr>
 <tr>
@@ -3031,16 +2735,14 @@ that:</p>
 <code class="sourceCode R"><span><span class="fu">label</span><span class="op">(</span><span class="va">blood</span><span class="op">$</span><span class="va">curpmh</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"current_pmh"</span></span>
 <span><span class="fu">label</span><span class="op">(</span><span class="va">blood</span><span class="op">$</span><span class="va">case</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"case_control"</span></span>
 <span><span class="fu">label</span><span class="op">(</span><span class="va">blood</span><span class="op">$</span><span class="va">ageblood</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"Age"</span></span>
-<span><span class="fu">units</span><span class="op">(</span><span class="va">blood</span><span class="op">$</span><span class="va">ageblood</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"years"</span></span>
-<span><span class="fu">units</span><span class="op">(</span><span class="va">blood</span><span class="op">$</span><span class="va">estradol</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"pg/mL"</span></span>
-<span><span class="fu">units</span><span class="op">(</span><span class="va">blood</span><span class="op">$</span><span class="va">estrone</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"pg/mL"</span></span></code></pre>
+<span><span class="fu">units</span><span class="op">(</span><span class="va">blood</span><span class="op">$</span><span class="va">ageblood</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="st">"years"</span></span></code></pre>
 </div>
 <p>Which looks a bit nicer:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">estradol</span> <span class="op">+</span> <span class="va">estrone</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span><span class="op">)</span></span></code></pre>
 </div>
 <!--html_preserve-->
 <div class="Rtable1">
@@ -3150,155 +2852,6 @@ Median [Min, Max]
 </td>
 <td class="lastrow">
 58.0 [46.0, 68.0]
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-estradol (pg/mL)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Mean (SD)
-</td>
-<td>
-8.05 (5.29)
-</td>
-<td>
-8.73 (8.84)
-</td>
-<td>
-10.5 (9.72)
-</td>
-<td>
-10.6 (13.7)
-</td>
-<td>
-8.81 (7.06)
-</td>
-<td>
-9.44 (10.9)
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Median [Min, Max]
-</td>
-<td class="lastrow">
-6.00 [2.00, 46.0]
-</td>
-<td class="lastrow">
-6.50 [2.00, 57.0]
-</td>
-<td class="lastrow">
-8.00 [3.00, 85.0]
-</td>
-<td class="lastrow">
-6.00 [3.00, 76.0]
-</td>
-<td class="lastrow">
-7.00 [2.00, 85.0]
-</td>
-<td class="lastrow">
-6.00 [2.00, 76.0]
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-estrone (pg/mL)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Mean (SD)
-</td>
-<td>
-28.7 (15.0)
-</td>
-<td>
-26.8 (12.0)
-</td>
-<td>
-32.3 (15.7)
-</td>
-<td>
-27.7 (13.2)
-</td>
-<td>
-29.8 (15.3)
-</td>
-<td>
-27.1 (12.3)
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median [Min, Max]
-</td>
-<td>
-25.0 [10.0, 131]
-</td>
-<td>
-23.0 [13.0, 65.0]
-</td>
-<td>
-29.0 [11.0, 119]
-</td>
-<td>
-24.0 [12.0, 59.0]
-</td>
-<td>
-26.0 [10.0, 131]
-</td>
-<td>
-23.0 [12.0, 65.0]
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Missing
-</td>
-<td class="lastrow">
-58 (19.5%)
-</td>
-<td class="lastrow">
-15 (31.3%)
-</td>
-<td class="lastrow">
-30 (22.2%)
-</td>
-<td class="lastrow">
-11 (37.9%)
-</td>
-<td class="lastrow">
-88 (20.3%)
-</td>
-<td class="lastrow">
-26 (33.8%)
 </td>
 </tr>
 <tr>
@@ -3488,13 +3041,13 @@ presented in the table.</p>
 control how continuous and categorical data respectively, is shown in
 the table.</p>
 <p>The simple way of doing that is by using abbrevieated function names.
-We only include estradiol and estrone in the the table to save
+We only include testosterone and prolactin in the the table to save
 space:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">estradol</span> <span class="op">+</span> <span class="va">estrone</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span>,</span>
+<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span>,</span>
 <span>        render.continuous<span class="op">=</span><span class="fu">c</span><span class="op">(</span>.<span class="op">=</span><span class="st">"Mean (SD%)"</span>, .<span class="op">=</span><span class="st">"Median [Min, Max]"</span>,</span>
 <span>                           <span class="st">"Geom. mean (Geo. SD%)"</span><span class="op">=</span><span class="st">"GMEAN (GSD%)"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
@@ -3633,7 +3186,7 @@ Geom. mean (Geo. SD%)
 </tr>
 <tr>
 <td class="rowlabel firstrow">
-estradol (pg/mL)
+testost
 </td>
 <td class="firstrow">
 </td>
@@ -3653,22 +3206,22 @@ estradol (pg/mL)
 Mean (SD%)
 </td>
 <td>
-8.05 (5.29%)
+25.3 (13.2%)
 </td>
 <td>
-8.73 (8.84%)
+22.2 (10.7%)
 </td>
 <td>
-10.5 (9.72%)
+27.6 (16.1%)
 </td>
 <td>
-10.6 (13.7%)
+28.2 (15.6%)
 </td>
 <td>
-8.81 (7.06%)
+26.0 (14.2%)
 </td>
 <td>
-9.44 (10.9%)
+24.4 (13.0%)
 </td>
 </tr>
 <tr>
@@ -3676,108 +3229,22 @@ Mean (SD%)
 Median [Min, Max]
 </td>
 <td>
-6.00 [2.00, 46.0]
+23.0 [4.00, 111]
 </td>
 <td>
-6.50 [2.00, 57.0]
+21.5 [8.00, 63.0]
 </td>
 <td>
-8.00 [3.00, 85.0]
+25.0 [6.00, 144]
 </td>
 <td>
-6.00 [3.00, 76.0]
+24.0 [10.0, 69.0]
 </td>
 <td>
-7.00 [2.00, 85.0]
+23.0 [4.00, 144]
 </td>
 <td>
-6.00 [2.00, 76.0]
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Geom. mean (Geo. SD%)
-</td>
-<td class="lastrow">
-6.92 (1.69%)
-</td>
-<td class="lastrow">
-6.81 (1.90%)
-</td>
-<td class="lastrow">
-8.53 (1.78%)
-</td>
-<td class="lastrow">
-7.63 (2.03%)
-</td>
-<td class="lastrow">
-7.39 (1.74%)
-</td>
-<td class="lastrow">
-7.11 (1.94%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-estrone (pg/mL)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Mean (SD%)
-</td>
-<td>
-28.7 (15.0%)
-</td>
-<td>
-26.8 (12.0%)
-</td>
-<td>
-32.3 (15.7%)
-</td>
-<td>
-27.7 (13.2%)
-</td>
-<td>
-29.8 (15.3%)
-</td>
-<td>
-27.1 (12.3%)
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median [Min, Max]
-</td>
-<td>
-25.0 [10.0, 131]
-</td>
-<td>
-23.0 [13.0, 65.0]
-</td>
-<td>
-29.0 [11.0, 119]
-</td>
-<td>
-24.0 [12.0, 59.0]
-</td>
-<td>
-26.0 [10.0, 131]
-</td>
-<td>
-23.0 [12.0, 65.0]
+22.0 [8.00, 69.0]
 </td>
 </tr>
 <tr>
@@ -3785,22 +3252,22 @@ Median [Min, Max]
 Geom. mean (Geo. SD%)
 </td>
 <td>
-25.9 (1.56%)
+22.4 (1.65%)
 </td>
 <td>
-24.6 (1.50%)
+20.0 (1.58%)
 </td>
 <td>
-29.4 (1.54%)
+24.6 (1.60%)
 </td>
 <td>
-25.0 (1.59%)
+24.6 (1.69%)
 </td>
 <td>
-26.9 (1.56%)
+23.1 (1.64%)
 </td>
 <td>
-24.7 (1.53%)
+21.6 (1.63%)
 </td>
 </tr>
 <tr>
@@ -3808,22 +3275,131 @@ Geom. mean (Geo. SD%)
 Missing
 </td>
 <td class="lastrow">
-58 (19.5%)
+6 (2.0%)
 </td>
 <td class="lastrow">
-15 (31.3%)
+2 (4.2%)
 </td>
 <td class="lastrow">
-30 (22.2%)
+3 (2.2%)
 </td>
 <td class="lastrow">
-11 (37.9%)
+1 (3.4%)
 </td>
 <td class="lastrow">
-88 (20.3%)
+9 (2.1%)
 </td>
 <td class="lastrow">
-26 (33.8%)
+3 (3.9%)
+</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">
+prolactn
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+<td class="firstrow">
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Mean (SD%)
+</td>
+<td>
+9.60 (5.10%)
+</td>
+<td>
+13.7 (12.3%)
+</td>
+<td>
+10.8 (6.79%)
+</td>
+<td>
+9.57 (3.29%)
+</td>
+<td>
+9.99 (5.70%)
+</td>
+<td>
+12.2 (10.1%)
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Median [Min, Max]
+</td>
+<td>
+8.16 [1.96, 37.3]
+</td>
+<td>
+8.81 [3.87, 55.8]
+</td>
+<td>
+9.30 [2.66, 59.9]
+</td>
+<td>
+8.88 [4.49, 17.6]
+</td>
+<td>
+8.64 [1.96, 59.9]
+</td>
+<td>
+8.84 [3.87, 55.8]
+</td>
+</tr>
+<tr>
+<td class="rowlabel">
+Geom. mean (Geo. SD%)
+</td>
+<td>
+8.59 (1.58%)
+</td>
+<td>
+10.7 (1.89%)
+</td>
+<td>
+9.63 (1.58%)
+</td>
+<td>
+9.05 (1.41%)
+</td>
+<td>
+8.90 (1.59%)
+</td>
+<td>
+10.1 (1.73%)
+</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">
+Missing
+</td>
+<td class="lastrow">
+14 (4.7%)
+</td>
+<td class="lastrow">
+0 (0%)
+</td>
+<td class="lastrow">
+6 (4.4%)
+</td>
+<td class="lastrow">
+1 (3.4%)
+</td>
+<td class="lastrow">
+20 (4.6%)
+</td>
+<td class="lastrow">
+1 (1.3%)
 </td>
 </tr>
 </tbody>
@@ -3860,13 +3436,13 @@ geometric standard deviation. Change the code to write out “Geom.” and
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">estradol</span> <span class="op">+</span> <span class="va">estrone</span> <span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span>,</span>
+<code class="sourceCode R"><span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span> <span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span>,</span>
 <span>        render.continuous<span class="op">=</span><span class="fu">c</span><span class="op">(</span>.<span class="op">=</span><span class="st">"Mean (SD%)"</span>, .<span class="op">=</span><span class="st">"Median [Min, Max]"</span>,</span>
 <span>                           <span class="st">"Geometric mean (Geometric SD%)"</span><span class="op">=</span><span class="st">"GMEAN (GSD%)"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
@@ -3895,7 +3471,7 @@ to define a function ourself:</p>
 <span>  <span class="fu">c</span><span class="op">(</span><span class="st">""</span>,<span class="st">"Median"</span> <span class="op">=</span> <span class="fu">sprintf</span><span class="op">(</span><span class="st">"%.3f"</span>, <span class="fu">median</span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>,</span>
 <span><span class="st">"Variance"</span> <span class="op">=</span> <span class="fu">sprintf</span><span class="op">(</span><span class="st">"%.1f"</span>, <span class="fu">var</span><span class="op">(</span><span class="va">x</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
-<span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">estradol</span> <span class="op">+</span> <span class="va">estrone</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span>,</span>
+<span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span>,</span>
 <span>render.continuous <span class="op">=</span> <span class="va">my_summary</span><span class="op">)</span></span></code></pre>
 </div>
 <!--html_preserve-->
@@ -4006,155 +3582,6 @@ Variance
 </td>
 <td class="lastrow">
 30.6
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-estradol (pg/mL)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median
-</td>
-<td>
-6.000
-</td>
-<td>
-6.500
-</td>
-<td>
-8.000
-</td>
-<td>
-6.000
-</td>
-<td>
-7.000
-</td>
-<td>
-6.000
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Variance
-</td>
-<td class="lastrow">
-28.0
-</td>
-<td class="lastrow">
-78.1
-</td>
-<td class="lastrow">
-94.5
-</td>
-<td class="lastrow">
-186.8
-</td>
-<td class="lastrow">
-49.8
-</td>
-<td class="lastrow">
-118.0
-</td>
-</tr>
-<tr>
-<td class="rowlabel firstrow">
-estrone (pg/mL)
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-<td class="firstrow">
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Median
-</td>
-<td>
-25.000
-</td>
-<td>
-23.000
-</td>
-<td>
-29.000
-</td>
-<td>
-24.000
-</td>
-<td>
-26.000
-</td>
-<td>
-23.000
-</td>
-</tr>
-<tr>
-<td class="rowlabel">
-Variance
-</td>
-<td>
-223.8
-</td>
-<td>
-143.8
-</td>
-<td>
-246.4
-</td>
-<td>
-174.4
-</td>
-<td>
-232.8
-</td>
-<td>
-151.5
-</td>
-</tr>
-<tr>
-<td class="rowlabel lastrow">
-Missing
-</td>
-<td class="lastrow">
-58 (19.5%)
-</td>
-<td class="lastrow">
-15 (31.3%)
-</td>
-<td class="lastrow">
-30 (22.2%)
-</td>
-<td class="lastrow">
-11 (37.9%)
-</td>
-<td class="lastrow">
-88 (20.3%)
-</td>
-<td class="lastrow">
-26 (33.8%)
 </td>
 </tr>
 <tr>
@@ -4355,7 +3782,7 @@ specifying <code>render.categorical</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4407,7 +3834,7 @@ straightforward.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>Try to remove the empty string from the function, and use it is a
 table one as previously shown:</p>
@@ -4419,7 +3846,7 @@ table one as previously shown:</p>
 <span>  <span class="fu">c</span><span class="op">(</span><span class="st">"Median"</span> <span class="op">=</span> <span class="fu">sprintf</span><span class="op">(</span><span class="st">"%.3f"</span>, <span class="fu">median</span><span class="op">(</span><span class="va">x</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>,</span>
 <span><span class="st">"Variance"</span> <span class="op">=</span> <span class="fu">sprintf</span><span class="op">(</span><span class="st">"%.1f"</span>, <span class="fu">var</span><span class="op">(</span><span class="va">x</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
-<span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">estradol</span> <span class="op">+</span> <span class="va">estrone</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span>,</span>
+<span><span class="fu">table1</span><span class="op">(</span><span class="op">~</span><span class="va">ageblood</span> <span class="op">+</span> <span class="va">testost</span> <span class="op">+</span> <span class="va">prolactn</span><span class="op">|</span><span class="va">case</span> <span class="op">+</span> <span class="va">curpmh</span>, data <span class="op">=</span> <span class="va">blood</span>,</span>
 <span>render.continuous <span class="op">=</span> <span class="va">my_summary</span><span class="op">)</span></span></code></pre>
 </div>
 <p>The line beginning with “Median” does not show up, but the median
@@ -4433,7 +3860,7 @@ value is shown next to the “Age” and “Weight” lines.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Primarily of use if there are medical students on the course</p>
 </div>
@@ -4660,7 +4087,7 @@ challenge blocks</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -4830,7 +4257,7 @@ funktioner.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] -0.1148570  0.7923089 -0.2539532  0.8359442 -1.8509198</code></pre>
+<pre class="output" tabindex="0"><code>[1]  0.1027327  2.2159623 -1.7993566  0.4296567  1.3010841</code></pre>
 </div>
 <p>Den returnerer (her) fem tilfældige værdier fra en normalfordeling
 med (her) middelværdi 0 og standardafvigelse 1.</p>
@@ -5199,7 +4626,7 @@ multitude of tests has been devised for testing exactly that.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>These tests can be difficult for learners that have not encountered
 hypothesis-testing before.</p>
@@ -5440,7 +4867,7 @@ in USA. We only look at eruptions that lasts longer than 3 minutes:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Det er nødvendigt at specificere at vi bruger
 <code>dplyr::select</code> da den maskeres af MASS-pakken</p>
@@ -5681,7 +5108,7 @@ actually be better.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>Og her er det vi holder dem fast på at det faktisk er dem selv der er
 de bedst kvalificerede til at afgøre det. For det er dem der forstår
@@ -5937,7 +5364,7 @@ bad.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Bremselængden er faktisk ikke en lineær funktion af hastigheden.
 Bilen har kinetisk (bevægelses) energi så længe den bevæger sig. Den
@@ -6067,7 +5494,7 @@ mph?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>3.932*12.5 - 17.579 = 31.571 ft</p>
 </div>
@@ -6090,7 +5517,7 @@ mph?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Yep. We might be able to measure the speed with the implied
 precision. But the prediction implies a precision on the scale of
@@ -6203,7 +5630,7 @@ library <code>palmerpenguins</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6296,7 +5723,7 @@ distributed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6688,7 +6115,7 @@ included.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>svaret er 42</p>
 </div>
@@ -6700,7 +6127,7 @@ included.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6860,7 +6287,7 @@ centimeter high, postmenopausal woman weighing 62 kg?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>We find it by adding all the terms:</p>
 <ul>
@@ -7551,7 +6978,7 @@ This is definitely not normally distributed.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.470761</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.4578118</code></pre>
 </div>
 <p>The important point of the Central Limit Theorem is, that if we take
 a large number of random samples, and calculate the mean of each of
@@ -7567,7 +6994,7 @@ this:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.5266054</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.4930829</code></pre>
 </div>
 <p>And we can use the <code>replicate()</code> function to repeat that
 calculation several times, in this case 1000 times:</p>
@@ -7719,7 +7146,7 @@ with the data.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Men det er egentlig ikke vigtigt her - fokus er på hvordan man får et
 barchart til at se pænere ud.</p>
@@ -7792,7 +7219,7 @@ that the most frequent species of penguin is Adelie penguins.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>Ja, det er let nok ellers, men nu er det ekstremt let.</p>
 </div>
@@ -8543,31 +7970,31 @@ work with afterwards:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 69, 47, 62
+<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 47, 62, 69
 
 Cluster means:
    Alcohol Malicacid      Ash Alcalinityofash Magnesium Totalphenols Flavanoids
-1 12.51667  2.494203 2.288551        20.82319  92.34783     2.070725   1.758406
-2 13.80447  1.883404 2.426170        17.02340 105.51064     2.867234   3.014255
-3 12.92984  2.504032 2.408065        19.89032 103.59677     2.111129   1.584032
+1 13.80447  1.883404 2.426170        17.02340 105.51064     2.867234   3.014255
+2 12.92984  2.504032 2.408065        19.89032 103.59677     2.111129   1.584032
+3 12.51667  2.494203 2.288551        20.82319  92.34783     2.070725   1.758406
   Nonflavanoidphenols Proanthocyanins Colorintensity       Hue
-1           0.3901449        1.451884       4.086957 0.9411594
-2           0.2853191        1.910426       5.702553 1.0782979
-3           0.3883871        1.503387       5.650323 0.8839677
+1           0.2853191        1.910426       5.702553 1.0782979
+2           0.3883871        1.503387       5.650323 0.8839677
+3           0.3901449        1.451884       4.086957 0.9411594
   OD280OD315ofdilutedwines   Proline
-1                 2.490725  458.2319
-2                 3.114043 1195.1489
-3                 2.365484  728.3387
+1                 3.114043 1195.1489
+2                 2.365484  728.3387
+3                 2.490725  458.2319
 
 Clustering vector:
-  [1] 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 2 2 3 3 2 2 3 2 2 2 2 2 2 3 3
- [38] 2 2 3 3 2 2 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 3 1 3 1 1 3 1 1 3 3 3 1 1 2
- [75] 3 1 1 1 3 1 1 3 3 1 1 1 1 1 3 3 1 1 1 1 1 3 3 1 3 1 3 1 1 1 3 1 1 1 1 3 1
-[112] 1 3 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 3 1 1 3 3 3 3 1 1 1 3 3 1 1 3 3 1 3
-[149] 3 1 1 1 1 3 3 3 1 3 3 3 1 3 1 3 3 1 3 3 3 3 1 1 3 3 3 3 3 1
+  [1] 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 1 1 2 2 1 1 2 1 1 1 1 1 1 2 2
+ [38] 1 1 2 2 1 1 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 2 3 2 3 3 2 3 3 2 2 2 3 3 1
+ [75] 2 3 3 3 2 3 3 2 2 3 3 3 3 3 2 2 3 3 3 3 3 2 2 3 2 3 2 3 3 3 2 3 3 3 3 2 3
+[112] 3 2 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 2 3 3 2 2 2 2 3 3 3 2 2 3 3 2 2 3 2
+[149] 2 3 3 3 3 2 2 2 3 2 2 2 3 2 3 2 2 3 2 2 2 2 3 3 2 2 2 2 2 3
 
 Within cluster sum of squares by cluster:
-[1]  443166.7 1360950.5  566572.5
+[1] 1360950.5  566572.5  443166.7
  (between_SS / total_SS =  86.5 %)
 
 Available components:
@@ -8589,9 +8016,9 @@ found, and match them with the true values, and count the matches:</p>
 </h3>
 <pre class="output" tabindex="0"><code>     true
 quess  1  2  3
-    1  0 50 19
-    2 46  1  0
-    3 13 20 29</code></pre>
+    1 46  1  0
+    2 13 20 29
+    3  0 50 19</code></pre>
 </div>
 <p>The algorithm have no idea about the numbering, the three groups are
 numbered 1 to 3 randomly. It appears that cluster 2 from the algorithm
@@ -9629,7 +9056,7 @@ gør vi også.</p>
   dette er en hint fence
   </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 
 </div>
@@ -9666,7 +9093,7 @@ gør vi også.</p>
   dette er en instructor fence
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 
 </div>
@@ -9681,7 +9108,7 @@ gør vi også.</p>
   dette er en spoiler fence
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 
 </div>
