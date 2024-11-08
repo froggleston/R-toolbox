@@ -892,7 +892,7 @@ problems arise, try using one of the other functions provided in
 <p>Stata is a proprietary statistical software package, used in a
 multitude of different fields, primarily biomedicine, epidemiololy,
 sociology and economics.</p>
-<p>As mentioned above, hte <code>haven</code> package provides functions
+<p>As mentioned above, the <code>haven</code> package provides functions
 for reading Stata files:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -911,8 +911,7 @@ reading specific file formats.</p>
 <hr class="half-width">
 <p>SAS is a proprietary statistical software suite developed by SAS
 Institute.</p>
-<p>As mentioned above the package <code>haven</code> can read
-SAS-files:</p>
+<p>The package <code>haven</code> can read SAS-files:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1207,8 +1206,8 @@ function:</p>
 </h3>
 <pre class="output" tabindex="0"><code>[1] 4201.754</code></pre>
 </div>
-<p>A slightly more cumbersome way is using the summarise function from
-<code>tidyverse</code>:</p>
+<p>A slightly more cumbersome way is using the <code>summarise()</code>
+function from <code>tidyverse</code>:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1224,7 +1223,8 @@ function:</p>
      &lt;dbl&gt;
 1    4202.</code></pre>
 </div>
-<p>The advantage will be clear below.</p>
+<p>As we will see below, this function streamlines the process of
+getting multiple descriptive values.</p>
 <p>Barring significant outliers, <code>mean</code> is an expression of
 position of the data. This is the weight we would expect a random
 penguin in our dataset to have.</p>
@@ -1245,27 +1245,23 @@ observations is smaller than. And half the observations is larger.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">summarise</span><span class="op">(</span>median <span class="op">=</span> <span class="fu">median</span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">median</span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code># A tibble: 1 × 1
-  median
-   &lt;dbl&gt;
-1   4050</code></pre>
+<pre class="output" tabindex="0"><code>[1] 4050</code></pre>
 </div>
 <p>We can note that the mean is larger than the median. This indicates
 that the data is skewed, in this case toward the larger penguins.</p>
-<p>We can get both <code>median</code> and <code>mean</code> in one
-go:</p>
+<p>We can get both <code>median</code> and <code>mean</code> in one go
+using the <code>summarise()</code> function:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">penguins</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">summarise</span><span class="op">(</span>median <span class="op">=</span> <span class="fu">median</span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">T</span><span class="op">)</span>,</span>
+<span>  <span class="fu">summarise</span><span class="op">(</span>median <span class="op">=</span> <span class="fu">median</span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
 <span>            mean   <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">body_mass_g</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
@@ -4081,7 +4077,7 @@ funktioner.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1]  2.0708034 -1.0812002  1.7313221  0.4901545 -1.4659334</code></pre>
+<pre class="output" tabindex="0"><code>[1] -0.536407282 -1.911209692 -0.017573346 -0.003118702  0.181864337</code></pre>
 </div>
 <p>Den returnerer (her) fem tilfældige værdier fra en normalfordeling
 med (her) middelværdi 0 og standardafvigelse 1.</p>
@@ -6744,7 +6740,7 @@ This is definitely not normally distributed.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.4833268</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.5328444</code></pre>
 </div>
 <p>The important point of the Central Limit Theorem is, that if we take
 a large number of random samples, and calculate the mean of each of
@@ -6760,7 +6756,7 @@ this:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.454573</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.4953382</code></pre>
 </div>
 <p>And we can use the <code>replicate()</code> function to repeat that
 calculation several times, in this case 1000 times:</p>
@@ -7709,32 +7705,32 @@ work with afterwards:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 100, 50, 28
+<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 69, 47, 62
 
 Cluster means:
-   Alcohol Malicacid    Ash Alcalinityofash Magnesium Totalphenols Flavanoids
-1 12.60250  2.463600 2.3293        20.69600   93.7400     2.050400   1.633500
-2 13.33680  2.396800 2.3718        18.51000  108.6000     2.432400   2.214800
-3 13.82214  1.773929 2.4900        16.96429  105.3571     2.923929   3.111429
-  Nonflavanoidphenols Proanthocyanins Colorintensity      Hue
-1           0.3987000        1.421900       4.694800 0.911900
-2           0.3236000        1.707200       5.143600 0.966720
-3           0.2985714        1.986786       6.202857 1.103571
-  OD280OD315ofdilutedwines Proline
-1                 2.381700  517.75
-2                 2.862800  894.60
-3                 2.984643 1301.50
+   Alcohol Malicacid      Ash Alcalinityofash Magnesium Totalphenols Flavanoids
+1 12.51667  2.494203 2.288551        20.82319  92.34783     2.070725   1.758406
+2 13.80447  1.883404 2.426170        17.02340 105.51064     2.867234   3.014255
+3 12.92984  2.504032 2.408065        19.89032 103.59677     2.111129   1.584032
+  Nonflavanoidphenols Proanthocyanins Colorintensity       Hue
+1           0.3901449        1.451884       4.086957 0.9411594
+2           0.2853191        1.910426       5.702553 1.0782979
+3           0.3883871        1.503387       5.650323 0.8839677
+  OD280OD315ofdilutedwines   Proline
+1                 2.490725  458.2319
+2                 3.114043 1195.1489
+3                 2.365484  728.3387
 
 Clustering vector:
-  [1] 2 2 3 3 2 3 3 3 2 2 3 3 3 3 3 3 3 3 3 2 2 2 2 2 2 2 3 3 2 2 3 3 2 3 2 2 2
- [38] 3 2 2 2 2 2 1 2 2 2 2 2 3 3 3 3 3 2 3 2 3 3 1 1 1 1 1 1 1 1 1 2 2 2 1 1 2
- [75] 2 1 1 1 2 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1
-[112] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 2 1 1 2 2 1 1
-[149] 1 1 1 1 1 1 1 2 1 2 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 2 2 2 2 1
+  [1] 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 2 2 3 3 2 2 3 2 2 2 2 2 2 3 3
+ [38] 2 2 3 3 2 2 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 3 1 3 1 1 3 1 1 3 3 3 1 1 2
+ [75] 3 1 1 1 3 1 1 3 3 1 1 1 1 1 3 3 1 1 1 1 1 3 3 1 3 1 3 1 1 1 3 1 1 1 1 3 1
+[112] 1 3 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 3 1 1 3 3 3 3 1 1 1 3 3 1 1 3 3 1 3
+[149] 3 1 1 1 1 3 3 3 1 3 3 3 1 3 1 3 3 1 3 3 3 3 1 1 3 3 3 3 3 1
 
 Within cluster sum of squares by cluster:
-[1] 1263330.5  815783.7  550201.0
- (between_SS / total_SS =  85.1 %)
+[1]  443166.7 1360950.5  566572.5
+ (between_SS / total_SS =  86.5 %)
 
 Available components:
 
@@ -7755,9 +7751,9 @@ found, and match them with the true values, and count the matches:</p>
 </h3>
 <pre class="output" tabindex="0"><code>     true
 quess  1  2  3
-    1  1 62 37
-    2 30  9 11
-    3 28  0  0</code></pre>
+    1  0 50 19
+    2 46  1  0
+    3 13 20 29</code></pre>
 </div>
 <p>The algorithm have no idea about the numbering, the three groups are
 numbered 1 to 3 randomly. It appears that cluster 2 from the algorithm
@@ -8786,7 +8782,7 @@ gør vi også.</p>
   dette er en hint fence
   </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 
 </div>
@@ -8823,7 +8819,7 @@ gør vi også.</p>
   dette er en spoiler fence
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 
 </div>
