@@ -112,6 +112,14 @@ Reading the documentation reveals that it is not that simple:
 
 "Where virtual machines are in use, one would hope that the result for logical = TRUE represents the number of CPUs available (or potentially available) to that particular VM."
 
+Or use this:
+
+
+``` r
+future::availableCores()
+```
+
+
 ### Memory
 
 Looking at the interface, we see that we also get access to more memory, or RAM.
@@ -286,6 +294,8 @@ note that there is an "Upload" button in the Files pane in RStudio. Use that.
 
 ### What types of machines did I have access to?
 
+UCloud offers the possibility of "projects" where you choices might be different.
+If you're not in a "project" these will be the default options:
 
 | name | vcpu |  memory (GB) |
 |------|------|-------------|
@@ -439,6 +449,10 @@ reticulate::use_condaenv("my_project_env", required = TRUE)
 
 Before actually doing anything.
 
+
+
+
+
 #### Other issues
 
 Renv is a bit finicky. You might get messages about packages being in "an inconsistent
@@ -458,6 +472,16 @@ renv::snapshot()
 renv::restore()
 ```
 
+Sometimes renv forgets that a library is installed...
+
+Fortunately the libraries are easily available, so an 
+
+``` r
+renv::install("rstudio/keras3")
+```
+
+is fast. The example shows keras3 - exchange the package name
+for what is actually missing.
 
 ### The sledgehammer solution
 
