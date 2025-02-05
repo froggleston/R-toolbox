@@ -562,6 +562,13 @@ that returns the number of cores we have access to:</p>
 <p>“Where virtual machines are in use, one would hope that the result
 for logical = TRUE represents the number of CPUs available (or
 potentially available) to that particular VM.”</p>
+<p>Or use this:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">future</span><span class="fu">::</span><span class="fu">availableCores</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
 </div>
 <div class="section level3">
 <h3 id="memory">Memory<a class="anchor" aria-label="anchor" href="#memory"></a></h3>
@@ -701,6 +708,9 @@ Use that.</p>
 </div>
 <div class="section level3">
 <h3 id="what-types-of-machines-did-i-have-access-to">What types of machines did I have access to?<a class="anchor" aria-label="anchor" href="#what-types-of-machines-did-i-have-access-to"></a></h3>
+<p>UCloud offers the possibility of “projects” where you choices might
+be different. If you’re not in a “project” these will be the default
+options:</p>
 <table class="table"><thead><tr class="header"><th>name</th>
 <th>vcpu</th>
 <th>memory (GB)</th>
@@ -762,7 +772,7 @@ we call it “setup.R”</p>
 <p>Some of the lines of code restart R. This is necessary for R to
 read-in new options and settings. And when R is restarted, it does not
 know where to continue.</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -808,7 +818,7 @@ know where to continue.</p>
 </div>
 <p>One way to check that everything worked, is to run the following
 script:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -839,7 +849,7 @@ project.</p>
 project:¨</p>
 <figure><img src="fig/ucloud_taking_longer.png" class="figure mx-auto d-block"></figure><p>And for reasons we do not entirely understand at KUB Datalab (yet),
 we also have to run the</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -852,14 +862,14 @@ we also have to run the</p>
 <h4 id="other-issues">Other issues<a class="anchor" aria-label="anchor" href="#other-issues"></a></h4>
 <p>Renv is a bit finicky. You might get messages about packages being in
 “an inconsistent state”. Try running this first:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">renv</span><span class="fu">::</span><span class="fu">restore</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
 <p>And if that does not solve the problem, try:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -867,6 +877,16 @@ we also have to run the</p>
 <span><span class="fu">renv</span><span class="fu">::</span><span class="fu">snapshot</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu">renv</span><span class="fu">::</span><span class="fu">restore</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
+<p>Sometimes renv forgets that a library is installed…</p>
+<p>Fortunately the libraries are easily available, so an</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">renv</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="st">"rstudio/keras3"</span><span class="op">)</span></span></code></pre>
+</div>
+<p>is fast. The example shows keras3 - exchange the package name for
+what is actually missing.</p>
 </div>
 <div class="section level3">
 <h3 id="the-sledgehammer-solution">The sledgehammer solution<a class="anchor" aria-label="anchor" href="#the-sledgehammer-solution"></a></h3>
@@ -876,7 +896,7 @@ being pretty violent with the virtual machine.</p>
 <p>When you have started the virtual machine, and opened a project, make
 a new R-script in the project, copy the following code (or download it
 from here), and run it line by line.</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
