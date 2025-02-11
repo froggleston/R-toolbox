@@ -94,8 +94,8 @@ DiagrammeR::grViz("digraph {
 ```
 
 <div class="figure" style="text-align: center">
-<!--html_preserve--><div id="htmlwidget-85a80ebab4be5d75c49c" style="width:100%;height:500px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-85a80ebab4be5d75c49c">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TB]\n  \n  node [shape = rectangle]        \n  rec1 [label = \"Step 1. Wake up\"]\n  rec2 [label = \"Step 2. Write code\"]\n  rec3 [label =  \"Step 3. ???\"]\n  rec4 [label = \"Step 4. PROFIT\"]\n  \n  # edge definitions with the node IDs\n  rec1 -> rec2 -> rec3 -> rec4\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-0ec77beb445b2e90de9f" style="width:100%;height:500px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0ec77beb445b2e90de9f">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = TB]\n  \n  node [shape = rectangle]        \n  rec1 [label = \"Step 1. Wake up\"]\n  rec2 [label = \"Step 2. Write code\"]\n  rec3 [label =  \"Step 3. ???\"]\n  rec4 [label = \"Step 4. PROFIT\"]\n  \n  # edge definitions with the node IDs\n  rec1 -> rec2 -> rec3 -> rec4\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 <p class="caption">A diagram showing a programmer's daydream.</p>
 </div>
 
@@ -103,8 +103,8 @@ DiagrammeR::grViz("digraph {
 
 The tee-pipe allow us to inject a function into a longer set of pipes, without affecting the rest of the flow.
 
-<!--html_preserve--><div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-0e40c416b6ed3f8c7f89" style="width:504px;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-0e40c416b6ed3f8c7f89">{"x":{"diagram":"\n  graph TB\n    A[Input data] --> B[%T>%]\n    B --> C[Run for side-effect <br> e.g. print, plot or log]\n    B --> D[Return original data]\n"},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-158b5d5bbf8c36f3696a" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-158b5d5bbf8c36f3696a">{"x":{"diagram":"\n  graph TB\n    A[Input data] --> B[%T>%]\n    B --> C[Run for side-effect <br> e.g. print, plot or log]\n    B --> D[Return original data]\n"},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 %\<\>% %\$% %!\>% %T\>%
 
