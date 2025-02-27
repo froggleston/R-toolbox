@@ -118,11 +118,11 @@
   R-toolbox
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 81%" class="percentage">
-    81%
+<aside class="col-md-12 lesson-progress"><div style="width: 61%" class="percentage">
+    61%
   </div>
   <div class="progress library">
-    <div class="progress-bar library" role="progressbar" style="width: 81%" aria-valuenow="81" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar library" role="progressbar" style="width: 61%" aria-valuenow="61" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -381,7 +381,7 @@
 <div class="accordion accordion-flush" id="accordionFlush20">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading20">
-        <a href="fence-test.html">19. Fences på vores undervisningssider</a>
+        <a href="tuning-kmeans.html">19. Tuning kmeans</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -390,7 +390,7 @@
 <div class="accordion accordion-flush" id="accordionFlush21">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading21">
-        <a href="making-a-new-course.html">20. Make a new course</a>
+        <a href="gis_setup.html">20. Setup for GIS</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -399,7 +399,16 @@
 <div class="accordion accordion-flush" id="accordionFlush22">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading22">
-        <a href="tuning-kmeans.html">21. Tuning kmeans</a>
+        <a href="fence-test.html">21. Fences på vores undervisningssider</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush23">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading23">
+        <a href="making-a-new-course.html">22. Make a new course</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -448,7 +457,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="ucloud.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="fence-test.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="tuning-kmeans.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -456,8 +465,8 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: R on Ucloud
         </a>
-        <a class="chapter-link float-end" href="fence-test.html" rel="next">
-          Next: Fences på vores...
+        <a class="chapter-link float-end" href="tuning-kmeans.html" rel="next">
+          Next: Tuning kmeans...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -509,7 +518,7 @@ version 4.1 in May 2021.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> R dialects </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>R-programmers tend to write in one dialect of R, small variations
 that are understandable - but still different. The three common dialects
@@ -620,10 +629,10 @@ have a number of siblings.</p>
 <p>This pipe allow us to inject a function into a longer set of pipes,
 without affecting the rest of the flow.</p>
 <!--html_preserve-->
-<div id="htmlwidget-5e62308ff38a933ae969" class="DiagrammeR html-widget html-fill-item" style="width:504px;height:504px;">
+<div id="htmlwidget-8884d7c00be96d5ab4c1" class="DiagrammeR html-widget html-fill-item" style="width:504px;height:504px;">
 
 </div>
-<script type="application/json" data-for="htmlwidget-5e62308ff38a933ae969">{"x":{"diagram":"\n  graph LR\n    A[Input data] --> B[%T>%]\n    B --> C[Function run for side-effect <br> e.g. print, plot or log]\n    B --> E\n    C --> D[ %>% ]\n    D --> E[Next function in the flow]\n"},"evals":[],"jsHooks":[]}</script><!--/html_preserve--><p><img src="fig/tee-pipe.png" class="figure"> The tee-pipe sends data to two
+<script type="application/json" data-for="htmlwidget-8884d7c00be96d5ab4c1">{"x":{"diagram":"\n  graph LR\n    A[Input data] --> B[%T>%]\n    B --> C[Function run for side-effect <br> e.g. print, plot or log]\n    B --> E\n    C --> D[ %>% ]\n    D --> E[Next function in the flow]\n"},"evals":[],"jsHooks":[]}</script><!--/html_preserve--><p><img src="fig/tee-pipe.png" class="figure"> The tee-pipe sends data to two
 functions. The immediate next, which we want to run for plotting,
 logging or printing data, and to the next function over, which get the
 original input data, rather than what is returned by the intermediate
@@ -648,7 +657,7 @@ equal to 1.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -712,7 +721,7 @@ the side effect.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Defining three functions </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -819,7 +828,7 @@ Sepal.Width in the iris dataset.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>Something like this:</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -840,7 +849,7 @@ Sepal.Width in the iris dataset.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>This cannot be done.</p>
 <p>In this attempt:</p>
@@ -959,7 +968,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="ucloud.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="fence-test.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="tuning-kmeans.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -967,8 +976,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: R on Ucloud
         </a>
-        <a class="chapter-link float-end" href="fence-test.html" rel="next">
-          Next: Fences på vores...
+        <a class="chapter-link float-end" href="tuning-kmeans.html" rel="next">
+          Next: Tuning kmeans...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
