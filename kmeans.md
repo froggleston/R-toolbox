@@ -417,16 +417,16 @@ library(tidymodels)
 ```
 
 ``` output
-── Attaching packages ────────────────────────────────────── tidymodels 1.2.0 ──
+── Attaching packages ────────────────────────────────────── tidymodels 1.3.0 ──
 ```
 
 ``` output
 ✔ broom        1.0.7     ✔ rsample      1.2.1
-✔ dials        1.3.0     ✔ tune         1.2.1
-✔ infer        1.0.7     ✔ workflows    1.1.4
+✔ dials        1.4.0     ✔ tune         1.3.0
+✔ infer        1.0.7     ✔ workflows    1.2.0
 ✔ modeldata    1.4.0     ✔ workflowsets 1.1.0
-✔ parsnip      1.2.1     ✔ yardstick    1.3.2
-✔ recipes      1.1.0     
+✔ parsnip      1.3.0     ✔ yardstick    1.3.2
+✔ recipes      1.1.1     
 ```
 
 ``` output
@@ -437,7 +437,6 @@ library(tidymodels)
 ✖ dplyr::lag()      masks stats::lag()
 ✖ yardstick::spec() masks readr::spec()
 ✖ recipes::step()   masks stats::step()
-• Learn how to get started at https://www.tidymodels.org/start/
 ```
 
 ``` r
