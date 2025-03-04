@@ -417,6 +417,7 @@
         <ul><li><a href="#export-your-app">Export your app</a></li>
 <li><a href="#test-your-app">Test your app</a></li>
 <li><a href="#now-we-need-to-get-it-on-github">Now we need to get it on GitHub</a></li>
+<li><a href="#more-than-one-app">More than one app</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -620,6 +621,18 @@ library in your code:</p>
 <p>Flere apps på samme repo</p>
 <p><a href="https://posit-dev.github.io/r-shinylive/" class="external-link uri">https://posit-dev.github.io/r-shinylive/</a></p>
 <p>Denne beskriver i detaljer hvordan <a href="https://hbctraining.github.io/Training-modules/RShiny/lessons/shinylive.html" class="external-link uri">https://hbctraining.github.io/Training-modules/RShiny/lessons/shinylive.html</a></p>
+</section><section><h2 class="section-heading" id="more-than-one-app">More than one app<a class="anchor" aria-label="anchor" href="#more-than-one-app"></a></h2>
+<hr class="half-width"><p>The assets needed for running this takes up space.</p>
+<p>How do we serve more than one app</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">shinylive</span><span class="fu">::</span><span class="fu">export</span><span class="op">(</span><span class="st">"myapp1"</span>, <span class="st">"site"</span>, subdir <span class="op">=</span> <span class="st">"app1"</span><span class="op">)</span></span>
+<span><span class="fu">shinylive</span><span class="fu">::</span><span class="fu">export</span><span class="op">(</span><span class="st">"myapp2"</span>, <span class="st">"site"</span>, subdir <span class="op">=</span> <span class="st">"app2"</span><span class="op">)</span></span></code></pre>
+</div>
+<p>shinylive::export(“myapp1”, “site”, subdir = “app1”)
+shinylive::export(“myapp2”, “site”, subdir = “app2”)</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
