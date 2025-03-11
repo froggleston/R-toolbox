@@ -581,7 +581,7 @@ _Dimensions:_ Rows: 62 Columns: 22
 
 ### FEV
 
-Data on 654 children seen in the [Childhood Respiratory Disease Study](#tage_6)^6^ in East Boston 
+Data on 654 children seen in the [Childhood Respiratory Disease Study](learners/data.md#tage_6)^6^ in East Boston 
 Massachusetts in 1980. Forced Expiratory Volume (FEV), an index of pulmonary
 function was measured, along with, age, height, sex and smoking status. 
 
@@ -1527,7 +1527,7 @@ _Dimensions:_ Rows: 173 Columns: 9
 Data from a 7 year longitudinal study started in spring 1975 in Edinburgh.
 Two classes at an elementary school participated and informed consent were
 collected from 40 of the 42 boys in the classes. Every 3 months a 24 hour
-urine sample were collected from each boy. These samples were analyzed for the
+urine sample were collected from each boy. These samples were analysed for the
 precense of spermatozoa. In the variable observations are registered the result
 of each urine sample.
 
