@@ -395,12 +395,19 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         22. Make a new course
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#editing">Editing</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -525,7 +532,7 @@ you can easily initialize a new repository based on this page.</p>
   How do you make a template-repo?
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Go to the main page of the repo you want to make a template.</p>
 <p>Click “settings”, and, just under the box where you can change the
@@ -556,6 +563,8 @@ forking to your own GitHub account, and cloning the repo to your
 computer.</p>
 <p>You will also need to update the CITATION.cff file, otherwise the
 citation will point to this site, rather than your own.</p>
+<p>You can use <a href="https://citation-file-format.github.io/cff-initializer-javascript/#/" class="external-link uri">https://citation-file-format.github.io/cff-initializer-javascript/#/</a>
+to edit the existing, or make a new one.</p>
 <div id="consider-deleting-stuff" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -620,6 +629,8 @@ R-toolbox.</p>
 </div>
 </div>
 </div>
+<section><h2 class="section-heading" id="editing">Editing<a class="anchor" aria-label="anchor" href="#editing"></a></h2>
+<hr class="half-width"><p>There are a lot of useful information on <a href="https://carpentries.github.io/sandpaper-docs" class="external-link uri">https://carpentries.github.io/sandpaper-docs</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -636,10 +647,7 @@ R-toolbox.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="fence-test.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="shinylive.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
