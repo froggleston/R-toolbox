@@ -45,7 +45,7 @@ mean(random_numbers)
 ```
 
 ``` output
-[1] 0.5009681
+[1] 0.4874432
 ```
 The important point of the Central Limit Theorem is, that if we take a large
 number of random samples, and calculate the mean of each of these samples,
@@ -59,7 +59,7 @@ mean(runif(100))
 ```
 
 ``` output
-[1] 0.4923317
+[1] 0.5001773
 ```
 And we can use the `replicate()` function to repeat that calculation several times, in this case 1000 times:
 
