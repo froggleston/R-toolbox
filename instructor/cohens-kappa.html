@@ -569,7 +569,7 @@ one.</p>
   Constructing the data
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Ja, dette bør ligge i et datasæt der kan indlæses.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -714,7 +714,7 @@ Weighted   0.5588 0.1282 4.359 1.304e-05</code></pre>
   Unweighted vs Weighted?
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>For some use cases it does not really matter what kind of
 disagreement the two raters have. They of course should agree, but the
@@ -835,16 +835,21 @@ divided by the number of patients:</p>
 <p><span class="math display">\[P_0 = \frac{a + d}{N}\]</span></p>
 <p>The random agreement <span class="math inline">\(P_e\)</span> takes a
 bit more math:</p>
-<p>Doctor 1 answers “yes” in <span class="math inline">\(\frac{R_1}{N}\)</span> cases. Doctor 2 answers
-“yes” in <span class="math inline">\(\frac{C_1}{N}\)</span> cases.</p>
-<p>Based on this, the probability that they both, randomly and by
+<ul><li>Doctor 1 answers “yes” in <span class="math inline">\(\frac{R_1}{N}\)</span> cases.</li>
+<li>Doctor 2 answers “yes” in <span class="math inline">\(\frac{C_1}{N}\)</span> cases.</li>
+</ul><p>Based on this, the probability that they both, randomly and by
 chance, answers “yes” is:</p>
-<p><span class="math display">\[\frac{R1}{N}  \frac{C1}{N}\]</span>
-Doctor1 answers “no” in <span class="math inline">\({R2}{N}\)</span>
-cases Doctor2 answers “no” in <span class="math inline">\(\frac{C2}{N}\)</span> cases</p>
+<p><span class="math display">\[\frac{R1}{N}  \frac{C1}{N}\]</span></p>
+<p>And for the random agreement of “no”:</p>
+<p><em>Doctor1 answers “no” in <span class="math inline">\(\frac{R2}{N}\)</span> cases </em> Doctor2 answers
+“no” in <span class="math inline">\(\frac{C2}{N}\)</span> cases</p>
 <p>And the probability that they both, again randomly and by chance,
 answers “no” is:</p>
 <p><span class="math display">\[\frac{R2}{N} \frac{C2}{N}\]</span></p>
+<p>We then calculate the total probability that the two raters agree by
+chance by adding the two ways they can do that:</p>
+<p><span class="math display">\[P_e = \frac{R1}{N}  \frac{C1}{N}+
+\frac{R2}{N} \frac{C2}{N}\]</span></p>
 <p>Now that we have both <span class="math inline">\(P_0\)</span> and
 <span class="math inline">\(P_e\)</span>, we can calculate <span class="math inline">\(\kappa\)</span>, and confidence intervals: <span class="math inline">\(\kappa \pm Z_{\alpha/2} SE_\kappa\)</span> based
 on the Z-distribution (if normality is assured, otherwise the
@@ -857,7 +862,7 @@ t-distribution).</p>
   This looks like something I have seen before?
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p>If you have ever looked at how the math in a <span class="math inline">\(\chi^2\)</span> test works, this might look
 familiar. Thats because it actually is.</p>
