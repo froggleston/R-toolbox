@@ -537,7 +537,7 @@
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Den her side er virkelig ikke egnet til undervisningsbrug. Det er
 oversigten med eksempler og ret korte forklaringer. Hele siden kan nok
@@ -1060,12 +1060,113 @@ log-logistisk, …)<a class="anchor" aria-label="anchor" href="#accelerated-fail
 </div>
 <div class="section level3">
 <h3 id="intraclass-correlation-coefficient-icc">Intraclass Correlation Coefficient (ICC)<a class="anchor" aria-label="anchor" href="#intraclass-correlation-coefficient-icc"></a></h3>
+<p>EJ KORREKTURLÆST</p>
+<div class="section level4">
+<h4 id="used-for-4">Used for<a class="anchor" aria-label="anchor" href="#used-for-4"></a></h4>
+<ul><li>Assessing the reliability or agreement of quantitative measurements
+made by two or more raters.<br></li>
+<li>
+<strong>Real-world example:</strong> Determining how consistently
+three radiologists measure tumor size on MRI scans.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="assumptions-4">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-4"></a></h4>
+<ul><li>Measurements are continuous and approximately normally
+distributed.<br></li>
+<li>Raters are randomly selected (for the “random‐effects” model) or
+fixed (for the “fixed‐effects” model), depending on choice.<br></li>
+<li>No interaction between subjects and raters (i.e., rater effects are
+consistent across subjects).<br></li>
+<li>Balanced design: each subject is rated by the same set of
+raters.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="strengths-4">Strengths<a class="anchor" aria-label="anchor" href="#strengths-4"></a></h4>
+<ul><li>Quantifies both consistency and absolute agreement, with different
+model/type options.<br></li>
+<li>Can accommodate any number of raters and subjects.<br></li>
+<li>Provides confidence intervals and tests for ICC.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="weaknesses-4">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-4"></a></h4>
+<ul><li>Sensitive to violations of normality and homogeneity of
+variance.<br></li>
+<li>Choice of model (one‐way vs. two‐way) and type (consistency
+vs. agreement) affects results.<br></li>
+<li>Requires balanced data; missing ratings complicate estimation.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="example-4">Example<a class="anchor" aria-label="anchor" href="#example-4"></a></h4>
+<div class="section level5">
+<h5 id="hypothesis-4">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-4"></a></h5>
+<ul><li>
+<strong>Null hypothesis (H₀):</strong> The intraclass correlation
+coefficient ICC = 0 (no reliability beyond chance).<br></li>
+<li>
+<strong>Alternative hypothesis (H₁):</strong> ICC &gt; 0
+(measurements are more reliable than chance).</li>
+</ul><div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">irr</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Loading required package: lpSolve</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Simulate ratings of 10 subjects by 3 raters:</span></span>
+<span><span class="fu">set.seed</span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
+<span><span class="va">ratings</span> <span class="op">&lt;-</span> <span class="fu">data.frame</span><span class="op">(</span></span>
+<span>  rater1 <span class="op">=</span> <span class="fu">round</span><span class="op">(</span><span class="fu">rnorm</span><span class="op">(</span><span class="fl">10</span>, mean <span class="op">=</span> <span class="fl">50</span>, sd <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  rater2 <span class="op">=</span> <span class="fu">round</span><span class="op">(</span><span class="fu">rnorm</span><span class="op">(</span><span class="fl">10</span>, mean <span class="op">=</span> <span class="fl">50</span>, sd <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  rater3 <span class="op">=</span> <span class="fu">round</span><span class="op">(</span><span class="fu">rnorm</span><span class="op">(</span><span class="fl">10</span>, mean <span class="op">=</span> <span class="fl">50</span>, sd <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Compute two-way random effects, absolute agreement, single rater ICC:</span></span>
+<span><span class="va">icc_result</span> <span class="op">&lt;-</span> <span class="fu">icc</span><span class="op">(</span><span class="va">ratings</span>,</span>
+<span>                  model <span class="op">=</span> <span class="st">"twoway"</span>,</span>
+<span>                  type  <span class="op">=</span> <span class="st">"agreement"</span>,</span>
+<span>                  unit  <span class="op">=</span> <span class="st">"single"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Display results:</span></span>
+<span><span class="va">icc_result</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code> Single Score Intraclass Correlation
+
+   Model: twoway
+   Type : agreement
+
+   Subjects = 10
+     Raters = 3
+   ICC(A,1) = -0.0823
+
+ F-Test, H0: r0 = 0 ; H1: r0 &gt; 0
+  F(9,16.8) = 0.77 , p = 0.645
+
+ 95%-Confidence Interval for ICC Population Values:
+  -0.326 &lt; ICC &lt; 0.382</code></pre>
+</div>
+<p>Interpretation: The estimated ICC is -0.08 with a 95% CI [-0.33,
+0.38] and p-value = 0.645. We fail to reject the null hypothesis. This
+indicates that there is no evidence of reliability beyond chance among
+the raters.</p>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="blandaltman-analysis">Bland–Altman analysis<a class="anchor" aria-label="anchor" href="#blandaltman-analysis"></a></h3>
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-4">Used for<a class="anchor" aria-label="anchor" href="#used-for-4"></a></h4>
+<h4 id="used-for-5">Used for<a class="anchor" aria-label="anchor" href="#used-for-5"></a></h4>
 <p>Assessing agreement between two quantitative measurement methods by
 examining the mean difference (bias) and the limits of agreement. It
 tests if any difference is constant across the range of measurements,
@@ -1075,7 +1176,7 @@ example:</strong> Comparing blood pressure readings from a new wrist
 monitor and a standard sphygmomanometer.</p>
 </div>
 <div class="section level4">
-<h4 id="assumptions-4">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-4"></a></h4>
+<h4 id="assumptions-5">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-5"></a></h4>
 <ul><li>Paired measurements on the same subjects.<br></li>
 <li>Differences (method A – method B) are approximately normally
 distributed.<br></li>
@@ -1083,7 +1184,7 @@ distributed.<br></li>
 the difference (homoscedasticity).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-4">Strengths<a class="anchor" aria-label="anchor" href="#strengths-4"></a></h4>
+<h4 id="strengths-5">Strengths<a class="anchor" aria-label="anchor" href="#strengths-5"></a></h4>
 <ul><li>Provides both a visual (Bland–Altman plot) and numerical summary
 (bias and limits) of agreement.<br></li>
 <li>Easy to interpret clinically: shows how far apart two methods can
@@ -1092,23 +1193,23 @@ differ for most observations.<br></li>
 agreement.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-4">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-4"></a></h4>
+<h4 id="weaknesses-5">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-5"></a></h4>
 <ul><li>Assumes constant bias across range of measurements.<br></li>
 <li>Sensitive to outliers, which can widen limits of agreement.<br></li>
 <li>Requires adequate sample size (n ≥ 30 preferred) to estimate limits
 reliably.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-4">Example<a class="anchor" aria-label="anchor" href="#example-4"></a></h4>
+<h4 id="example-5">Example<a class="anchor" aria-label="anchor" href="#example-5"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-4">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-4"></a></h5>
+<h5 id="hypothesis-5">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-5"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> Mean difference between
 methods A and B is zero (no systematic bias).<br></li>
 <li>
 <strong>Alternative hypothesis (H₁):</strong> Mean difference ≠ 0
 (systematic bias exists).</li>
-</ul><div class="codewrapper sourceCode" id="cb10">
+</ul><div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1141,7 +1242,7 @@ methods A and B is zero (no systematic bias).<br></li>
 <span>       x <span class="op">=</span> <span class="st">"Mean of Wrist &amp; Sphyg Measurements"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Difference (Wrist – Sphyg)"</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="../fig/stat-tests-1-rendered-bland_altman-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb11">
+<figure><img src="../fig/stat-tests-1-rendered-bland_altman-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
