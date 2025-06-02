@@ -4775,6 +4775,80 @@ evidence of a positive linear trend: higher prenatal vitamin doses are associate
 
 EJ KORREKTURLÆST
 
+#### Used for
+- Testing whether proportions of a binary outcome differ across three or more related (matched) groups.  
+- **Real-world example:** Checking if three different allergy medications have different proportions of symptom relief in the same set of patients.
+
+#### Assumptions
+- Each subject is measured on the same binary outcome under each condition (matched/paired design).  
+- Observations (subjects) are independent of one another.  
+- The outcome for each subject in each group is binary (e.g., “relief” vs. “no relief”).  
+
+#### Strengths
+- Extends McNemar’s test to more than two matched proportions.  
+- Controls for subject‐level variability by using each subject as their own block.  
+- Simple test statistic and interpretation via χ² distribution.
+
+#### Weaknesses
+- Only addresses overall difference; does not indicate which pairs of groups differ (post‐hoc tests required).  
+- Sensitive to missing data: any subject missing a response in one condition must be excluded.  
+- Assumes no interactions or clustering beyond the matched sets.
+
+#### Example
+
+##### Hypothesis
+- **Null hypothesis (H₀):** The proportion of patients experiencing symptom relief is the same across all three medications (p₁ = p₂ = p₃).  
+- **Alternative hypothesis (H₁):** At least one medication’s relief proportion differs from the others.
+
+
+``` r
+# Install and load DescTools if not already installed:
+# install.packages("DescTools")
+library(DescTools)
+```
+
+``` output
+
+Attaching package: 'DescTools'
+```
+
+``` output
+The following object is masked from 'package:car':
+
+    Recode
+```
+
+``` r
+# Simulate binary relief outcomes for 12 patients on three medications:
+# 1 = relief, 0 = no relief
+set.seed(2025)
+relief_med1 <- c(1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1)
+relief_med2 <- c(1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1)
+relief_med3 <- c(1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1)
+
+# Combine into a matrix: rows = subjects, columns = medications
+relief_matrix <- cbind(relief_med1, relief_med2, relief_med3)
+
+# Perform Cochran’s Q test:
+cq_result <- CochranQTest(relief_matrix)
+
+# Display results:
+cq_result
+```
+
+``` output
+
+	Cochran's Q test
+
+data:  y
+Q = 0.29, df = 2, p-value = 0.9
+```
+Interpretation:
+Cochran’s Q statistic = 0.286 with df = 2 and p-value = 0.867. We
+fail to reject the null hypothesis.
+Thus, there is
+no evidence that relief proportions differ across the three medications.
+
 ::::
 
 ::::spoiler
@@ -4784,6 +4858,87 @@ EJ KORREKTURLÆST
 
 EJ KORREKTURLÆST
 
+#### Used for
+- Testing marginal homogeneity in a square contingency table of paired categorical outcomes (k ≥ 3 categories).  
+- **Real-world example:** Assessing whether patients’ self‐rated pain levels (None, Mild, Moderate, Severe) before and after a new analgesic are distributed the same way.
+
+#### Assumptions
+- Data consist of paired observations on the same subjects, each classified into one of k categories at two time points or under two conditions.  
+- The contingency table is square (same set of k categories for “before” and “after”).  
+- Observations (pairs) are independent of one another.  
+- No cell has zero counts that prevent the necessary sums for the test (ideally none of the off‐diagonal cell sums are zero across all pairs).
+
+#### Strengths
+- Generalizes McNemar’s test to k > 2 categories.  
+- Specifically tests whether the overall marginal (row vs. column) distributions are the same.  
+- Computes a χ²‐statistic based on off‐diagonal discordances, summarizing all category shifts.
+
+#### Weaknesses
+- Only detects overall marginal changes; does not indicate which category pairs drive the difference (post‐hoc needed).  
+- Sensitive to small sample sizes or sparse off‐diagonal entries (may lack power or violate asymptotic χ² approximation).  
+- Assumes symmetry under the null; if many pairs move in one direction but not the reverse, marginal sums can still balance, potentially masking certain shifts.
+
+#### Example
+
+##### Hypothesis
+- **Null hypothesis (H₀):** The marginal distribution of pain levels is the same before and after treatment.  
+- **Alternative hypothesis (H₁):** The marginal distributions differ (some shifts in categories occurred).
+
+
+``` r
+# Install and load DescTools if not already installed:
+# install.packages("DescTools")
+library(DescTools)
+
+# Simulate paired pain ratings for 50 patients:
+# Categories: 1=None, 2=Mild, 3=Moderate, 4=Severe
+set.seed(123)
+before <- sample(1:4, 50, replace = TRUE, prob = c(0.10, 0.30, 0.40, 0.20))
+# After treatment: some improvement for many, some unchanged or worse
+after  <- pmin(pmax(before + sample(c(-1, 0, 1), 50, replace = TRUE, prob = c(0.4, 0.4, 0.2)), 1), 4)
+
+# Create a square contingency table of before vs. after:
+pain_table <- table(factor(before, levels = 1:4),
+                    factor(after,  levels = 1:4))
+dimnames(pain_table) <- list(
+  Before = c("None", "Mild", "Moderate", "Severe"),
+  After  = c("None", "Mild", "Moderate", "Severe")
+)
+
+# Perform Stuart–Maxwell test for marginal homogeneity:
+stuart_result <- StuartMaxwellTest(pain_table)
+
+# Display the table and test result:
+pain_table
+```
+
+``` output
+          After
+Before     None Mild Moderate Severe
+  None        6    0        0      0
+  Mild        8    8        1      0
+  Moderate    0    4        9      5
+  Severe      0    0        6      3
+```
+
+``` r
+stuart_result
+```
+
+``` output
+
+	Stuart-Maxwell test
+
+data:  pain_table
+chi-squared = 9.9, df = 3, p-value = 0.02
+```
+
+Interpretation:
+The Stuart–Maxwell χ² statistic = 9.89 with df = 3 and p-value = 0.0195. We
+reject the null hypothesis.
+Since the p-value is r round(stuart_result$p.value, 3), we
+conclude that the marginal distribution of pain levels differs before vs. after treatment (some patients shifted categories).
+
 ::::
 
 ::::spoiler
@@ -4791,6 +4946,80 @@ EJ KORREKTURLÆST
 ### Two-sample test for binomial proportions / Mantel–Haenszel test
 
 EJ KORREKTURLÆST
+
+#### Used for
+- Comparing two independent binomial proportions, possibly stratified by a third variable (Mantel–Haenszel).  
+- **Real-world example:** Assessing whether a new vaccine reduces infection rates compared to placebo across multiple clinics.
+
+#### Assumptions
+- Observations within each group (and stratum, if stratified) are independent.  
+- Each observation has a binary outcome (success/failure).  
+- In the unstratified case, the two groups are independent and sample sizes are sufficiently large for the normal approximation (if using a z-test or `prop.test()`).  
+- For the Mantel–Haenszel test: effects are assumed homogeneous across strata (common odds ratio).
+
+#### Strengths
+- Simple two‐sample z‐test or χ²‐based test (`prop.test()`) for unstratified comparisons.  
+- Mantel–Haenszel test controls for confounding by stratification, providing an overall test of association and a pooled odds ratio.  
+- Exact or asymptotic inference available (Fisher’s exact for small counts, Mantel–Haenszel χ² for larger).
+
+#### Weaknesses
+- The unstratified z‐test/χ² test can give misleading results if confounders are present.  
+- Mantel–Haenszel requires the common‐odds‐ratio assumption; if this fails (effect modification), the pooled estimate may be invalid.  
+- Both methods rely on adequate sample sizes in each cell (especially for asymptotic approximations).
+
+#### Example
+
+##### Hypothesis
+- **Null hypothesis (H₀):** The infection rates in Vaccine and Placebo groups are equal across clinics (common odds ratio = 1).  
+- **Alternative hypothesis (H₁):** The infection rates differ between Vaccine and Placebo groups (common odds ratio ≠ 1).
+
+
+``` r
+# Simulated data from two clinics (strata):
+# Clinic A: Vaccine (5 infections / 100), Placebo (15 infections / 100)
+# Clinic B: Vaccine (8 infections / 120), Placebo (20 infections / 120)
+
+# Create a 3‐dimensional array: 2 × 2 × 2 (Treatment × Outcome × Clinic)
+# Dimension names: Treatment = Vaccine, Placebo; Outcome = Infected, NotInfected; Clinic = A, B
+mh_table <- array(
+  c(  5,  95,   # Clinic A, Vaccine
+     15,  85,   # Clinic A, Placebo
+      8, 112,   # Clinic B, Vaccine
+     20, 100 ), # Clinic B, Placebo
+  dim = c(2, 2, 2),
+  dimnames = list(
+    Treatment = c("Vaccine", "Placebo"),
+    Outcome   = c("Infected", "NotInfected"),
+    Clinic    = c("A", "B")
+  )
+)
+
+# Perform Mantel–Haenszel test:
+mh_result <- mantelhaen.test(mh_table, correct = FALSE)
+
+# Display results:
+mh_result
+```
+
+``` output
+
+	Mantel-Haenszel chi-squared test without continuity correction
+
+data:  mh_table
+Mantel-Haenszel X-squared = 11, df = 1, p-value = 8e-04
+alternative hypothesis: true common odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.1702 0.6463
+sample estimates:
+common odds ratio 
+           0.3316 
+```
+
+Interpretation:
+The Mantel–Haenszel χ² statistic = 11.275 with df = 1 and p‐value = 7.86\times 10^{-4}. We
+reject the null hypothesis.
+Thus, since the p‐value is 0.001, we
+conclude there is a significant difference in infection rates between Vaccine and Placebo after controlling for clinic.
 
 ::::
 
