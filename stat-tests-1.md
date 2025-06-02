@@ -3167,6 +3167,130 @@ is significantly associated with higher odds of readmission, accounting for hosp
 
 EJ KORREKTURLÆST
 
+#### Used for
+- Modeling correlated or clustered data (e.g., repeated measures, longitudinal, or clustered observations) when interest lies in population‐averaged effects rather than subject‐specific effects.  
+- **Real-world example:** Estimating the effect of a diabetes education program on the probability of glycemic control (A1C < 7%) over multiple clinic visits per patient.
+
+#### Assumptions
+- Clustered or repeated observations per subject/cluster with some “working” correlation structure (e.g., exchangeable, autoregressive).  
+- Correct specification of the link function and the mean model (e.g., logit link for binary outcomes).  
+- Missing data are missing completely at random (MCAR) or missing at random (MAR), assuming missingness only depends on observed covariates.  
+- Large‐sample inference: GEE relies on asymptotic properties (number of clusters ≫ 1).
+
+#### Strengths
+- Robust (“sandwich”) standard errors even if the working correlation structure is mis‐specified.  
+- Provides marginal (population‐averaged) estimates, often of direct interest in public health/epidemiology.  
+- Accommodates a variety of outcomes (binary, count, continuous) via appropriate link and family.
+
+#### Weaknesses
+- Efficiency can be lost if the working correlation is far from the truth (though estimates remain consistent).  
+- Inference is asymptotic—small numbers of clusters can lead to biased standard errors.  
+- Does not model subject‐specific trajectories; cannot estimate random‐effects variance components.
+
+#### Example
+
+##### Hypothesis
+- **Null hypothesis (H₀):** The education program has no effect on odds of glycemic control over time (β_edu = 0).  
+- **Alternative hypothesis (H₁):** The education program changes the odds of glycemic control over time (β_edu ≠ 0).
+
+
+``` r
+# Install/load necessary package:
+# install.packages("geepack")
+library(geepack)
+
+set.seed(2025)
+# Simulate data: 100 patients (clusters), each with 4 visits
+n_patients   <- 100
+visits_per   <- 4
+patient_id   <- rep(1:n_patients, each = visits_per)
+visit_number <- rep(1:visits_per, times = n_patients)
+
+# Simulate a binary program indicator (0=no program, 1=received education), randomly assigned at baseline
+edu_program  <- rbinom(n_patients, 1, 0.5)
+edu          <- rep(edu_program, each = visits_per)
+
+# Simulate time effect (visits 1–4 coded 0–3) and baseline covariate (e.g., age)
+age_cont     <- rnorm(n_patients, mean = 60, sd = 10)
+age          <- rep(age_cont, each = visits_per)
+
+# True population‐averaged logistic model:
+# logit(p_ij) = -1 + 0.4 * edu_i - 0.02 * age_i + 0.3 * visit_number_j
+# For simplicity, ignore cluster‐specific random effect; correlation introduced via GEE working structure.
+lin_pred     <- -1 +
+                0.4 * edu +
+               -0.02 * age +
+                0.3 * visit_number
+prob         <- plogis(lin_pred)
+
+# Simulate binary outcome: glycemic control (1=yes, 0=no)
+gly_control  <- rbinom(n_patients * visits_per, 1, prob)
+
+df_gee <- data.frame(
+  patient_id   = factor(patient_id),
+  visit_number = visit_number,
+  edu          = factor(edu, labels = c("NoEdu","Edu")),
+  age          = age,
+  gly_control  = gly_control
+)
+
+# Fit GEE with exchangeable working correlation:
+gee_fit <- geeglm(
+  gly_control ~ edu + age + visit_number,
+  id            = patient_id,
+  family        = binomial(link = "logit"),
+  corstr        = "exchangeable",
+  data          = df_gee
+)
+
+# Display summary:
+summary(gee_fit)
+```
+
+``` output
+
+Call:
+geeglm(formula = gly_control ~ edu + age + visit_number, family = binomial(link = "logit"), 
+    data = df_gee, id = patient_id, corstr = "exchangeable")
+
+ Coefficients:
+             Estimate  Std.err   Wald Pr(>|W|)    
+(Intercept)  -1.84098  0.87073  4.470   0.0345 *  
+eduEdu        0.55189  0.24796  4.954   0.0260 *  
+age          -0.01791  0.01287  1.934   0.1643    
+visit_number  0.55376  0.10903 25.795  3.8e-07 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation structure = exchangeable 
+Estimated Scale Parameters:
+
+            Estimate Std.err
+(Intercept)   0.9761  0.1171
+  Link = identity 
+
+Estimated Correlation Parameters:
+      Estimate Std.err
+alpha  0.00166 0.03069
+Number of clusters:   100  Maximum cluster size: 4 
+```
+
+Interpretation:
+
+The estimated coefficient for edu (Edu vs. NoEdu) is 0.552
+. Its robust (“sandwich”) standard error is 0.248
+
+, yielding a Wald‐type z = 2.23, with p = 0.026. We
+reject the null hypothesis.
+This indicates that, across all visits and patients, those in the education program have significantly difference in odds of glycemic control compared to those without education.
+
+The coefficient for age equals -0.0179 (p = 0.164), indicating each additional year of age multiplies the odds of control by exp(-0.0179).
+
+The visit_number effect is 0.554 per visit (p = 3.8\times 10^{-7}), showing whether odds of control change over successive visits.
+
+Because GEE uses a sandwich estimator, these inferences remain valid even if “exchangeable” correlation is not exactly correct, provided we have a sufficiently large number of patients.
+
+
 ::::
 
 
@@ -3327,13 +3451,13 @@ test_result
 	Exact Poisson test
 
 data:  events time base: patient_days
-number of events = 8, time base = 3500, p-value = 0.702
+number of events = 8, time base = 3500, p-value = 0.7
 alternative hypothesis: true event rate is not equal to 0.002
 95 percent confidence interval:
- 0.0009868092 0.0045037683
+ 0.0009868 0.0045038
 sample estimates:
- event rate 
-0.002285714 
+event rate 
+  0.002286 
 ```
 
 Interpretation:
@@ -3592,15 +3716,15 @@ bias; loa_low; loa_up; t_test
 ```
 
 ``` output
-[1] 0.3333333
+[1] 0.3333
 ```
 
 ``` output
-[1] -1.596741
+[1] -1.597
 ```
 
 ``` output
-[1] 2.263408
+[1] 2.263
 ```
 
 ``` output
@@ -3608,13 +3732,13 @@ bias; loa_low; loa_up; t_test
 	One Sample t-test
 
 data:  diffs
-t = 1.1726, df = 11, p-value = 0.2657
+t = 1.2, df = 11, p-value = 0.3
 alternative hypothesis: true mean is not equal to 0
 95 percent confidence interval:
- -0.2923355  0.9590022
+ -0.2923  0.9590
 sample estimates:
 mean of x 
-0.3333333 
+   0.3333 
 ```
 
 The mean difference (bias) is 0.33 units, with 95% limits of 
