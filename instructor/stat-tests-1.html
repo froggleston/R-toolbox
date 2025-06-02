@@ -6328,6 +6328,105 @@ rates.</p>
 <div id="collapseSpoiler46" class="accordion-collapse collapse" aria-labelledby="headingSpoiler46" data-bs-parent="#accordionSpoiler46">
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
+<div class="section level4">
+<h4 id="used-for-39">Used for<a class="anchor" aria-label="anchor" href="#used-for-39"></a></h4>
+<ul><li>Testing whether proportions of a binary outcome differ across three
+or more related (matched) groups.<br></li>
+<li>
+<strong>Real-world example:</strong> Checking if three different
+allergy medications have different proportions of symptom relief in the
+same set of patients.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="assumptions-44">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-44"></a></h4>
+<ul><li>Each subject is measured on the same binary outcome under each
+condition (matched/paired design).<br></li>
+<li>Observations (subjects) are independent of one another.<br></li>
+<li>The outcome for each subject in each group is binary (e.g., “relief”
+vs. “no relief”).</li>
+</ul></div>
+<div class="section level4">
+<h4 id="strengths-44">Strengths<a class="anchor" aria-label="anchor" href="#strengths-44"></a></h4>
+<ul><li>Extends McNemar’s test to more than two matched proportions.<br></li>
+<li>Controls for subject‐level variability by using each subject as
+their own block.<br></li>
+<li>Simple test statistic and interpretation via χ² distribution.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="weaknesses-44">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-44"></a></h4>
+<ul><li>Only addresses overall difference; does not indicate which pairs of
+groups differ (post‐hoc tests required).<br></li>
+<li>Sensitive to missing data: any subject missing a response in one
+condition must be excluded.<br></li>
+<li>Assumes no interactions or clustering beyond the matched sets.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="example-44">Example<a class="anchor" aria-label="anchor" href="#example-44"></a></h4>
+<div class="section level5">
+<h5 id="hypothesis-44">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-44"></a></h5>
+<ul><li>
+<strong>Null hypothesis (H₀):</strong> The proportion of patients
+experiencing symptom relief is the same across all three medications (p₁
+= p₂ = p₃).<br></li>
+<li>
+<strong>Alternative hypothesis (H₁):</strong> At least one
+medication’s relief proportion differs from the others.</li>
+</ul><div class="codewrapper sourceCode" id="cb120">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Install and load DescTools if not already installed:</span></span>
+<span><span class="co"># install.packages("DescTools")</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">DescTools</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>
+Attaching package: 'DescTools'</code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The following object is masked from 'package:car':
+
+    Recode</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb123">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Simulate binary relief outcomes for 12 patients on three medications:</span></span>
+<span><span class="co"># 1 = relief, 0 = no relief</span></span>
+<span><span class="fu">set.seed</span><span class="op">(</span><span class="fl">2025</span><span class="op">)</span></span>
+<span><span class="va">relief_med1</span> <span class="op">&lt;-</span> <span class="fu">c</span><span class="op">(</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">relief_med2</span> <span class="op">&lt;-</span> <span class="fu">c</span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">relief_med3</span> <span class="op">&lt;-</span> <span class="fu">c</span><span class="op">(</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Combine into a matrix: rows = subjects, columns = medications</span></span>
+<span><span class="va">relief_matrix</span> <span class="op">&lt;-</span> <span class="fu">cbind</span><span class="op">(</span><span class="va">relief_med1</span>, <span class="va">relief_med2</span>, <span class="va">relief_med3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Perform Cochran’s Q test:</span></span>
+<span><span class="va">cq_result</span> <span class="op">&lt;-</span> <span class="fu">CochranQTest</span><span class="op">(</span><span class="va">relief_matrix</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Display results:</span></span>
+<span><span class="va">cq_result</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>
+	Cochran's Q test
+
+data:  y
+Q = 0.29, df = 2, p-value = 0.9</code></pre>
+</div>
+<p>Interpretation: Cochran’s Q statistic = 0.286 with df = 2 and p-value
+= 0.867. We fail to reject the null hypothesis. Thus, there is no
+evidence that relief proportions differ across the three
+medications.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -6340,6 +6439,116 @@ rates.</p>
 <div id="collapseSpoiler47" class="accordion-collapse collapse" aria-labelledby="headingSpoiler47" data-bs-parent="#accordionSpoiler47">
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
+<div class="section level4">
+<h4 id="used-for-40">Used for<a class="anchor" aria-label="anchor" href="#used-for-40"></a></h4>
+<ul><li>Testing marginal homogeneity in a square contingency table of paired
+categorical outcomes (k ≥ 3 categories).<br></li>
+<li>
+<strong>Real-world example:</strong> Assessing whether patients’
+self‐rated pain levels (None, Mild, Moderate, Severe) before and after a
+new analgesic are distributed the same way.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="assumptions-45">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-45"></a></h4>
+<ul><li>Data consist of paired observations on the same subjects, each
+classified into one of k categories at two time points or under two
+conditions.<br></li>
+<li>The contingency table is square (same set of k categories for
+“before” and “after”).<br></li>
+<li>Observations (pairs) are independent of one another.<br></li>
+<li>No cell has zero counts that prevent the necessary sums for the test
+(ideally none of the off‐diagonal cell sums are zero across all
+pairs).</li>
+</ul></div>
+<div class="section level4">
+<h4 id="strengths-45">Strengths<a class="anchor" aria-label="anchor" href="#strengths-45"></a></h4>
+<ul><li>Generalizes McNemar’s test to k &gt; 2 categories.<br></li>
+<li>Specifically tests whether the overall marginal (row vs. column)
+distributions are the same.<br></li>
+<li>Computes a χ²‐statistic based on off‐diagonal discordances,
+summarizing all category shifts.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="weaknesses-45">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-45"></a></h4>
+<ul><li>Only detects overall marginal changes; does not indicate which
+category pairs drive the difference (post‐hoc needed).<br></li>
+<li>Sensitive to small sample sizes or sparse off‐diagonal entries (may
+lack power or violate asymptotic χ² approximation).<br></li>
+<li>Assumes symmetry under the null; if many pairs move in one direction
+but not the reverse, marginal sums can still balance, potentially
+masking certain shifts.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="example-45">Example<a class="anchor" aria-label="anchor" href="#example-45"></a></h4>
+<div class="section level5">
+<h5 id="hypothesis-45">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-45"></a></h5>
+<ul><li>
+<strong>Null hypothesis (H₀):</strong> The marginal distribution of
+pain levels is the same before and after treatment.<br></li>
+<li>
+<strong>Alternative hypothesis (H₁):</strong> The marginal
+distributions differ (some shifts in categories occurred).</li>
+</ul><div class="codewrapper sourceCode" id="cb125">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Install and load DescTools if not already installed:</span></span>
+<span><span class="co"># install.packages("DescTools")</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">DescTools</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Simulate paired pain ratings for 50 patients:</span></span>
+<span><span class="co"># Categories: 1=None, 2=Mild, 3=Moderate, 4=Severe</span></span>
+<span><span class="fu">set.seed</span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
+<span><span class="va">before</span> <span class="op">&lt;-</span> <span class="fu">sample</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, <span class="fl">50</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">0.10</span>, <span class="fl">0.30</span>, <span class="fl">0.40</span>, <span class="fl">0.20</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co"># After treatment: some improvement for many, some unchanged or worse</span></span>
+<span><span class="va">after</span>  <span class="op">&lt;-</span> <span class="fu">pmin</span><span class="op">(</span><span class="fu">pmax</span><span class="op">(</span><span class="va">before</span> <span class="op">+</span> <span class="fu">sample</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="op">-</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fl">50</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">0.4</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span><span class="op">)</span><span class="op">)</span>, <span class="fl">1</span><span class="op">)</span>, <span class="fl">4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create a square contingency table of before vs. after:</span></span>
+<span><span class="va">pain_table</span> <span class="op">&lt;-</span> <span class="fu">table</span><span class="op">(</span><span class="fu">factor</span><span class="op">(</span><span class="va">before</span>, levels <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span>,</span>
+<span>                    <span class="fu">factor</span><span class="op">(</span><span class="va">after</span>,  levels <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">dimnames</span><span class="op">(</span><span class="va">pain_table</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu">list</span><span class="op">(</span></span>
+<span>  Before <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"None"</span>, <span class="st">"Mild"</span>, <span class="st">"Moderate"</span>, <span class="st">"Severe"</span><span class="op">)</span>,</span>
+<span>  After  <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"None"</span>, <span class="st">"Mild"</span>, <span class="st">"Moderate"</span>, <span class="st">"Severe"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Perform Stuart–Maxwell test for marginal homogeneity:</span></span>
+<span><span class="va">stuart_result</span> <span class="op">&lt;-</span> <span class="fu">StuartMaxwellTest</span><span class="op">(</span><span class="va">pain_table</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Display the table and test result:</span></span>
+<span><span class="va">pain_table</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>          After
+Before     None Mild Moderate Severe
+  None        6    0        0      0
+  Mild        8    8        1      0
+  Moderate    0    4        9      5
+  Severe      0    0        6      3</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb127">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">stuart_result</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>
+	Stuart-Maxwell test
+
+data:  pain_table
+chi-squared = 9.9, df = 3, p-value = 0.02</code></pre>
+</div>
+<p>Interpretation: The Stuart–Maxwell χ² statistic = 9.89 with df = 3
+and p-value = 0.0195. We reject the null hypothesis. Since the p-value
+is r round(stuart_result$p.value, 3), we conclude that the marginal
+distribution of pain levels differs before vs. after treatment (some
+patients shifted categories).</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -6352,6 +6561,106 @@ rates.</p>
 <div id="collapseSpoiler48" class="accordion-collapse collapse" aria-labelledby="headingSpoiler48" data-bs-parent="#accordionSpoiler48">
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
+<div class="section level4">
+<h4 id="used-for-41">Used for<a class="anchor" aria-label="anchor" href="#used-for-41"></a></h4>
+<ul><li>Comparing two independent binomial proportions, possibly stratified
+by a third variable (Mantel–Haenszel).<br></li>
+<li>
+<strong>Real-world example:</strong> Assessing whether a new vaccine
+reduces infection rates compared to placebo across multiple
+clinics.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="assumptions-46">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-46"></a></h4>
+<ul><li>Observations within each group (and stratum, if stratified) are
+independent.<br></li>
+<li>Each observation has a binary outcome (success/failure).<br></li>
+<li>In the unstratified case, the two groups are independent and sample
+sizes are sufficiently large for the normal approximation (if using a
+z-test or <code>prop.test()</code>).<br></li>
+<li>For the Mantel–Haenszel test: effects are assumed homogeneous across
+strata (common odds ratio).</li>
+</ul></div>
+<div class="section level4">
+<h4 id="strengths-46">Strengths<a class="anchor" aria-label="anchor" href="#strengths-46"></a></h4>
+<ul><li>Simple two‐sample z‐test or χ²‐based test (<code>prop.test()</code>)
+for unstratified comparisons.<br></li>
+<li>Mantel–Haenszel test controls for confounding by stratification,
+providing an overall test of association and a pooled odds ratio.<br></li>
+<li>Exact or asymptotic inference available (Fisher’s exact for small
+counts, Mantel–Haenszel χ² for larger).</li>
+</ul></div>
+<div class="section level4">
+<h4 id="weaknesses-46">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-46"></a></h4>
+<ul><li>The unstratified z‐test/χ² test can give misleading results if
+confounders are present.<br></li>
+<li>Mantel–Haenszel requires the common‐odds‐ratio assumption; if this
+fails (effect modification), the pooled estimate may be invalid.<br></li>
+<li>Both methods rely on adequate sample sizes in each cell (especially
+for asymptotic approximations).</li>
+</ul></div>
+<div class="section level4">
+<h4 id="example-46">Example<a class="anchor" aria-label="anchor" href="#example-46"></a></h4>
+<div class="section level5">
+<h5 id="hypothesis-46">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-46"></a></h5>
+<ul><li>
+<strong>Null hypothesis (H₀):</strong> The infection rates in
+Vaccine and Placebo groups are equal across clinics (common odds ratio =
+1).<br></li>
+<li>
+<strong>Alternative hypothesis (H₁):</strong> The infection rates
+differ between Vaccine and Placebo groups (common odds ratio ≠ 1).</li>
+</ul><div class="codewrapper sourceCode" id="cb129">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Simulated data from two clinics (strata):</span></span>
+<span><span class="co"># Clinic A: Vaccine (5 infections / 100), Placebo (15 infections / 100)</span></span>
+<span><span class="co"># Clinic B: Vaccine (8 infections / 120), Placebo (20 infections / 120)</span></span>
+<span></span>
+<span><span class="co"># Create a 3‐dimensional array: 2 × 2 × 2 (Treatment × Outcome × Clinic)</span></span>
+<span><span class="co"># Dimension names: Treatment = Vaccine, Placebo; Outcome = Infected, NotInfected; Clinic = A, B</span></span>
+<span><span class="va">mh_table</span> <span class="op">&lt;-</span> <span class="fu">array</span><span class="op">(</span></span>
+<span>  <span class="fu">c</span><span class="op">(</span>  <span class="fl">5</span>,  <span class="fl">95</span>,   <span class="co"># Clinic A, Vaccine</span></span>
+<span>     <span class="fl">15</span>,  <span class="fl">85</span>,   <span class="co"># Clinic A, Placebo</span></span>
+<span>      <span class="fl">8</span>, <span class="fl">112</span>,   <span class="co"># Clinic B, Vaccine</span></span>
+<span>     <span class="fl">20</span>, <span class="fl">100</span> <span class="op">)</span>, <span class="co"># Clinic B, Placebo</span></span>
+<span>  dim <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span>,</span>
+<span>  dimnames <span class="op">=</span> <span class="fu">list</span><span class="op">(</span></span>
+<span>    Treatment <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"Vaccine"</span>, <span class="st">"Placebo"</span><span class="op">)</span>,</span>
+<span>    Outcome   <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"Infected"</span>, <span class="st">"NotInfected"</span><span class="op">)</span>,</span>
+<span>    Clinic    <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Perform Mantel–Haenszel test:</span></span>
+<span><span class="va">mh_result</span> <span class="op">&lt;-</span> <span class="fu">mantelhaen.test</span><span class="op">(</span><span class="va">mh_table</span>, correct <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Display results:</span></span>
+<span><span class="va">mh_result</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>
+	Mantel-Haenszel chi-squared test without continuity correction
+
+data:  mh_table
+Mantel-Haenszel X-squared = 11, df = 1, p-value = 8e-04
+alternative hypothesis: true common odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.1702 0.6463
+sample estimates:
+common odds ratio
+           0.3316 </code></pre>
+</div>
+<p>Interpretation: The Mantel–Haenszel χ² statistic = 11.275 with df = 1
+and p‐value = 7.86^{-4}. We reject the null hypothesis. Thus, since the
+p‐value is 0.001, we conclude there is a significant difference in
+infection rates between Vaccine and Placebo after controlling for
+clinic.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -6402,7 +6711,7 @@ rates.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-39">Used for<a class="anchor" aria-label="anchor" href="#used-for-39"></a></h4>
+<h4 id="used-for-42">Used for<a class="anchor" aria-label="anchor" href="#used-for-42"></a></h4>
 <ul><li>Testing whether an observed incidence rate (events per unit
 person‐time) differs from a specified rate.<br></li>
 <li>
@@ -6411,13 +6720,13 @@ rate of catheter‐associated infections (per 1,000 patient‐days) equals
 the national benchmark.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-44">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-44"></a></h4>
+<h4 id="assumptions-47">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-47"></a></h4>
 <ul><li>Events occur independently and follow a Poisson process.<br></li>
 <li>The incidence rate is constant over the observation period.<br></li>
 <li>Person‐time is measured accurately and non‐overlapping.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-44">Strengths<a class="anchor" aria-label="anchor" href="#strengths-44"></a></h4>
+<h4 id="strengths-47">Strengths<a class="anchor" aria-label="anchor" href="#strengths-47"></a></h4>
 <ul><li>Exact test based on the Poisson distribution—no large‐sample
 approximation needed.<br></li>
 <li>Naturally accounts for differing follow‐up times via
@@ -6425,23 +6734,23 @@ person‐time.<br></li>
 <li>Valid for rare events and small counts.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-44">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-44"></a></h4>
+<h4 id="weaknesses-47">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-47"></a></h4>
 <ul><li>Sensitive to overdispersion (variance &gt; mean) and violation of
 Poisson assumptions.<br></li>
 <li>Cannot adjust for covariates or time‐varying rates.<br></li>
 <li>Assumes homogeneity of the rate across the period.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-44">Example<a class="anchor" aria-label="anchor" href="#example-44"></a></h4>
+<h4 id="example-47">Example<a class="anchor" aria-label="anchor" href="#example-47"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-44">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-44"></a></h5>
+<h5 id="hypothesis-47">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-47"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> The true incidence rate λ = 2
 infections per 1,000 patient‐days.<br></li>
 <li>
 <strong>Alternative hypothesis (H₁):</strong> λ ≠ 2 infections per
 1,000 patient‐days.</li>
-</ul><div class="codewrapper sourceCode" id="cb120">
+</ul><div class="codewrapper sourceCode" id="cb131">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -6622,7 +6931,7 @@ that the infection rate differs from the benchmark.”</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-40">Used for<a class="anchor" aria-label="anchor" href="#used-for-40"></a></h4>
+<h4 id="used-for-43">Used for<a class="anchor" aria-label="anchor" href="#used-for-43"></a></h4>
 <ul><li>Assessing the reliability or agreement of quantitative measurements
 made by two or more raters.<br></li>
 <li>
@@ -6630,7 +6939,7 @@ made by two or more raters.<br></li>
 three radiologists measure tumor size on MRI scans.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-45">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-45"></a></h4>
+<h4 id="assumptions-48">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-48"></a></h4>
 <ul><li>Measurements are continuous and approximately normally
 distributed.<br></li>
 <li>Raters are randomly selected (for the “random‐effects” model) or
@@ -6641,14 +6950,14 @@ consistent across subjects).<br></li>
 raters.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-45">Strengths<a class="anchor" aria-label="anchor" href="#strengths-45"></a></h4>
+<h4 id="strengths-48">Strengths<a class="anchor" aria-label="anchor" href="#strengths-48"></a></h4>
 <ul><li>Quantifies both consistency and absolute agreement, with different
 model/type options.<br></li>
 <li>Can accommodate any number of raters and subjects.<br></li>
 <li>Provides confidence intervals and tests for ICC.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-45">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-45"></a></h4>
+<h4 id="weaknesses-48">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-48"></a></h4>
 <ul><li>Sensitive to violations of normality and homogeneity of
 variance.<br></li>
 <li>Choice of model (one‐way vs. two‐way) and type (consistency
@@ -6656,16 +6965,16 @@ vs. agreement) affects results.<br></li>
 <li>Requires balanced data; missing ratings complicate estimation.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-45">Example<a class="anchor" aria-label="anchor" href="#example-45"></a></h4>
+<h4 id="example-48">Example<a class="anchor" aria-label="anchor" href="#example-48"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-45">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-45"></a></h5>
+<h5 id="hypothesis-48">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-48"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> The intraclass correlation
 coefficient ICC = 0 (no reliability beyond chance).<br></li>
 <li>
 <strong>Alternative hypothesis (H₁):</strong> ICC &gt; 0
 (measurements are more reliable than chance).</li>
-</ul><div class="codewrapper sourceCode" id="cb122">
+</ul><div class="codewrapper sourceCode" id="cb133">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -6676,7 +6985,7 @@ coefficient ICC = 0 (no reliability beyond chance).<br></li>
 </h3>
 <pre class="output" tabindex="0"><code>Loading required package: lpSolve</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb124">
+<div class="codewrapper sourceCode" id="cb135">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -6734,7 +7043,7 @@ the raters.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-41">Used for<a class="anchor" aria-label="anchor" href="#used-for-41"></a></h4>
+<h4 id="used-for-44">Used for<a class="anchor" aria-label="anchor" href="#used-for-44"></a></h4>
 <p>Assessing agreement between two quantitative measurement methods by
 examining the mean difference (bias) and the limits of agreement. It
 tests if any difference is constant across the range of measurements,
@@ -6744,7 +7053,7 @@ example:</strong> Comparing blood pressure readings from a new wrist
 monitor and a standard sphygmomanometer.</p>
 </div>
 <div class="section level4">
-<h4 id="assumptions-46">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-46"></a></h4>
+<h4 id="assumptions-49">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-49"></a></h4>
 <ul><li>Paired measurements on the same subjects.<br></li>
 <li>Differences (method A – method B) are approximately normally
 distributed.<br></li>
@@ -6752,7 +7061,7 @@ distributed.<br></li>
 the difference (homoscedasticity).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-46">Strengths<a class="anchor" aria-label="anchor" href="#strengths-46"></a></h4>
+<h4 id="strengths-49">Strengths<a class="anchor" aria-label="anchor" href="#strengths-49"></a></h4>
 <ul><li>Provides both a visual (Bland–Altman plot) and numerical summary
 (bias and limits) of agreement.<br></li>
 <li>Easy to interpret clinically: shows how far apart two methods can
@@ -6761,23 +7070,23 @@ differ for most observations.<br></li>
 agreement.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-46">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-46"></a></h4>
+<h4 id="weaknesses-49">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-49"></a></h4>
 <ul><li>Assumes constant bias across range of measurements.<br></li>
 <li>Sensitive to outliers, which can widen limits of agreement.<br></li>
 <li>Requires adequate sample size (n ≥ 30 preferred) to estimate limits
 reliably.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-46">Example<a class="anchor" aria-label="anchor" href="#example-46"></a></h4>
+<h4 id="example-49">Example<a class="anchor" aria-label="anchor" href="#example-49"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-46">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-46"></a></h5>
+<h5 id="hypothesis-49">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-49"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> Mean difference between
 methods A and B is zero (no systematic bias).<br></li>
 <li>
 <strong>Alternative hypothesis (H₁):</strong> Mean difference ≠ 0
 (systematic bias exists).</li>
-</ul><div class="codewrapper sourceCode" id="cb126">
+</ul><div class="codewrapper sourceCode" id="cb137">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -6810,7 +7119,7 @@ methods A and B is zero (no systematic bias).<br></li>
 <span>       x <span class="op">=</span> <span class="st">"Mean of Wrist &amp; Sphyg Measurements"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Difference (Wrist – Sphyg)"</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="../fig/stat-tests-1-rendered-bland_altman-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb127">
+<figure><img src="../fig/stat-tests-1-rendered-bland_altman-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb138">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
