@@ -5753,6 +5753,9 @@ conclude there is no evidence of a difference in survival between Drug A and Dru
 
 ::::
 
+<a id="default-anchor"></a>
+
+
 ::::spoiler
 
 
@@ -5928,6 +5931,9 @@ giving a 95 % CI for HR:
 
 
 ::::
+
+<a id="default-anchor"></a>
+
 
 ::::spoiler
 
@@ -6105,6 +6111,9 @@ Both are highly significant (CIs exclude 1).
 Overall, because all covariate p values for drug, age, and grade are < 0.05, we conclude each is significantly associated with time to recurrence, holding the others constant.
 
 ::::
+
+<a id="default-anchor"></a>
+
 
 ::::spoiler
 
@@ -6415,6 +6424,9 @@ If $p \ge 0.05$, we fail to reject $H_{0}$, indicating no evidence of a differen
 
 ::::
 
+<a id="default-anchor"></a>
+
+
 ::::spoiler
 
 ### Test af proportional hazards-antagelsen (Schoenfeld residualer)
@@ -6519,7 +6531,7 @@ If all p‐values $\ge 0.05$, we fail to reject $H_0$ and conclude the proportio
 ## Aftale- og concordance-mål
 
 
-
+<a id="default-anchor"></a>
 
 ::::spoiler
 ### Kappa statistic
@@ -6528,20 +6540,24 @@ EJ KORREKTURLÆST
 MON IKKE DENNE SNARERE SKAL KONSOLIDERES MED DEN COHENS VI ALLEREDE HAR?
 
 #### Used for
+
 - Quantifying agreement between two raters classifying the same subjects into categories, beyond chance.  
 - **Real-world example:** Assessing whether two pathologists agree on “Benign” vs. “Malignant” diagnoses.
 
 #### Assumptions
+
 - Each subject is independently rated by both raters.  
 - Ratings are categorical (nominal or ordinal).  
 - The marginal distributions of categories need not be equal.
 
 #### Strengths
+
 - Corrects for agreement expected by chance.  
 - Provides an interpretable coefficient, $\kappa$, ranging from –1 to 1.  
 - Can be weighted for ordinal categories.
 
 #### Weaknesses
+
 - Sensitive to prevalence and marginal imbalances (“paradox”).  
 - Doesn’t distinguish systematic bias from random disagreement.  
 - Requires at least two raters and non‐sparse tables for stable estimates.
@@ -6644,48 +6660,44 @@ Conventionally, $\kappa$ values are interpreted as:
 
 ::::
 
+<a id="intraclass-correlation-coefficient"></a>
+
 ::::spoiler
 
 ### Intraclass Correlation Coefficient (ICC)
 
 EJ KORREKTURLÆST
 
-#### Used for
-- Assessing the reliability or agreement of quantitative measurements made by two or more raters.  
-- **Real-world example:** Determining how consistently three radiologists measure tumor size on MRI scans.
+* **Used for** Assessing the reliability or agreement of quantitative measurements made by two or more raters.  
+* **Real-world example:** Determining how consistently three radiologists measure tumor size on MRI scans.
 
-#### Assumptions
+**Assumptions**:
+
 - Measurements are continuous and approximately normally distributed.  
 - Raters are randomly selected (for the “random‐effects” model) or fixed (for the “fixed‐effects” model), depending on choice.  
-- No interaction between subjects and raters (i.e., rater effects are consistent across subjects).  
+- No interaction between subjects and raters (i.e., rater effects are consistent across subjects).
 - Balanced design: each subject is rated by the same set of raters.
 
-#### Strengths
+**Strengths**
 - Quantifies both consistency and absolute agreement, with different model/type options.  
 - Can accommodate any number of raters and subjects.  
 - Provides confidence intervals and tests for ICC.
 
-#### Weaknesses
+**Weaknesses**
 - Sensitive to violations of normality and homogeneity of variance.  
 - Choice of model (one‐way vs. two‐way) and type (consistency vs. agreement) affects results.  
 - Requires balanced data; missing ratings complicate estimation.
 
 #### Example
 
-##### Hypothesis
-- **Null hypothesis (H₀):** The intraclass correlation coefficient ICC = 0 (no reliability beyond chance).  
-- **Alternative hypothesis (H₁):** ICC > 0 (measurements are more reliable than chance).
+**Hypothesis**
+- _Null hypothesis (H₀):_ The intraclass correlation coefficient ICC = 0 (no reliability beyond chance).  
+- _Alternative hypothesis (H₁):_ ICC > 0 (measurements are more reliable than chance).
 
 
 ``` r
 library(irr)
-```
 
-``` output
-Loading required package: lpSolve
-```
-
-``` r
 # Simulate ratings of 10 subjects by 3 raters:
 set.seed(42)
 ratings <- data.frame(
@@ -6720,14 +6732,15 @@ icc_result
  95%-Confidence Interval for ICC Population Values:
   -0.326 < ICC < 0.382
 ```
-Interpretation:
+**Interpretation:**
 The estimated ICC is -0.08 with a 95% CI [-0.33, 0.38] and p-value = 0.645. We
 fail to reject the null hypothesis.
 This indicates that
 there is no evidence of reliability beyond chance among the raters.
 
-
 ::::
+
+<a id="default-anchor"></a>
 
 ::::spoiler
 ### Bland–Altman analysis
@@ -6838,10 +6851,25 @@ no statistically significant bias; the two methods agree on average.
 ::::
 
 
+Der skal nok suppleres med:
+Weighted κ
+ is used for ordinal values. We use the function kappa2() from the irr package.
+Light’s κ
+ is used for studying interrater agreement between more than 2 raters. We use the function kappamlight() from the irr package.
+Fleiss κ
+ is also used when having more than 2 raters. But does not require the same raters for each subject.
+
+
+Vi har også nogen:
+.learner-accordion .accordion-item, .spoiler-accordion .accordion-item, .challenge-accordion .accordion-item 
+
+hvor font-size skal være 1rem i stedet for 1.2rem
+
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-
+- Use an appropriate statistical test
+- Make sure you understand the assumptions underlying the test
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
