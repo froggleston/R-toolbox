@@ -16,11 +16,36 @@ exercises: 2
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+  padding-left: 1.5em;          /* plads til marker + hul */
+
+<!-- Hyper-lokal css -->
+<style>
+/* Kun på denne side: sæt accordion-item til 1rem */
+.spoiler-accordion li {
+  font-size: 1rem !important;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+  list-style-position: outside !important; /* markør udenfor boksen */
+
+
+}
+</style>
+
+
 
 :::: instructor
 Den her side er virkelig ikke egnet til undervisningsbrug. Det er oversigten
 med eksempler og ret korte forklaringer.
 Hele siden kan nok med fordel deles ret meget op.
+
+Der skal læses korrektur på ALT. Så brug intet i en undervisningssituation 
+før markeringen af manglende korrektur er fjernet.
+
+Samtlige eksempler bør omlægges til noget der bruger datasæt enten fra denne
+side selv, eller fra https://vincentarelbundock.github.io/Rdatasets/
+
+
+
 ::::
 
 A collection of statistical tests
@@ -6628,15 +6653,13 @@ weighted kappa   0.077     0.34   0.6
 
 The estimated Cohen’s $\kappa$ is
 
-$\widehat{\kappa} = \texttt{kappa_result\$kappa[1]}$
+$\widehat{\kappa}$ = 0.3377
 
-The test statistic (z) =
+The test statistic (z) = kappa_result$z[1] DETTE FUNGERER IKKE - Z ER IKKE I OBJEKTET.
 
-$\texttt{kappa_result\$z[1]}$
+with p-value =$\texttt{signif(kappa_result\$p.value[1], 3)}$. DET HER FUNGERER VIST HELLER IKKE...
 
-with p-value =$\texttt{signif(kappa_result\$p.value[1], 3)}$.
-
-Since p = r signif(kappa_result$p.value[1], 3)
+Since p = r signif(kappa_result$p.value[1], 3) EJ HELLER DETTE
 
 If p < 0.05, we reject $H_{0}$ and conclude there is agreement beyond chance.
 
@@ -6673,26 +6696,28 @@ EJ KORREKTURLÆST
 
 **Assumptions**:
 
-- Measurements are continuous and approximately normally distributed.  
-- Raters are randomly selected (for the “random‐effects” model) or fixed (for the “fixed‐effects” model), depending on choice.  
-- No interaction between subjects and raters (i.e., rater effects are consistent across subjects).
-- Balanced design: each subject is rated by the same set of raters.
+* Measurements are continuous and approximately normally distributed.  
+* Raters are randomly selected (for the “random‐effects” model) or fixed (for the “fixed‐effects” model), depending on choice.
+* No interaction between subjects and raters (i.e., rater effects are consistent across subjects).
+* Balanced design: each subject is rated by the same set of raters.
 
 **Strengths**
-- Quantifies both consistency and absolute agreement, with different model/type options.  
-- Can accommodate any number of raters and subjects.  
-- Provides confidence intervals and tests for ICC.
+
+* Quantifies both consistency and absolute agreement, with different model/type options.  
+* Can accommodate any number of raters and subjects.  
+* Provides confidence intervals and tests for ICC.
 
 **Weaknesses**
-- Sensitive to violations of normality and homogeneity of variance.  
-- Choice of model (one‐way vs. two‐way) and type (consistency vs. agreement) affects results.  
-- Requires balanced data; missing ratings complicate estimation.
+
+* Sensitive to violations of normality and homogeneity of variance.  
+* Choice of model (one‐way vs. two‐way) and type (consistency vs. agreement) affects results.  
+* Requires balanced data; missing ratings complicate estimation.
 
 #### Example
 
 **Hypothesis**
-- _Null hypothesis (H₀):_ The intraclass correlation coefficient ICC = 0 (no reliability beyond chance).  
-- _Alternative hypothesis (H₁):_ ICC > 0 (measurements are more reliable than chance).
+* Null hypothesis (H₀): The intraclass correlation coefficient ICC = 0 (no reliability beyond chance).  
+* Alternative hypothesis (H₁): ICC > 0 (measurements are more reliable than chance).
 
 
 ``` r
@@ -6732,6 +6757,7 @@ icc_result
  95%-Confidence Interval for ICC Population Values:
   -0.326 < ICC < 0.382
 ```
+
 **Interpretation:**
 The estimated ICC is -0.08 with a 95% CI [-0.33, 0.38] and p-value = 0.645. We
 fail to reject the null hypothesis.
