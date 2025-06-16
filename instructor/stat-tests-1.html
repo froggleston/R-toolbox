@@ -5777,7 +5777,7 @@ healthy birth rates.</p>
 </div>
 </div>
 </div>
-<p><a id="test-navn"></a></p>
+<p><a id="cochran_q_test"></a></p>
 <div id="accordionSpoiler45" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler45" aria-expanded="false" aria-controls="collapseSpoiler45">
@@ -5786,42 +5786,30 @@ healthy birth rates.</p>
 <div id="collapseSpoiler45" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler45" aria-labelledby="headingSpoiler45">
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
-<div class="section level4">
-<h4 id="used-for">Used for<a class="anchor" aria-label="anchor" href="#used-for"></a></h4>
-<ul><li>Testing whether proportions of a binary outcome differ across three
-or more related (matched) groups.<br></li>
+<ul><li>
+<strong>Used for</strong> Testing whether proportions of a binary
+outcome differ across three or more related (matched) groups.<br></li>
 <li>
 <strong>Real-world example:</strong> Checking if three different
 allergy medications have different proportions of symptom relief in the
 same set of patients.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="assumptions">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions"></a></h4>
-<ul><li>Each subject is measured on the same binary outcome under each
-condition (matched/paired design).<br></li>
-<li>Observations (subjects) are independent of one another.<br></li>
-<li>The outcome for each subject in each group is binary (e.g., “relief”
-vs. “no relief”).</li>
-</ul></div>
-<div class="section level4">
-<h4 id="strengths">Strengths<a class="anchor" aria-label="anchor" href="#strengths"></a></h4>
-<ul><li>Extends McNemar’s test to more than two matched proportions.<br></li>
-<li>Controls for subject‐level variability by using each subject as
-their own block.<br></li>
-<li>Simple test statistic and interpretation via χ² distribution.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="weaknesses">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses"></a></h4>
-<ul><li>Only addresses overall difference; does not indicate which pairs of
-groups differ (post‐hoc tests required).<br></li>
-<li>Sensitive to missing data: any subject missing a response in one
-condition must be excluded.<br></li>
-<li>Assumes no interactions or clustering beyond the matched sets.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a></h4>
-<div class="section level5">
-<h5 id="hypothesis">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis"></a></h5>
+</ul><p><strong>Assumptions</strong> * Each subject is measured on the same
+binary outcome under each condition (matched/paired design).<br>
+* Observations (subjects) are independent of one another.<br>
+* The outcome for each subject in each group is binary (e.g., “relief”
+vs. “no relief”).</p>
+<p><strong>Strengths</strong> * Extends McNemar’s test to more than two
+matched proportions.<br>
+* Controls for subject‐level variability by using each subject as their
+own block.<br>
+* Simple test statistic and interpretation via χ² distribution.</p>
+<p><strong>Weaknesses</strong> * Only addresses overall difference; does
+not indicate which pairs of groups differ (post‐hoc tests
+required).<br>
+* Sensitive to missing data: any subject missing a response in one
+condition must be excluded.<br>
+* Assumes no interactions or clustering beyond the matched sets.</p>
+<p><strong>Example</strong></p>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> The proportion of patients
 experiencing symptom relief is the same across all three medications (p₁
@@ -5879,17 +5867,15 @@ Attaching package: 'DescTools'</code></pre>
 data:  y
 Q = 0.29, df = 2, p-value = 0.9</code></pre>
 </div>
-<p>Interpretation: Cochran’s Q statistic = 0.286 with df = 2 and p-value
-= 0.867. We fail to reject the null hypothesis. Thus, there is no
-evidence that relief proportions differ across the three
+<p><strong>Interpretation:</strong> Cochran’s Q statistic = 0.286 with
+df = 2 and p-value = 0.867. We fail to reject the null hypothesis. Thus,
+there is no evidence that relief proportions differ across the three
 medications.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<p><a id="test-navn"></a></p>
+<p><a id="stuart_maxwell_test"></a></p>
 <div id="accordionSpoiler46" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler46" aria-expanded="false" aria-controls="collapseSpoiler46">
@@ -5898,49 +5884,38 @@ medications.</p>
 <div id="collapseSpoiler46" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler46" aria-labelledby="headingSpoiler46">
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
-<div class="section level4">
-<h4 id="used-for-1">Used for<a class="anchor" aria-label="anchor" href="#used-for-1"></a></h4>
-<ul><li>Testing marginal homogeneity in a square contingency table of paired
-categorical outcomes (k ≥ 3 categories).<br></li>
+<ul><li>
+<strong>Used for</strong> Testing marginal homogeneity in a square
+contingency table of paired categorical outcomes (k ≥ 3
+categories).<br></li>
 <li>
 <strong>Real-world example:</strong> Assessing whether patients’
 self‐rated pain levels (None, Mild, Moderate, Severe) before and after a
 new analgesic are distributed the same way.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="assumptions-1">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-1"></a></h4>
-<ul><li>Data consist of paired observations on the same subjects, each
-classified into one of k categories at two time points or under two
-conditions.<br></li>
-<li>The contingency table is square (same set of k categories for
-“before” and “after”).<br></li>
-<li>Observations (pairs) are independent of one another.<br></li>
-<li>No cell has zero counts that prevent the necessary sums for the test
+</ul><p><strong>Assumptions</strong> * Data consist of paired observations on
+the same subjects, each classified into one of k categories at two time
+points or under two conditions.<br>
+* The contingency table is square (same set of k categories for “before”
+and “after”).<br>
+* Observations (pairs) are independent of one another.<br>
+* No cell has zero counts that prevent the necessary sums for the test
 (ideally none of the off‐diagonal cell sums are zero across all
-pairs).</li>
-</ul></div>
-<div class="section level4">
-<h4 id="strengths-1">Strengths<a class="anchor" aria-label="anchor" href="#strengths-1"></a></h4>
-<ul><li>Generalizes McNemar’s test to k &gt; 2 categories.<br></li>
-<li>Specifically tests whether the overall marginal (row vs. column)
-distributions are the same.<br></li>
-<li>Computes a χ²‐statistic based on off‐diagonal discordances,
-summarizing all category shifts.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="weaknesses-1">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-1"></a></h4>
-<ul><li>Only detects overall marginal changes; does not indicate which
-category pairs drive the difference (post‐hoc needed).<br></li>
-<li>Sensitive to small sample sizes or sparse off‐diagonal entries (may
-lack power or violate asymptotic χ² approximation).<br></li>
-<li>Assumes symmetry under the null; if many pairs move in one direction
+pairs).</p>
+<p><strong>Strengths</strong> * Generalizes McNemar’s test to k &gt; 2
+categories.<br>
+* Specifically tests whether the overall marginal (row vs. column)
+distributions are the same.<br>
+* Computes a χ²‐statistic based on off‐diagonal discordances,
+summarizing all category shifts.</p>
+<p><strong>Weaknesses</strong> * Only detects overall marginal changes;
+does not indicate which category pairs drive the difference (post‐hoc
+needed).<br>
+* Sensitive to small sample sizes or sparse off‐diagonal entries (may
+lack power or violate asymptotic χ² approximation).<br>
+* Assumes symmetry under the null; if many pairs move in one direction
 but not the reverse, marginal sums can still balance, potentially
-masking certain shifts.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="example-1">Example<a class="anchor" aria-label="anchor" href="#example-1"></a></h4>
-<div class="section level5">
-<h5 id="hypothesis-1">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-1"></a></h5>
+masking certain shifts.</p>
+<p><strong>Example</strong></p>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> The marginal distribution of
 pain levels is the same before and after treatment.<br></li>
@@ -6001,18 +5976,16 @@ Before     None Mild Moderate Severe
 data:  pain_table
 chi-squared = 9.9, df = 3, p-value = 0.02</code></pre>
 </div>
-<p>Interpretation: The Stuart–Maxwell χ² statistic = 9.89 with df = 3
-and p-value = 0.0195. We reject the null hypothesis. Since the p-value
-is r round(stuart_result$p.value, 3), we conclude that the marginal
-distribution of pain levels differs before vs. after treatment (some
-patients shifted categories).</p>
+<p><strong>Interpretation:</strong> The Stuart–Maxwell χ² statistic =
+9.89 with df = 3 and p-value = 0.0195. We reject the null hypothesis.
+Since the p-value is r round(stuart_result$p.value, 3), we conclude that
+the marginal distribution of pain levels differs before vs. after
+treatment (some patients shifted categories).</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<p><a id="test-navn"></a></p>
+<p><a id="two_sample_binomial_mh"></a></p>
 <div id="accordionSpoiler47" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler47" aria-expanded="false" aria-controls="collapseSpoiler47">
@@ -6021,48 +5994,35 @@ patients shifted categories).</p>
 <div id="collapseSpoiler47" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler47" aria-labelledby="headingSpoiler47">
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
-<div class="section level4">
-<h4 id="used-for-2">Used for<a class="anchor" aria-label="anchor" href="#used-for-2"></a></h4>
-<ul><li>Comparing two independent binomial proportions, possibly stratified
-by a third variable (Mantel–Haenszel).<br></li>
+<ul><li>
+<strong>Used for</strong> Comparing two independent binomial
+proportions, possibly stratified by a third variable
+(Mantel–Haenszel).<br></li>
 <li>
 <strong>Real-world example:</strong> Assessing whether a new vaccine
 reduces infection rates compared to placebo across multiple
 clinics.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="assumptions-2">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-2"></a></h4>
-<ul><li>Observations within each group (and stratum, if stratified) are
-independent.<br></li>
-<li>Each observation has a binary outcome (success/failure).<br></li>
-<li>In the unstratified case, the two groups are independent and sample
+</ul><p><strong>Assumptions</strong> * Observations within each group (and
+stratum, if stratified) are independent.<br>
+* Each observation has a binary outcome (success/failure).<br>
+* In the unstratified case, the two groups are independent and sample
 sizes are sufficiently large for the normal approximation (if using a
-z-test or <code>prop.test()</code>).<br></li>
-<li>For the Mantel–Haenszel test: effects are assumed homogeneous across
-strata (common odds ratio).</li>
-</ul></div>
-<div class="section level4">
-<h4 id="strengths-2">Strengths<a class="anchor" aria-label="anchor" href="#strengths-2"></a></h4>
-<ul><li>Simple two‐sample z‐test or χ²‐based test (<code>prop.test()</code>)
-for unstratified comparisons.<br></li>
-<li>Mantel–Haenszel test controls for confounding by stratification,
-providing an overall test of association and a pooled odds ratio.<br></li>
-<li>Exact or asymptotic inference available (Fisher’s exact for small
-counts, Mantel–Haenszel χ² for larger).</li>
-</ul></div>
-<div class="section level4">
-<h4 id="weaknesses-2">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-2"></a></h4>
-<ul><li>The unstratified z‐test/χ² test can give misleading results if
-confounders are present.<br></li>
-<li>Mantel–Haenszel requires the common‐odds‐ratio assumption; if this
-fails (effect modification), the pooled estimate may be invalid.<br></li>
-<li>Both methods rely on adequate sample sizes in each cell (especially
-for asymptotic approximations).</li>
-</ul></div>
-<div class="section level4">
-<h4 id="example-2">Example<a class="anchor" aria-label="anchor" href="#example-2"></a></h4>
-<div class="section level5">
-<h5 id="hypothesis-2">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-2"></a></h5>
+z-test or <code>prop.test()</code>).<br>
+* For the Mantel–Haenszel test: effects are assumed homogeneous across
+strata (common odds ratio).</p>
+<p><strong>Strengths</strong> * Simple two‐sample z‐test or χ²‐based
+test (<code>prop.test()</code>) for unstratified comparisons.<br>
+* Mantel–Haenszel test controls for confounding by stratification,
+providing an overall test of association and a pooled odds ratio.<br>
+* Exact or asymptotic inference available (Fisher’s exact for small
+counts, Mantel–Haenszel χ² for larger).</p>
+<p><strong>Weaknesses</strong> * The unstratified z‐test/χ² test can
+give misleading results if confounders are present.<br>
+* Mantel–Haenszel requires the common‐odds‐ratio assumption; if this
+fails (effect modification), the pooled estimate may be invalid.<br>
+* Both methods rely on adequate sample sizes in each cell (especially
+for asymptotic approximations).</p>
+<p><strong>Example</strong></p>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> The infection rates in
 Vaccine and Placebo groups are equal across clinics (common odds ratio =
@@ -6114,13 +6074,11 @@ sample estimates:
 common odds ratio
            0.3316 </code></pre>
 </div>
-<p>Interpretation: The Mantel–Haenszel χ² statistic = 11.275 with df = 1
-and p‐value = 7.86^{-4}. We reject the null hypothesis. Thus, since the
-p‐value is 0.001, we conclude there is a significant difference in
-infection rates between Vaccine and Placebo after controlling for
-clinic.</p>
-</div>
-</div>
+<p><strong>Interpretation:</strong> The Mantel–Haenszel χ² statistic =
+11.275 with df = 1 and p‐value = 7.86^{-4}. We reject the null
+hypothesis. Thus, since the p‐value is 0.001, we conclude there is a
+significant difference in infection rates between Vaccine and Placebo
+after controlling for clinic.</p>
 </div>
 </div>
 </div>
@@ -6135,7 +6093,7 @@ clinic.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-3">Used for<a class="anchor" aria-label="anchor" href="#used-for-3"></a></h4>
+<h4 id="used-for">Used for<a class="anchor" aria-label="anchor" href="#used-for"></a></h4>
 <ul><li>Testing whether two categorical variables (with R rows and C
 columns) are independent in an R×C contingency table.<br></li>
 <li>
@@ -6144,7 +6102,7 @@ columns) are independent in an R×C contingency table.<br></li>
 news source (TV, Online, Print) in a survey.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-3">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-3"></a></h4>
+<h4 id="assumptions">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions"></a></h4>
 <ul><li>Observations are independent (each subject contributes to exactly
 one cell).<br></li>
 <li>The table is R×C with mutually exclusive and exhaustive
@@ -6154,7 +6112,7 @@ to be valid; otherwise consider collapsing categories or using an exact
 test.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-3">Strengths<a class="anchor" aria-label="anchor" href="#strengths-3"></a></h4>
+<h4 id="strengths">Strengths<a class="anchor" aria-label="anchor" href="#strengths"></a></h4>
 <ul><li>Simple to compute and interpret via a single χ² statistic and
 p-value.<br></li>
 <li>Applicable to any R×C table, not just 2×2.<br></li>
@@ -6162,7 +6120,7 @@ p-value.<br></li>
 continuous variables.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-3">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-3"></a></h4>
+<h4 id="weaknesses">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses"></a></h4>
 <ul><li>Sensitive to small expected counts—cells with expected &lt; 5 can
 invalidate the approximation.<br></li>
 <li>Does not indicate which specific cells contribute most to the
@@ -6172,9 +6130,9 @@ required.<br></li>
 Fisher’s exact or Monte Carlo methods.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-3">Example<a class="anchor" aria-label="anchor" href="#example-3"></a></h4>
+<h4 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-3">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-3"></a></h5>
+<h5 id="hypothesis">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> Education level and preferred
 news source are independent.<br></li>
@@ -6249,7 +6207,7 @@ the expected under independence.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-4">Used for<a class="anchor" aria-label="anchor" href="#used-for-4"></a></h4>
+<h4 id="used-for-1">Used for<a class="anchor" aria-label="anchor" href="#used-for-1"></a></h4>
 <ul><li>Testing for a linear (monotonic) association between two ordinal
 variables in an R×C contingency table (Mantel’s extension of the χ²
 test).<br></li>
@@ -6260,7 +6218,7 @@ associated with increasing level of inflammation marker (Low &lt; Medium
 &lt; High) in the same patients.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-4">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-4"></a></h4>
+<h4 id="assumptions-1">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-1"></a></h4>
 <ul><li>Observations are independent.<br></li>
 <li>Both row and column variables are ordinal with a meaningful
 order.<br></li>
@@ -6270,7 +6228,7 @@ order.<br></li>
 linear on the log‐odds scale.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-4">Strengths<a class="anchor" aria-label="anchor" href="#strengths-4"></a></h4>
+<h4 id="strengths-1">Strengths<a class="anchor" aria-label="anchor" href="#strengths-1"></a></h4>
 <ul><li>Specifically targets a linear trend across ordered categories rather
 than any arbitrary departure from independence.<br></li>
 <li>More powerful than a general χ² test of independence when the true
@@ -6278,7 +6236,7 @@ association is monotonic.<br></li>
 <li>Accommodates arbitrary R×C tables (not limited to 2×k or k×2).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-4">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-4"></a></h4>
+<h4 id="weaknesses-1">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-1"></a></h4>
 <ul><li>Only detects linear-by-linear association; non‐monotonic patterns
 (e.g. U‐shaped) may be missed.<br></li>
 <li>Requires correct ordering of both row and column
@@ -6287,9 +6245,9 @@ categories—misordering invalidates the test.<br></li>
 χ² approximation.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-4">Example<a class="anchor" aria-label="anchor" href="#example-4"></a></h4>
+<h4 id="example-1">Example<a class="anchor" aria-label="anchor" href="#example-1"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-4">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-4"></a></h5>
+<h5 id="hypothesis-1">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-1"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> No linear trend in the
 log‐odds of inflammation level across pain‐severity categories (row and
@@ -6387,7 +6345,7 @@ level.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-5">Used for<a class="anchor" aria-label="anchor" href="#used-for-5"></a></h4>
+<h4 id="used-for-2">Used for<a class="anchor" aria-label="anchor" href="#used-for-2"></a></h4>
 <ul><li>Testing whether two groups have the same distribution across k
 categories (heterogeneity of proportions in a 2×k table).<br></li>
 <li>
@@ -6396,7 +6354,7 @@ smoking status (Never, Former, Current, Occasional) between males and
 females.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-5">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-5"></a></h4>
+<h4 id="assumptions-2">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-2"></a></h4>
 <ul><li>Observations are independent.<br></li>
 <li>Categories (columns) are mutually exclusive and exhaustive.<br></li>
 <li>Expected count in each cell is at least 5 for the χ² approximation
@@ -6404,7 +6362,7 @@ to be valid.<br></li>
 <li>The table is 2×k (two groups by k categories).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-5">Strengths<a class="anchor" aria-label="anchor" href="#strengths-5"></a></h4>
+<h4 id="strengths-2">Strengths<a class="anchor" aria-label="anchor" href="#strengths-2"></a></h4>
 <ul><li>Simple to compute via <code>chisq.test()</code> in R.<br></li>
 <li>Tests whether proportions differ across all k categories
 simultaneously.<br></li>
@@ -6412,7 +6370,7 @@ simultaneously.<br></li>
 counts.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-5">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-5"></a></h4>
+<h4 id="weaknesses-2">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-2"></a></h4>
 <ul><li>Sensitive to small expected counts; if many cells have expected &lt;
 5, approximation may be invalid.<br></li>
 <li>Only indicates that distributions differ, not which categories drive
@@ -6421,9 +6379,9 @@ the difference (follow‐up residual or post‐hoc tests needed).<br></li>
 measures.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-5">Example<a class="anchor" aria-label="anchor" href="#example-5"></a></h4>
+<h4 id="example-2">Example<a class="anchor" aria-label="anchor" href="#example-2"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-5">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-5"></a></h5>
+<h5 id="hypothesis-2">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-2"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> The two groups have the same
 distribution across the k categories (no heterogeneity).<br></li>
@@ -6491,7 +6449,7 @@ substantially from expected under homogeneity.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-6">Used for<a class="anchor" aria-label="anchor" href="#used-for-6"></a></h4>
+<h4 id="used-for-3">Used for<a class="anchor" aria-label="anchor" href="#used-for-3"></a></h4>
 <ul><li>Testing whether an observed incidence rate (events per unit
 person‐time) differs from a specified rate.<br></li>
 <li>
@@ -6500,13 +6458,13 @@ rate of catheter‐associated infections (per 1,000 patient‐days) equals
 the national benchmark.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-6">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-6"></a></h4>
+<h4 id="assumptions-3">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-3"></a></h4>
 <ul><li>Events occur independently and follow a Poisson process.<br></li>
 <li>The incidence rate is constant over the observation period.<br></li>
 <li>Person‐time is measured accurately and non‐overlapping.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-6">Strengths<a class="anchor" aria-label="anchor" href="#strengths-6"></a></h4>
+<h4 id="strengths-3">Strengths<a class="anchor" aria-label="anchor" href="#strengths-3"></a></h4>
 <ul><li>Exact test based on the Poisson distribution—no large‐sample
 approximation needed.<br></li>
 <li>Naturally accounts for differing follow‐up times via
@@ -6514,16 +6472,16 @@ person‐time.<br></li>
 <li>Valid for rare events and small counts.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-6">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-6"></a></h4>
+<h4 id="weaknesses-3">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-3"></a></h4>
 <ul><li>Sensitive to overdispersion (variance &gt; mean) and violation of
 Poisson assumptions.<br></li>
 <li>Cannot adjust for covariates or time‐varying rates.<br></li>
 <li>Assumes homogeneity of the rate across the period.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-6">Example<a class="anchor" aria-label="anchor" href="#example-6"></a></h4>
+<h4 id="example-3">Example<a class="anchor" aria-label="anchor" href="#example-3"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-6">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-6"></a></h5>
+<h5 id="hypothesis-3">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-3"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> The true incidence rate λ = 2
 infections per 1,000 patient‐days.<br></li>
@@ -6590,7 +6548,7 @@ that the infection rate differs from the benchmark.”</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-7">Used for<a class="anchor" aria-label="anchor" href="#used-for-7"></a></h4>
+<h4 id="used-for-4">Used for<a class="anchor" aria-label="anchor" href="#used-for-4"></a></h4>
 <ul><li>Comparing incidence rates (events per unit person‐time) between two
 independent groups.<br></li>
 <li>
@@ -6599,7 +6557,7 @@ rate of central‐line infections (per 1,000 catheter‐days) differs from
 Hospital B’s rate.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-7">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-7"></a></h4>
+<h4 id="assumptions-4">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-4"></a></h4>
 <ul><li>Events in each group follow a Poisson process.<br></li>
 <li>The incidence rate is constant over person‐time within each
 group.<br></li>
@@ -6607,7 +6565,7 @@ group.<br></li>
 <li>Groups are independent and there is no unaccounted confounding.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-7">Strengths<a class="anchor" aria-label="anchor" href="#strengths-7"></a></h4>
+<h4 id="strengths-4">Strengths<a class="anchor" aria-label="anchor" href="#strengths-4"></a></h4>
 <ul><li>Accounts for differing follow‐up times via person‐time
 denominators.<br></li>
 <li>Provides an exact test (via Poisson) for comparing rates without
@@ -6615,7 +6573,7 @@ relying on large‐sample normal approximations.<br></li>
 <li>Outputs both a rate‐ratio estimate and confidence interval.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-7">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-7"></a></h4>
+<h4 id="weaknesses-4">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-4"></a></h4>
 <ul><li>Sensitive to violations of the Poisson assumption (e.g.,
 overdispersion or clustering of events).<br></li>
 <li>Does not adjust for covariates—only a crude two‐group
@@ -6624,9 +6582,9 @@ comparison.<br></li>
 inference may be biased.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-7">Example<a class="anchor" aria-label="anchor" href="#example-7"></a></h4>
+<h4 id="example-4">Example<a class="anchor" aria-label="anchor" href="#example-4"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-7">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-7"></a></h5>
+<h5 id="hypothesis-4">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-4"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> The two incidence rates are
 equal (<span class="math inline">\(\lambda_A =
@@ -6702,7 +6660,7 @@ hospitals.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-8">Used for<a class="anchor" aria-label="anchor" href="#used-for-8"></a></h4>
+<h4 id="used-for-5">Used for<a class="anchor" aria-label="anchor" href="#used-for-5"></a></h4>
 <ul><li>Testing whether there is a linear trend in incidence rates across
 ordered exposure groups.<br></li>
 <li>
@@ -6711,7 +6669,7 @@ incidence per 1,000 person‐years increases across smoking intensity
 categories (Non‐smoker, Light‐smoker, Heavy‐smoker).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-8">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-8"></a></h4>
+<h4 id="assumptions-5">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-5"></a></h4>
 <ul><li>Events in each group follow a Poisson process.<br></li>
 <li>The exposure groups have a natural order and can be assigned numeric
 scores (e.g., 0, 1, 2).<br></li>
@@ -6721,7 +6679,7 @@ non‐overlapping.<br></li>
 the exposure groups.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-8">Strengths<a class="anchor" aria-label="anchor" href="#strengths-8"></a></h4>
+<h4 id="strengths-5">Strengths<a class="anchor" aria-label="anchor" href="#strengths-5"></a></h4>
 <ul><li>Directly tests for a dose‐response (linear) relationship in
 rates.<br></li>
 <li>Accounts for differing person‐time across groups via an offset in
@@ -6730,7 +6688,7 @@ Poisson regression.<br></li>
 exposure score.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-8">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-8"></a></h4>
+<h4 id="weaknesses-5">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-5"></a></h4>
 <ul><li>Only detects a linear trend; non‐linear patterns across groups may
 be missed.<br></li>
 <li>Sensitive to misclassification of exposure group ordering or
@@ -6739,9 +6697,9 @@ scoring.<br></li>
 invalid unless corrected.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-8">Example<a class="anchor" aria-label="anchor" href="#example-8"></a></h4>
+<h4 id="example-5">Example<a class="anchor" aria-label="anchor" href="#example-5"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-8">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-8"></a></h5>
+<h5 id="hypothesis-5">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-5"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> There is no linear trend in
 incidence rates across exposure groups (β = 0).<br></li>
@@ -6832,7 +6790,7 @@ rises significantly from Non‐smoker → Light‐smoker → Heavy‐smoker.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-9">Used for<a class="anchor" aria-label="anchor" href="#used-for-9"></a></h4>
+<h4 id="used-for-6">Used for<a class="anchor" aria-label="anchor" href="#used-for-6"></a></h4>
 <ul><li>Testing whether the incidence rate in one group differs from that in
 another group using an exact (Poisson) method for the rate ratio.<br></li>
 <li>
@@ -6841,7 +6799,7 @@ between two antibiotic regimens (A vs. B) when event counts and
 person‐time are relatively small.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-9">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-9"></a></h4>
+<h4 id="assumptions-6">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-6"></a></h4>
 <ul><li>Events in each group follow a Poisson process.<br></li>
 <li>The rate within each group is constant over the observed
 person‐time.<br></li>
@@ -6851,7 +6809,7 @@ non‐overlapping.<br></li>
 exposure).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-9">Strengths<a class="anchor" aria-label="anchor" href="#strengths-9"></a></h4>
+<h4 id="strengths-6">Strengths<a class="anchor" aria-label="anchor" href="#strengths-6"></a></h4>
 <ul><li>Provides an exact confidence interval for the rate ratio and an
 exact test p‐value without relying on large‐sample normal
 approximations.<br></li>
@@ -6859,7 +6817,7 @@ approximations.<br></li>
 <li>Directly tests the null hypothesis <span class="math inline">\(\text{RR} = 1\)</span> (where <span class="math inline">\(\text{RR} = \lambda_1 / \lambda_2\)</span>).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-9">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-9"></a></h4>
+<h4 id="weaknesses-6">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-6"></a></h4>
 <ul><li>Sensitive to overdispersion (variance &gt; mean) or
 clustering—assumes Poisson variance equals the mean.<br></li>
 <li>Only compares two groups at a time; cannot easily adjust for
@@ -6868,9 +6826,9 @@ covariates.<br></li>
 biased.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-9">Example<a class="anchor" aria-label="anchor" href="#example-9"></a></h4>
+<h4 id="example-6">Example<a class="anchor" aria-label="anchor" href="#example-6"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-9">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-9"></a></h5>
+<h5 id="hypothesis-6">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-6"></a></h5>
 <ul><li>
 <strong>Null hypothesis (<span class="math inline">\(H_{0}\)</span>):</strong> The rate in group A
 equals the rate in group B, i.e. <span class="math inline">\(\text{RR} =
@@ -6959,7 +6917,7 @@ B.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-10">Used for<a class="anchor" aria-label="anchor" href="#used-for-10"></a></h4>
+<h4 id="used-for-7">Used for<a class="anchor" aria-label="anchor" href="#used-for-7"></a></h4>
 <ul><li>Comparing the survival distributions of two or more groups in
 time-to-event data.<br></li>
 <li>
@@ -6968,21 +6926,21 @@ receiving Drug A have different overall survival than patients receiving
 Drug B after cancer diagnosis.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-10">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-10"></a></h4>
+<h4 id="assumptions-7">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-7"></a></h4>
 <ul><li>Censoring is independent of survival (noninformative).<br></li>
 <li>Survival times are continuously distributed.<br></li>
 <li>The hazard functions are proportional over time (i.e., the ratio of
 hazard rates between groups is constant).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-10">Strengths<a class="anchor" aria-label="anchor" href="#strengths-10"></a></h4>
+<h4 id="strengths-7">Strengths<a class="anchor" aria-label="anchor" href="#strengths-7"></a></h4>
 <ul><li>Nonparametric: does not assume any specific survival
 distribution.<br></li>
 <li>Accommodates right-censoring.<br></li>
 <li>Widely used and easy to implement via <code>survdiff()</code>.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-10">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-10"></a></h4>
+<h4 id="weaknesses-7">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-7"></a></h4>
 <ul><li>Sensitive to violations of proportional hazards—if hazards cross,
 test may mislead.<br></li>
 <li>Only tests for equality of entire survival curves, not pinpointing
@@ -6991,9 +6949,9 @@ when differences occur.<br></li>
 observations.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-10">Example<a class="anchor" aria-label="anchor" href="#example-10"></a></h4>
+<h4 id="example-7">Example<a class="anchor" aria-label="anchor" href="#example-7"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-10">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-10"></a></h5>
+<h5 id="hypothesis-7">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-7"></a></h5>
 <ul><li>
 <strong>Null hypothesis (<span class="math inline">\(H_{0}\)</span>):</strong> The survival functions
 in the two groups are equal, i.e. <span class="math inline">\(S_{A}(t) =
@@ -7079,7 +7037,7 @@ in survival between Drug A and Drug B..</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-11">Used for<a class="anchor" aria-label="anchor" href="#used-for-11"></a></h4>
+<h4 id="used-for-8">Used for<a class="anchor" aria-label="anchor" href="#used-for-8"></a></h4>
 <ul><li>Modeling time‐to‐event data with a specified parametric
 form—specifically the Weibull distribution—for both the baseline hazard
 and covariate effects.<br></li>
@@ -7089,7 +7047,7 @@ chemotherapy agent on time to disease progression, assuming a Weibull
 hazard shape.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-11">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-11"></a></h4>
+<h4 id="assumptions-8">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-8"></a></h4>
 <ul><li><p><strong>Weibull distribution</strong>: The survival times <span class="math inline">\(T\)</span> follow a Weibull distribution with
 shape parameter <span class="math inline">\(\alpha\)</span> and scale
 parameter <span class="math inline">\(\lambda\)</span>, so the hazard is
@@ -7107,7 +7065,7 @@ accelerated‐failure‐time (AFT) parameterization, we assume <span class="math
 extreme‐value distribution.</p>
 </div>
 <div class="section level4">
-<h4 id="strengths-11">Strengths<a class="anchor" aria-label="anchor" href="#strengths-11"></a></h4>
+<h4 id="strengths-8">Strengths<a class="anchor" aria-label="anchor" href="#strengths-8"></a></h4>
 <ul><li>Provides a fully specified likelihood, enabling efficient estimation
 and confidence intervals.<br></li>
 <li>Yields both scale (AFT) and hazard‐ratio interpretations (via
@@ -7116,7 +7074,7 @@ transformation).<br></li>
 adequate).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-11">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-11"></a></h4>
+<h4 id="weaknesses-8">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-8"></a></h4>
 <ul><li>Mis‐specification of the Weibull form (shape <span class="math inline">\(\alpha\)</span> wrong) can bias estimates and
 inferences.<br></li>
 <li>Less robust than semi‐parametric Cox models if the true hazard is
@@ -7125,9 +7083,9 @@ not Weibull‐shaped.<br></li>
 comparisons).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-11">Example<a class="anchor" aria-label="anchor" href="#example-11"></a></h4>
+<h4 id="example-8">Example<a class="anchor" aria-label="anchor" href="#example-8"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-11">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-11"></a></h5>
+<h5 id="hypothesis-8">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-8"></a></h5>
 <ul><li>
 <strong>Null hypothesis (<span class="math inline">\(H_{0}\)</span>)</strong>: The new chemotherapy
 does not change time to progression, i.e. the coefficient <span class="math inline">\(\beta_{\text{treatment}} = 0\)</span>.<br></li>
@@ -7286,7 +7244,7 @@ c(“Value”,“Std. Error”,“p”)]`.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-12">Used for<a class="anchor" aria-label="anchor" href="#used-for-12"></a></h4>
+<h4 id="used-for-9">Used for<a class="anchor" aria-label="anchor" href="#used-for-9"></a></h4>
 <ul><li>Modeling the hazard (instantaneous event rate) for time‐to‐event
 data as a function of covariates without specifying a baseline
 hazard.<br></li>
@@ -7296,7 +7254,7 @@ drug (Drug A vs. Drug B) on time to cancer recurrence, adjusting for age
 and tumor grade.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-12">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-12"></a></h4>
+<h4 id="assumptions-9">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-9"></a></h4>
 <ul><li><p><strong>Proportional hazards</strong>: For any two individuals
 <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, $ = (_i^ - _j^) $ is constant over
 time (no interaction between covariates and time).<br></p></li>
@@ -7309,7 +7267,7 @@ of continuous covariates: <span class="math inline">\(\log h(t \mid
 <li><p>No important omitted covariates that interact with time.</p></li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-12">Strengths<a class="anchor" aria-label="anchor" href="#strengths-12"></a></h4>
+<h4 id="strengths-9">Strengths<a class="anchor" aria-label="anchor" href="#strengths-9"></a></h4>
 <ul><li>
 <strong>Semi‐parametric</strong>: No need to specify <span class="math inline">\(h_0(t)\)</span> (baseline hazard)
 explicitly.<br></li>
@@ -7319,7 +7277,7 @@ extended).<br></li>
 <li>Widely used and implemented (e.g., <code>coxph()</code> in R).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-12">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-12"></a></h4>
+<h4 id="weaknesses-9">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-9"></a></h4>
 <ul><li>Sensitive to violation of proportional hazards—if hazards cross,
 estimates and tests may be invalid.<br></li>
 <li>Does not automatically provide baseline survival estimate unless
@@ -7328,9 +7286,9 @@ explicitly requested (e.g., via <code>survfit()</code>).<br></li>
 without transformations or splines.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-12">Example<a class="anchor" aria-label="anchor" href="#example-12"></a></h4>
+<h4 id="example-9">Example<a class="anchor" aria-label="anchor" href="#example-9"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-12">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-12"></a></h5>
+<h5 id="hypothesis-9">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-9"></a></h5>
 <ul><li><p><strong>Null hypothesis (<span class="math inline">\(H_{0}\)</span>)</strong>: There is no difference
 in hazard between Drug A and Drug B after adjusting for age and tumor
 grade, i.e. <span class="math inline">\(\beta_{\text{drug}} = 0 \quad
@@ -7470,7 +7428,7 @@ recurrence, holding the others constant.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-13">Used for<a class="anchor" aria-label="anchor" href="#used-for-13"></a></h4>
+<h4 id="used-for-10">Used for<a class="anchor" aria-label="anchor" href="#used-for-10"></a></h4>
 <ul><li>Modeling time‐to‐event data under the assumption that covariates act
 multiplicatively on survival time (“accelerate” or “decelerate”
 survival).<br></li>
@@ -7480,7 +7438,7 @@ survival).<br></li>
 follows an exponential or log‐logistic distribution.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-13">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-13"></a></h4>
+<h4 id="assumptions-10">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-10"></a></h4>
 <ul><li>
 <strong>AFT form:</strong> For each subject <span class="math inline">\(i\)</span>,<br><span class="math display">\[
   \log T_i \;=\; \mathbf{X}_i^\top \boldsymbol{\beta} \;+\; \sigma\,W_i,
@@ -7502,7 +7460,7 @@ vs. log‐logistic).<br></li>
 interacting variables.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-13">Strengths<a class="anchor" aria-label="anchor" href="#strengths-13"></a></h4>
+<h4 id="strengths-10">Strengths<a class="anchor" aria-label="anchor" href="#strengths-10"></a></h4>
 <ul><li>Provides a direct interpretation in terms of <strong>time
 ratios</strong>:<br><span class="math display">\[
   \text{Time Ratio for covariate }j = \exp\bigl(\beta_{j}\bigr),
@@ -7515,7 +7473,7 @@ errors) if the distributional form is correct.<br></li>
 adequate.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-13">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-13"></a></h4>
+<h4 id="weaknesses-10">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-10"></a></h4>
 <ul><li>Mis‐specifying the error distribution (e.g. assuming exponential
 when data are log‐logistic) biases estimates and inference.<br></li>
 <li>Less robust than the semi‐parametric Cox model if true hazard shape
@@ -7524,9 +7482,9 @@ deviates from assumed form.<br></li>
 the chosen distribution is appropriate.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-13">Example<a class="anchor" aria-label="anchor" href="#example-13"></a></h4>
+<h4 id="example-10">Example<a class="anchor" aria-label="anchor" href="#example-10"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-13">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-13"></a></h5>
+<h5 id="hypothesis-10">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-10"></a></h5>
 <ul><li>
 <strong>Null hypothesis (<span class="math inline">\(H_{0}\)</span>):</strong> Treatment has no effect
 on log‐survival time, i.e.<br><span class="math inline">\(\beta_{\text{treatment}} = 0 \quad
@@ -7708,7 +7666,7 @@ distribution.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-14">Used for<a class="anchor" aria-label="anchor" href="#used-for-14"></a></h4>
+<h4 id="used-for-11">Used for<a class="anchor" aria-label="anchor" href="#used-for-11"></a></h4>
 <ul><li>Testing equality of cumulative incidence functions between groups in
 the presence of competing risks.<br></li>
 <li>
@@ -7717,14 +7675,14 @@ cancer relapse (event of interest) between two treatment arms,
 accounting for death from other causes as a competing event.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-14">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-14"></a></h4>
+<h4 id="assumptions-11">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-11"></a></h4>
 <ul><li>Competing risks are mutually exclusive and each subject experiences
 at most one event.<br></li>
 <li>Censoring is independent of the event processes.<br></li>
 <li>The cause‐specific hazards are proportional across groups.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-14">Strengths<a class="anchor" aria-label="anchor" href="#strengths-14"></a></h4>
+<h4 id="strengths-11">Strengths<a class="anchor" aria-label="anchor" href="#strengths-11"></a></h4>
 <ul><li>Directly compares cumulative incidence functions rather than
 cause‐specific hazards.<br></li>
 <li>Accounts properly for competing events (does not treat them as
@@ -7733,7 +7691,7 @@ noninformative censoring).<br></li>
 built in.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-14">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-14"></a></h4>
+<h4 id="weaknesses-11">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-11"></a></h4>
 <ul><li>Assumes proportional subdistribution hazards (which may be
 violated).<br></li>
 <li>Sensitive to heavy censoring or sparse events in one group.<br></li>
@@ -7741,9 +7699,9 @@ violated).<br></li>
 time points.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-14">Example<a class="anchor" aria-label="anchor" href="#example-14"></a></h4>
+<h4 id="example-11">Example<a class="anchor" aria-label="anchor" href="#example-11"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-14">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-14"></a></h5>
+<h5 id="hypothesis-11">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-11"></a></h5>
 <ul><li>
 <strong>Null hypothesis (<span class="math inline">\(H_{0}\)</span>):</strong> <span class="math inline">\(F_1^{(1)}(t) = F_2^{(1)}(t)\quad\text{for all
 }t\)</span> (the cumulative incidence of the event of interest is the
@@ -7828,7 +7786,7 @@ difference in relapse incidence between the treatment arms.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-15">Used for<a class="anchor" aria-label="anchor" href="#used-for-15"></a></h4>
+<h4 id="used-for-12">Used for<a class="anchor" aria-label="anchor" href="#used-for-12"></a></h4>
 <ul><li>Testing the proportional‐hazards assumption in Cox models using
 Schoenfeld residuals.<br></li>
 <li>
@@ -7837,27 +7795,27 @@ between a new drug and control remains constant over follow‐up
 time.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-15">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-15"></a></h4>
+<h4 id="assumptions-12">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-12"></a></h4>
 <ul><li>You have a fitted Cox model (<code>coxph()</code>).<br></li>
 <li>Censoring is noninformative.<br></li>
 <li>The true hazard ratios are constant over time under the null.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-15">Strengths<a class="anchor" aria-label="anchor" href="#strengths-15"></a></h4>
+<h4 id="strengths-12">Strengths<a class="anchor" aria-label="anchor" href="#strengths-12"></a></h4>
 <ul><li>Provides both a global test and covariate‐specific tests.<br></li>
 <li>Uses residuals to detect time‐varying effects.<br></li>
 <li>Easy to implement via <code>cox.zph()</code>.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-15">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-15"></a></h4>
+<h4 id="weaknesses-12">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-12"></a></h4>
 <ul><li>Sensitive to sparse data or few events.<br></li>
 <li>May flag minor, clinically irrelevant departures.<br></li>
 <li>Graphical interpretation can be subjective.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-15">Example<a class="anchor" aria-label="anchor" href="#example-15"></a></h4>
+<h4 id="example-12">Example<a class="anchor" aria-label="anchor" href="#example-12"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-15">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-15"></a></h5>
+<h5 id="hypothesis-12">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-12"></a></h5>
 <ul><li><p><strong>Null hypothesis (<span class="math inline">\(H_0\)</span>):</strong> The hazard ratio is
 constant over time for each covariate, i.e.<br>
 $ = (<em>k (X</em>{ik}-X_{jk}))t.$</p></li>
@@ -7950,7 +7908,7 @@ proportional hazards assumption is reasonable.</p>
 <p>EJ KORREKTURLÆST MON IKKE DENNE SNARERE SKAL KONSOLIDERES MED DEN
 COHENS VI ALLEREDE HAR?</p>
 <div class="section level4">
-<h4 id="used-for-16">Used for<a class="anchor" aria-label="anchor" href="#used-for-16"></a></h4>
+<h4 id="used-for-13">Used for<a class="anchor" aria-label="anchor" href="#used-for-13"></a></h4>
 <ul><li>Quantifying agreement between two raters classifying the same
 subjects into categories, beyond chance.<br></li>
 <li>
@@ -7958,28 +7916,28 @@ subjects into categories, beyond chance.<br></li>
 pathologists agree on “Benign” vs. “Malignant” diagnoses.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="assumptions-16">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-16"></a></h4>
+<h4 id="assumptions-13">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-13"></a></h4>
 <ul><li>Each subject is independently rated by both raters.<br></li>
 <li>Ratings are categorical (nominal or ordinal).<br></li>
 <li>The marginal distributions of categories need not be equal.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-16">Strengths<a class="anchor" aria-label="anchor" href="#strengths-16"></a></h4>
+<h4 id="strengths-13">Strengths<a class="anchor" aria-label="anchor" href="#strengths-13"></a></h4>
 <ul><li>Corrects for agreement expected by chance.<br></li>
 <li>Provides an interpretable coefficient, <span class="math inline">\(\kappa\)</span>, ranging from –1 to 1.<br></li>
 <li>Can be weighted for ordinal categories.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-16">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-16"></a></h4>
+<h4 id="weaknesses-13">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-13"></a></h4>
 <ul><li>Sensitive to prevalence and marginal imbalances (“paradox”).<br></li>
 <li>Doesn’t distinguish systematic bias from random disagreement.<br></li>
 <li>Requires at least two raters and non‐sparse tables for stable
 estimates.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-16">Example<a class="anchor" aria-label="anchor" href="#example-16"></a></h4>
+<h4 id="example-13">Example<a class="anchor" aria-label="anchor" href="#example-13"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-16">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-16"></a></h5>
+<h5 id="hypothesis-13">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-13"></a></h5>
 <ul><li>
 <strong>Null hypothesis (<span class="math inline">\(H_{0}\)</span>):</strong> <span class="math inline">\(\kappa = 0\)</span> (no agreement beyond
 chance).<br></li>
@@ -8178,7 +8136,7 @@ is no evidence of reliability beyond chance among the raters.</p>
 <div class="accordion-body">
 <p>EJ KORREKTURLÆST</p>
 <div class="section level4">
-<h4 id="used-for-17">Used for<a class="anchor" aria-label="anchor" href="#used-for-17"></a></h4>
+<h4 id="used-for-14">Used for<a class="anchor" aria-label="anchor" href="#used-for-14"></a></h4>
 <p>Assessing agreement between two quantitative measurement methods by
 examining the mean difference (bias) and the limits of agreement. It
 tests if any difference is constant across the range of measurements,
@@ -8188,7 +8146,7 @@ example:</strong> Comparing blood pressure readings from a new wrist
 monitor and a standard sphygmomanometer.</p>
 </div>
 <div class="section level4">
-<h4 id="assumptions-17">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-17"></a></h4>
+<h4 id="assumptions-14">Assumptions<a class="anchor" aria-label="anchor" href="#assumptions-14"></a></h4>
 <ul><li>Paired measurements on the same subjects.<br></li>
 <li>Differences (method A – method B) are approximately normally
 distributed.<br></li>
@@ -8196,7 +8154,7 @@ distributed.<br></li>
 the difference (homoscedasticity).</li>
 </ul></div>
 <div class="section level4">
-<h4 id="strengths-17">Strengths<a class="anchor" aria-label="anchor" href="#strengths-17"></a></h4>
+<h4 id="strengths-14">Strengths<a class="anchor" aria-label="anchor" href="#strengths-14"></a></h4>
 <ul><li>Provides both a visual (Bland–Altman plot) and numerical summary
 (bias and limits) of agreement.<br></li>
 <li>Easy to interpret clinically: shows how far apart two methods can
@@ -8205,16 +8163,16 @@ differ for most observations.<br></li>
 agreement.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="weaknesses-17">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-17"></a></h4>
+<h4 id="weaknesses-14">Weaknesses<a class="anchor" aria-label="anchor" href="#weaknesses-14"></a></h4>
 <ul><li>Assumes constant bias across range of measurements.<br></li>
 <li>Sensitive to outliers, which can widen limits of agreement.<br></li>
 <li>Requires adequate sample size (n ≥ 30 preferred) to estimate limits
 reliably.</li>
 </ul></div>
 <div class="section level4">
-<h4 id="example-17">Example<a class="anchor" aria-label="anchor" href="#example-17"></a></h4>
+<h4 id="example-14">Example<a class="anchor" aria-label="anchor" href="#example-14"></a></h4>
 <div class="section level5">
-<h5 id="hypothesis-17">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-17"></a></h5>
+<h5 id="hypothesis-14">Hypothesis<a class="anchor" aria-label="anchor" href="#hypothesis-14"></a></h5>
 <ul><li>
 <strong>Null hypothesis (H₀):</strong> Mean difference between
 methods A and B is zero (no systematic bias).<br>
