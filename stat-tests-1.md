@@ -2968,39 +2968,36 @@ Similar interpretation applies to price.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "linear_mixed_effects_model"></a>
 
 ::::spoiler
 
 ### Linear mixed-effects modeller (LME)
 
 EJ KORREKTURLÆST
-#### Used for
-- Modeling continuous outcomes with both fixed effects (predictors of interest) and random effects (to account for grouped or repeated measures).  
-- **Real-world example:** Evaluating the effect of a new teaching method on student test scores, while accounting for variability between classrooms and schools.
+* **Used for** Modeling continuous outcomes with both fixed effects (predictors of interest) and random effects (to account for grouped or repeated measures).  
+* **Real-world example:** Evaluating the effect of a new teaching method on student test scores, while accounting for variability between classrooms and schools.
 
-#### Assumptions
-- Linear relationship between predictors and outcome.  
-- Residuals are independent and normally distributed with mean zero.  
-- Random effects are normally distributed.  
-- Homoscedasticity: constant variance of residuals.  
-- Random effects structure correctly specified (e.g., intercepts and/or slopes).
+**Assumptions**
+* Linear relationship between predictors and outcome.  
+* Residuals are independent and normally distributed with mean zero.  
+* Random effects are normally distributed.  
+* Homoscedasticity: constant variance of residuals.  
+* Random effects structure correctly specified (e.g., intercepts and/or slopes).
 
-#### Strengths
-- Accounts for correlation within clusters (e.g., pupils within the same classroom).  
-- Can handle unbalanced data and missing observations within clusters.  
-- Flexibly models complex hierarchical or longitudinal data structures.
+**Strengths**
+* Accounts for correlation within clusters (e.g., pupils within the same classroom).  
+* Can handle unbalanced data and missing observations within clusters.  
+* Flexibly models complex hierarchical or longitudinal data structures.
 
-#### Weaknesses
-- Model specification (random effects structure) can be challenging.  
-- Parameter estimation can be computationally intensive and may fail to converge.  
-- Inference (p-values) often relies on approximations or additional packages.
+**Weaknesses**
+* Model specification (random effects structure) can be challenging.  
+* Parameter estimation can be computationally intensive and may fail to converge.  
+* Inference (p-values) often relies on approximations or additional packages.
 
-#### Example
-
-##### Hypothesis
-- **Null hypothesis (H₀):** The new teaching method has no effect on student test scores (fixed effect β_method = 0).  
-- **Alternative hypothesis (H₁):** The new teaching method affects student test scores (β_method ≠ 0).
+**Example**
+* **Null hypothesis (H₀):** The new teaching method has no effect on student test scores (fixed effect β_method = 0).  
+* **Alternative hypothesis (H₁):** The new teaching method affects student test scores (β_method ≠ 0).
 
 
 ``` r
@@ -3091,7 +3088,7 @@ Correlation of Fixed Effects:
 methdNwMthd -0.080
 ```
 
-Interpretation:
+**Interpretation:**
 The fixed-effect estimate for NewMethod is 5.96 points (SE = 0.9), with p = 2.35\times 10^{-10}. We
 reject the null hypothesis.
 Thus, there is
@@ -3100,7 +3097,7 @@ evidence that the new teaching method significantly changes test scores, account
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "generalized_linear_mixed_effects_model"></a>
 
 ::::spoiler
 
@@ -3108,31 +3105,29 @@ evidence that the new teaching method significantly changes test scores, account
 
 EJ KORREKTURLÆST
 
-#### Used for
-- Modeling non-normal outcomes (e.g. binary, counts) with both fixed effects and random effects.  
-- **Real-world example:** Predicting whether patients are readmitted (yes/no) based on age and comorbidity score, with random intercepts for each hospital.
+* **Used for** Modeling non-normal outcomes (e.g. binary, counts) with both fixed effects and random effects.  
+* **Real-world example:** Predicting whether patients are readmitted (yes/no) based on age and comorbidity score, with random intercepts for each hospital.
 
-#### Assumptions
-- Observations within each cluster (e.g. hospital) are correlated, but clusters are independent.  
-- The conditional distribution of the outcome given predictors and random effects follows a specified exponential‐family distribution (e.g. binomial, Poisson).  
-- The link function (e.g. logit, log) correctly relates the linear predictor to the mean of the outcome.  
-- Random effects are normally distributed.
+**Assumptions**
+* Observations within each cluster (e.g. hospital) are correlated, but clusters are independent.  
+* The conditional distribution of the outcome given predictors and random effects follows a specified exponential‐family distribution (e.g. binomial, Poisson).  
+* The link function (e.g. logit, log) correctly relates the linear predictor to the mean of the outcome.  
+* Random effects are normally distributed.
 
-#### Strengths
-- Can accommodate hierarchical or longitudinal data and non-Gaussian outcomes.  
-- Estimates both population‐level (fixed) effects and cluster‐specific (random) variation.  
-- Flexible: supports a variety of link functions and distributions.
+**Strengths**
+* Can accommodate hierarchical or longitudinal data and non-Gaussian outcomes.  
+* Estimates both population‐level (fixed) effects and cluster‐specific (random) variation.  
+* Flexible: supports a variety of link functions and distributions.
 
-#### Weaknesses
-- Computationally intensive; convergence can fail with complex random‐effects structures.  
-- Inference (especially p-values for fixed effects) relies on approximations.  
-- Model specification (random slopes, link choice) can be challenging.
+**Weaknesses**
+* Computationally intensive; convergence can fail with complex random‐effects structures.  
+* Inference (especially p-values for fixed effects) relies on approximations.  
+* Model specification (random slopes, link choice) can be challenging.
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** The log-odds of readmission do not depend on age (β_age = 0).  
-- **Alternative hypothesis (H₁):** Age affects the log-odds of readmission (β_age ≠ 0).
+* **Null hypothesis (H₀):** The log-odds of readmission do not depend on age (β_age = 0).  
+* **Alternative hypothesis (H₁):** Age affects the log-odds of readmission (β_age ≠ 0).
 
 
 ``` r
@@ -3196,7 +3191,7 @@ age         -0.932
 comorbidity -0.293  0.101
 ```
 
-Interpretation:
+**Interpretation:**
 The fixed‐effect estimate for age is 0.035 (SE = 0.005), giving an odds ratio of 1.036 per year of age. With a z‐value = 6.59 and p ≈ 4.3\times 10^{-11}, we
 reject the null hypothesis.
 This indicates that age
@@ -3205,7 +3200,7 @@ is significantly associated with higher odds of readmission, accounting for hosp
 ::::
 
 
-<a id = "test-navn"></a>
+<a id = "gee_logistic"></a>
 
 ::::spoiler
 
@@ -3213,31 +3208,29 @@ is significantly associated with higher odds of readmission, accounting for hosp
 
 EJ KORREKTURLÆST
 
-#### Used for
-- Modeling correlated or clustered data (e.g., repeated measures, longitudinal, or clustered observations) when interest lies in population‐averaged effects rather than subject‐specific effects.  
-- **Real-world example:** Estimating the effect of a diabetes education program on the probability of glycemic control (A1C < 7%) over multiple clinic visits per patient.
+* **Used for** Modeling correlated or clustered data (e.g., repeated measures, longitudinal, or clustered observations) when interest lies in population‐averaged effects rather than subject‐specific effects.  
+* **Real-world example:** Estimating the effect of a diabetes education program on the probability of glycemic control (A1C < 7%) over multiple clinic visits per patient.
 
-#### Assumptions
-- Clustered or repeated observations per subject/cluster with some “working” correlation structure (e.g., exchangeable, autoregressive).  
-- Correct specification of the link function and the mean model (e.g., logit link for binary outcomes).  
-- Missing data are missing completely at random (MCAR) or missing at random (MAR), assuming missingness only depends on observed covariates.  
-- Large‐sample inference: GEE relies on asymptotic properties (number of clusters ≫ 1).
+**Assumptions**
+* Clustered or repeated observations per subject/cluster with some “working” correlation structure (e.g., exchangeable, autoregressive).  
+* Correct specification of the link function and the mean model (e.g., logit link for binary outcomes).  
+* Missing data are missing completely at random (MCAR) or missing at random (MAR), assuming missingness only depends on observed covariates.  
+* Large‐sample inference: GEE relies on asymptotic properties (number of clusters ≫ 1).
 
-#### Strengths
-- Robust (“sandwich”) standard errors even if the working correlation structure is mis‐specified.  
-- Provides marginal (population‐averaged) estimates, often of direct interest in public health/epidemiology.  
-- Accommodates a variety of outcomes (binary, count, continuous) via appropriate link and family.
+**Strengths**
+* Robust (“sandwich”) standard errors even if the working correlation structure is mis‐specified.  
+* Provides marginal (population‐averaged) estimates, often of direct interest in public health/epidemiology.  
+* Accommodates a variety of outcomes (binary, count, continuous) via appropriate link and family.
 
-#### Weaknesses
-- Efficiency can be lost if the working correlation is far from the truth (though estimates remain consistent).  
-- Inference is asymptotic—small numbers of clusters can lead to biased standard errors.  
-- Does not model subject‐specific trajectories; cannot estimate random‐effects variance components.
+**Weaknesses**
+* Efficiency can be lost if the working correlation is far from the truth (though estimates remain consistent).  
+* Inference is asymptotic—small numbers of clusters can lead to biased standard errors.  
+* Does not model subject‐specific trajectories; cannot estimate random‐effects variance components.
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** The education program has no effect on odds of glycemic control over time (β_edu = 0).  
-- **Alternative hypothesis (H₁):** The education program changes the odds of glycemic control over time (β_edu ≠ 0).
+* **Null hypothesis (H₀):** The education program has no effect on odds of glycemic control over time (β_edu = 0).  
+* **Alternative hypothesis (H₁):** The education program changes the odds of glycemic control over time (β_edu ≠ 0).
 
 
 ``` r
@@ -3321,7 +3314,7 @@ alpha  0.00166 0.03069
 Number of clusters:   100  Maximum cluster size: 4 
 ```
 
-Interpretation:
+**Interpretation:*'
 
 The estimated coefficient for edu (Edu vs. NoEdu) is 0.552
 . Its robust (“sandwich”) standard error is 0.248
@@ -3343,20 +3336,8 @@ Because GEE uses a sandwich estimator, these inferences remain valid even if “
 
 ## Kontingenstabel- og proportions-tests
 
-<a id = "test-navn"></a>
 
-::::spoiler
-
-### Contingency-table methods (χ² osv.)
-
-EJ KORREKTURLÆST
-HVOR KATTEN KOMMER DET HER EGENTLIG FRA?
-
-
-
-::::
-
-<a id = "test-navn"></a>
+<a id = "mcnemar_test"></a>
 
 ::::spoiler
 
@@ -3364,30 +3345,28 @@ HVOR KATTEN KOMMER DET HER EGENTLIG FRA?
 
 EJ KORREKTURLÆST
 
-#### Used for
-- Testing whether the proportions of paired binary outcomes differ (i.e., detecting marginal changes in a 2×2 paired table).  
-- **Real-world example:** Determining if a new diagnostic test classification (Positive/Negative) differs from an existing “gold standard” classification on the same patients.
+* **Used for** Testing whether the proportions of paired binary outcomes differ (i.e., detecting marginal changes in a 2×2 paired table).  
+* **Real-world example:** Determining if a new diagnostic test classification (Positive/Negative) differs from an existing “gold standard” classification on the same patients.
 
-#### Assumptions
-- Data consist of paired binary observations (e.g., before/after, test1/test2) on the same subjects.  
-- Discordant cell counts (subjects where Test A=Positive & Test B=Negative or vice versa) are sufficiently large (≥ 10) for the χ² approximation; otherwise use exact McNemar.  
-- Each pair is independent of all other pairs.
+**Assumptions**
+* Data consist of paired binary observations (e.g., before/after, test1/test2) on the same subjects.  
+* Discordant cell counts (subjects where Test A=Positive & Test B=Negative or vice versa) are sufficiently large (≥ 10) for the χ² approximation; otherwise use exact McNemar.  
+* Each pair is independent of all other pairs.
 
-#### Strengths
-- Simple to implement for paired binary data.  
-- Specifically tests for a change in proportion rather than overall association.  
-- Does not require marginal homogeneity for concordant pairs (only discordant pairs matter).
+**Strengths**
+* Simple to implement for paired binary data.  
+* Specifically tests for a change in proportion rather than overall association.  
+* Does not require marginal homogeneity for concordant pairs (only discordant pairs matter).
 
-#### Weaknesses
-- Ignores concordant pairs (those where both methods agree), focusing only on discordant counts.  
-- χ² approximation can be invalid if discordant counts are small—requires exact test.  
-- Only applicable to 2×2 paired tables (binary outcomes).
+**Weaknesses**
+* Ignores concordant pairs (those where both methods agree), focusing only on discordant counts.  
+* χ² approximation can be invalid if discordant counts are small—requires exact test.  
+* Only applicable to 2×2 paired tables (binary outcomes).
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** The probability of discordant outcomes is the same in both directions (b = c).  
-- **Alternative hypothesis (H₁):** The probability of discordant outcomes differs (b ≠ c).
+* **Null hypothesis (H₀):** The probability of discordant outcomes is the same in both directions (b = c).  
+* **Alternative hypothesis (H₁):** The probability of discordant outcomes differs (b ≠ c).
 
 
 ``` r
@@ -3421,7 +3400,7 @@ data:  ctab
 McNemar's chi-squared = 3.3, df = 1, p-value = 0.07
 ```
 
-Interpretation:
+**Interpretation:**
 The McNemar χ² statistic is 3.33 with p-value = 0.0679. We
 fail to reject the null hypothesis.
 Since b (OldTest Positive, NewTest Negative) = 20 and c (OldTest Negative, NewTest Positive) = 10, a significant result would indicate that the switch in classifications is not symmetric—i.e., the new test’s positive/negative calls differ from the old test more often in one direction than the other.
@@ -3429,7 +3408,7 @@ Since b (OldTest Positive, NewTest Negative) = 20 and c (OldTest Negative, NewTe
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "fishers_exact_test"></a>
 
 ::::spoiler
 
@@ -3437,30 +3416,28 @@ Since b (OldTest Positive, NewTest Negative) = 20 and c (OldTest Negative, NewTe
 
 EJ KORREKTURLÆST
 
-#### Used for
-- Testing independence between two categorical variables in a small-sample 2×2 contingency table.  
-- **Real-world example:** Examining whether a new antibiotic leads to cure versus failure in 15 patients (small sample where χ² might be invalid).
+* **Used for** Testing independence between two categorical variables in a small-sample 2×2 contingency table.  
+* **Real-world example:** Examining whether a new antibiotic leads to cure versus failure in 15 patients (small sample where χ² might be invalid).
 
-#### Assumptions
-- Observations are independent.  
-- Data form a 2×2 table (binary outcome × binary exposure).  
-- Marginal totals are fixed (conditional inference on margins).
+**Assumptions**
+* Observations are independent.  
+* Data form a 2×2 table (binary outcome × binary exposure).  
+* Marginal totals are fixed (conditional inference on margins).
 
-#### Strengths
-- Exact p-value without relying on large-sample approximations.  
-- Valid even when expected cell counts are very small or zero.  
-- Simple to implement in R via `fisher.test()`.
+**Strengths**
+* Exact p-value without relying on large-sample approximations.  
+* Valid even when expected cell counts are very small or zero.  
+* Simple to implement in R via `fisher.test()`.
 
-#### Weaknesses
-- Only directly applies to 2×2 tables; extensions to larger tables exist but are computationally intensive.  
-- Does not provide an effect-size estimate beyond the odds ratio (which must be computed separately).  
-- Can be conservative (lower power) compared to asymptotic tests with moderate sample sizes.
+**Weaknesses**
+* Only directly applies to 2×2 tables; extensions to larger tables exist but are computationally intensive.  
+* Does not provide an effect-size estimate beyond the odds ratio (which must be computed separately).  
+* Can be conservative (lower power) compared to asymptotic tests with moderate sample sizes.
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** Treatment and outcome are independent (odds ratio = 1).  
-- **Alternative hypothesis (H₁):** Treatment and outcome are not independent (odds ratio ≠ 1).
+* **Null hypothesis (H₀):** Treatment and outcome are independent (odds ratio = 1).  
+* **Alternative hypothesis (H₁):** Treatment and outcome are not independent (odds ratio ≠ 1).
 
 
 ``` r
@@ -3500,7 +3477,7 @@ odds ratio
      3.196 
 ```
 
-Interpretation:
+**Interpretation:**
 Fisher’s exact test yields an odds ratio estimate of 3.2 with a two-sided p-value = 0.329. We
 fail to reject the null hypothesis.
 Thus, there is
@@ -3509,7 +3486,7 @@ no evidence of a difference in cure rates between the two treatments.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "barnard_exact_test"></a>
 
 ::::spoiler
 
@@ -3517,30 +3494,29 @@ no evidence of a difference in cure rates between the two treatments.
 
 EJ KORREKTURLÆST
 VÆR SÆRLIGT OPMÆRKSOM HER - DER VAR STORE UDFORDRINGER...
-#### Used for
-- Testing independence in a 2×2 contingency table via an unconditional exact test.  
-- **Real-world example:** Determining if a new pain medication and placebo differ in adverse event rates when sample sizes are small.
 
-#### Assumptions
-- Observations are independent and each subject contributes exactly one cell in the 2×2 table.  
-- Only one margin (row or column totals) is fixed; the other margin is free.  
-- Binary outcome (e.g., “Adverse Event: Yes/No”) and binary grouping (“Medication vs. Placebo”).
+* **Used for** Testing independence in a 2×2 contingency table via an unconditional exact test.  
+* **Real-world example:** Determining if a new pain medication and placebo differ in adverse event rates when sample sizes are small.
 
-#### Strengths
-- More powerful than Fisher’s exact test because it does not condition on both margins.  
-- Provides an exact p-value without relying on large‐sample approximations.  
-- Particularly advantageous when margins are not fixed by design.
+**Assumptions**
+* Observations are independent and each subject contributes exactly one cell in the 2×2 table.  
+* Only one margin (row or column totals) is fixed; the other margin is free.  
+* Binary outcome (e.g., “Adverse Event: Yes/No”) and binary grouping (“Medication vs. Placebo”).
 
-#### Weaknesses
-- Computationally slower than Fisher’s exact test for larger sample sizes.  
-- Only applies to 2×2 tables (binary × binary).  
-- Requires installation of the **Barnard** package (not in base R).
+**Strengths**
+* More powerful than Fisher’s exact test because it does not condition on both margins.  
+* Provides an exact p-value without relying on large‐sample approximations.  
+* Particularly advantageous when margins are not fixed by design.
 
-#### Example
+**Weaknesses**
+* Computationally slower than Fisher’s exact test for larger sample sizes.  
+* Only applies to 2×2 tables (binary × binary).  
+* Requires installation of the **Barnard** package (not in base R).
 
-##### Hypothesis
-- **Null hypothesis (H₀):** The probability of an adverse event is the same in the Medication and Placebo groups (no association).  
-- **Alternative hypothesis (H₁):** The probability of an adverse event differs between Medication and Placebo.
+**Example**
+
+* **Null hypothesis (H₀):** The probability of an adverse event is the same in the Medication and Placebo groups (no association).  
+* **Alternative hypothesis (H₁):** The probability of an adverse event differs between Medication and Placebo.
 
 
 ``` r
@@ -4731,7 +4707,7 @@ $pooled
 [1] TRUE
 ```
 
-Interpretation:
+**Interpretation:**
 The output includes:
 
 A score statistic (here ≈ 2.24733).
@@ -4754,38 +4730,36 @@ One‐sided p‐value (0.0168): Tests specifically whether the Medication advers
 ::::
 
 
-<a id = "test-navn"></a>
+<a id = "cochran_armitage_trend_test"></a>
 
 ::::spoiler
 
 ### Cochran–Armitage trend test (ordinal tabel)
 
 EJ KORREKTURLÆST
-#### Used for
-- Testing for a linear trend in proportions across ordered categories in a 2×k contingency table.  
-- **Real-world example:** Assessing whether increasing levels of prenatal vitamin dose (Low, Medium, High) correspond to higher rates of healthy birth outcomes (Yes/No).
+* **Used for** Testing for a linear trend in proportions across ordered categories in a 2×k contingency table.  
+* **Real-world example:** Assessing whether increasing levels of prenatal vitamin dose (Low, Medium, High) correspond to higher rates of healthy birth outcomes (Yes/No).
 
-#### Assumptions
-- Observations are independent.  
-- Categories of the ordinal predictor have a natural order (e.g., Low < Medium < High).  
-- The response is binary within each category (success/failure).  
-- Expected counts for successes and failures in each category are sufficiently large for the χ² approximation (generally ≥ 5).
+**Assumptions**
+* Observations are independent.  
+* Categories of the ordinal predictor have a natural order (e.g., Low < Medium < High).  
+* The response is binary within each category (success/failure).  
+* Expected counts for successes and failures in each category are sufficiently large for the χ² approximation (generally ≥ 5).
 
-#### Strengths
-- Specifically targets a monotonic (linear) increase or decrease in the success probability across ordered groups.  
-- More powerful than a general χ² test of independence when a linear trend is present.  
-- Straightforward to compute via `prop.trend.test()` in R.
+**Strengths**
+* Specifically targets a monotonic (linear) increase or decrease in the success probability across ordered groups.  
+* More powerful than a general χ² test of independence when a linear trend is present.  
+* Straightforward to compute via `prop.trend.test()` in R.
 
-#### Weaknesses
-- Only detects a linear trend; non-monotonic patterns (e.g., U-shaped) will be missed.  
-- Requires correct ordering and spacing of category scores; misordering invalidates the test.  
-- Sensitive to small expected counts in any group, which can distort the chi-square approximation.
+**Weaknesses**
+* Only detects a linear trend; non-monotonic patterns (e.g., U-shaped) will be missed.  
+* Requires correct ordering and spacing of category scores; misordering invalidates the test.  
+* Sensitive to small expected counts in any group, which can distort the chi-square approximation.
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** No linear trend in the probability of a healthy birth outcome across dose levels (slope = 0).  
-- **Alternative hypothesis (H₁):** A positive linear trend exists: higher dose levels correspond to higher healthy birth rates (slope > 0).
+* **Null hypothesis (H₀):** No linear trend in the probability of a healthy birth outcome across dose levels (slope = 0).  
+* **Alternative hypothesis (H₁):** A positive linear trend exists: higher dose levels correspond to higher healthy birth rates (slope > 0).
 
 
 ``` r
@@ -4814,7 +4788,7 @@ data:  successes out of totals ,
 X-squared = 13, df = 1, p-value = 4e-04
 ```
 
-Interpretation:
+**Interpretation:**
 The Cochran–Armitage test statistic χ² = 12.578 with p-value = 3.9\times 10^{-4}. Because the p-value is < 0.05, we
 reject the null hypothesis.
 Thus, there is
