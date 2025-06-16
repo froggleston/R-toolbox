@@ -6,7 +6,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- How do I run X statistical test?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -16,7 +16,7 @@ exercises: 2
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-  padding-left: 1.5em;          /* plads til marker + hul */
+
 
 <!-- Hyper-lokal css -->
 <style>
@@ -137,7 +137,7 @@ difference from the claimed distribution.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "one_sample_z_test"></a>
 
 ::::spoiler
 
@@ -233,7 +233,7 @@ or that it is smaller (p = 0.6700314)
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "one_sample_t_test"></a>
 
 ::::spoiler
 
@@ -306,7 +306,7 @@ no evidence to conclude the average score differs from the passing threshold of 
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "one_sample_poisson_test"></a>
 
 ::::spoiler
 
@@ -375,7 +375,7 @@ no evidence to conclude the call rate differs from 30 calls/hour.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "shapiro_wilk_test"></a>
 
 ::::spoiler
 
@@ -436,7 +436,7 @@ no evidence to conclude a departure from normality.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "ks_one_sample"></a>
 
 ::::spoiler
 
@@ -501,7 +501,7 @@ no evidence to conclude deviation from Normal(120,15).
 
 
 
-<a id = "test-navn"></a>
+<a id = "chi_square_gof"></a>
 
 ::::spoiler
 
@@ -568,7 +568,7 @@ no evidence to conclude the sample proportions differ from the population.
 ## To-prøve-tests og parrede tests
 
 
-<a id = "test-navn"></a>
+<a id = "two_sample_f_test"></a>
 
 ::::spoiler
 
@@ -641,7 +641,7 @@ evidence that the variability in blood pressure differs between the two clinics.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "paired_t_test"></a>
 
 ::::spoiler
 
@@ -709,7 +709,7 @@ evidence that the medication significantly changed blood pressure.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "two_sample_t_test_equal_var"></a>
 
 ::::spoiler
 
@@ -778,7 +778,7 @@ evidence that the average systolic blood pressure differs between the two groups
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "two_sample_t_test_unequal_var"></a>
 
 ::::spoiler
 
@@ -846,7 +846,7 @@ no evidence of a difference in average recovery times..
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "mann_whitney_u_test"></a>
 
 ::::spoiler
 
@@ -912,7 +912,7 @@ evidence that median pain scores differ between Drug A and Drug B.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "wilcoxon_signed_rank_test"></a>
 
 ::::spoiler
 
@@ -975,7 +975,7 @@ evidence that median pain scores change after treatment..
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "ks_two_sample"></a>
 
 ::::spoiler
 
@@ -1038,7 +1038,7 @@ evidence that the distribution of recovery times differs between therapies.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "levene_test"></a>
 
 ::::spoiler
 
@@ -1111,7 +1111,7 @@ no evidence of differing variances across clinics.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "bartlett_test"></a>
 
 ::::spoiler
 
@@ -1182,7 +1182,7 @@ evidence that at least one laboratory’s variance differs from the others.
 
 ## Variansanalyse (ANOVA/ANCOVA)
 
-<a id = "test-navn"></a>
+<a id = "one_way_anova"></a>
 
 ::::spoiler
 
@@ -1248,7 +1248,7 @@ no evidence of a difference in mean scores among methods.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "one_way_ancova"></a>
 
 ::::spoiler
 ### One-way ANCOVA
@@ -1323,7 +1323,7 @@ evidence that, controlling for prior GPA, at least one teaching method leads to 
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "welchs_anova"></a>
 
 ::::spoiler
 
@@ -1390,7 +1390,7 @@ no evidence of a difference in mean blood pressure among the clinics.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "repeated_measures_anova"></a>
 
 ::::spoiler
 
@@ -1464,7 +1464,7 @@ no evidence that reaction times differ across sleep deprivation conditions.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "manova"></a>
 
 ::::spoiler
 
@@ -1626,7 +1626,7 @@ Tjek altid flere tests; hvis de konkluderer ens, styrker det din konklusion.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "friedman_test"></a>
 
 ::::spoiler
 
@@ -1694,7 +1694,7 @@ no evidence that pain scores differ across time points.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "tukey_hsd"></a>
 
 ::::spoiler
 
@@ -1766,7 +1766,7 @@ interval, and an adjusted p‐value. For example, if the Lecture–Online compar
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "dunnett_test"></a>
 
 ::::spoiler
 
@@ -1911,7 +1911,7 @@ fail to reject the null for Fertilizer B vs. Control.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "bonferroni_correction"></a>
 
 ::::spoiler
 
@@ -1984,7 +1984,7 @@ The output shows adjusted p-values for each pair of diets. For example, if the A
 
 ## Ikke-parametriske k-prøve-tests
 
-<a id = "test-navn"></a>
+<a id = "kruskal_wallis_test"></a>
 
 ::::spoiler
 
@@ -2054,7 +2054,7 @@ evidence that at least one treatment group’s median pain score differs.
 ::::
 
 
-<a id = "test-navn"></a>
+<a id = "rank_correlation"></a>
 
 ::::spoiler
 
@@ -2120,7 +2120,7 @@ evidence of a monotonic association between X and Y.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "anderson_darling_test"></a>
 
 ::::spoiler
 
@@ -2192,7 +2192,7 @@ no evidence to conclude a departure from normality.
 ## Regression og korrelation
 
 
-<a id = "test-navn"></a>
+<a id = "simple_linear_regression"></a>
 
 ::::spoiler
 
@@ -2288,7 +2288,7 @@ evidence of a significant linear association between x and y.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "multiple_regression"></a>
 
 ::::spoiler
 
@@ -2383,7 +2383,7 @@ Similar interpretation applies to bedrooms and neighborhood indicators.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "pearson_correlation"></a>
 
 ::::spoiler
 
@@ -2455,7 +2455,7 @@ evidence of a significant linear association between hours studied and exam scor
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "spearman_rank_correlation"></a>
 
 ::::spoiler
 
@@ -2519,7 +2519,7 @@ evidence of a significant monotonic association between the two variables.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "kendall_tau"></a>
 
 ::::spoiler
 
@@ -2527,30 +2527,28 @@ evidence of a significant monotonic association between the two variables.
 
 EJ KORREKTURLÆST
 
-#### Used for
-- Assessing the strength and direction of a monotonic association between two variables based on concordant and discordant pairs.  
-- **Real-world example:** Evaluating whether the ranking of students by homework completion correlates with their ranking by final exam performance.
+* **Used for** Assessing the strength and direction of a monotonic association between two variables based on concordant and discordant pairs.  
+* **Real-world example:** Evaluating whether the ranking of students by homework completion correlates with their ranking by final exam performance.
 
-#### Assumptions
-- Observations are independent pairs.  
-- Variables are measured on at least an ordinal scale.  
-- The relationship is monotonic (but not necessarily linear).
+**Assumptions**
+* Observations are independent pairs.  
+* Variables are measured on at least an ordinal scale.  
+* The relationship is monotonic (but not necessarily linear).
 
-#### Strengths
-- Nonparametric: does not require any distributional assumptions.  
-- Robust to outliers and tied values (with appropriate corrections).  
-- Directly interprets probability of concordance vs. discordance.
+**Strengths**
+* Nonparametric: does not require any distributional assumptions.  
+* Robust to outliers and tied values (with appropriate corrections).  
+* Directly interprets probability of concordance vs. discordance.
 
-#### Weaknesses
-- Less powerful than Spearman’s rho when the relationship is strictly monotonic and no ties.  
-- Tied ranks reduce effective sample size and require tie corrections.  
-- Only measures monotonic association, not form or magnitude of change.
+**Weaknesses**
+* Less powerful than Spearman’s rho when the relationship is strictly monotonic and no ties.  
+* Tied ranks reduce effective sample size and require tie corrections.  
+* Only measures monotonic association, not form or magnitude of change.
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** Kendall’s τ = 0 (no association between the two rankings).  
-- **Alternative hypothesis (H₁):** τ ≠ 0 (a monotonic association exists).
+* **Null hypothesis (H₀):** Kendall’s τ = 0 (no association between the two rankings).  
+* **Alternative hypothesis (H₁):** τ ≠ 0 (a monotonic association exists).
 
 
 ``` r
@@ -2580,7 +2578,7 @@ sample estimates:
 0.9203643 
 ```
 
-Interpretation:
+**Interpretation:**
 Kendall’s τ = 0.92 with a two-sided p-value = 2.13\times 10^{-10}. We
 reject the null hypothesis.
 Thus, there is
@@ -2588,7 +2586,7 @@ evidence of a significant monotonic association between homework and exam rankin
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "multiple_logistic_regression"></a>
 
 ::::spoiler
 
@@ -2597,32 +2595,30 @@ evidence of a significant monotonic association between homework and exam rankin
 EJ KORREKTURLÆST
 
 
-#### Used for
-- Modeling the probability of a binary outcome as a function of two or more predictors.  
-- **Real-world example:** Predicting whether a patient has heart disease (yes/no) based on age, cholesterol level, and smoking status.
+* **Used for** Modeling the probability of a binary outcome as a function of two or more predictors.  
+* **Real-world example:** Predicting whether a patient has heart disease (yes/no) based on age, cholesterol level, and smoking status.
 
-#### Assumptions
-- Outcome is binary (0/1) and observations are independent.  
-- Log-odds of the outcome are a linear function of the predictors (linearity in the logit).  
-- No perfect multicollinearity among predictors.  
-- Large enough sample so that maximum likelihood estimates are stable (rule of thumb: ≥10 events per predictor).
+**Assumptions**
+* Outcome is binary (0/1) and observations are independent.  
+* Log-odds of the outcome are a linear function of the predictors (linearity in the logit).  
+* No perfect multicollinearity among predictors.  
+* Large enough sample so that maximum likelihood estimates are stable (rule of thumb: ≥10 events per predictor).
 
-#### Strengths
-- Adjusts for multiple confounders simultaneously.  
-- Coefficients have clear interpretation as log‐odds (or odds ratios).  
-- Flexible: handles continuous, categorical, and interaction terms.
+**Strengths**
+* Adjusts for multiple confounders simultaneously.  
+* Coefficients have clear interpretation as log‐odds (or odds ratios).  
+* Flexible: handles continuous, categorical, and interaction terms.
 
-#### Weaknesses
-- Sensitive to complete or quasi‐complete separation (can prevent convergence).  
-- Assumes linearity in the logit—requires transformation or splines if violated.  
-- Interpretation of interactions and higher‐order terms can be complex.  
-- Requires adequate sample size, especially when events are rare.
+**Weaknesses**
+* Sensitive to complete or quasi‐complete separation (can prevent convergence).  
+* Assumes linearity in the logit—requires transformation or splines if violated.  
+* Interpretation of interactions and higher‐order terms can be complex.  
+* Requires adequate sample size, especially when events are rare.
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** All predictor coefficients β₁ = β₂ = β₃ = 0 (none of the variables affect disease odds).  
-- **Alternative hypothesis (H₁):** At least one βᵢ ≠ 0 (at least one predictor affects odds).
+* **Null hypothesis (H₀):** All predictor coefficients β₁ = β₂ = β₃ = 0 (none of the variables affect disease odds).  
+* **Alternative hypothesis (H₁):** At least one βᵢ ≠ 0 (at least one predictor affects odds).
 
 
 ``` r
@@ -2699,7 +2695,7 @@ cholesterol 9.979236e-01 1.01955252
 smokerYes   1.347682e+00 5.57661867
 ```
 
-Interpretation:
+**Interpretation:**
 
 The Wald test for each coefficient (from summary(model)) gives a z-statistic and p-value. For example, if the coefficient for age is β̂ = 0.04 (p = 0.01), its odds ratio is exp(0.04) ≈ 1.04 (95% CI from exp(confint(model))), meaning each additional year of age multiplies the odds of disease by about 1.04.
 
@@ -2711,7 +2707,7 @@ You would reject the null hypothesis overall, concluding that at least one predi
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "poisson_regression"></a>
 
 ::::spoiler
 
@@ -2722,27 +2718,26 @@ EJ KORREKTURLÆST
 * **Used for** Modeling count data (events per unit time or space) as a function of one or more predictors.  
 * **Real-world example:** Predicting the number of daily emergency room visits based on average daily temperature.
 
-#### Assumptions
-- Counts follow a Poisson distribution (mean = variance).  
-- Events occur independently.  
-- The log of the expected count is a linear function of the predictors.  
-- No excessive zero‐inflation (if present, consider zero‐inflated models).
+**Assumptions**
+* Counts follow a Poisson distribution (mean = variance).  
+* Events occur independently.  
+* The log of the expected count is a linear function of the predictors.  
+* No excessive zero‐inflation (if present, consider zero‐inflated models).
 
-#### Strengths
-- Naturally handles non‐negative integer outcomes.  
-- Estimates incidence rate ratios (IRRs) that are easy to interpret.  
-- Can include both categorical and continuous predictors.
+**Strengths**
+* Naturally handles non‐negative integer outcomes.  
+* Estimates incidence rate ratios (IRRs) that are easy to interpret.  
+* Can include both categorical and continuous predictors.
 
-#### Weaknesses
-- Sensitive to overdispersion (variance > mean); may need quasi‐Poisson or negative binomial.  
-- Assumes log‐linear relationship—misspecification leads to bias.  
-- Influential observations (e.g., days with extreme counts) can distort estimates.
+**Weaknesses**
+* Sensitive to overdispersion (variance > mean); may need quasi‐Poisson or negative binomial.  
+* Assumes log‐linear relationship—misspecification leads to bias.  
+* Influential observations (e.g., days with extreme counts) can distort estimates.
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** Temperature has no effect on the expected number of ER visits (β₁ = 0).  
-- **Alternative hypothesis (H₁):** Temperature affects the expected number of ER visits (β₁ ≠ 0).
+* **Null hypothesis (H₀):** Temperature has no effect on the expected number of ER visits (β₁ = 0).  
+* **Alternative hypothesis (H₁):** Temperature affects the expected number of ER visits (β₁ ≠ 0).
 
 
 ``` r
@@ -2786,7 +2781,7 @@ AIC: 463.81
 Number of Fisher Scoring iterations: 4
 ```
 
-Interpretation:
+**Interpretation:**
 The estimated coefficient for temperature is 0.053, giving an incidence rate ratio IRR = 1.054. With a p-value = 7.01\times 10^{-28}, we
 reject the null hypothesis.
 This means each 1 °C increase in average daily temperature is associated with a multiplicative change of approximately 1.054 in the expected number of ER visits.
@@ -2797,7 +2792,7 @@ This means each 1 °C increase in average daily temperature is associated with a
 ::::
 
 
-<a id = "test-navn"></a>
+<a id = "negative_binomial_regression"></a>
 
 ::::spoiler
 
@@ -2805,31 +2800,29 @@ This means each 1 °C increase in average daily temperature is associated with a
 
 EJ KORREKTURLÆST
 
-#### Used for
-- Modeling overdispersed count data (variance > mean) as a function of one or more predictors.  
-- **Real-world example:** Predicting the number of daily asthma attacks per patient based on air pollution level when counts show extra-Poisson variation.
+* **Used for** Modeling overdispersed count data (variance > mean) as a function of one or more predictors.  
+* **Real-world example:** Predicting the number of daily asthma attacks per patient based on air pollution level when counts show extra-Poisson variation.
 
-#### Assumptions
-- Counts follow a negative binomial distribution (allows variance > mean).  
-- Events occur independently.  
-- The log of the expected count is a linear function of the predictors.  
-- Overdispersion parameter is constant across observations.
+**Assumptions**
+* Counts follow a negative binomial distribution (allows variance > mean).  
+* Events occur independently.  
+* The log of the expected count is a linear function of the predictors.  
+* Overdispersion parameter is constant across observations.
 
-#### Strengths
-- Handles overdispersion naturally without biasing standard errors.  
-- Estimates incidence rate ratios (IRRs) with correct inference.  
-- Can include both continuous and categorical predictors.
+**Strengths**
+* Handles overdispersion naturally without biasing standard errors.  
+* Estimates incidence rate ratios (IRRs) with correct inference.  
+* Can include both continuous and categorical predictors.
 
-#### Weaknesses
-- Requires estimation of an extra dispersion parameter, which may be unstable in small samples.  
-- Sensitive to model misspecification (link function, omitted covariates).  
-- Influential observations can still distort estimates if extreme.
+**Weaknesses**
+* Requires estimation of an extra dispersion parameter, which may be unstable in small samples.  
+* Sensitive to model misspecification (link function, omitted covariates).  
+* Influential observations can still distort estimates if extreme.
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** Air pollution level has no effect on the expected number of asthma attacks (β₁ = 0).  
-- **Alternative hypothesis (H₁):** Air pollution level affects the expected number of asthma attacks (β₁ ≠ 0).
+* **Null hypothesis (H₀):** Air pollution level has no effect on the expected number of asthma attacks (β₁ = 0).  
+* **Alternative hypothesis (H₁):** Air pollution level affects the expected number of asthma attacks (β₁ ≠ 0).
 
 
 ``` r
@@ -2881,14 +2874,14 @@ Number of Fisher Scoring iterations: 1
  2 x log-likelihood:  -817.455 
 ```
 
-Interpretation:
+**Interpretation:**
 The estimated coefficient for PM2.5 is 0.045, giving an incidence rate ratio IRR = 1.046. With p-value = 7.38\times 10^{-19}, we
 reject the null hypothesis.
 This means each 1 µg/m³ increase in PM2.5 is associated with a multiplicative change of approximately 1.046 in the expected number of asthma attacks, accounting for overdispersion.
 
 ::::
 
-<a id = "test-navn"></a>
+<a id = "ordinal_logistic_regression"></a>
 
 ::::spoiler
 
@@ -2896,31 +2889,30 @@ This means each 1 µg/m³ increase in PM2.5 is associated with a multiplicative 
 
 EJ KORREKTURLÆST
 
-#### Used for
-- Modeling an ordinal outcome (with more than two ordered categories) as a function of one or more predictors.  
-- **Real-world example:** Predicting customer satisfaction levels (Low, Medium, High) based on service wait time and price.
+**Used for**
+* Modeling an ordinal outcome (with more than two ordered categories) as a function of one or more predictors.  
+* **Real-world example:** Predicting customer satisfaction levels (Low, Medium, High) based on service wait time and price.
 
-#### Assumptions
-- The dependent variable is ordinal with a meaningful order.  
-- **Proportional odds (parallel lines):** the effect of each predictor is the same across all thresholds between outcome categories.  
-- Observations are independent.  
-- No multicollinearity among predictors.
+**Assumptions**
+* The dependent variable is ordinal with a meaningful order.  
+* **Proportional odds (parallel lines):** the effect of each predictor is the same across all thresholds between outcome categories.  
+* Observations are independent.  
+* No multicollinearity among predictors.
 
-#### Strengths
-- Makes efficient use of the ordering information in the outcome.  
-- Provides interpretable odds‐ratios for cumulative probabilities.  
-- More powerful than nominal models (e.g., multinomial logit) when the order matters.
+**Strengths**
+* Makes efficient use of the ordering information in the outcome.  
+* Provides interpretable odds‐ratios for cumulative probabilities.  
+* More powerful than nominal models (e.g., multinomial logit) when the order matters.
 
-#### Weaknesses
-- Relies on the proportional‐odds assumption; violation can bias estimates.  
-- Interpretation can be less intuitive than linear regression.  
-- Cannot easily accommodate non‐proportional effects without extension.
+**Weaknesses**
+* Relies on the proportional‐odds assumption; violation can bias estimates.  
+* Interpretation can be less intuitive than linear regression.  
+* Cannot easily accommodate non‐proportional effects without extension.
 
-#### Example
+**Example**
 
-##### Hypothesis
-- **Null hypothesis (H₀):** Waiting time has no effect on the odds of higher satisfaction (\(\beta_{\text{wait}} = 0\)).  
-- **Alternative hypothesis (H₁):** Waiting time affects the odds of higher satisfaction (\(\beta_{\text{wait}} \neq 0\)).
+* **Null hypothesis (H₀):** Waiting time has no effect on the odds of higher satisfaction (\(\beta_{\text{wait}} = 0\)).  
+* **Alternative hypothesis (H₁):** Waiting time affects the odds of higher satisfaction (\(\beta_{\text{wait}} \neq 0\)).
 
 
 ``` r
@@ -2964,8 +2956,7 @@ Low|Medium  -3.34230915 0.625031561 -5.347425   0.000
 Medium|High -1.78229869 0.564771833 -3.155785   0.002
 ```
 
-Interpretation:
-
+**Interpretation:**
 The estimated coefficient for wait_time is -0.04.
 
 The odds‐ratio is 0.96, meaning each additional minute of wait changes the odds of being in a higher satisfaction category by that factor.
@@ -6849,8 +6840,8 @@ in the data (are there differences that are dependent on measurement levels)
 #### Example
 
 ##### Hypothesis
-- **Null hypothesis (H₀):** Mean difference between methods A and B is zero (no systematic bias).  
-- **Alternative hypothesis (H₁):** Mean difference ≠ 0 (systematic bias exists).
+* **Null hypothesis (H₀):** Mean difference between methods A and B is zero (no systematic bias).  
+' **Alternative hypothesis (H₁):** Mean difference ≠ 0 (systematic bias exists).
 
 
 ``` r
