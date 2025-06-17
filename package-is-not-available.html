@@ -434,6 +434,15 @@
       <div class="accordion-body">
         <ul><li><a href="#what-does-install.packages-do">What does install.packages() do?</a></li>
 <li><a href="#you-cant-spell">1. You can’t spell</a></li>
+<li><a href="#you-did-not-look-in-the-right-repository.">2. You did not look in the right repository.</a></li>
+<li><a href="#the-package-is-not-in-the-repositories-you-have-selected">2.5 The package is not in the repositories you have selected:</a></li>
+<li><a href="#repository-is-unavailable">3. Repository is unavailable</a></li>
+<li><a href="#maybe-it-is-not-actually-a-package-you-want">4. Maybe it is not actually a package you want</a></li>
+<li><a href="#r-is-out-of-date.">5. R is out of date.</a></li>
+<li><a href="#the-package-might-be-out-of-date">6. The package might be out of date</a></li>
+<li><a href="#a-binary-for-your-os-may-not-exist">7. A binary for your OS may not exist</a></li>
+<li><a href="#the-package-is-on-github.-or-another-location.">8. The package is on GitHub. Or another location.</a></li>
+<li><a href="#there-is-no-source-version-of-the-package">9. There is no source version of the package</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -567,6 +576,12 @@ part of the basic R-infrastructure. But other repositories exist, and we
 can specify them either in general settings in R, or by specifying them
 in <code>install.packages</code> using the <code>repos</code>
 argument.</p>
+<p>Most repositories will place restrictions on what packages are
+allowed. CRAN fx runs a set of tests, making sure a new package is
+documented and does more or less what it claims to do. Updated packages
+are also checked to ensure any changes does not break stuff. The checks
+are continously improving, so a package that passed the tests last year,
+might no longer live up to the standard.</p>
 <p>In order to share the load, CRAN, and some other repositories, have
 “mirrors”, sites that have the same packages stored, but located in
 different countries. The internet is fast, but it is quicker to download
@@ -603,25 +618,40 @@ with that.</p>
 not find the correct package name. Also, package names are case
 sensitive. This is an annoying mistake to make, and in our experience
 surprisingly difficult to locate.</p>
-<ol start="2" style="list-style-type: decimal"><li>You did not look in the right repository. CRAN is default. But
-sometimes we need packages that lives in other repositories.</li>
-</ol><div class="codewrapper sourceCode" id="cb1">
+</section><section><h2 class="section-heading" id="you-did-not-look-in-the-right-repository-">2. You did not look in the right repository.<a class="anchor" aria-label="anchor" href="#you-did-not-look-in-the-right-repository-"></a></h2>
+<hr class="half-width"><p>By default <code>install.packages()</code> looks in CRAN. But
+sometimes we need packages that live in other repositories.</p>
+<div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">setRepositories</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/setRepositories.png" class="figure mx-auto d-block"></figure><ol start="3" style="list-style-type: decimal"><li>The package is not in the repositories you have selected:</li>
-</ol><div class="codewrapper sourceCode" id="cb2">
+<p>allow us to chose one or more of the repositories that R knows about:
+<img src="fig/setRepositories.png" class="figure"></p>
+<p>What if we need a repository our local R-installation already know?
+No worries, a function for that exist:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">setRepositories</span><span class="op">(</span>addURLs <span class="op">=</span></span>
+<span>                <span class="fu">c</span><span class="op">(</span>CRANxtras <span class="op">=</span> <span class="st">"https://www.stats.ox.ac.uk/pub/RWin"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="the-package-is-not-in-the-repositories-you-have-selected">2.5 The package is not in the repositories you have selected:<a class="anchor" aria-label="anchor" href="#the-package-is-not-in-the-repositories-you-have-selected"></a></h2>
+<hr class="half-width"><p>This is almost the same problem. We can get at list, or rather a
+matrix of all the available packages in the repositories we have
+selected:</p>
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ap</span> <span class="op">&lt;-</span> <span class="fu">available.packages</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<p>This is a matrix of all the packages available. In our case 22308 of
-them.</p>
-<p>Rather than viewing all of them, it is better to test:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<p>In this example we find 22308 packages.</p>
+<p>Rather than viewing all of them, it is better to test if the package
+we are looking for is actually available:</p>
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -632,19 +662,26 @@ them.</p>
 </h3>
 <pre class="output" tabindex="0"><code>[1] TRUE</code></pre>
 </div>
-<p>But remember point 1.</p>
-<p>If you get ths message:</p>
-<p><code>Warning: unable to access index for repository</code> This is
-probably due to the selected CRAN repo to be currently unavailable. Run
-<code>chooseCRANmirror()</code> to chose another, and try again.</p>
-<ol start="4" style="list-style-type: decimal"><li><p>maybe it is not a package you want. But a dataset. A package is a
-standardized collection of material extending R, e.g. providing code,
-data, or documentation. A library is a place (directory) where R knows
-to find packages it can use</p></li>
-<li><p>R is out of date. The package you want might depend on a more
-recent version of R. Or another package.</p></li>
-</ol><p>Take a look at the list of available packages we got earlier:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<p>It is, but remember the point about spelling and case
+sensitivity.</p>
+</section><section><h2 class="section-heading" id="repository-is-unavailable">3. Repository is unavailable<a class="anchor" aria-label="anchor" href="#repository-is-unavailable"></a></h2>
+<hr class="half-width"><p>If you get this message:</p>
+<p><code>Warning: unable to access index for repository</code></p>
+<p>The selected repository is probably currently unavailable. you can
+try again later, or run <code>chooseCRANmirror()</code> to chose another
+mirror, and then try again.</p>
+</section><section><h2 class="section-heading" id="maybe-it-is-not-actually-a-package-you-want">4. Maybe it is not actually a package you want<a class="anchor" aria-label="anchor" href="#maybe-it-is-not-actually-a-package-you-want"></a></h2>
+<hr class="half-width"><p>Many are the times we have tried to run
+<code>library(diamonds)</code> followed by
+<code>install.packages("diamonds")</code> only to remember that
+<code>diamonds</code> is a dataset in the <code>ggplot2</code> package.
+Run <code>data()</code> to get a list of all the datasets available in
+your current setup.</p>
+</section><section><h2 class="section-heading" id="r-is-out-of-date-">5. R is out of date.<a class="anchor" aria-label="anchor" href="#r-is-out-of-date-"></a></h2>
+<hr class="half-width"><p>The package you want might depend on a more recent version of R. Or
+another package.</p>
+<p>Take a look at the list of available packages we got earlier:</p>
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -655,67 +692,78 @@ recent version of R. Or another package.</p></li>
 </h3>
 <pre class="output" tabindex="0"><code>[1] "parsnip (&gt;= 1.0.0), R (&gt;= 3.6)"</code></pre>
 </div>
-<p>If <code>install.packages("baguette")</code> fails, begin ensuring
-that you have a version for <code>parsnip</code> at least as new as
-1.0.0, and a version of R at least as good as 3.6.</p>
+<p>If <code>install.packages("baguette")</code> fails, start by making
+sure that you have a version of <code>parsnip</code> installed that
+meets the requirements. And also make sure your installed version of R
+is adequate.</p>
 <p>Depending on your setup, the easy way to update R is:</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">installr</span><span class="op">)</span></span>
 <span><span class="fu">updateR</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<ol start="6" style="list-style-type: decimal"><li>the package might be out of date For example it could be archived. I
-a package is no longer maintained, and do no longer pass R CMD check
-tests, it will be archived. We can still access it:</li>
-</ol><div class="codewrapper sourceCode" id="cb8">
+</section><section><h2 class="section-heading" id="the-package-might-be-out-of-date">6. The package might be out of date<a class="anchor" aria-label="anchor" href="#the-package-might-be-out-of-date"></a></h2>
+<hr class="half-width"><p>For example it could be archived. If a package is no longer
+maintained, and do no longer pass the automatic checks in the
+repositories, it will be archived. However, we can still access it:</p>
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">remotes</span><span class="op">)</span></span>
 <span><span class="fu">install_version</span><span class="op">(</span><span class="st">"tidyverse"</span>, <span class="st">"1.2.3"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>An archived package may still be found on github (or another version
-control system)</p>
-<div class="codewrapper sourceCode" id="cb9">
+<p>An archived package may also be found on github (or another version
+control system). This is especially useful if the package is actually
+still maintained but have been archived by CRAN because any error in the
+automatic checks have not yet been fixed:</p>
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">remotes</span><span class="op">)</span></span>
 <span><span class="fu">install_github</span><span class="op">(</span><span class="st">"vqv/ggbiplot"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>9? A binary for your os may not exist</p>
-<p>It might require additional software not available to CRAN. This is
-mostly a problem for windows because CRAN have access to linux, and
-MacOS is at its root a linux (ok bsd) distribution.</p>
-<p>Some packages are not available as binaries at all. You can try to
-locate a version in the CRAN (extras) repository.</p>
-<p>If a package requires compiling on Windows you will need RTools (<a href="http://cran.r-project.org/bin/windows/Rtools/" class="external-link uri">http://cran.r-project.org/bin/windows/Rtools/</a>) or Xcode
-(<a href="https://stackoverflow.com/q/9329243/324364" class="external-link uri">https://stackoverflow.com/q/9329243/324364</a>) on macos. On
-a “true” linux machine most of what you need is already available.¨</p>
-<p>You can now run:</p>
-<div class="codewrapper sourceCode" id="cb10">
+</section><section><h2 class="section-heading" id="a-binary-for-your-os-may-not-exist">7. A binary for your OS may not exist<a class="anchor" aria-label="anchor" href="#a-binary-for-your-os-may-not-exist"></a></h2>
+<hr class="half-width"><p>CRAN and other repositories will often compile a package to a
+selection of operating systems. Some packages require additional
+software to compile, that are not available to CRAN for at given
+operating system. And some packages are not available as binaries at
+all.</p>
+<p>In this case you will have to compile the package yourself. Do not
+worry, R will handle it for you.</p>
+<p>If you are on windows, you will need to have <a href="http://cran.r-project.org/bin/windows/Rtools/" class="external-link">RTools
+installed</a>.</p>
+<p>On MacOS you will need <a href="https://stackoverflow.com/q/9329243/324364" class="external-link">Xcode</a></p>
+<p>On a Linux machine you will have to compile most packages, but your
+operating system have access to what it need to do this already.</p>
+<p>Havin prepared by installing Rtools or Xcode, you can now run:</p>
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"dplyr"</span>, type <span class="op">=</span> <span class="st">"source"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>If you need additional software, it will be mentinend under
+<p>If you do need additional software, it will be mentioned under
 “NeedsCompilation” on cran.r-project.org for the specific package.</p>
-<ol start="8" style="list-style-type: decimal"><li>The package is on GitHub. Or another location.</li>
-</ol><p>This requires the remotes package:</p>
-<div class="codewrapper sourceCode" id="cb11">
+</section><section><h2 class="section-heading" id="the-package-is-on-github--or-another-location-">8. The package is on GitHub. Or another location.<a class="anchor" aria-label="anchor" href="#the-package-is-on-github--or-another-location-"></a></h2>
+<hr class="half-width"><p>This is similar to the situation where we have to get a package from
+github because it has been archived on CRAN. It requires the
+<code>remotes</code> package, and knowledge about where on GitHub the
+package resides:</p>
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">remotes</span><span class="op">)</span></span>
 <span><span class="fu">install_github</span><span class="op">(</span><span class="st">"vqv/ggbiplot"</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Other similar services exist, like bitbucket (install_bitbucket) and
-gitoriuous (install_gitorious)</p>
-<ol start="9" style="list-style-type: decimal"><li>There is no source version of the package</li>
-</ol><p>A binary version may be available, but a source version is not. This
+<p>Other similar services exist, and <code>remotes</code> provides
+function for the more popular.</p>
+</section><section><h2 class="section-heading" id="there-is-no-source-version-of-the-package">9. There is no source version of the package<a class="anchor" aria-label="anchor" href="#there-is-no-source-version-of-the-package"></a></h2>
+<hr class="half-width"><p>A binary version may be available, but a source version is not. This
 can cause problems. or so we’re told. run
 <code>options(install.packages.check.source = "no")</code></p>
 <ol start="10" style="list-style-type: decimal"><li><p>The package is in a non-standard repository. If the repository is
@@ -740,12 +788,6 @@ location. Wait.</li>
 <div class="callout-content">
 <ul><li>Use <code>.md</code> files for episodes when you want static
 content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
 </ul></div>
 </div>
 </div>
