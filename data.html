@@ -1729,10 +1729,16 @@ received antibiotics?</p>
 </div>
 <div class="section level3">
 <h3 id="infantbp">INFANTBP<a class="anchor" aria-label="anchor" href="#infantbp"></a></h3>
+<p>100 3 day old infants were given a drop of various solutions (salt or
+sugar), and the vigour with witch they sucked was recorded. First ten
+measurements were done with solutions only containing salt (or no salt
+at all). As a control, after the measurements of the response to salt,
+the response to sugar solutions were recorded. A common hypothesis is
+that the response to the taste of salt depends on the blood pressure. Is
+this true?</p>
 <p><em>Dimensions:</em> Rows: 100 Columns: 18</p>
 <p><a href="data.html#rosner_1">Source</a><sup>1</sup></p>
 <p><a href="https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/INFANTBP.csv" class="external-link">Download</a></p>
-<p>Salt Taste Variables den er på side 202 i bogen</p>
 <div id="accordionSpoiler19" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler19" aria-expanded="false" aria-controls="collapseSpoiler19">
@@ -1750,41 +1756,34 @@ received antibiotics?</p>
 <td></td>
 <td></td>
 </tr><tr class="even"><td>Mn_sbp</td>
-<td>Mean SBP 99.99=missing</td>
-<td></td>
+<td>Mean SBP*</td>
+<td>mmHg</td>
 </tr><tr class="odd"><td>Mn_dbp</td>
-<td>Mean DBP 99.99=missing</td>
-<td></td>
-</tr><tr class="even"><td>MSB1slt</td>
-<td>MSB-trial 1* water</td>
-<td></td>
-</tr><tr class="odd"><td>MSB2slt</td>
+<td>Mean DBP*</td>
+<td>mmHg</td>
+</tr></tbody></table><p>Salt Taste Variables</p>
+<table class="table"><thead><tr class="header"><th>Variable</th>
+<th>Description</th>
+</tr></thead><tbody><tr class="odd"><td>MSB1slt</td>
+<td>MSB-trial 1** water</td>
+</tr><tr class="even"><td>MSB2slt</td>
 <td>MSB-trial 2 water</td>
-<td></td>
-</tr><tr class="even"><td>MSB3slt</td>
+</tr><tr class="odd"><td>MSB3slt</td>
 <td>MSB-trial 3 0.1 molar salt + water</td>
-<td></td>
-</tr><tr class="odd"><td>MSB4slt</td>
+</tr><tr class="even"><td>MSB4slt</td>
 <td>MSB-trial 4 0.1 molar salt + water</td>
-<td></td>
-</tr><tr class="even"><td>MSB5slt</td>
+</tr><tr class="odd"><td>MSB5slt</td>
 <td>MSB-trial 5 water</td>
-<td></td>
-</tr><tr class="odd"><td>MSB6slt</td>
+</tr><tr class="even"><td>MSB6slt</td>
 <td>MSB-trial 6 water</td>
-<td></td>
-</tr><tr class="even"><td>MSB7slt</td>
+</tr><tr class="odd"><td>MSB7slt</td>
 <td>MSB-trial 7 0.3 molar salt + water</td>
-<td></td>
-</tr><tr class="odd"><td>MSB8slt</td>
+</tr><tr class="even"><td>MSB8slt</td>
 <td>MSB-trial 8 0.3 molar salt + water</td>
-<td></td>
-</tr><tr class="even"><td>MSB9slt</td>
+</tr><tr class="odd"><td>MSB9slt</td>
 <td>MSB-trial 9 water</td>
-<td></td>
-</tr><tr class="odd"><td>MSB10slt</td>
+</tr><tr class="even"><td>MSB10slt</td>
 <td>MSB-trial 10 water</td>
-<td></td>
 </tr></tbody></table><p>Sugar Taste Variables</p>
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
@@ -1797,9 +1796,12 @@ received antibiotics?</p>
 </tr><tr class="even"><td>MSB4sug</td>
 <td>MSB-trial 4 15% sucrose + water</td>
 </tr><tr class="odd"><td>MSB5sug</td>
-<td>MSB-trial 5 non-nutritive sucking</td>
-</tr></tbody></table><ul><li>for MSB data 999.99 is a missing value; 0 indicates the baby did not
-suck.</li>
+<td>MSB-trial 5 non-nutritive sucking***</td>
+</tr></tbody></table><ul><li>For mean bloodpressure (Mn_sbp/Mn_dbp) 99.99 indicates a missing
+value. ** Unit of all MSB data is “mean number of sucks pr burst of
+sucking”. 999.99 indicates a missing value; 0 indicates the baby did not
+suck. *** non-nutrive sucking is sucking without the infant receiving
+liquid.</li>
 </ul></div>
 </div>
 </div>
