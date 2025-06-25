@@ -504,7 +504,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Data sets</h1>
-        <p>Last updated on 2025-06-24 |
+        <p>Last updated on 2025-06-25 |
 
         <a href="https://github.com/KUBDatalab/R-toolbox/edit/main/learners/data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -707,18 +707,19 @@ group.</p>
 <td></td>
 <td>pg/mL</td>
 </tr><tr class="odd"><td>estrone</td>
-<td>Estrone <br> missing = 999</td>
+<td>Estrone †</td>
 <td></td>
 <td>pg/mL</td>
 </tr><tr class="even"><td>testost</td>
-<td>Testosterone <br> missing = 999</td>
+<td>Testosterone †</td>
 <td></td>
 <td>ng/dL</td>
 </tr><tr class="odd"><td>prolactn</td>
-<td>Prolactin <br> missing = 99.99</td>
+<td>Prolactin ‡</td>
 <td></td>
 <td>ng/L</td>
-</tr></tbody></table></div>
+</tr></tbody></table><p>† 999 indicates missing data ‡ 99.99 indicates missing data</p>
+</div>
 </div>
 </div>
 </div>
@@ -789,19 +790,19 @@ unknown or hysterectomy</td>
 <td>Pack-years smoking</td>
 <td>year</td>
 </tr><tr class="odd"><td>ls</td>
-<td>Lumbar spine</td>
+<td>Lumbar spine †</td>
 <td>g/cm<sup>2</sup></td>
 </tr><tr class="even"><td>fn</td>
-<td>Femoral neck</td>
+<td>Femoral neck ‡</td>
 <td>g/cm<sup>2</sup></td>
 </tr><tr class="odd"><td>fs</td>
-<td>Femoral shaft</td>
+<td>Femoral shaft ⸸</td>
 <td>g/cm<sup>2</sup></td>
 </tr></tbody></table><p>Pack-years are defined as how many years the woman have smoked a pack
 of cigarettes pr day, normally ca. 20 cigarettes pr pack.</p>
-<p>Lumbar spine: L1-L5.</p>
-<p>Femoral neck: Collum femoris</p>
-<p>Femoral shaft: Corpus femoris</p>
+<p>† Lumbar spine: L1-L5.</p>
+<p>‡ Femoral neck: Collum femoris</p>
+<p>⸸ Femoral shaft: Corpus femoris</p>
 </div>
 </div>
 </div>
@@ -1097,7 +1098,7 @@ lower, abnormal, sensitivity.</p>
 </tr><tr class="odd"><td>n3</td>
 <td>Nasal Visit 3</td>
 <td>mm</td>
-</tr></tbody></table><p>99: Missing values</p>
+</tr></tbody></table><p>99 indicates missing values</p>
 </div>
 </div>
 </div>
@@ -1151,12 +1152,13 @@ appear to change by pubertal stage.</p>
 <td>Hemoglobin A1c</td>
 <td>%</td>
 </tr><tr class="odd"><td>ht_cm</td>
-<td>Height <br> missing=999.9</td>
+<td>Height †</td>
 <td>cm</td>
 </tr><tr class="even"><td>wt_kg</td>
 <td>Weight</td>
 <td>kg</td>
-</tr></tbody></table></div>
+</tr></tbody></table><p>† 999.9 indicates missing data</p>
+</div>
 </div>
 </div>
 </div>
@@ -1266,22 +1268,22 @@ subject. Are the measurements reproducable?</p>
 <th>LABEL</th>
 <th>unit</th>
 </tr></thead><tbody><tr class="odd"><td>Subject</td>
-<td>SUBJECT #</td>
+<td>Subject number</td>
 <td></td>
 </tr><tr class="even"><td>Replicat</td>
 <td>REPLICATE #</td>
 <td></td>
 </tr><tr class="odd"><td>Estrone</td>
-<td>ESTRONE</td>
+<td>Estrone</td>
 <td>pg/mL</td>
 </tr><tr class="even"><td>Estradol</td>
-<td>ESTRADIOL</td>
+<td>Estradiol</td>
 <td>pg/ml</td>
 </tr><tr class="odd"><td>Androste</td>
-<td>ANDROSTENEDIONE</td>
+<td>Androstenedione</td>
 <td>ng/dL</td>
 </tr><tr class="even"><td>Testost</td>
-<td>TESTOSTERONE</td>
+<td>Testosterone</td>
 <td>ng/dL</td>
 </tr></tbody></table></div>
 </div>
@@ -1324,13 +1326,13 @@ children, BMI and Waist/hip ratio.</p>
 <td>Parity, number of children 9=missing</td>
 <td></td>
 </tr><tr class="even"><td>Agefbo</td>
-<td>Age at 1st birth (= 0 if numchild = 0) 99 = missing</td>
+<td>Age at 1st birth (= 0 if numchild = 0) †</td>
 <td>year</td>
 </tr><tr class="odd"><td>Anykids</td>
 <td>Any children <br> 1 = yes <br> 0 = no <br> 9 = missing</td>
 <td></td>
 </tr><tr class="even"><td>Agemenar</td>
-<td>Age at menarche <br> 99=missing</td>
+<td>Age at menarche †</td>
 <td>years</td>
 </tr><tr class="odd"><td>BMI</td>
 <td>Body Mass Index</td>
@@ -1339,6 +1341,7 @@ children, BMI and Waist/hip ratio.</p>
 <td>waist-hip ratio</td>
 <td></td>
 </tr></tbody></table><p>CAVE: Note the coding of Agefbo</p>
+<p>† 99 = missing</p>
 </div>
 </div>
 </div>
@@ -1756,16 +1759,16 @@ this true?</p>
 <td></td>
 <td></td>
 </tr><tr class="even"><td>Mn_sbp</td>
-<td>Mean SBP†</td>
+<td>Mean SBP †</td>
 <td>mmHg</td>
 </tr><tr class="odd"><td>Mn_dbp</td>
-<td>Mean DBP†</td>
+<td>Mean DBP †</td>
 <td>mmHg</td>
-</tr></tbody></table><p>Salt Taste Variables</p>
+</tr></tbody></table><p><strong>Salt Taste Variables</strong></p>
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
 </tr></thead><tbody><tr class="odd"><td>MSB1slt</td>
-<td>MSB-trial 1‡ water</td>
+<td>MSB-trial 1 ‡ water</td>
 </tr><tr class="even"><td>MSB2slt</td>
 <td>MSB-trial 2 water</td>
 </tr><tr class="odd"><td>MSB3slt</td>
@@ -1784,7 +1787,7 @@ this true?</p>
 <td>MSB-trial 9 water</td>
 </tr><tr class="even"><td>MSB10slt</td>
 <td>MSB-trial 10 water</td>
-</tr></tbody></table><p>Sugar Taste Variables</p>
+</tr></tbody></table><p><strong>Sugar Taste Variables</strong></p>
 <table class="table"><thead><tr class="header"><th>Variable</th>
 <th>Description</th>
 </tr></thead><tbody><tr class="odd"><td>MSB1sug</td>
@@ -1823,7 +1826,6 @@ and neurological parameters?</p>
 <p><em>Dimensions:</em> Rows: 124 Columns: 40</p>
 <p><a href="data.html#rosner_1">Source</a><sup>1</sup></p>
 <p><a href="https://raw.githubusercontent.com/KUBDatalab/R-toolbox/main/episodes/data/LEAD.csv" class="external-link">Download</a></p>
-<p>siden er nr. 29 i bogen</p>
 <div id="accordionSpoiler20" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler20" aria-expanded="false" aria-controls="collapseSpoiler20">
@@ -3264,10 +3266,10 @@ Machine Learning Repository, <a href="https://doi.org/10.24432/C5PC7J" class="ex
 <p><a id="stoet_10">10</a>: Stoet, G. &amp; Geary, D.C. 2019, A
 simplified approach to measuring national gender inequality, PLOS ONE,
 14(1), 1-18, <a href="https://doi.org/10.1371/journal.pone.0205349" class="external-link uri">https://doi.org/10.1371/journal.pone.0205349</a></p>
-<!--
+<p>† ‡ ⸸ <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
+ --></p>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -3326,8 +3328,8 @@ any links that you are not going to use.
   "url": "https://KUBDatalab.github.io/R-toolbox/data.html",
   "identifier": "https://KUBDatalab.github.io/R-toolbox/data.html",
   "dateCreated": "2024-04-09",
-  "dateModified": "2025-06-24",
-  "datePublished": "2025-06-24"
+  "dateModified": "2025-06-25",
+  "datePublished": "2025-06-25"
 }
 
   </script><script>
