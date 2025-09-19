@@ -50,7 +50,7 @@ of the data we provide it with:
 hist(penguins$bill_length_mm)
 ```
 
-<img src="fig/histograms-rendered-unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
+<img src="fig/histograms-rendered-penguin_base_histogram-1.png" style="display: block; margin: auto;" />
 
 This is not a very nice looking histogram, and `ggplot2` provides us with a 
 more easily customisable `geom_histogram()` function:
@@ -70,7 +70,7 @@ Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_bin()`).
 ```
 
-<img src="fig/histograms-rendered-unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="fig/histograms-rendered-penguin_ggplot_histogram-1.png" style="display: block; margin: auto;" />
 
 This is the distibution of the length, in millimeter, of the bill (or beak) of
 a selection of penguins. 
@@ -105,7 +105,7 @@ Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_bin()`).
 ```
 
-<img src="fig/histograms-rendered-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="fig/histograms-rendered-facetted_histogram-1.png" style="display: block; margin: auto;" />
 
 The data now looks a bit more normally distributed. And we can observe that
 male penguins tend to have longer beaks than female penguins. We can also
@@ -140,7 +140,7 @@ Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_bin()`).
 ```
 
-<img src="fig/histograms-rendered-unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="fig/histograms-rendered-bins_20-1.png" style="display: block; margin: auto;" />
 
 ::::
 
@@ -236,11 +236,14 @@ Now find the recommended bin-width:
 ``` r
 h <- 2*iqr*n^(-1/3)
 ```
+
 And then the number of bins:
+
 
 ``` r
 k <- (max(bill_lengths) - min(bill_lengths))/h
 ```
+
 Remember to take the ceiling:
 
 ``` r
@@ -292,6 +295,7 @@ ceiling(sqrt(n))
 ``` output
 [1] 19
 ```
+
 ::::
 ::::
 
@@ -557,6 +561,7 @@ nclass.Sturges(penguins$bill_length_mm)
 ``` output
 [1] 10
 ```
+
 `nclass.FD` and `nclass.scott` works similarly, but note that it is necessary
 to remove missing values. If one of the other heuristics is needed, we either
 need to do the calculations ourself - or try to identify a package that contains
@@ -614,7 +619,7 @@ Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_bin()`).
 ```
 
-<img src="fig/histograms-rendered-unnamed-chunk-36-1.png" style="display: block; margin: auto;" />
+<img src="fig/histograms-rendered-penguins_with_seq-1.png" style="display: block; margin: auto;" />
 
 ## Do not abuse the option of specifying breaks!
 
