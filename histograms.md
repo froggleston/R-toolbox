@@ -203,6 +203,7 @@ The number of bins are then found as
 $$
 k = \lceil \frac{range}{h} \rceil
 $$
+
 ::::challenge
 ## Try it yourself
 
@@ -350,10 +351,13 @@ ceiling(k)
 Again we get $k$ directly from $n$:
 
 $$k = \lceil 2n^{1/3}\rceil$$
+
 ::::challenge
+## Try it yourself
 
 According to the Rice rule, how many bins should we use for a histogram
 of the length of penguin bills?
+
 ::::solution
 
 Get all the lengths of the penguin bills, excluding missing values:
@@ -384,6 +388,7 @@ ceiling(k)
 ``` output
 [1] 14
 ```
+
 ::::
 ::::
 
@@ -403,9 +408,11 @@ Doanes rule basically adds extra bins based on how skewed the data is, and
 works better than Sturges' rule for non-normal distributions.
 
 ::::challenge
+## Try it yourself
 
 According to Doanes rule, how many bins should we use for a histogram
 of the length of penguin bills?
+
 ::::solution
 
 Get all the lengths of the penguin bills, excluding missing values:
@@ -425,11 +432,22 @@ Find $g_1$:
 
 
 ``` r
-g1 <- skewness(bill_lengths)
+library(e1071)
 ```
 
-``` error
-Error in skewness(bill_lengths): could not find function "skewness"
+``` output
+
+Attaching package: 'e1071'
+```
+
+``` output
+The following object is masked from 'package:ggplot2':
+
+    element
+```
+
+``` r
+g1 <- skewness(bill_lengths)
 ```
 Find $\sigma_{g1}$:
 
@@ -443,10 +461,6 @@ Now we can find $k$. Remember to take the absolute value of $g_1$
 ``` r
 k <- 1 + log2(n) + log2(1+abs(g1)/s_g1)
 ```
-
-``` error
-Error: object 'g1' not found
-```
 And then round up $k$ to get the number of bins:
 
 
@@ -455,7 +469,7 @@ ceiling(k)
 ```
 
 ``` output
-[1] 14
+[1] 10
 ```
 
 ::::
@@ -471,9 +485,11 @@ Where $\sigma$ is the standard deviation of the data. This rule implicitly assum
 that the data is normally distributed.
 
 ::::challenge
+## Try it yourself
 
 According to Scott's rule, how many bins should we use for a histogram
 of the length of penguin bills?
+
 ::::solution
 
 Get all the lengths of the penguin bills, excluding missing values:
