@@ -119,7 +119,12 @@ all the available packages in the repositories we have selected:
 ap <- available.packages()
 ```
 
-In this example we find 23045 packages.
+``` warning
+Warning: unable to access index for repository https://carpentries.r-universe.dev/src/contrib:
+  cannot open URL 'https://carpentries.r-universe.dev/src/contrib/PACKAGES'
+```
+
+In this example we find 23044 packages.
 
 Rather than viewing all of them, it is better to test if the package we are 
 looking for is actually available:
