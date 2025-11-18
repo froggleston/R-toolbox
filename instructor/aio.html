@@ -929,7 +929,7 @@ more common.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>The most important point is that there is a very high probability
 that at least one package exists that is designed to read a specific
@@ -1367,7 +1367,8 @@ x_i\]</span></p>
 <p>Where N is the number of observations, and <span class="math inline">\(x_i\)</span> is the individual observations in the
 sample <span class="math inline">\(x\)</span>.</p>
 <p>The easiest way of getting the mean is using the <code>mean()</code>
-function:</p>
+function. Adding the <code>na.rm = TRUE</code> argument removes missing
+values before the calculation is done:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -5269,23 +5270,23 @@ Missing
 <span>    <span class="fu">add_overall</span><span class="op">(</span>last <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre>
 </div>
 <!--html_preserve-->
-<div id="nmnmihqqor" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#nmnmihqqor table {
+<div id="pltpyixsrv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pltpyixsrv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#nmnmihqqor thead, #nmnmihqqor tbody, #nmnmihqqor tfoot, #nmnmihqqor tr, #nmnmihqqor td, #nmnmihqqor th {
+#pltpyixsrv thead, #pltpyixsrv tbody, #pltpyixsrv tfoot, #pltpyixsrv tr, #pltpyixsrv td, #pltpyixsrv th {
   border-style: none;
 }
 
-#nmnmihqqor p {
+#pltpyixsrv p {
   margin: 0;
   padding: 0;
 }
 
-#nmnmihqqor .gt_table {
+#pltpyixsrv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5311,12 +5312,12 @@ Missing
   border-left-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_caption {
+#pltpyixsrv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#nmnmihqqor .gt_title {
+#pltpyixsrv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5328,7 +5329,7 @@ Missing
   border-bottom-width: 0;
 }
 
-#nmnmihqqor .gt_subtitle {
+#pltpyixsrv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5340,7 +5341,7 @@ Missing
   border-top-width: 0;
 }
 
-#nmnmihqqor .gt_heading {
+#pltpyixsrv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5352,13 +5353,13 @@ Missing
   border-right-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_bottom_border {
+#pltpyixsrv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_col_headings {
+#pltpyixsrv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5373,7 +5374,7 @@ Missing
   border-right-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_col_heading {
+#pltpyixsrv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5393,7 +5394,7 @@ Missing
   overflow-x: hidden;
 }
 
-#nmnmihqqor .gt_column_spanner_outer {
+#pltpyixsrv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5405,15 +5406,15 @@ Missing
   padding-right: 4px;
 }
 
-#nmnmihqqor .gt_column_spanner_outer:first-child {
+#pltpyixsrv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#nmnmihqqor .gt_column_spanner_outer:last-child {
+#pltpyixsrv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#nmnmihqqor .gt_column_spanner {
+#pltpyixsrv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5425,11 +5426,11 @@ Missing
   width: 100%;
 }
 
-#nmnmihqqor .gt_spanner_row {
+#pltpyixsrv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#nmnmihqqor .gt_group_heading {
+#pltpyixsrv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5455,7 +5456,7 @@ Missing
   text-align: left;
 }
 
-#nmnmihqqor .gt_empty_group_heading {
+#pltpyixsrv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5470,15 +5471,15 @@ Missing
   vertical-align: middle;
 }
 
-#nmnmihqqor .gt_from_md > :first-child {
+#pltpyixsrv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#nmnmihqqor .gt_from_md > :last-child {
+#pltpyixsrv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#nmnmihqqor .gt_row {
+#pltpyixsrv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5497,7 +5498,7 @@ Missing
   overflow-x: hidden;
 }
 
-#nmnmihqqor .gt_stub {
+#pltpyixsrv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5510,7 +5511,7 @@ Missing
   padding-right: 5px;
 }
 
-#nmnmihqqor .gt_stub_row_group {
+#pltpyixsrv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5524,15 +5525,15 @@ Missing
   vertical-align: top;
 }
 
-#nmnmihqqor .gt_row_group_first td {
+#pltpyixsrv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#nmnmihqqor .gt_row_group_first th {
+#pltpyixsrv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#nmnmihqqor .gt_summary_row {
+#pltpyixsrv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5542,16 +5543,16 @@ Missing
   padding-right: 5px;
 }
 
-#nmnmihqqor .gt_first_summary_row {
+#pltpyixsrv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_first_summary_row.thick {
+#pltpyixsrv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#nmnmihqqor .gt_last_summary_row {
+#pltpyixsrv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5561,7 +5562,7 @@ Missing
   border-bottom-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_grand_summary_row {
+#pltpyixsrv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5571,7 +5572,7 @@ Missing
   padding-right: 5px;
 }
 
-#nmnmihqqor .gt_first_grand_summary_row {
+#pltpyixsrv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5581,7 +5582,7 @@ Missing
   border-top-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_last_grand_summary_row_top {
+#pltpyixsrv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5591,11 +5592,11 @@ Missing
   border-bottom-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_striped {
+#pltpyixsrv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#nmnmihqqor .gt_table_body {
+#pltpyixsrv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5604,7 +5605,7 @@ Missing
   border-bottom-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_footnotes {
+#pltpyixsrv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5618,7 +5619,7 @@ Missing
   border-right-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_footnote {
+#pltpyixsrv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5627,7 +5628,7 @@ Missing
   padding-right: 5px;
 }
 
-#nmnmihqqor .gt_sourcenotes {
+#pltpyixsrv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5641,7 +5642,7 @@ Missing
   border-right-color: #D3D3D3;
 }
 
-#nmnmihqqor .gt_sourcenote {
+#pltpyixsrv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5649,72 +5650,72 @@ Missing
   padding-right: 5px;
 }
 
-#nmnmihqqor .gt_left {
+#pltpyixsrv .gt_left {
   text-align: left;
 }
 
-#nmnmihqqor .gt_center {
+#pltpyixsrv .gt_center {
   text-align: center;
 }
 
-#nmnmihqqor .gt_right {
+#pltpyixsrv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#nmnmihqqor .gt_font_normal {
+#pltpyixsrv .gt_font_normal {
   font-weight: normal;
 }
 
-#nmnmihqqor .gt_font_bold {
+#pltpyixsrv .gt_font_bold {
   font-weight: bold;
 }
 
-#nmnmihqqor .gt_font_italic {
+#pltpyixsrv .gt_font_italic {
   font-style: italic;
 }
 
-#nmnmihqqor .gt_super {
+#pltpyixsrv .gt_super {
   font-size: 65%;
 }
 
-#nmnmihqqor .gt_footnote_marks {
+#pltpyixsrv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#nmnmihqqor .gt_asterisk {
+#pltpyixsrv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#nmnmihqqor .gt_indent_1 {
+#pltpyixsrv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#nmnmihqqor .gt_indent_2 {
+#pltpyixsrv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#nmnmihqqor .gt_indent_3 {
+#pltpyixsrv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#nmnmihqqor .gt_indent_4 {
+#pltpyixsrv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#nmnmihqqor .gt_indent_5 {
+#pltpyixsrv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#nmnmihqqor .katex-display {
+#pltpyixsrv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#nmnmihqqor div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pltpyixsrv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5945,7 +5946,7 @@ muligheder for at tilpasse tabellen.</p>
 <pre class="output" tabindex="0"><code>function(src, ...) {
   UseMethod("tbl")
 }
-&lt;bytecode: 0x5556028b4e90&gt;
+&lt;bytecode: 0x55ada0241460&gt;
 &lt;environment: namespace:dplyr&gt;</code></pre>
 </div>
 <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
@@ -6785,7 +6786,7 @@ normally distributed.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> How skewed is the plot? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>We have two tails in the qq-plot, a left and a right. And they can be
 either above or below the qq-line.</p>
@@ -6924,7 +6925,7 @@ multitude of tests has been devised for testing exactly that.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>These tests can be difficult for learners that have not encountered
 hypothesis-testing before.</p>
@@ -7161,7 +7162,7 @@ in USA. We only look at eruptions that lasts longer than 3 minutes:</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Det er nødvendigt at specificere at vi bruger
 <code>dplyr::select</code> da den maskeres af MASS-pakken</p>
@@ -7402,7 +7403,7 @@ actually be better.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor2" aria-expanded="false" aria-controls="collapseInstructor2">
   <h3 class="accordion-header" id="headingInstructor2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
 <div class="accordion-body">
 <p>Og her er det vi holder dem fast på at det faktisk er dem selv der er
 de bedst kvalificerede til at afgøre det. For det er dem der forstår
@@ -7440,7 +7441,7 @@ eruption times are all positive, and on the real number line.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor3" aria-expanded="false" aria-controls="collapseInstructor3">
   <h3 class="accordion-header" id="headingInstructor3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor3" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor3" aria-labelledby="headingInstructor3">
+<div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
 <div class="accordion-body">
 <p>“Real numbers”, på dansk reelle tal. Hvis du ved hvad imaginære tal
 er, ved du også hvad reelle tal er. Hvis ikke - så er reelle tal alle de
@@ -8871,23 +8872,23 @@ wt          -2.308463917
 qsec         .          </code></pre>
 </div>
 Compare with the ordinary model: <!--html_preserve-->
-<div id="luswwvwuxc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#luswwvwuxc table {
+<div id="gyejgnxqxi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gyejgnxqxi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#luswwvwuxc thead, #luswwvwuxc tbody, #luswwvwuxc tfoot, #luswwvwuxc tr, #luswwvwuxc td, #luswwvwuxc th {
+#gyejgnxqxi thead, #gyejgnxqxi tbody, #gyejgnxqxi tfoot, #gyejgnxqxi tr, #gyejgnxqxi td, #gyejgnxqxi th {
   border-style: none;
 }
 
-#luswwvwuxc p {
+#gyejgnxqxi p {
   margin: 0;
   padding: 0;
 }
 
-#luswwvwuxc .gt_table {
+#gyejgnxqxi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -8913,12 +8914,12 @@ Compare with the ordinary model: <!--html_preserve-->
   border-left-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_caption {
+#gyejgnxqxi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#luswwvwuxc .gt_title {
+#gyejgnxqxi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -8930,7 +8931,7 @@ Compare with the ordinary model: <!--html_preserve-->
   border-bottom-width: 0;
 }
 
-#luswwvwuxc .gt_subtitle {
+#gyejgnxqxi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -8942,7 +8943,7 @@ Compare with the ordinary model: <!--html_preserve-->
   border-top-width: 0;
 }
 
-#luswwvwuxc .gt_heading {
+#gyejgnxqxi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -8954,13 +8955,13 @@ Compare with the ordinary model: <!--html_preserve-->
   border-right-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_bottom_border {
+#gyejgnxqxi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_col_headings {
+#gyejgnxqxi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -8975,7 +8976,7 @@ Compare with the ordinary model: <!--html_preserve-->
   border-right-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_col_heading {
+#gyejgnxqxi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -8995,7 +8996,7 @@ Compare with the ordinary model: <!--html_preserve-->
   overflow-x: hidden;
 }
 
-#luswwvwuxc .gt_column_spanner_outer {
+#gyejgnxqxi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -9007,15 +9008,15 @@ Compare with the ordinary model: <!--html_preserve-->
   padding-right: 4px;
 }
 
-#luswwvwuxc .gt_column_spanner_outer:first-child {
+#gyejgnxqxi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#luswwvwuxc .gt_column_spanner_outer:last-child {
+#gyejgnxqxi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#luswwvwuxc .gt_column_spanner {
+#gyejgnxqxi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -9027,11 +9028,11 @@ Compare with the ordinary model: <!--html_preserve-->
   width: 100%;
 }
 
-#luswwvwuxc .gt_spanner_row {
+#gyejgnxqxi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#luswwvwuxc .gt_group_heading {
+#gyejgnxqxi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -9057,7 +9058,7 @@ Compare with the ordinary model: <!--html_preserve-->
   text-align: left;
 }
 
-#luswwvwuxc .gt_empty_group_heading {
+#gyejgnxqxi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -9072,15 +9073,15 @@ Compare with the ordinary model: <!--html_preserve-->
   vertical-align: middle;
 }
 
-#luswwvwuxc .gt_from_md > :first-child {
+#gyejgnxqxi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#luswwvwuxc .gt_from_md > :last-child {
+#gyejgnxqxi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#luswwvwuxc .gt_row {
+#gyejgnxqxi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -9099,7 +9100,7 @@ Compare with the ordinary model: <!--html_preserve-->
   overflow-x: hidden;
 }
 
-#luswwvwuxc .gt_stub {
+#gyejgnxqxi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -9112,7 +9113,7 @@ Compare with the ordinary model: <!--html_preserve-->
   padding-right: 5px;
 }
 
-#luswwvwuxc .gt_stub_row_group {
+#gyejgnxqxi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -9126,15 +9127,15 @@ Compare with the ordinary model: <!--html_preserve-->
   vertical-align: top;
 }
 
-#luswwvwuxc .gt_row_group_first td {
+#gyejgnxqxi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#luswwvwuxc .gt_row_group_first th {
+#gyejgnxqxi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#luswwvwuxc .gt_summary_row {
+#gyejgnxqxi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -9144,16 +9145,16 @@ Compare with the ordinary model: <!--html_preserve-->
   padding-right: 5px;
 }
 
-#luswwvwuxc .gt_first_summary_row {
+#gyejgnxqxi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_first_summary_row.thick {
+#gyejgnxqxi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#luswwvwuxc .gt_last_summary_row {
+#gyejgnxqxi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -9163,7 +9164,7 @@ Compare with the ordinary model: <!--html_preserve-->
   border-bottom-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_grand_summary_row {
+#gyejgnxqxi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -9173,7 +9174,7 @@ Compare with the ordinary model: <!--html_preserve-->
   padding-right: 5px;
 }
 
-#luswwvwuxc .gt_first_grand_summary_row {
+#gyejgnxqxi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -9183,7 +9184,7 @@ Compare with the ordinary model: <!--html_preserve-->
   border-top-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_last_grand_summary_row_top {
+#gyejgnxqxi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -9193,11 +9194,11 @@ Compare with the ordinary model: <!--html_preserve-->
   border-bottom-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_striped {
+#gyejgnxqxi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#luswwvwuxc .gt_table_body {
+#gyejgnxqxi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -9206,7 +9207,7 @@ Compare with the ordinary model: <!--html_preserve-->
   border-bottom-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_footnotes {
+#gyejgnxqxi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -9220,7 +9221,7 @@ Compare with the ordinary model: <!--html_preserve-->
   border-right-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_footnote {
+#gyejgnxqxi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -9229,7 +9230,7 @@ Compare with the ordinary model: <!--html_preserve-->
   padding-right: 5px;
 }
 
-#luswwvwuxc .gt_sourcenotes {
+#gyejgnxqxi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -9243,7 +9244,7 @@ Compare with the ordinary model: <!--html_preserve-->
   border-right-color: #D3D3D3;
 }
 
-#luswwvwuxc .gt_sourcenote {
+#gyejgnxqxi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -9251,72 +9252,72 @@ Compare with the ordinary model: <!--html_preserve-->
   padding-right: 5px;
 }
 
-#luswwvwuxc .gt_left {
+#gyejgnxqxi .gt_left {
   text-align: left;
 }
 
-#luswwvwuxc .gt_center {
+#gyejgnxqxi .gt_center {
   text-align: center;
 }
 
-#luswwvwuxc .gt_right {
+#gyejgnxqxi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#luswwvwuxc .gt_font_normal {
+#gyejgnxqxi .gt_font_normal {
   font-weight: normal;
 }
 
-#luswwvwuxc .gt_font_bold {
+#gyejgnxqxi .gt_font_bold {
   font-weight: bold;
 }
 
-#luswwvwuxc .gt_font_italic {
+#gyejgnxqxi .gt_font_italic {
   font-style: italic;
 }
 
-#luswwvwuxc .gt_super {
+#gyejgnxqxi .gt_super {
   font-size: 65%;
 }
 
-#luswwvwuxc .gt_footnote_marks {
+#gyejgnxqxi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#luswwvwuxc .gt_asterisk {
+#gyejgnxqxi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#luswwvwuxc .gt_indent_1 {
+#gyejgnxqxi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#luswwvwuxc .gt_indent_2 {
+#gyejgnxqxi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#luswwvwuxc .gt_indent_3 {
+#gyejgnxqxi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#luswwvwuxc .gt_indent_4 {
+#gyejgnxqxi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#luswwvwuxc .gt_indent_5 {
+#gyejgnxqxi .gt_indent_5 {
   text-indent: 25px;
 }
 
-#luswwvwuxc .katex-display {
+#gyejgnxqxi .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#luswwvwuxc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#gyejgnxqxi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -10198,7 +10199,7 @@ This is definitely not normally distributed.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.4633889</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.5344634</code></pre>
 </div>
 <p>The important point of the Central Limit Theorem is, that if we take
 a large number of random samples, and calculate the mean of each of
@@ -10214,7 +10215,7 @@ this:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 0.5219784</code></pre>
+<pre class="output" tabindex="0"><code>[1] 0.5072653</code></pre>
 </div>
 <p>And we can use the <code>replicate()</code> function to repeat that
 calculation several times, in this case 1000 times:</p>
@@ -11134,7 +11135,7 @@ data/customers into 10 groups.</p>
   Why 10?
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>In the case of the online bookseller the number was chosen to get a
 relatively small number of clusters, in order not to have to manage 20
@@ -11249,31 +11250,31 @@ we can work with afterwards:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 62, 47, 69
+<pre class="output" tabindex="0"><code>K-means clustering with 3 clusters of sizes 69, 62, 47
 
 Cluster means:
    Alcohol Malicacid      Ash Alcalinityofash Magnesium Totalphenols Flavanoids
-1 12.92984  2.504032 2.408065        19.89032 103.59677     2.111129   1.584032
-2 13.80447  1.883404 2.426170        17.02340 105.51064     2.867234   3.014255
-3 12.51667  2.494203 2.288551        20.82319  92.34783     2.070725   1.758406
+1 12.51667  2.494203 2.288551        20.82319  92.34783     2.070725   1.758406
+2 12.92984  2.504032 2.408065        19.89032 103.59677     2.111129   1.584032
+3 13.80447  1.883404 2.426170        17.02340 105.51064     2.867234   3.014255
   Nonflavanoidphenols Proanthocyanins Colorintensity       Hue
-1           0.3883871        1.503387       5.650323 0.8839677
-2           0.2853191        1.910426       5.702553 1.0782979
-3           0.3901449        1.451884       4.086957 0.9411594
+1           0.3901449        1.451884       4.086957 0.9411594
+2           0.3883871        1.503387       5.650323 0.8839677
+3           0.2853191        1.910426       5.702553 1.0782979
   OD280OD315ofdilutedwines   Proline
-1                 2.365484  728.3387
-2                 3.114043 1195.1489
-3                 2.490725  458.2319
+1                 2.490725  458.2319
+2                 2.365484  728.3387
+3                 3.114043 1195.1489
 
 Clustering vector:
-  [1] 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 2 2 1 1 2 2 1 2 2 2 2 2 2 1 1
- [38] 2 2 1 1 2 2 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 1 3 1 3 3 1 3 3 1 1 1 3 3 2
- [75] 1 3 3 3 1 3 3 1 1 3 3 3 3 3 1 1 3 3 3 3 3 1 1 3 1 3 1 3 3 3 1 3 3 3 3 1 3
-[112] 3 1 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 1 3 3 1 1 1 1 3 3 3 1 1 3 3 1 1 3 1
-[149] 1 3 3 3 3 1 1 1 3 1 1 1 3 1 3 1 1 3 1 1 1 1 3 3 1 1 1 1 1 3
+  [1] 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 2 2 3 3 2 2 3 3 2 3 3 3 3 3 3 2 2
+ [38] 3 3 2 2 3 3 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 1 2 1 2 1 1 2 1 1 2 2 2 1 1 3
+ [75] 2 1 1 1 2 1 1 2 2 1 1 1 1 1 2 2 1 1 1 1 1 2 2 1 2 1 2 1 1 1 2 1 1 1 1 2 1
+[112] 1 2 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 2 1 1 2 2 2 2 1 1 1 2 2 1 1 2 2 1 2
+[149] 2 1 1 1 1 2 2 2 1 2 2 2 1 2 1 2 2 1 2 2 2 2 1 1 2 2 2 2 2 1
 
 Within cluster sum of squares by cluster:
-[1]  566572.5 1360950.5  443166.7
+[1]  443166.7  566572.5 1360950.5
  (between_SS / total_SS =  86.5 %)
 
 Available components:
@@ -11313,9 +11314,9 @@ found, and match them with the true values:</p>
 </h3>
 <pre class="output" tabindex="0"><code>     true
 quess  1  2  3
-    1 13 20 29
-    2 46  1  0
-    3  0 50 19</code></pre>
+    1  0 50 19
+    2 13 20 29
+    3 46  1  0</code></pre>
 </div>
 <p>The algorithm have no idea about how the true groups are numbered, so
 the numbering does not match. But it appears that i does a relatively
@@ -13729,7 +13730,7 @@ install it using the command line ahead of time.</p>
   Linux
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Steps for installing the geospatial will vary based on which form of
 Linux you are using. These instructions are adapted from the <a href="https://github.com/r-spatial/sf" class="external-link"><code>sf</code> package’s
@@ -14044,7 +14045,7 @@ any links that you are not going to use.
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Fortæl de studerende at de skal logge på GitHub hvis de ikke allerede
 har gjort det.</p>
@@ -22422,10 +22423,16 @@ selected:</p>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ap</span> <span class="op">&lt;-</span> <span class="fu">available.packages</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<p>In this example we find 23045 packages.</p>
+<div class="codewrapper">
+<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="warning" tabindex="0"><code>Warning: unable to access index for repository https://carpentries.r-universe.dev/src/contrib:
+  cannot open URL 'https://carpentries.r-universe.dev/src/contrib/PACKAGES'</code></pre>
+</div>
+<p>In this example we find 23044 packages.</p>
 <p>Rather than viewing all of them, it is better to test if the package
 we are looking for is actually available:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -22461,7 +22468,7 @@ your current setup.</p>
 <p>The package you want might depend on a more recent version of R. Or
 another package.</p>
 <p>Take a look at the list of available packages we got earlier:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -22477,7 +22484,7 @@ sure that you have a version of <code>parsnip</code> installed that
 meets the requirements. And also make sure your installed version of R
 is adequate.</p>
 <p>Depending on your setup, the easy way to update R is:</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -22490,7 +22497,7 @@ is adequate.</p>
 <p>For example it could be archived. If a package is no longer
 maintained, and do no longer pass the automatic checks in the
 repositories, it will be archived. However, we can still access it:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -22501,7 +22508,7 @@ repositories, it will be archived. However, we can still access it:</p>
 control system). This is especially useful if the package is actually
 still maintained but have been archived by CRAN because any error in the
 automatic checks have not yet been fixed:</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -22524,7 +22531,7 @@ installed</a>.</p>
 <p>On a Linux machine you will have to compile most packages, but your
 operating system have access to what it need to do this already.</p>
 <p>Havin prepared by installing Rtools or Xcode, you can now run:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -22539,7 +22546,7 @@ operating system have access to what it need to do this already.</p>
 github because it has been archived on CRAN. It requires the
 <code>remotes</code> package, and knowledge about where on GitHub the
 package resides:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -22687,7 +22694,7 @@ er en X fence”.</p>
   dette er en hint fence
   </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 
 </div>
@@ -22726,7 +22733,7 @@ er en X fence”.</p>
   dette er en instructor fence
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 
 </div>
@@ -22755,7 +22762,7 @@ siden man roligt kan ignorere.</p>
   dette er en spoiler fence
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 
 </div>
@@ -22781,7 +22788,7 @@ siden man roligt kan ignorere.</p>
   Den optræder som regel med en solution fence
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Og den er “inde i” challenge fencen.</p>
 </div>
@@ -22925,7 +22932,7 @@ you can easily initialize a new repository based on this page.</p>
   How do you make a template-repo?
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Go to the main page of the repo you want to make a template.</p>
 <p>Click “settings”, and, just under the box where you can change the

@@ -689,10 +689,16 @@ selected:</p>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ap</span> <span class="op">&lt;-</span> <span class="fu">available.packages</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<p>In this example we find 23045 packages.</p>
+<div class="codewrapper">
+<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="warning" tabindex="0"><code>Warning: unable to access index for repository https://carpentries.r-universe.dev/src/contrib:
+  cannot open URL 'https://carpentries.r-universe.dev/src/contrib/PACKAGES'</code></pre>
+</div>
+<p>In this example we find 23044 packages.</p>
 <p>Rather than viewing all of them, it is better to test if the package
 we are looking for is actually available:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -722,7 +728,7 @@ your current setup.</p>
 <hr class="half-width"><p>The package you want might depend on a more recent version of R. Or
 another package.</p>
 <p>Take a look at the list of available packages we got earlier:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -738,7 +744,7 @@ sure that you have a version of <code>parsnip</code> installed that
 meets the requirements. And also make sure your installed version of R
 is adequate.</p>
 <p>Depending on your setup, the easy way to update R is:</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -749,7 +755,7 @@ is adequate.</p>
 <hr class="half-width"><p>For example it could be archived. If a package is no longer
 maintained, and do no longer pass the automatic checks in the
 repositories, it will be archived. However, we can still access it:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -760,7 +766,7 @@ repositories, it will be archived. However, we can still access it:</p>
 control system). This is especially useful if the package is actually
 still maintained but have been archived by CRAN because any error in the
 automatic checks have not yet been fixed:</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -781,7 +787,7 @@ installed</a>.</p>
 <p>On a Linux machine you will have to compile most packages, but your
 operating system have access to what it need to do this already.</p>
 <p>Havin prepared by installing Rtools or Xcode, you can now run:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -794,7 +800,7 @@ operating system have access to what it need to do this already.</p>
 github because it has been archived on CRAN. It requires the
 <code>remotes</code> package, and knowledge about where on GitHub the
 package resides:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
